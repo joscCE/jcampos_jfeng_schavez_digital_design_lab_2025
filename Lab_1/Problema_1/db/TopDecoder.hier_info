@@ -1,0 +1,41 @@
+|TopDecoder
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+y1[0] << decoderBDC:uut.y1
+y1[1] << decoderBDC:uut.y1
+y1[2] << decoderBDC:uut.y1
+y1[3] << decoderBDC:uut.y1
+y0[0] << decoderBDC:uut.y0
+y0[1] << decoderBDC:uut.y0
+y0[2] << decoderBDC:uut.y0
+y0[3] << decoderBDC:uut.y0
+
+
+|TopDecoder|decoderBDC:uut
+a[0] => y0[0].DATAIN
+a[1] => y0.IN0
+a[1] => y0.IN0
+a[1] => y1.IN0
+a[1] => y0.IN1
+a[1] => y0.IN1
+a[2] => y0.IN0
+a[2] => y0.IN1
+a[2] => y1.IN0
+a[2] => y0.IN0
+a[3] => y0.IN1
+a[3] => y1.IN1
+a[3] => y1.IN1
+a[3] => y0.IN1
+a[3] => y0.IN1
+y1[0] <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y1[1] <= <GND>
+y1[2] <= <GND>
+y1[3] <= <GND>
+y0[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+y0[1] <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y0[2] <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y0[3] <= y0.DB_MAX_OUTPUT_PORT_TYPE
+
+

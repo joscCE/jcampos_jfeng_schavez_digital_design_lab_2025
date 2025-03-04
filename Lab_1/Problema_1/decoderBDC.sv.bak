@@ -1,0 +1,20 @@
+module decoderBDC(
+	logic input [0:3] a
+	logic output [0,3] y1,y0
+
+);
+	
+	/* output first segmen */
+	assign y0[0] = a[3];
+	assign y0[1] = (~a[0] & a[3] )| (a[0] & a[1] & ~a[2]);
+	assign y0[2] = (~a[0] & a[1]) | (a[1] & a[2] );
+	assign y0[3] = a[0]&~a[1]&~a[2];
+	
+	/* output second segmen */
+	assing y1[0] = (a[0] & a[1]) | (a[0] & a[2]);
+	assing y1[1] = 0;
+	assing y1[2] = 0;
+	assing y1[3] = 0;
+	
+
+endmodule

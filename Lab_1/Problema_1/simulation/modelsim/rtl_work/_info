@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/simulation/modelsim
+vdecoderBDC
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1741060169
+!i10b 1
+!s100 <ZDoioTUi8km<[T3PNZPb1
+I<8VR_c^cSoL3iEIg0nb<51
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 decoderBDC_sv_unit
+S1
+R0
+w1741059910
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/decoderBDC.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/decoderBDC.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1741060169.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/decoderBDC.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/decoderBDC.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1
+Z8 tCvgOpt 0
+ndecoder@b@d@c
+vtb_decoderBDC
+R1
+R2
+!i10b 1
+!s100 ZD8`4`]X80:I<Jgn7m`j82
+IeEXHd?58VH<VZB>U@dU7W0
+R3
+!s105 TB_decoderBDC_sv_unit
+S1
+R0
+w1741060144
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TB_decoderBDC.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TB_decoderBDC.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TB_decoderBDC.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TB_decoderBDC.sv|
+!i113 1
+R6
+R7
+R8
+ntb_decoder@b@d@c
+vTopDecoder
+R1
+R2
+!i10b 1
+!s100 S>>:60XCiUZ9e:FkD;`WO1
+I:Y>480zXWM_`aO_Y6B0bc0
+R3
+!s105 TopDecoder_sv_unit
+S1
+R0
+w1741054800
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TopDecoder.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TopDecoder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1741060168.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TopDecoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_1/TopDecoder.sv|
+!i113 1
+R6
+R7
+R8
+n@top@decoder
