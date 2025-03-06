@@ -1,0 +1,12 @@
+libraryIEEE;useIEEE.STD_LOGIC_1164.all;
+
+entityinvis
+port(a:in STD_LOGIC_VECTOR(3downto0);
+		y:outSTD_LOGIC_VECTOR(3downto0));
+ end;
+ 
+ architecturesynthofinvis
+ 
+ begin
+	y<=nota;
+ end;

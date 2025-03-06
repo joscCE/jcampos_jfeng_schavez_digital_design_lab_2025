@@ -1,0 +1,127 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/simulation/modelsim
+Efulladderbit
+Z1 w1741222046
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd
+Z5 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd
+l0
+L3
+VfSV<5V7C`ibD1fMfAkC>;1
+!s100 cbNe7i7BTHPCViL3l9QB20
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1741223790
+!i10b 1
+Z8 !s108 1741223789.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd|
+Z10 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Asynth
+R2
+R3
+DEx4 work 12 fulladderbit 0 22 fSV<5V7C`ibD1fMfAkC>;1
+l12
+L9
+Vg0Q=f6fXbcPc9_]WJjkzi3
+!s100 f]Ubm@==`S]WA4:]NZ32z1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_fulladderbit
+Z13 w1741223440
+R2
+R3
+R0
+Z14 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd
+Z15 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd
+l0
+L4
+V`?co^TmK8Qa_;ga4@PVQo0
+!s100 L=aYBlShfMK;nCS2NCSoz1
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1741223790.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd|
+Z18 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd|
+!i113 1
+R11
+R12
+Asim
+R2
+R3
+DEx4 work 15 tb_fulladderbit 0 22 `?co^TmK8Qa_;ga4@PVQo0
+l20
+L7
+V=D=i_VjULgF:8bn7VO1M<1
+!s100 Y0W6^fdOfaYN1TFEPe:`:0
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Etop_full_adder
+Z19 w1741223641
+R2
+R3
+R0
+Z20 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd
+Z21 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd
+l0
+L4
+Vgm1@<J7Q^BXU7K3;2dZo]0
+!s100 A7edh=Ob>2hnTLjW9d>Go3
+R6
+31
+R7
+!i10b 1
+R16
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd|
+Z23 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd|
+!i113 1
+R11
+R12
+Asynth
+R2
+R3
+DEx4 work 14 top_full_adder 0 22 gm1@<J7Q^BXU7K3;2dZo]0
+l25
+L13
+V=z<91ZDfLn5oojH77C[BV1
+!s100 SWNbkB^Sj244oH5<]Ld=H0
+R6
+31
+R7
+!i10b 1
+R16
+R22
+R23
+!i113 1
+R11
+R12
