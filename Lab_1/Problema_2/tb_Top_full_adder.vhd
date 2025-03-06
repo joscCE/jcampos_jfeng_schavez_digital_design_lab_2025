@@ -12,7 +12,7 @@ architecture testbench of tb_Top_full_adder is
         port(
             a, b    : in  STD_LOGIC_VECTOR(3 downto 0);
             cin     : in  STD_LOGIC;
-            s       : out STD_LOGIC_VECTOR(3 downto 0);
+            seg0, seg1 : out STD_LOGIC_VECTOR(7 downto 0);
             cout    : out STD_LOGIC
         );
     end component;
@@ -20,16 +20,17 @@ architecture testbench of tb_Top_full_adder is
     -- Señales para estímulos y resultados
     signal a_tb, b_tb : STD_LOGIC_VECTOR(3 downto 0);
     signal cin_tb     : STD_LOGIC;
-    signal s_tb       : STD_LOGIC_VECTOR(3 downto 0);
+    signal seg0_tb, seg1_tb : STD_LOGIC_VECTOR(7 downto 0);
     signal cout_tb    : STD_LOGIC;
 
 begin
-    -- Instancia del sumador de 4 bits
+    -- Instancia del sumador de 4 bits con decodificador
     UUT: Top_full_adder port map(
         a    => a_tb,
         b    => b_tb,
         cin  => cin_tb,
-        s    => s_tb,
+        seg0 => seg0_tb,
+        seg1 => seg1_tb,
         cout => cout_tb
     );
 

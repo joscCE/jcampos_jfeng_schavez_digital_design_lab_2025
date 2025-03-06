@@ -8,10 +8,22 @@ b[1] => fulladderbit:FA1.b
 b[2] => fulladderbit:FA2.b
 b[3] => fulladderbit:FA3.b
 cin => fulladderbit:FA0.cin
-s[0] << fulladderbit:FA0.s
-s[1] << fulladderbit:FA1.s
-s[2] << fulladderbit:FA2.s
-s[3] << fulladderbit:FA3.s
+seg0[0] << TopDecoder:decoder_inst.seg0[0]
+seg0[1] << TopDecoder:decoder_inst.seg0[1]
+seg0[2] << TopDecoder:decoder_inst.seg0[2]
+seg0[3] << TopDecoder:decoder_inst.seg0[3]
+seg0[4] << TopDecoder:decoder_inst.seg0[4]
+seg0[5] << TopDecoder:decoder_inst.seg0[5]
+seg0[6] << TopDecoder:decoder_inst.seg0[6]
+seg0[7] << TopDecoder:decoder_inst.seg0[7]
+seg1[0] << TopDecoder:decoder_inst.seg1[0]
+seg1[1] << TopDecoder:decoder_inst.seg1[1]
+seg1[2] << TopDecoder:decoder_inst.seg1[2]
+seg1[3] << TopDecoder:decoder_inst.seg1[3]
+seg1[4] << TopDecoder:decoder_inst.seg1[4]
+seg1[5] << TopDecoder:decoder_inst.seg1[5]
+seg1[6] << TopDecoder:decoder_inst.seg1[6]
+seg1[7] << TopDecoder:decoder_inst.seg1[7]
 cout << fulladderbit:FA3.cout
 
 
@@ -57,5 +69,106 @@ cin => s.IN1
 cin => cout.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_full_adder|TopDecoder:decoder_inst
+a[0] => decoderBDC:bdc_decoder.a[0]
+a[1] => decoderBDC:bdc_decoder.a[1]
+a[2] => decoderBDC:bdc_decoder.a[2]
+a[3] => decoderBDC:bdc_decoder.a[3]
+seg0[0] <= Decoder7seg:seg_decoder.seg0[0]
+seg0[1] <= Decoder7seg:seg_decoder.seg0[1]
+seg0[2] <= Decoder7seg:seg_decoder.seg0[2]
+seg0[3] <= Decoder7seg:seg_decoder.seg0[3]
+seg0[4] <= Decoder7seg:seg_decoder.seg0[4]
+seg0[5] <= Decoder7seg:seg_decoder.seg0[5]
+seg0[6] <= Decoder7seg:seg_decoder.seg0[6]
+seg0[7] <= Decoder7seg:seg_decoder.seg0[7]
+seg1[0] <= Decoder7seg:seg_decoder.seg1[0]
+seg1[1] <= Decoder7seg:seg_decoder.seg1[1]
+seg1[2] <= Decoder7seg:seg_decoder.seg1[2]
+seg1[3] <= Decoder7seg:seg_decoder.seg1[3]
+seg1[4] <= Decoder7seg:seg_decoder.seg1[4]
+seg1[5] <= Decoder7seg:seg_decoder.seg1[5]
+seg1[6] <= Decoder7seg:seg_decoder.seg1[6]
+seg1[7] <= Decoder7seg:seg_decoder.seg1[7]
+
+
+|Top_full_adder|TopDecoder:decoder_inst|decoderBDC:bdc_decoder
+a[0] => y0[0].DATAIN
+a[1] => y0.IN0
+a[1] => y0.IN0
+a[1] => y1.IN0
+a[1] => y0.IN1
+a[1] => y0.IN1
+a[2] => y0.IN0
+a[2] => y0.IN0
+a[2] => y0.IN1
+a[2] => y0.IN0
+a[3] => y0.IN1
+a[3] => y0.IN1
+a[3] => y1.IN1
+a[3] => y0.IN1
+a[3] => y0.IN1
+y0[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+y0[1] <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y0[2] <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y0[3] <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1[0] <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y1[1] <= <GND>
+y1[2] <= <GND>
+y1[3] <= <GND>
+
+
+|Top_full_adder|TopDecoder:decoder_inst|Decoder7seg:seg_decoder
+a[0] => seg0_internal.IN0
+a[0] => seg0_internal.IN0
+a[0] => seg0_internal[5].IN1
+a[0] => seg0_internal.IN1
+a[0] => seg0_internal.IN0
+a[0] => seg0_internal.IN0
+a[0] => seg0_internal.IN0
+a[0] => seg0_internal.IN0
+a[1] => seg0_internal.IN0
+a[1] => seg0_internal.IN1
+a[1] => seg0_internal.IN0
+a[1] => seg0_internal.IN1
+a[1] => seg0_internal.IN1
+a[1] => seg0_internal.IN0
+a[1] => seg0_internal.IN0
+a[2] => seg0_internal.IN1
+a[2] => seg0_internal.IN1
+a[2] => seg0_internal.IN1
+a[2] => seg0_internal.IN1
+a[2] => seg0_internal.IN1
+a[2] => seg0_internal.IN1
+a[2] => seg0_internal.IN1
+a[3] => seg0_internal.IN1
+a[3] => seg0_internal.IN1
+a[3] => seg0_internal.IN1
+a[3] => seg0_internal.IN1
+b[0] => seg1[7].DATAIN
+b[0] => seg1[4].DATAIN
+b[0] => seg1[3].DATAIN
+b[0] => seg1[2].DATAIN
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+seg0[0] <= <VCC>
+seg0[1] <= seg0_internal[1].DB_MAX_OUTPUT_PORT_TYPE
+seg0[2] <= seg0_internal[2].DB_MAX_OUTPUT_PORT_TYPE
+seg0[3] <= seg0_internal[3].DB_MAX_OUTPUT_PORT_TYPE
+seg0[4] <= seg0_internal[4].DB_MAX_OUTPUT_PORT_TYPE
+seg0[5] <= seg0_internal[5].DB_MAX_OUTPUT_PORT_TYPE
+seg0[6] <= seg0_internal[6].DB_MAX_OUTPUT_PORT_TYPE
+seg0[7] <= seg0_internal[7].DB_MAX_OUTPUT_PORT_TYPE
+seg1[0] <= <VCC>
+seg1[1] <= <VCC>
+seg1[2] <= b[0].DB_MAX_OUTPUT_PORT_TYPE
+seg1[3] <= b[0].DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] <= b[0].DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] <= <GND>
+seg1[6] <= <GND>
+seg1[7] <= b[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
