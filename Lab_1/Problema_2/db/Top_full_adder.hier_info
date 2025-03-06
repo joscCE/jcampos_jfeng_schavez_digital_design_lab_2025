@@ -8,11 +8,11 @@ b[1] => fulladderbit:FA1.b
 b[2] => fulladderbit:FA2.b
 b[3] => fulladderbit:FA3.b
 cin => fulladderbit:FA0.cin
-s[0] <= fulladderbit:FA0.s
-s[1] <= fulladderbit:FA1.s
-s[2] <= fulladderbit:FA2.s
-s[3] <= fulladderbit:FA3.s
-cout <= fulladderbit:FA3.cout
+s[0] << fulladderbit:FA0.s
+s[1] << fulladderbit:FA1.s
+s[2] << fulladderbit:FA2.s
+s[3] << fulladderbit:FA3.s
+cout << fulladderbit:FA3.cout
 
 
 |Top_full_adder|fulladderbit:FA0

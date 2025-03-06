@@ -7,25 +7,25 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/simulation/modelsim
+Z0 dC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/simulation/modelsim
 Efulladderbit
-Z1 w1741222046
+Z1 w1741224665
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd
-Z5 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd
+Z4 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd
+Z5 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd
 l0
 L3
 VfSV<5V7C`ibD1fMfAkC>;1
 !s100 cbNe7i7BTHPCViL3l9QB20
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1741223790
+Z7 !s110 1741232573
 !i10b 1
-Z8 !s108 1741223789.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd|
-Z10 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd|
+Z8 !s108 1741232573.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd|
+Z10 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/fulladderbit.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
@@ -47,52 +47,56 @@ R10
 !i113 1
 R11
 R12
-Etb_fulladderbit
-Z13 w1741223440
+Etb_top_full_adder
+Z13 w1741231235
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R2
 R3
 R0
-Z14 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd
-Z15 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd
+Z16 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_Top_full_adder.vhd
+Z17 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_Top_full_adder.vhd
 l0
-L4
-V`?co^TmK8Qa_;ga4@PVQo0
-!s100 L=aYBlShfMK;nCS2NCSoz1
+L6
+V[_UDk^M0]9_;[?I1gLZ?f3
+!s100 D_4Ofb[09RncS37e8daE61
 R6
 31
 R7
 !i10b 1
-Z16 !s108 1741223790.000000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd|
-Z18 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_fulladderbit.vhd|
+R8
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_Top_full_adder.vhd|
+Z19 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/tb_Top_full_adder.vhd|
 !i113 1
 R11
 R12
-Asim
+Atestbench
+R14
+R15
 R2
 R3
-DEx4 work 15 tb_fulladderbit 0 22 `?co^TmK8Qa_;ga4@PVQo0
-l20
-L7
-V=D=i_VjULgF:8bn7VO1M<1
-!s100 Y0W6^fdOfaYN1TFEPe:`:0
+DEx4 work 17 tb_top_full_adder 0 22 [_UDk^M0]9_;[?I1gLZ?f3
+l26
+L9
+V5_=FLG[TX]a9EOO?=fOLo0
+!s100 P=7oiIfHZ][DVc@17D2M=2
 R6
 31
 R7
 !i10b 1
-R16
-R17
+R8
 R18
+R19
 !i113 1
 R11
 R12
 Etop_full_adder
-Z19 w1741223641
+R1
 R2
 R3
 R0
-Z20 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd
-Z21 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd
+Z20 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd
+Z21 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd
 l0
 L4
 Vgm1@<J7Q^BXU7K3;2dZo]0
@@ -101,9 +105,9 @@ R6
 31
 R7
 !i10b 1
-R16
-Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd|
-Z23 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd|
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd|
+Z23 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd|
 !i113 1
 R11
 R12
@@ -119,7 +123,7 @@ R6
 31
 R7
 !i10b 1
-R16
+R8
 R22
 R23
 !i113 1
