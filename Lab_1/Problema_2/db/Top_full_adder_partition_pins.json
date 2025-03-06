@@ -32,22 +32,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "seg1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[7]",
-					"strict" : false
-				},
-				{
 					"name" : "cout",
 					"strict" : false
 				},
