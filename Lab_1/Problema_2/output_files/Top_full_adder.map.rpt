@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top_full_adder
-Thu Mar 06 10:41:29 2025
+Thu Mar 06 19:30:11 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 06 10:41:29 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 06 19:30:11 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Top_full_adder                              ;
 ; Top-level Entity Name           ; Top_full_adder                              ;
@@ -176,31 +176,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimate of Logic utilization (ALMs needed) ; 7                  ;
-;                                             ;                    ;
-; Combinational ALUT usage for logic          ; 13                 ;
-;     -- 7 input functions                    ; 0                  ;
-;     -- 6 input functions                    ; 0                  ;
-;     -- 5 input functions                    ; 4                  ;
-;     -- 4 input functions                    ; 7                  ;
-;     -- <=3 input functions                  ; 2                  ;
-;                                             ;                    ;
-; Dedicated logic registers                   ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 26                 ;
-;                                             ;                    ;
-; Total DSP Blocks                            ; 0                  ;
-;                                             ;                    ;
-; Maximum fan-out node                        ; fulladderbit:FA0|s ;
-; Maximum fan-out                             ; 7                  ;
-; Total fan-out                               ; 88                 ;
-; Average fan-out                             ; 1.35               ;
-+---------------------------------------------+--------------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 12                    ;
+;                                             ;                       ;
+; Combinational ALUT usage for logic          ; 22                    ;
+;     -- 7 input functions                    ; 0                     ;
+;     -- 6 input functions                    ; 1                     ;
+;     -- 5 input functions                    ; 5                     ;
+;     -- 4 input functions                    ; 7                     ;
+;     -- <=3 input functions                  ; 9                     ;
+;                                             ;                       ;
+; Dedicated logic registers                   ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 26                    ;
+;                                             ;                       ;
+; Total DSP Blocks                            ; 0                     ;
+;                                             ;                       ;
+; Maximum fan-out node                        ; fulladderbit:FA3|cout ;
+; Maximum fan-out                             ; 13                    ;
+; Total fan-out                               ; 119                   ;
+; Average fan-out                             ; 1.61                  ;
++---------------------------------------------+-----------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,8 +208,8 @@ refer to the applicable agreement for further details.
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name    ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+----------------+--------------+
-; |Top_full_adder              ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 26   ; 0            ; |Top_full_adder                         ; Top_full_adder ; work         ;
-;    |TopDecoder:decoder_inst| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_full_adder|TopDecoder:decoder_inst ; TopDecoder     ; work         ;
+; |Top_full_adder              ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 26   ; 0            ; |Top_full_adder                         ; Top_full_adder ; work         ;
+;    |TopDecoder:decoder_inst| ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_full_adder|TopDecoder:decoder_inst ; TopDecoder     ; work         ;
 ;    |fulladderbit:FA0|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_full_adder|fulladderbit:FA0        ; fulladderbit   ; work         ;
 ;    |fulladderbit:FA1|        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_full_adder|fulladderbit:FA1        ; fulladderbit   ; work         ;
 ;    |fulladderbit:FA2|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_full_adder|fulladderbit:FA2        ; fulladderbit   ; work         ;
@@ -238,17 +238,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 15                          ;
-;     normal            ; 15                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 26                          ;
+;     normal            ; 26                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 7                           ;
 ;         3 data inputs ; 2                           ;
 ;         4 data inputs ; 7                           ;
-;         5 data inputs ; 4                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 1                           ;
 ; boundary_port         ; 26                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.25                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -267,7 +269,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 06 10:41:17 2025
+    Info: Processing started: Thu Mar 06 19:30:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top_full_adder -c Top_full_adder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -290,32 +292,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file decoder
     Info (12022): Found design unit 1: Decoder7seg-Behavioral File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Decoder7seg.vhd Line: 13
     Info (12023): Found entity 1: Decoder7seg File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Decoder7seg.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file topdecoder.vhd
-    Info (12022): Found design unit 1: TopDecoder-Behavioral File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/TopDecoder.vhd Line: 11
+    Info (12022): Found design unit 1: TopDecoder-Behavioral File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/TopDecoder.vhd Line: 12
     Info (12023): Found entity 1: TopDecoder File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/TopDecoder.vhd Line: 4
 Info (12127): Elaborating entity "Top_full_adder" for the top level hierarchy
-Info (12128): Elaborating entity "fulladderbit" for hierarchy "fulladderbit:FA0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 41
-Info (12128): Elaborating entity "TopDecoder" for hierarchy "TopDecoder:decoder_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 48
+Warning (10541): VHDL Signal Declaration warning at Top_full_adder.vhd(9): used implicit default value for signal "cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 9
+Info (12128): Elaborating entity "fulladderbit" for hierarchy "fulladderbit:FA0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 43
+Info (12128): Elaborating entity "TopDecoder" for hierarchy "TopDecoder:decoder_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 50
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg0[0]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
     Warning (13410): Pin "seg1[0]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
     Warning (13410): Pin "seg1[1]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
-    Warning (13410): Pin "seg1[2]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
-    Warning (13410): Pin "seg1[3]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
-    Warning (13410): Pin "seg1[4]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
-    Warning (13410): Pin "seg1[5]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
-    Warning (13410): Pin "seg1[6]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
-    Warning (13410): Pin "seg1[7]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 8
+    Warning (13410): Pin "cout" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Problema_2/Top_full_adder.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Thu Mar 06 10:41:29 2025
-    Info: Elapsed time: 00:00:12
+    Info (21061): Implemented 22 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Thu Mar 06 19:30:11 2025
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:24
 
 

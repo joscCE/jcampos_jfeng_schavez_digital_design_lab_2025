@@ -23,6 +23,7 @@ architecture synth of Top_full_adder is
 	 component TopDecoder
 		port(
 				a    : in  STD_LOGIC_VECTOR(3 downto 0);
+				o     : in STD_LOGIC;
             seg0, seg1 : out STD_LOGIC_VECTOR(7 downto 0)
 		
 		
@@ -35,19 +36,21 @@ architecture synth of Top_full_adder is
     -- Señales internas para los acarreo entre los bits
     signal c : STD_LOGIC_VECTOR(3 downto 0);
 	 signal s : STD_LOGIC_VECTOR(3 downto 0);
+	 signal cout_internal : STD_LOGIC;
 
 begin
     -- Instancias de fulladderbit para cada bit
     FA0: fulladderbit port map(a(0), b(0), cin,  s(0), c(0));
     FA1: fulladderbit port map(a(1), b(1), c(0), s(1), c(1));
     FA2: fulladderbit port map(a(2), b(2), c(1), s(2), c(2));
-    FA3: fulladderbit port map(a(3), b(3), c(2), s(3), cout);
+    FA3: fulladderbit port map(a(3), b(3), c(2), s(3), cout_internal);
 	 
 	 
 	 
 	 decoder_inst: TopDecoder
 		port map(
 			a => s,
+			o => cout_internal,
 			seg0 => seg0,
 			seg1 => seg1
 	
