@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/simulation/modelsim
 vtb_Top_Sub
-Z1 !s110 1741415115
+Z1 !s110 1741419664
 !i10b 1
-!s100 k^9]]1WXT2?Q5dMc`d:6g0
-I`mog5Yi^EaacAa233dnW]1
+!s100 @M6zbhZKFObUMh4zX^j_k2
+Ik>oN51e1P2F1ihzMaZzO53
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1741415087
+w1741419642
 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v
 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1741415115.000000
+Z4 !s108 1741419664.000000
 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v|
 !i113 1
@@ -33,15 +33,15 @@ Z5 tCvgOpt 0
 ntb_@top_@sub
 vTop_Sub
 Z6 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-R1
+!s110 1741419663
 !i10b 1
-!s100 lIUVoCjONZCXL>eX@m`He3
-IBRK``Uz][??<VQ_3?HR`P3
+!s100 eXBT8f<zK@9D]1224g6JL1
+IW^1oTSk0Rah6zUj^Pz^VQ2
 R2
 !s105 Top_Sub_sv_unit
 S1
 R0
-Z7 w1741414460
+w1741419650
 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv
 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv
 L0 1
@@ -49,12 +49,12 @@ R3
 r1
 !s85 0
 31
-R4
+!s108 1741419663.000000
 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv|
 !i113 1
-Z8 o-sv -work work
-Z9 !s92 -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3
 R5
 n@top_@sub
 vTopDecoder
@@ -67,7 +67,7 @@ R2
 !s105 TopDecoder_sv_unit
 S1
 R0
-R7
+w1741414460
 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv
 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv
 L0 1
@@ -79,7 +79,7 @@ R4
 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv|
 !i113 1
+R7
 R8
-R9
 R5
 n@top@decoder

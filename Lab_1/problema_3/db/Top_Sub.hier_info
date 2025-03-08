@@ -1,18 +1,28 @@
 |Top_Sub
-a[0] => value[0].DATAB
-a[1] => value[1].DATAB
-a[2] => value[2].DATAB
-a[3] => value[3].DATAB
-a[4] => value[4].DATAB
-a[5] => value[5].DATAB
-reset => value[0].OUTPUTSELECT
-reset => value[1].OUTPUTSELECT
-reset => value[1].IN0
-reset => value[2].OUTPUTSELECT
-reset => value[3].OUTPUTSELECT
-reset => value[4].OUTPUTSELECT
-reset => value[5].OUTPUTSELECT
-dec_btn => value[1].IN1
+a[0] => value[0]~reg0.ADATA
+a[1] => value[1]~reg0.ADATA
+a[2] => value[2]~reg0.ADATA
+a[3] => value[3]~reg0.ADATA
+a[4] => value[4]~reg0.ADATA
+a[5] => value[5]~reg0.ADATA
+reset => value[0]~reg0.ALOAD
+reset => value[1]~reg0.ALOAD
+reset => value[2]~reg0.ALOAD
+reset => value[3]~reg0.ALOAD
+reset => value[4]~reg0.ALOAD
+reset => value[5]~reg0.ALOAD
+dec_btn => value.OUTPUTSELECT
+dec_btn => value.OUTPUTSELECT
+dec_btn => value.OUTPUTSELECT
+dec_btn => value.OUTPUTSELECT
+dec_btn => value.OUTPUTSELECT
+dec_btn => value.OUTPUTSELECT
+clk => value[0]~reg0.CLK
+clk => value[1]~reg0.CLK
+clk => value[2]~reg0.CLK
+clk => value[3]~reg0.CLK
+clk => value[4]~reg0.CLK
+clk => value[5]~reg0.CLK
 seg1[0] << TopDecoder:topdec.seg1
 seg1[1] << TopDecoder:topdec.seg1
 seg1[2] << TopDecoder:topdec.seg1
@@ -29,6 +39,12 @@ seg0[4] << TopDecoder:topdec.seg0
 seg0[5] << TopDecoder:topdec.seg0
 seg0[6] << TopDecoder:topdec.seg0
 seg0[7] << TopDecoder:topdec.seg0
+value[0] << value[0].DB_MAX_OUTPUT_PORT_TYPE
+value[1] << value[1].DB_MAX_OUTPUT_PORT_TYPE
+value[2] << value[2].DB_MAX_OUTPUT_PORT_TYPE
+value[3] << value[3].DB_MAX_OUTPUT_PORT_TYPE
+value[4] << value[4].DB_MAX_OUTPUT_PORT_TYPE
+value[5] << value[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top_Sub|TopDecoder:topdec
