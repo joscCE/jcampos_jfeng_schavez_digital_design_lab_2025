@@ -13,7 +13,7 @@ module Top_Sub
      wire reset_n = ~reset;
      wire dec_btn_n_active = ~dec_btn;
  
-     always_ff @(reset_n or dec_btn_n_active) begin
+     always @(reset_n or dec_btn_n_active) begin
          if (reset_n) 
              value <= a;  
          else if (dec_btn_n_active) 
