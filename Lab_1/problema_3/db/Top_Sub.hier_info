@@ -1,0 +1,20 @@
+|Top_Sub
+a[0] => ~NO_FANOUT~
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+a[4] => ~NO_FANOUT~
+a[5] => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+dec_btn => ~NO_FANOUT~
+seg1 <= <GND>
+seg0[0] <= <GND>
+seg0[1] <= <GND>
+seg0[2] <= <GND>
+seg0[3] <= <GND>
+seg0[4] <= <GND>
+seg0[5] <= <GND>
+seg0[6] <= <GND>
+seg0[7] <= <GND>
+
+

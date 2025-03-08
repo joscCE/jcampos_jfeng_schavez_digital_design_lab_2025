@@ -1,0 +1,13 @@
+module tb_Top_Sub();
+logic a;
+// instantiate device under test
+sillyfunction dut(a);
+// apply inputs one at a time
+// checking results
+initial begin
+a = 0; b = 0; c = 0; #10;
+assert (y === 1) else $error("000 failed.");
+a = 1; b = 0; c = 0; #10;
+assert (y === 1) else $error("100 failed.");
+end
+endmodule
