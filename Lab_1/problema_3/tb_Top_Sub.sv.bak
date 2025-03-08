@@ -1,0 +1,58 @@
+`timescale 1ns / 1ps
+
+module tb_Top_Sub;
+
+  parameter N = 6;
+  
+  // Señales del DUT
+  logic clk;
+  logic [N-1:0] a;
+  logic reset;
+  logic dec_btn;
+  logic [7:0] seg1, seg0;
+
+  // Instancia del DUT
+  Top_Sub #(.N(N)) dut (
+    .clk(clk),
+    .a(a),
+    .reset(reset),
+    .dec_btn(dec_btn),
+    .seg1(seg1),
+    .seg0(seg0)
+  );
+
+  // Generador de reloj (10 ns de período)
+  always #5 clk = ~clk;
+
+  initial begin
+    // Inicialización
+    clk = 0;
+    a = 6'd30;      // Valor inicial arbitrario
+    reset = 1;      // Aplicar reset
+    dec_btn = 1;    // Botón inactivo
+    #10;
+    
+    reset = 0;      // Liberar reset
+    #20;
+    
+    // Prueba de decremento
+    dec_btn = 0;    // Presionar botón
+    #10;
+    dec_btn = 1;    // Liberar botón
+    #10;
+    
+    dec_btn = 0;    // Otro decremento
+    #10;
+    dec_btn = 1;
+    #10;
+    
+    // Aplicar reset nuevamente
+    reset = 1;
+    #10;
+    reset = 0;
+    
+    // Esperar y finalizar
+    #50;
+    $finish;
+  end
+endmodule

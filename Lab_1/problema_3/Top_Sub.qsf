@@ -58,7 +58,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name VERILOG_FILE tb_Top_Sub.v
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_Top_Sub.v -section_id tb_Top_Sub
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -116,4 +115,6 @@ set_location_assignment PIN_V25 -to a[5]
 set_location_assignment PIN_AA15 -to dec_btn
 set_location_assignment PIN_AA14 -to reset
 set_location_assignment PIN_AF14 -to clk
+set_global_assignment -name SYSTEMVERILOG_FILE tb_Top_Sub.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_Top_Sub.sv -section_id tb_Top_Sub
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

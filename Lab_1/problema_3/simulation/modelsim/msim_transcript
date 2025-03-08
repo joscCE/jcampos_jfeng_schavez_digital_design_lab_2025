@@ -10,93 +10,70 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:41:03 on Mar 08,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3" C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv 
+# Start time: 12:07:15 on Mar 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv 
 # -- Compiling module Top_Sub
 # 
 # Top level modules:
 # 	Top_Sub
-# End time: 01:41:03 on Mar 08,2025, Elapsed time: 0:00:00
+# End time: 12:07:16 on Mar 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:41:04 on Mar 08,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3" C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv 
+# Start time: 12:07:16 on Mar 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv 
 # -- Compiling module TopDecoder
 # 
 # Top level modules:
 # 	TopDecoder
-# End time: 01:41:04 on Mar 08,2025, Elapsed time: 0:00:00
+# End time: 12:07:16 on Mar 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:41:04 on Mar 08,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3" C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v 
+# Start time: 12:07:16 on Mar 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.sv 
 # -- Compiling module tb_Top_Sub
 # 
 # Top level modules:
 # 	tb_Top_Sub
-# End time: 01:41:04 on Mar 08,2025, Elapsed time: 0:00:00
+# End time: 12:07:16 on Mar 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_Top_Sub
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_Top_Sub 
-# Start time: 01:41:04 on Mar 08,2025
-# Loading work.tb_Top_Sub
+# Start time: 12:07:17 on Mar 08,2025
 # Loading sv_std.std
+# Loading work.tb_Top_Sub
 # Loading work.Top_Sub
 # Loading work.TopDecoder
-# ** Warning: (vsim-3015) C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv(27): [PCDPC] - Port size (6) does not match connection size (2) for port 'a'. The port definition is at: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_Top_Sub/dut2/topdec File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv
-# ** Warning: (vsim-3015) C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/Top_Sub.sv(27): [PCDPC] - Port size (6) does not match connection size (4) for port 'a'. The port definition is at: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_Top_Sub/dut4/topdec File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/TopDecoder.sv
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Ayudapls  Hostname: DESKTOP-TEQ9DGO  ProcessID: 14628
-#           Attempting to use alternate WLF file "./wlftwdkfyf".
+#           Attempting to use alternate WLF file "./wlftfzmbim".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftwdkfyf
+#           Using alternate file: ./wlftfzmbim
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# 
-# Iniciando testbench para N=2, N=4 y N=6 bits
-# 
-# RESET: Valor inicializado a 3
-# RESET: Valor inicializado a 3
-# RESET: Valor inicializado a 3
-# RESET: Valor inicializado a 3
-# RESET: Valor inicializado a 3
-# RESET: Valor inicializado a 3
-# RESET aplicado: N2=3, N4=3, N6=3
-# DECREMENTO: Nuevo valor 2
-# DECREMENTO: Nuevo valor 2
-# DECREMENTO: Nuevo valor 2
-# DECREMENTO: N2=2, N4=2, N6=2
-# DECREMENTO: Nuevo valor 1
-# DECREMENTO: Nuevo valor 1
-# DECREMENTO: Nuevo valor 1
-# DECREMENTO: N2=1, N4=1, N6=1
-# DECREMENTO: Nuevo valor 0
-# DECREMENTO: Nuevo valor 0
-# DECREMENTO: Nuevo valor 0
-# DECREMENTO: N2=0, N4=0, N6=0
-# RESET: Valor inicializado a 0
-# RESET: Valor inicializado a 0
-# RESET: Valor inicializado a 0
-# UNDERFLOW: Reiniciado a 63
-# UNDERFLOW: Reiniciado a 15
-# UNDERFLOW: Reiniciado a 3
-# Underflow correcto (N=2): 3
-# Underflow correcto (N=4): 15
-# Underflow correcto (N=6): 63
-# ** Note: $finish    : C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v(78)
-#    Time: 145 ps  Iteration: 1  Instance: /tb_Top_Sub
-# 1
-# Break in Module tb_Top_Sub at C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/problema_3/tb_Top_Sub.v line 78
+# Time: 0 | value:  x | a: 15 | reset: 1 | dec_btn: 1 | seg0: 255 | seg1: 255
+# Time: 10000 | value: 15 | a: 15 | reset: 0 | dec_btn: 1 | seg0: 146 | seg1: 249
+# Time: 20000 | value: 15 | a: 15 | reset: 1 | dec_btn: 1 | seg0: 146 | seg1: 249
+# Valor inicial de 'value' correcto: 15
+# Time: 30000 | value: 14 | a: 15 | reset: 1 | dec_btn: 0 | seg0: 153 | seg1: 249
+# Time: 40000 | value: 14 | a: 15 | reset: 1 | dec_btn: 1 | seg0: 153 | seg1: 249
+# Time: 50000 | value: 13 | a: 15 | reset: 1 | dec_btn: 0 | seg0: 176 | seg1: 249
+# Time: 60000 | value: 13 | a: 15 | reset: 1 | dec_btn: 1 | seg0: 176 | seg1: 249
+# Time: 70000 | value: 12 | a: 15 | reset: 1 | dec_btn: 0 | seg0: 164 | seg1: 249
+# Time: 80000 | value: 12 | a: 15 | reset: 1 | dec_btn: 1 | seg0: 164 | seg1: 249
+# Time: 90000 | value: 15 | a: 15 | reset: 0 | dec_btn: 1 | seg0: 146 | seg1: 249
+# Time: 100000 | value: 15 | a: 15 | reset: 1 | dec_btn: 1 | seg0: 146 | seg1: 249
+# Valor restaurado correctamente después del reset: 15
+# Test completado con éxito.
+# End time: 12:09:14 on Mar 08,2025, Elapsed time: 0:01:57
+# Errors: 0, Warnings: 2
