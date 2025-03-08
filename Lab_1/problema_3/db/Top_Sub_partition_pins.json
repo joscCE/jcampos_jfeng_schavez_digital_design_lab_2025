@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "dec_btn",
-					"strict" : false
-				},
-				{
 					"name" : "a[1]",
 					"strict" : false
 				},
@@ -81,6 +77,10 @@
 				},
 				{
 					"name" : "a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_btn",
 					"strict" : false
 				},
 				{

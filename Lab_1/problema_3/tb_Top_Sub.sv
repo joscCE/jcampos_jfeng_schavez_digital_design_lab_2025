@@ -23,7 +23,7 @@ module tb_Top_Sub;
   // Variable para el valor esperado
   logic [N-1:0] expected_value;
 
-  // Generación de un valor aleatorio
+
   initial begin
     a = 100111;  // 15
     expected_value = a;  // El valor inicial de 'value' debe ser 'a'
@@ -32,12 +32,11 @@ module tb_Top_Sub;
     reset = 1;      // Aplicar reset
     dec_btn = 1;    // Botón inactivo
     #10;
-    
-    // Desactivar el reset para cargar el valor en 'value'
-    reset = 0;      // Liberar reset (reset = 0 significa presionar)
+
+    reset = 0;      // presiona el reset para cargar el numero
     #10;
 	 
-	 reset = 1;
+	 reset = 1;     //libera el reset
 	 #10;
     
     // Verificar si el valor cargado es el esperado (a)
@@ -48,8 +47,8 @@ module tb_Top_Sub;
       $display("Valor inicial de 'value' correcto: %d", dut.value);
     end
     
-    // Prueba de decremento: decrecer tres veces
-    dec_btn = 0;    // Activar botón para decrecer (dec_btn = 0 significa presionar)
+    // decremento del numero 3 veces 
+    dec_btn = 0;    // Activar botón para decrecer
     #10;
     dec_btn = 1;    // Liberar botón
     #10;
@@ -84,27 +83,26 @@ module tb_Top_Sub;
       $stop;
     end
     
-    // Aplicar reset nuevamente
-    reset = 0;      // Reset (presionar)
+    // Aplicar reset otra vez
+    reset = 0;      // presiona el reset
     #10;
-    reset = 1;      // Liberar reset (debería restaurar 'value' al valor inicial)
+    reset = 1;      // libera el reset
     #10;
     
-    // Verificar que el valor se haya restaurado al valor inicial
+    // vwerificacion que sea ifual a "a"
     if (dut.value !== expected_value) begin
       $display("ERROR: El valor de 'value' no se restauró correctamente después del reset.");
       $stop;
     end else begin
       $display("Valor restaurado correctamente después del reset: %d", dut.value);
     end
-    
-    // Esperar y finalizar la simulación
+
     #50;
     $display("Test completado con éxito.");
   end
 
   // Conectar 'value' interno al testbench para monitorizarlo
-  assign value_internal = dut.value; // 'value' es interno en Top_Sub, pero lo conectamos aquí
+  assign value_internal = dut.value; 
 
   // Monitorizar el valor de 'value'
   initial begin
