@@ -1,0 +1,21 @@
+|Top_Controller
+btn => seg3[0]~reg0.CLK
+btn => seg3[1]~reg0.CLK
+btn => seg3[2]~reg0.CLK
+btn => seg3[3]~reg0.CLK
+btn => seg3[4]~reg0.CLK
+btn => seg3[5]~reg0.CLK
+btn => seg3[6]~reg0.CLK
+btn => seg3[7]~reg0.CLK
+btn => count[0].CLK
+btn => count[1].CLK
+seg3[0] <= seg3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[1] <= seg3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[2] <= seg3[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[3] <= seg3[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[4] <= seg3[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[5] <= seg3[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[6] <= seg3[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[7] <= seg3[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
