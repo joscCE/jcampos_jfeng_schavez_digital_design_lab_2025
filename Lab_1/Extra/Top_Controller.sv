@@ -26,9 +26,9 @@ module Top_Controller(
             count <= count + 1;
 
         case (count)
-            2'b00: seg3 <= 8'b10000101;
-            2'b01: seg3 <= 8'b00010001;
-            2'b10: seg3 <= 8'b01001001;
+            2'b00: seg3 <= 8'b00010001;
+            2'b01: seg3 <= 8'b01001001;
+            2'b10: seg3 <= 8'b10000101;
             default: seg3 <= 8'b00000000; 
         endcase
     end

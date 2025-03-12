@@ -28,10 +28,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "seg1[0]",
-					"strict" : false
-				},
-				{
 					"name" : "seg1[1]",
 					"strict" : false
 				},

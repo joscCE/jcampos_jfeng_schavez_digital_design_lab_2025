@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top_Controller
-Tue Mar 11 22:46:34 2025
+Wed Mar 12 08:49:17 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 11 22:46:34 2025       ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 12 08:49:17 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Top_Controller                              ;
 ; Top-level Entity Name           ; Top_Controller                              ;
@@ -202,14 +202,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 70       ;
+; Estimate of Logic utilization (ALMs needed) ; 72       ;
 ;                                             ;          ;
 ; Combinational ALUT usage for logic          ; 127      ;
-;     -- 7 input functions                    ; 2        ;
-;     -- 6 input functions                    ; 10       ;
-;     -- 5 input functions                    ; 11       ;
-;     -- 4 input functions                    ; 35       ;
-;     -- <=3 input functions                  ; 69       ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 15       ;
+;     -- 5 input functions                    ; 8        ;
+;     -- 4 input functions                    ; 34       ;
+;     -- <=3 input functions                  ; 70       ;
 ;                                             ;          ;
 ; Dedicated logic registers                   ; 14       ;
 ;                                             ;          ;
@@ -218,9 +218,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; count[0] ;
-; Maximum fan-out                             ; 21       ;
-; Total fan-out                               ; 524      ;
-; Average fan-out                             ; 2.44     ;
+; Maximum fan-out                             ; 20       ;
+; Total fan-out                               ; 522      ;
+; Average fan-out                             ; 2.43     ;
 +---------------------------------------------+----------+
 
 
@@ -229,17 +229,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                 ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Top_Controller                              ; 127 (25)            ; 14 (8)                    ; 0                 ; 0          ; 37   ; 0            ; |Top_Controller                                                                                                                                     ; Top_Controller      ; work         ;
+; |Top_Controller                              ; 127 (26)            ; 14 (8)                    ; 0                 ; 0          ; 37   ; 0            ; |Top_Controller                                                                                                                                     ; Top_Controller      ; work         ;
 ;    |Adder_prob3:adder_inst|                  ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Adder_prob3:adder_inst                                                                                                              ; Adder_prob3         ; work         ;
 ;       |deco_prob3:decoder_inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Adder_prob3:adder_inst|deco_prob3:decoder_inst                                                                                      ; deco_prob3          ; work         ;
 ;       |fulladderbit:FA0|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Adder_prob3:adder_inst|fulladderbit:FA0                                                                                             ; fulladderbit        ; work         ;
 ;       |fulladderbit:FA1|                     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Adder_prob3:adder_inst|fulladderbit:FA1                                                                                             ; fulladderbit        ; work         ;
 ;       |fulladderbit:FA2|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Adder_prob3:adder_inst|fulladderbit:FA2                                                                                             ; fulladderbit        ; work         ;
 ;       |fulladderbit:FA3|                     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Adder_prob3:adder_inst|fulladderbit:FA3                                                                                             ; fulladderbit        ; work         ;
-;    |Decoder_prob1:decoder_inst|              ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Decoder_prob1:decoder_inst                                                                                                          ; Decoder_prob1       ; work         ;
-;       |Decoder7seg:seg_decoder|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Decoder_prob1:decoder_inst|Decoder7seg:seg_decoder                                                                                  ; Decoder7seg         ; work         ;
-;    |Sub_prob3:sub_inst|                      ; 86 (19)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Sub_prob3:sub_inst                                                                                                                  ; Sub_prob3           ; work         ;
-;       |deco_sub3:topdec|                     ; 67 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Sub_prob3:sub_inst|deco_sub3:topdec                                                                                                 ; deco_sub3           ; work         ;
+;    |Decoder_prob1:decoder_inst|              ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Decoder_prob1:decoder_inst                                                                                                          ; Decoder_prob1       ; work         ;
+;       |Decoder7seg:seg_decoder|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Decoder_prob1:decoder_inst|Decoder7seg:seg_decoder                                                                                  ; Decoder7seg         ; work         ;
+;    |Sub_prob3:sub_inst|                      ; 84 (19)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Sub_prob3:sub_inst                                                                                                                  ; Sub_prob3           ; work         ;
+;       |deco_sub3:topdec|                     ; 65 (7)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Sub_prob3:sub_inst|deco_sub3:topdec                                                                                                 ; deco_sub3           ; work         ;
 ;          |lpm_divide:Div0|                   ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Sub_prob3:sub_inst|deco_sub3:topdec|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_3am:auto_generated|  ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Sub_prob3:sub_inst|deco_sub3:topdec|lpm_divide:Div0|lpm_divide_3am:auto_generated                                                   ; lpm_divide_3am      ; work         ;
 ;                |sign_div_unsign_9kh:divider| ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Controller|Sub_prob3:sub_inst|deco_sub3:topdec|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
@@ -284,8 +284,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Top_Controller|Mux2       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Top_Controller|Mux5       ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Top_Controller|Mux14      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Top_Controller|Mux5       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |Top_Controller|Mux14      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -363,29 +363,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 14                          ;
 ;     CLR               ; 6                           ;
 ;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 128                         ;
+; arriav_lcell_comb     ; 129                         ;
 ;     arith             ; 28                          ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 10                          ;
 ;         4 data inputs ; 2                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 88                          ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 19                          ;
+;     normal            ; 91                          ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 20                          ;
 ;         3 data inputs ; 14                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 10                          ;
+;         4 data inputs ; 32                          ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 15                          ;
 ;     shared            ; 10                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 8                           ;
 ; boundary_port         ; 37                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.10                        ;
-; Average LUT depth     ; 6.04                        ;
+; Average LUT depth     ; 6.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -394,7 +392,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -404,7 +402,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 11 22:46:20 2025
+    Info: Processing started: Wed Mar 12 08:49:05 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top_Controller -c Top_Controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -473,6 +471,7 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg3[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Extra/Top_Controller.sv Line: 22
     Warning (13410): Pin "seg3[5]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Extra/Top_Controller.sv Line: 22
+    Warning (13410): Pin "seg1[0]" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/Lab_1/Extra/Top_Controller.sv Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -480,10 +479,10 @@ Info (21057): Implemented 171 device resources after synthesis - the final resou
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 134 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Tue Mar 11 22:46:34 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:26
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4840 megabytes
+    Info: Processing ended: Wed Mar 12 08:49:17 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 

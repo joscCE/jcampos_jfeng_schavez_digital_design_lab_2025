@@ -274,7 +274,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF14      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF15      :        :                   :         : 3B        :                
 seg1[7]                      : AF16      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 GND                          : AF17      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF18      :        :                   :         : 4A        :                
+seg0[0]                      : AF18      : output : 3.3-V LVCMOS      :         : 4A        : N              
 seg3[2]                      : AF19      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 seg3[5]                      : AF20      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 seg3[7]                      : AF21      : output : 3.3-V LVCMOS      :         : 4A        : Y              
@@ -282,7 +282,7 @@ VCCIO4A                      : AF22      : power  :                   : 3.3V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF23      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF24      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF25      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 4A        :                
+seg1[0]                      : AF26      : output : 3.3-V LVCMOS      :         : 4A        : N              
 GND                          : AF27      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF28      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF29      :        :                   :         : 5A        :                
@@ -365,9 +365,9 @@ VREFB3BN0                    : AJ15      : power  :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ16      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ17      :        :                   :         : 4A        :                
 GND                          : AJ18      : gnd    :                   :         :           :                
-seg3[0]                      : AJ19      : output : 3.3-V LVCMOS      :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ20      :        :                   :         : 4A        :                
-seg1[0]                      : AJ21      : output : 3.3-V LVCMOS      :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ21      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ22      :        :                   :         : 4A        :                
 VCCIO4A                      : AJ23      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ24      :        :                   :         : 4A        :                
@@ -394,7 +394,7 @@ GND                          : AK15      : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK16      :        :                   :         : 4A        :                
 VREFB4AN0                    : AK17      : power  :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK18      :        :                   :         : 4A        :                
-seg0[0]                      : AK19      : output : 3.3-V LVCMOS      :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK19      :        :                   :         : 4A        :                
 VCCIO4A                      : AK20      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK21      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK22      :        :                   :         : 4A        :                
@@ -929,7 +929,7 @@ GND                          : W11       : gnd    :                   :         
 VCC                          : W12       : power  :                   : 1.1V    :           :                
 GND                          : W13       : gnd    :                   :         :           :                
 VCC                          : W14       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 3B        :                
+seg3[0]                      : W15       : output : 3.3-V LVCMOS      :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 4A        :                
 seg0[7]                      : W17       : output : 3.3-V LVCMOS      :         : 4A        : Y              
 GND                          : W18       : gnd    :                   :         :           :                
