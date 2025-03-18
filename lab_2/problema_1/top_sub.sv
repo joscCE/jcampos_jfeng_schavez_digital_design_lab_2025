@@ -14,13 +14,10 @@ module top_sub #(parameter x = 4)(
 	input logic [x-1:0] a, b,
 	input logic cin, 
 	output logic [x-1:0] r,
-	output logic cout,
-	output logic N, Z, C, V);
+	output logic cout);
 
 	logic [x:0] borrow; 
 	assign borrow[0] = cin;
-
-	logic [x-1:0] r_temp, r_abs;	
 
 	genvar i;
 	generate
@@ -29,17 +26,11 @@ module top_sub #(parameter x = 4)(
 				 .a(a[i]), 
 				 .b(b[i]), 
 				 .cin(borrow[i]), 
-				 .r(r_temp[i]), 
+				 .r(r[i]), 
 				 .cout(borrow[i+1])
 			);
 	  end
 	endgenerate
 	
 	assign cout = borrow[x];
-	
-	assign N = r[x-1];
-	assign Z = (r == 0);
-	assign C = cout;
-	assign V = (a[x-1] != b[x-1]) && (a[x-1] != r[x-1]);
-
 endmodule 

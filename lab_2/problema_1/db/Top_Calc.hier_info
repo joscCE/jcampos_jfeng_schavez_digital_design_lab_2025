@@ -13,10 +13,6 @@ r[1] << top_sub:restador_4bits.r
 r[2] << top_sub:restador_4bits.r
 r[3] << top_sub:restador_4bits.r
 cout << top_sub:restador_4bits.cout
-N << top_sub:restador_4bits.N
-Z << top_sub:restador_4bits.Z
-C << top_sub:restador_4bits.C
-V << top_sub:restador_4bits.V
 
 
 |Top_Calc|top_sub:restador_4bits
@@ -29,15 +25,11 @@ b[1] => b[1].IN1
 b[2] => b[2].IN1
 b[3] => b[3].IN1
 cin => borrow[0].IN1
-r[0] <= r_abs.DB_MAX_OUTPUT_PORT_TYPE
-r[1] <= r_abs.DB_MAX_OUTPUT_PORT_TYPE
-r[2] <= r_abs.DB_MAX_OUTPUT_PORT_TYPE
-r[3] <= r_abs.DB_MAX_OUTPUT_PORT_TYPE
+r[0] <= fullsubstract:sub_loop[0].fs_unit.r
+r[1] <= fullsubstract:sub_loop[1].fs_unit.r
+r[2] <= fullsubstract:sub_loop[2].fs_unit.r
+r[3] <= fullsubstract:sub_loop[3].fs_unit.r
 cout <= fullsubstract:sub_loop[3].fs_unit.cout
-N <= r_abs.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-C <= fullsubstract:sub_loop[3].fs_unit.cout
-V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top_Calc|top_sub:restador_4bits|fullsubstract:sub_loop[0].fs_unit
