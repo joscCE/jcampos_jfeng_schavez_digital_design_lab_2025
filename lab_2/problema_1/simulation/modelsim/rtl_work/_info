@@ -1,0 +1,111 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/simulation/modelsim
+vfullsubstract
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1742268386
+!i10b 1
+!s100 eWVB@Q]dNz6o@gM24kaFN3
+ICYz49eYNN2J^3inSL2mk;1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 top_sub_sv_unit
+S1
+R0
+Z5 w1742268369
+Z6 8C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv
+Z7 FC:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv
+L0 2
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1742268386.000000
+Z10 !s107 C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1
+Z14 tCvgOpt 0
+vtb_top_sub
+R1
+R2
+!i10b 1
+!s100 D;0d:2T67Q30]cn2?6e^o1
+Ih[Ji`OzMnlOTo8?2WWJT53
+R3
+!s105 tb_top_sub_sv_unit
+S1
+R0
+w1742267969
+8C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_top_sub.sv
+FC:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_top_sub.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_top_sub.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_top_sub.sv|
+!i113 1
+R12
+R13
+R14
+vTop_Calc
+R1
+R2
+!i10b 1
+!s100 1Qc=zbAngCBco8X7dBPQI2
+I4N@0nSh=BQk9Fi[jaSc`m3
+R3
+!s105 Top_Calc_sv_unit
+S1
+R0
+w1742267006
+8C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
+FC:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
+!i113 1
+R12
+R13
+R14
+n@top_@calc
+vtop_sub
+R1
+R2
+!i10b 1
+!s100 1zS?VIcnD]7CJOh7QJHhf0
+I?h6BQ7;L3hBkX3fD:iQ1U2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
