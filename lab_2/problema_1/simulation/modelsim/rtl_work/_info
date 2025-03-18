@@ -1,0 +1,139 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/simulation/modelsim
+vFullAdder
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1742272310
+!i10b 1
+!s100 XoDKA@;HNc>hBCbzYBIok0
+If0Ri^X;Fhl0^0JjB=b8l03
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 FullAdder_sv_unit
+S1
+R0
+w1742270719
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1742272310.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1
+Z8 tCvgOpt 0
+n@full@adder
+vfulladderbit
+R1
+R2
+!i10b 1
+!s100 4@ZcCe63P9STU_DhN9HGk3
+I7AWZ33GXO2Y_@CdnbS]3A3
+R3
+!s105 fulladderbit_sv_unit
+S1
+R0
+w1742261063
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv|
+!i113 1
+R6
+R7
+R8
+vMultiplier
+R1
+R2
+!i10b 1
+!s100 =_V``jI4K`dnGZlY:cMeB3
+IiP=hPK62F3mnYGS:KH22F3
+R3
+!s105 Multiplier_sv_unit
+S1
+R0
+w1742271960
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z9 !s108 1742272309.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv|
+!i113 1
+R6
+R7
+R8
+n@multiplier
+vMultiplier_tb
+R1
+R2
+!i10b 1
+!s100 2OgHYNznQh_?1BJZ65U3Z2
+IDEYVIHndR@CSneeY:A0=12
+R3
+!s105 Multiplier_tb_sv_unit
+S1
+R0
+w1742271810
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier_tb.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier_tb.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier_tb.sv|
+!i113 1
+R6
+R7
+R8
+n@multiplier_tb
+vTop_Calc
+R1
+!s110 1742272309
+!i10b 1
+!s100 GWO[ezjbNEWNo=;4Xzl[D3
+Ii:M_`K2;N;9]@H38S??082
+R3
+!s105 Top_Calc_sv_unit
+S1
+R0
+w1742272133
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
+!i113 1
+R6
+R7
+R8
+n@top_@calc

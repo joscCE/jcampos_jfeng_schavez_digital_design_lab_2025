@@ -1,0 +1,7 @@
+module Multiplier(
+	logic input [3:0] a,b
+	logic output [3:0]
+
+
+
+;
