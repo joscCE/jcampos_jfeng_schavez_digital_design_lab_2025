@@ -12,70 +12,70 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:31:49 on Mar 17,2025
+# Start time: 23:11:46 on Mar 19,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv 
 # -- Compiling module Top_Calc
 # 
 # Top level modules:
 # 	Top_Calc
-# End time: 22:31:49 on Mar 17,2025, Elapsed time: 0:00:00
+# End time: 23:11:46 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:31:49 on Mar 17,2025
+# Start time: 23:11:46 on Mar 19,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv 
 # -- Compiling module Multiplier
 # 
 # Top level modules:
 # 	Multiplier
-# End time: 22:31:50 on Mar 17,2025, Elapsed time: 0:00:01
+# End time: 23:11:46 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:31:50 on Mar 17,2025
+# Start time: 23:11:46 on Mar 19,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv 
 # -- Compiling module fulladderbit
 # 
 # Top level modules:
 # 	fulladderbit
-# End time: 22:31:50 on Mar 17,2025, Elapsed time: 0:00:00
+# End time: 23:11:46 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:31:50 on Mar 17,2025
+# Start time: 23:11:46 on Mar 19,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv 
 # -- Compiling module FullAdder
 # 
 # Top level modules:
 # 	FullAdder
-# End time: 22:31:50 on Mar 17,2025, Elapsed time: 0:00:00
+# End time: 23:11:46 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:31:50 on Mar 17,2025
+# Start time: 23:11:46 on Mar 19,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier_tb.sv 
 # -- Compiling module Multiplier_tb
 # 
 # Top level modules:
 # 	Multiplier_tb
-# End time: 22:31:50 on Mar 17,2025, Elapsed time: 0:00:00
+# End time: 23:11:46 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Multiplier_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Multiplier_tb 
-# Start time: 22:31:51 on Mar 17,2025
+# Start time: 23:11:48 on Mar 19,2025
 # Loading sv_std.std
 # Loading work.Multiplier_tb
 # Loading work.Multiplier
 # Loading work.FullAdder
 # Loading work.fulladderbit
-# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv(32): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /Multiplier_tb/uut/FA0 File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
-# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv(40): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /Multiplier_tb/uut/FA1 File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
-# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv(48): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /Multiplier_tb/uut/FA2 File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv(31): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /Multiplier_tb/uut/adder_gen[1]/FA File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv(31): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /Multiplier_tb/uut/adder_gen[2]/FA File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv(31): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /Multiplier_tb/uut/adder_gen[3]/FA File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
 # 
 # add wave *
 # view structure
@@ -83,5 +83,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 22:32:52 on Mar 17,2025, Elapsed time: 0:01:01
+# End time: 23:12:15 on Mar 19,2025, Elapsed time: 0:00:27
 # Errors: 0, Warnings: 3

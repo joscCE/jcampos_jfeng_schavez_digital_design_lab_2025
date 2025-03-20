@@ -34,17 +34,17 @@ b[3] => partials.IN1
 b[3] => partials.IN1
 b[3] => partials.IN1
 b[3] => partials.IN1
-p[0] <= FullAdder:FA2.s
-p[1] <= FullAdder:FA2.s
-p[2] <= FullAdder:FA2.s
-p[3] <= FullAdder:FA2.s
-p[4] <= FullAdder:FA2.s
-p[5] <= FullAdder:FA2.s
-p[6] <= FullAdder:FA2.s
-p[7] <= FullAdder:FA2.s
+p[0] <= FullAdder:adder_gen[3].FA.s
+p[1] <= FullAdder:adder_gen[3].FA.s
+p[2] <= FullAdder:adder_gen[3].FA.s
+p[3] <= FullAdder:adder_gen[3].FA.s
+p[4] <= FullAdder:adder_gen[3].FA.s
+p[5] <= FullAdder:adder_gen[3].FA.s
+p[6] <= FullAdder:adder_gen[3].FA.s
+p[7] <= FullAdder:adder_gen[3].FA.s
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -73,7 +73,7 @@ s[7] <= fulladderbit:FA[7].FA_bit.s
 cout <= fulladderbit:FA[7].FA_bit.cout
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[0].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[0].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -84,7 +84,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[1].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[1].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -95,7 +95,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[2].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[2].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -106,7 +106,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[3].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[3].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -117,7 +117,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[4].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[4].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -128,7 +128,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[5].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[5].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -139,7 +139,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[6].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[6].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -150,7 +150,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA0|fulladderbit:FA[7].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[1].FA|fulladderbit:FA[7].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -161,7 +161,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -190,7 +190,7 @@ s[7] <= fulladderbit:FA[7].FA_bit.s
 cout <= fulladderbit:FA[7].FA_bit.cout
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[0].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[0].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -201,7 +201,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[1].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[1].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -212,7 +212,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[2].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[2].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -223,7 +223,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[3].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[3].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -234,7 +234,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[4].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[4].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -245,7 +245,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[5].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[5].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -256,7 +256,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[6].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[6].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -267,7 +267,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA1|fulladderbit:FA[7].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[2].FA|fulladderbit:FA[7].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -278,7 +278,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -307,7 +307,7 @@ s[7] <= fulladderbit:FA[7].FA_bit.s
 cout <= fulladderbit:FA[7].FA_bit.cout
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[0].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[0].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -318,7 +318,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[1].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[1].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -329,7 +329,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[2].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[2].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -340,7 +340,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[3].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[3].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -351,7 +351,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[4].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[4].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -362,7 +362,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[5].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[5].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -373,7 +373,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[6].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[6].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
@@ -384,7 +384,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Calc|Multiplier:uut|FullAdder:FA2|fulladderbit:FA[7].FA_bit
+|Top_Calc|Multiplier:uut|FullAdder:adder_gen[3].FA|fulladderbit:FA[7].FA_bit
 a => p.IN0
 a => g.IN0
 b => p.IN1
