@@ -1,5 +1,5 @@
 Flow report for Top_Calc
-Wed Mar 19 14:25:03 2025
+Fri Mar 21 09:35:04 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Wed Mar 19 14:25:02 2025       ;
+; Flow Status                 ; Successful - Fri Mar 21 09:35:04 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Top_Calc                                    ;
 ; Top-level Entity Name       ; Top_Calc                                    ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/19/2025 14:24:50 ;
+; Start date & time ; 03/21/2025 09:34:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Top_Calc            ;
 +-------------------+---------------------+
@@ -73,15 +73,19 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 123719801157884.174241589011796        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 123719801157884.174257129307800        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; top_div_tb     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; top_mod_tb     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; top_div_tb                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_FILE                  ; top_div_tb.sv                          ; --            ; --          ; top_div_tb     ;
+; EDA_TEST_BENCH_FILE                  ; top_mod_tb.sv                          ; --            ; --          ; top_mod_tb     ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; top_div_tb                             ; --            ; --          ; top_div_tb     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; top_mod_tb                             ; --            ; --          ; top_mod_tb     ;
 ; EDA_TEST_BENCH_NAME                  ; top_div_tb                             ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; top_mod_tb                             ; --            ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
@@ -99,8 +103,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4766 MB             ; 00:00:24                           ;
-; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4766 MB             ; 00:00:23                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:23                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
