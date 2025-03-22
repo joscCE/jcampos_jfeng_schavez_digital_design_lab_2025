@@ -7,7 +7,7 @@ module tb_top_sub;
 	//Señales DUT
 	
 	logic [x-1:0] a, b, r;
-	logic cin, cout;
+	logic cin, cout, Ne;
 	
 	// Instanciar módulo
 	
@@ -16,7 +16,8 @@ module tb_top_sub;
 	 .b(b),
 	 .cin(cin),
 	 .r(r),
-	 .cout(cout)
+	 .cout(cout),
+	 .Ne(Ne)
 	);
 	
 	initial begin
@@ -28,15 +29,15 @@ module tb_top_sub;
 		b = 4'b0011; // 3
 		cin = 0;
 		#10;
-		check_result(4'b0010); // 5 - 3 = 2
+		check_result(4'b0010, 0); // 5 - 3 = 2, Ne = 0
 		
 		
-		// Prueba 2: 8 - 8
+		// Prueba 2: 8 - 8 
 		a = 4'b1000; // 8
 		b = 4'b1000; // 8
 		cin = 0;
 		#10;
-		check_result(4'b0000); // 8 - 8 = 0
+		check_result(4'b0000, 0); // 8 - 8 = 0, Ne = 0
 		
 		
 		// Prueba 3: 0 - 1 
@@ -44,7 +45,14 @@ module tb_top_sub;
 		b = 4'b0001; // 1
 		cin = 0;
 		#10;
-		check_result(4'b1111); // 0 - 1 = -1
+		check_result(4'b0001, 1); // |0 - 1| = 1, Ne = 1
+		
+		// Prueba 4: 2 - 3 
+		a = 4'b0010; // 2
+		b = 4'b0011; // 3
+		cin = 0;
+		#10;
+		check_result(4'b0001, 1); // |2 - 3| = 1, Ne = 1
 		
 		
 		$display("Todas las pruebas pasaron correctamente.");
@@ -53,18 +61,17 @@ module tb_top_sub;
 	
 	
 	task check_result(
-		input logic [x-1:0] expected_r);
-
-		if (r !== expected_r) begin
+		input logic [x-1:0] expected_r,
+		input logic expected_Ne
+	);
+		if (r !== expected_r || Ne !== expected_Ne) begin
 			$display("ERROR en la prueba: a=%b, b=%b, cin=%b", a, b, cin);
-			$display("Esperado -> r=%b", expected_r);
-			$display("Obtenido -> r=%b", r);
+			$display("Esperado -> r=%b, Ne=%b", expected_r, expected_Ne);
+			$display("Obtenido -> r=%b, Ne=%b", r, Ne);
 			$stop;
-			
 		end else begin
-			$display("Prueba PASADA: a=%b, b=%b, cin=%b -> r=%b", a, b, cin, r);
+			$display("Prueba PASADA: a=%b, b=%b, cin=%b -> r=%b, Ne=%b", a, b, cin, r, Ne);
 		end
-		
 	endtask
 
 
