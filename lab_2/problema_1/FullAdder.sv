@@ -1,5 +1,5 @@
 module FullAdder #(
-    parameter N = 8 // Parámetro de tamaño (por defecto 4 bits)
+    parameter N = 4 // Parámetro de tamaño (por defecto 4 bits)
 )(
     input  logic [N-1:0] a, b,  // Entradas de N bits
     input  logic cin,            // Carry de entrada
