@@ -1,0 +1,52 @@
+
+module fullsubstract(
+	input logic a,b,cin, 
+	output logic r, cout);
+							
+	assign cout = (~a & cin) | (a & ~b) | (cin & b);
+	assign r = a ^ b ^ cin;
+	
+endmodule 
+
+
+module top_sub #(parameter x = 4)(
+	input logic [x-1:0] a, b,
+	input logic cin, 
+	output logic [x-1:0] r,
+	output logic cout,
+	output logic N, Z, C, V);
+
+	logic y; //carry
+	
+	genvar i;
+	generate
+		for (i = 0; i < x; i = i + 1) begin : sub_loop 
+		
+			if (i == 0) begin 
+				fullsubstract fs_unit (
+					.a(a[i]),
+					.b(b[i]),
+					.cin(cin),
+					.r(r[i]),
+					.cout(x)
+				);
+			end else begin 
+				fullsubstract fs_unit (
+					.a(a[i]),
+					.b(b[i]),
+					.cin(x),
+					.r(r[i]),
+					.cout(x)
+				);
+			end
+		end
+	endgenerate 
+
+	assign cout = y;
+	
+	assign N = r[x-1];
+	assign Z = (r == 0);
+	assign C = cout;
+	assign V = (a[x-1] != b[x-1]) && (a[x-1] != r[x-1]);
+	
+endmodule

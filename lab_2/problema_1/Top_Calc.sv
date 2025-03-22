@@ -3,7 +3,11 @@ module Top_Calc #(parameter N = 4)(
     output logic [N-1:0] quotient,
     output logic [N-1:0] remainder_mod,
     output logic error_div,
-    output logic error_mod
+    output logic error_mod,
+
+    input logic cin,  
+    output logic [N-1:0] r,       
+	output logic cout
 );
 
     // División
@@ -21,5 +25,14 @@ module Top_Calc #(parameter N = 4)(
         .remainder(remainder_mod),
         .error(error_mod)
     );
+
+    // Resta
+	top_sub #(.x(N)) restador_4bits (
+		.a(a),      
+		.b(b),      
+		.cin(cin),  
+		.r(r),      
+		.cout(cout)
+	);
 
 endmodule
