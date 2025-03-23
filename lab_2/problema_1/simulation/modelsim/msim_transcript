@@ -10,75 +10,111 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:54:15 on Mar 21,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv 
+# Start time: 19:25:21 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv 
 # -- Compiling module fullsubstract
 # -- Compiling module top_sub
 # 
 # Top level modules:
 # 	top_sub
-# End time: 22:54:15 on Mar 21,2025, Elapsed time: 0:00:00
+# End time: 19:25:21 on Mar 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:54:15 on Mar 21,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv 
+# Start time: 19:25:21 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv 
+# -- Compiling module top_mod
+# 
+# Top level modules:
+# 	top_mod
+# End time: 19:25:21 on Mar 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:25:21 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv 
+# -- Compiling module top_div
+# 
+# Top level modules:
+# 	top_div
+# End time: 19:25:21 on Mar 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:25:22 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv 
 # -- Compiling module Top_Calc
 # 
 # Top level modules:
 # 	Top_Calc
-# End time: 22:54:15 on Mar 21,2025, Elapsed time: 0:00:00
+# End time: 19:25:22 on Mar 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:54:15 on Mar 21,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv 
+# Start time: 19:25:22 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv 
 # -- Compiling module Multiplier
 # 
 # Top level modules:
 # 	Multiplier
-# End time: 22:54:15 on Mar 21,2025, Elapsed time: 0:00:00
+# End time: 19:25:22 on Mar 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:54:15 on Mar 21,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv 
+# Start time: 19:25:22 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv 
 # -- Compiling module fulladderbit
 # 
 # Top level modules:
 # 	fulladderbit
-# End time: 22:54:15 on Mar 21,2025, Elapsed time: 0:00:00
+# End time: 19:25:22 on Mar 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:54:15 on Mar 21,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv 
+# Start time: 19:25:22 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv 
 # -- Compiling module FullAdder
 # 
 # Top level modules:
 # 	FullAdder
-# End time: 22:54:15 on Mar 21,2025, Elapsed time: 0:00:00
+# End time: 19:25:22 on Mar 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_top_sub.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:54:15 on Mar 21,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_top_sub.sv 
-# -- Compiling module tb_top_sub
+# Start time: 19:25:22 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv 
+# -- Compiling module ALU
 # 
 # Top level modules:
-# 	tb_top_sub
-# End time: 22:54:15 on Mar 21,2025, Elapsed time: 0:00:00
+# 	ALU
+# End time: 19:25:22 on Mar 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_top_sub
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_top_sub 
-# Start time: 22:54:15 on Mar 21,2025
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:25:22 on Mar 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU_tb.sv 
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 19:25:22 on Mar 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
+# Start time: 19:25:23 on Mar 22,2025
 # Loading sv_std.std
-# Loading work.tb_top_sub
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.top_mod
+# Loading work.top_div
+# Loading work.Multiplier
+# Loading work.FullAdder
 # Loading work.top_sub
+# Loading work.fulladderbit
 # Loading work.fullsubstract
 # 
 # add wave *
@@ -87,13 +123,15 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Iniciando pruebas...
-# Prueba PASADA: a=0101, b=0011, cin=0 -> r=0010, Ne=0
-# Prueba PASADA: a=1000, b=1000, cin=0 -> r=0000, Ne=0
-# Prueba PASADA: a=0000, b=0001, cin=0 -> r=0001, Ne=1
-# Prueba PASADA: a=0010, b=0011, cin=0 -> r=0001, Ne=1
-# Todas las pruebas pasaron correctamente.
-# ** Note: $finish    : C:/Users/jimmy/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_top_sub.sv(59)
-#    Time: 40 ns  Iteration: 0  Instance: /tb_top_sub
-# End time: 22:54:22 on Mar 21,2025, Elapsed time: 0:00:07
+# SUMA: a=1011, b=0011, y=1110, f=00000
+# RESTA: a=1011, b=0011, y=1000, f=00000
+# MULTIPLICACION: a=1011, b=0011, y=0001, f=00001
+# DIVISION: a=1011, b=0011, y=0011, f=00000
+# MODULO: a=1011, b=0011, y=0010, f=00000
+# AND: a=1011, b=0011, y=0011
+# OR: a=1011, b=0011, y=1011
+# XOR: a=1011, b=0011, y=1000
+# SHIFT LEFT: a=1011, y=0110
+# SHIFT RIGHT: a=1011, y=0101
+# End time: 19:26:40 on Mar 22,2025, Elapsed time: 0:01:17
 # Errors: 0, Warnings: 0

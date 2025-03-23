@@ -1,6 +1,7 @@
 module Multiplier #(parameter N = 4) (
     input logic [N-1:0] a, b,
-    output logic [(2*N)-1:0] p
+    output logic [N-1:0] p,   
+    output logic v           
 );
 
     logic [N-1:0] partials [0:N-1];
@@ -18,7 +19,7 @@ module Multiplier #(parameter N = 4) (
     
     generate
         for (i = 0; i < N; i++) begin : shift_gen
-            assign shifted_partial[i] = {partials[i], {i{1'b0}}}; 
+            assign shifted_partial[i] = {{(N){1'b0}}, partials[i]} << i;
         end
     endgenerate
     
@@ -28,16 +29,11 @@ module Multiplier #(parameter N = 4) (
     
     generate
         for (i = 1; i < N; i++) begin : adder_gen
-            FullAdder FA (
-                .a(sum[i-1]), 
-                .b(shifted_partial[i]), 
-                .cin(0),
-                .s(sum[i]), 
-                .cout()
-            );
+            assign sum[i] = sum[i-1] + shifted_partial[i];
         end
     endgenerate
     
-    assign p = sum[N-1];
-    
+    assign p = sum[N-1][N-1:0];  
+    assign v = |sum[N-1][2*N-1:N];  
+
 endmodule
