@@ -2,4 +2,100 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'equ'
+Slack : -6.813
+TNS   : -58.789
+
+Type  : Slow 1100mV 85C Model Setup 'sig'
+Slack : -0.323
+TNS   : -1.777
+
+Type  : Slow 1100mV 85C Model Hold 'equ'
+Slack : -2.331
+TNS   : -10.481
+
+Type  : Slow 1100mV 85C Model Hold 'sig'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'equ'
+Slack : -0.548
+TNS   : -8.565
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'sig'
+Slack : -0.532
+TNS   : -7.566
+
+Type  : Slow 1100mV 0C Model Setup 'equ'
+Slack : -6.667
+TNS   : -56.978
+
+Type  : Slow 1100mV 0C Model Setup 'sig'
+Slack : -0.377
+TNS   : -2.048
+
+Type  : Slow 1100mV 0C Model Hold 'equ'
+Slack : -2.312
+TNS   : -10.743
+
+Type  : Slow 1100mV 0C Model Hold 'sig'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'equ'
+Slack : -0.510
+TNS   : -8.277
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'sig'
+Slack : -0.507
+TNS   : -7.423
+
+Type  : Fast 1100mV 85C Model Setup 'equ'
+Slack : -3.758
+TNS   : -32.132
+
+Type  : Fast 1100mV 85C Model Setup 'sig'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'equ'
+Slack : -1.334
+TNS   : -5.549
+
+Type  : Fast 1100mV 85C Model Hold 'sig'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'equ'
+Slack : -0.650
+TNS   : -9.493
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'sig'
+Slack : -0.642
+TNS   : -8.479
+
+Type  : Fast 1100mV 0C Model Setup 'equ'
+Slack : -3.348
+TNS   : -28.777
+
+Type  : Fast 1100mV 0C Model Setup 'sig'
+Slack : 0.266
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'equ'
+Slack : -1.354
+TNS   : -6.301
+
+Type  : Fast 1100mV 0C Model Hold 'sig'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'equ'
+Slack : -0.666
+TNS   : -9.974
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'sig'
+Slack : -0.664
+TNS   : -8.997
+
 ------------------------------------------------------------

@@ -1,0 +1,37 @@
+module Decoder_bin(
+    input logic [3:0] a,        // Entrada de 4 bits
+    output logic [7:0] seg3, seg2, seg1, seg0 // Salidas a displays de 7 segmentos (4 displays)
+);
+
+    // Decodificación de los 7 segmentos para cada bit
+    always_comb begin
+        // Decodificación del primer bit (más significativo)
+        case (a[3])  // a[3] es el bit más significativo
+            1'b0: seg3 = 8'b11111111; // Apagado (representa 0)
+            1'b1: seg3 = 8'b00000001; // Encendido (representa 1)
+            default: seg3 = 8'b11111111; // Apagado
+        endcase
+        
+        // Decodificación del segundo bit
+        case (a[2])  // a[2] es el siguiente bit
+            1'b0: seg2 = 8'b11111111; // Apagado
+            1'b1: seg2 = 8'b00000001; // Encendido
+            default: seg2 = 8'b11111111; // Apagado
+        endcase
+        
+        // Decodificación del tercer bit
+        case (a[1])  // a[1] es el siguiente bit
+            1'b0: seg1 = 8'b11111111; // Apagado
+            1'b1: seg1 = 8'b00000001; // Encendido
+            default: seg1 = 8'b11111111; // Apagado
+        endcase
+        
+        // Decodificación del cuarto bit (menos significativo)
+        case (a[0])  // a[0] es el bit menos significativo
+            1'b0: seg0 = 8'b11111111; // Apagado
+            1'b1: seg0 = 8'b00000001; // Encendido
+            default: seg0 = 8'b11111111; // Apagado
+        endcase
+    end
+
+endmodule

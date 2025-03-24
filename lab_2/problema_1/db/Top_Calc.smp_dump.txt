@@ -1,0 +1,16 @@
+
+State Machine - |Top_Calc|lcd_controller:lcd_inst|state
+Name state.SEND_DATA state.SEND_ADDR state.START_COND state.IDLE state.STOP_COND 
+state.IDLE 0 0 0 0 0 
+state.START_COND 0 0 1 1 0 
+state.SEND_ADDR 0 1 0 1 0 
+state.SEND_DATA 1 0 0 1 0 
+state.STOP_COND 0 0 0 1 1 
+
+State Machine - |Top_Calc|lcd_controller:lcd_inst|i2c_master:i2c_inst|state
+Name state.CHECK_ACK state.SEND_BYTE state.START_COND state.IDLE state.STOP_COND 
+state.IDLE 0 0 0 0 0 
+state.START_COND 0 0 1 1 0 
+state.SEND_BYTE 0 1 0 1 0 
+state.CHECK_ACK 1 0 0 1 0 
+state.STOP_COND 0 0 0 1 1 

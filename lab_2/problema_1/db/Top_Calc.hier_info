@@ -1,4 +1,70 @@
 |Top_Calc
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+sig => op[0].CLK
+sig => op[1].CLK
+sig => op[2].CLK
+sig => op[3].CLK
+equ => flag[0]~reg0.CLK
+equ => flag[1]~reg0.CLK
+equ => flag[2]~reg0.CLK
+equ => flag[3]~reg0.CLK
+equ => flag[4]~reg0.CLK
+equ => result[0].CLK
+equ => result[1].CLK
+equ => result[2].CLK
+equ => result[3].CLK
+seg1[0] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[1] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[2] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[3] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[6] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[7] << seg1.DB_MAX_OUTPUT_PORT_TYPE
+seg0[0] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[1] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[2] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[3] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[4] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[5] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[6] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[7] << seg0.DB_MAX_OUTPUT_PORT_TYPE
+seg2[0] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[1] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[2] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[3] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[4] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[5] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[6] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[7] << seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg3[0] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg3[1] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg3[2] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg3[3] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg3[4] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg3[5] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg3[6] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg3[7] << seg3.DB_MAX_OUTPUT_PORT_TYPE
+seg4[0] << <VCC>
+seg4[1] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg4[2] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg4[3] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg4[4] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg4[5] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg4[6] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg4[7] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+flag[0] << flag[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flag[1] << flag[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flag[2] << flag[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flag[3] << flag[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flag[4] << flag[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top_Calc|ALU:alu_inst
@@ -348,5 +414,71 @@ cin => cout.IN1
 cin => cout.IN1
 r <= r.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_Calc|Decoder:dec_inst
+a[0] => LessThan0.IN8
+a[0] => Mod0.IN7
+a[1] => LessThan0.IN7
+a[1] => Mod0.IN6
+a[2] => LessThan0.IN6
+a[2] => Mod0.IN5
+a[3] => LessThan0.IN5
+a[3] => Mod0.IN4
+seg1[0] <= <VCC>
+seg1[1] <= <VCC>
+seg1[2] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+seg1[3] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] <= <GND>
+seg1[6] <= <GND>
+seg1[7] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[0] <= <VCC>
+seg0[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg0[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg0[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg0[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg0[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg0[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg0[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_Calc|Decoder_bin:dec_bin_inst
+a[0] => Decoder3.IN0
+a[1] => Decoder2.IN0
+a[2] => Decoder1.IN0
+a[3] => Decoder0.IN0
+seg3[0] <= <VCC>
+seg3[1] <= <VCC>
+seg3[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+seg3[5] <= <GND>
+seg3[6] <= <GND>
+seg3[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+seg2[0] <= <VCC>
+seg2[1] <= <VCC>
+seg2[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+seg2[3] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+seg2[4] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+seg2[5] <= <GND>
+seg2[6] <= <GND>
+seg2[7] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+seg1[0] <= <VCC>
+seg1[1] <= <VCC>
+seg1[2] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+seg1[3] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] <= <GND>
+seg1[6] <= <GND>
+seg1[7] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+seg0[0] <= <VCC>
+seg0[1] <= <VCC>
+seg0[2] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
+seg0[3] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
+seg0[4] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
+seg0[5] <= <GND>
+seg0[6] <= <GND>
+seg0[7] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
 
 

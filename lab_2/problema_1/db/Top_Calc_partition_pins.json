@@ -2,7 +2,192 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "seg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg4[7]",
+					"strict" : false
+				},
+				{
+					"name" : "flag[0]",
+					"strict" : false
+				},
+				{
+					"name" : "flag[1]",
+					"strict" : false
+				},
+				{
+					"name" : "flag[2]",
+					"strict" : false
+				},
+				{
+					"name" : "flag[3]",
+					"strict" : false
+				},
+				{
+					"name" : "flag[4]",
+					"strict" : false
+				},
+				{
+					"name" : "a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "equ",
+					"strict" : false
+				},
+				{
+					"name" : "sig",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
