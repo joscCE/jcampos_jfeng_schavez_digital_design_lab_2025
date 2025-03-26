@@ -76,16 +76,37 @@ module ALU #(parameter N = 4) (
                 y = y_mod; 
                 f[4] = err_mod; // Error
             end
-            4'b0101: y = a & b;  // AND
-            4'b0110: y = a | b;  // OR
-            4'b0111: y = a ^ b;  // XOR
-            4'b1000: y = a << 1; // Shift Left (mantiene el tamaño `N`)
-            4'b1001: y = a >> 1; // Shift Right (mantiene el tamaño `N`)
-            default: y = {N{1'b0}}; // Valor por defecto
+            4'b0101: begin 
+					 y = a & b;  // AND
+				end
+            4'b0110: begin 
+				    y = a | b;  // OR
+				end
+            4'b0111: begin
+					 y = a ^ b;  // XOR
+				end
+            4'b1000: begin 
+					 y = a << b; // Shift Left (mantiene el tamaño `N`)
+				end
+            4'b1001: begin 
+					 y = a >> b; // Shift Right (mantiene el tamaño `N`)
+				end
+            default: begin 
+				    y = {N{1'b0}}; // Valor por defecto
+					 
+					 f[0] = 1'b0; //Desbordamiento
+					 f[1] = 1'b0; //Acarreo
+					 f[2] = 1'b0; //Cero
+					 f[3] = 1'b0; //Negativo
+					 f[4] = 1'b0; //Error
+				end
         endcase
 
         // Bandera Z (Cero)
         f[2] = (y == {N{1'b0}}) ? 1'b1 : 1'b0;
+		  
+		  
+
     end
 
 endmodule

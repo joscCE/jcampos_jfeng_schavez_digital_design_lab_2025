@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Mar 25 22:52:35 2025
+Fitter Status : Successful - Wed Mar 26 16:35:27 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Top_Calc
 Top-level Entity Name : Top_Calc
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 82 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 85 / 41,910 ( < 1 % )
 Total registers : 17
 Total pins : 55 / 499 ( 11 % )
 Total virtual pins : 0

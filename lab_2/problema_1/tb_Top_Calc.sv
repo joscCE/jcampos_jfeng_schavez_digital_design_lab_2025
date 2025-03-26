@@ -2,206 +2,88 @@
 
 module tb_Top_Calc();
 
-    // Inputs
-    logic [3:0] a, b;
+    logic [3:0] a, b, op;
     logic sig, equ;
-    
-    // Outputs
     logic [7:0] seg1, seg0, seg2, seg3, seg4;
     logic [4:0] flag;
+    logic [3:0] expected_result;
     
-    // Instantiate the Unit Under Test (UUT)
     Top_Calc uut (
-        .a(a),
-        .b(b),
-        .sig(sig),
-        .equ(equ),
-        .seg1(seg1),
-        .seg0(seg0),
-        .seg2(seg2),
-        .seg3(seg3),
-        .seg4(seg4),
+        .a(a), 
+        .b(b), 
+        .sig(sig), 
+        .equ(equ), 
+        .seg1(seg1), 
+        .seg0(seg0), 
+        .seg2(seg2), 
+        .seg3(seg3), 
+        .seg4(seg4), 
         .flag(flag)
     );
     
-    // Clock generation for button simulation
-    logic clk;
-    initial begin
-        clk = 0;
-        forever #10 clk = ~clk;
-    end
-    
-    // Test procedure
-    initial begin
-        // Initialize Inputs
-        a = 0;
-        b = 0;
-        sig = 0;
-        equ = 0;
-        
-        // Wait for global reset
-        #100;
-        
-        // Test each operation with 2 different input pairs
-        
-        // 1. SUMA (+)
-        $display("\nTesting SUMA (+) operation:");
-        a = 4'b0011; b = 4'b0100; // 3 + 4
-        press_equ();
-        check_result(7, "3 + 4");
-        
-        a = 4'b1010; b = 4'b0110; // 10 + 6
-        press_equ();
-        check_result(16, "10 + 6");
-        
-        // 2. RESTA (-)
-        press_sig();
-        $display("\nTesting RESTA (-) operation:");
-        a = 4'b1000; b = 4'b0011; // 8 - 3
-        press_equ();
-        check_result(5, "8 - 3");
-        
-        a = 4'b0101; b = 4'b1000; // 5 - 8 (underflow)
-        press_equ();
-        check_result(-3, "5 - 8");
-        
-        // 3. MULTIPLICACIÓN (*)
-        press_sig();
-        $display("\nTesting MULTIPLICACION (*) operation:");
-        a = 4'b0011; b = 4'b0101; // 3 * 5
-        press_equ();
-        check_result(15, "3 * 5");
-        
-        a = 4'b0110; b = 4'b0110; // 6 * 6
-        press_equ();
-        check_result(36, "6 * 6");
-        
-        // 4. DIVISIÓN (/)
-        press_sig();
-        $display("\nTesting DIVISION (/) operation:");
-        a = 4'b1000; b = 4'b0010; // 8 / 2
-        press_equ();
-        check_result(4, "8 / 2");
-        
-        a = 4'b1001; b = 4'b0100; // 9 / 4
-        press_equ();
-        check_result(2, "9 / 4");
-        
-        // 5. MÓDULO (%)
-        press_sig();
-        $display("\nTesting MODULO (%%) operation:");
-        a = 4'b1001; b = 4'b0100; // 9 % 4
-        press_equ();
-        check_result(1, "9 % 4");
-        
-        a = 4'b1011; b = 4'b0011; // 11 % 3
-        press_equ();
-        check_result(2, "11 % 3");
-        
-        // 6. AND
-        press_sig();
-        $display("\nTesting AND operation:");
-        a = 4'b1010; b = 4'b1100; // 1010 & 1100
-        press_equ();
-        check_result(8'b1000, "1010 & 1100");
-        
-        a = 4'b1111; b = 4'b0101; // 1111 & 0101
-        press_equ();
-        check_result(8'b0101, "1111 & 0101");
-        
-        // 7. OR
-        press_sig();
-        $display("\nTesting OR operation:");
-        a = 4'b1010; b = 4'b1100; // 1010 | 1100
-        press_equ();
-        check_result(8'b1110, "1010 | 1100");
-        
-        a = 4'b0001; b = 4'b1000; // 0001 | 1000
-        press_equ();
-        check_result(8'b1001, "0001 | 1000");
-        
-        // 8. XOR
-        press_sig();
-        $display("\nTesting XOR operation:");
-        a = 4'b1010; b = 4'b1100; // 1010 ^ 1100
-        press_equ();
-        check_result(8'b0110, "1010 ^ 1100");
-        
-        a = 4'b1111; b = 4'b0101; // 1111 ^ 0101
-        press_equ();
-        check_result(8'b1010, "1111 ^ 0101");
-        
-        // 9. Desplazamiento izquierda (<<)
-        press_sig();
-        $display("\nTesting SHIFT LEFT (<<) operation:");
-        a = 4'b0001; b = 4'b0010; // 1 << 2
-        press_equ();
-        check_result(4'b0100, "1 << 2");
-        
-        a = 4'b0011; b = 4'b0001; // 3 << 1
-        press_equ();
-        check_result(4'b0110, "3 << 1");
-        
-        // 10. Desplazamiento derecha (>>)
-        press_sig();
-        $display("\nTesting SHIFT RIGHT (>>) operation:");
-        a = 4'b1000; b = 4'b0010; // 8 >> 2
-        press_equ();
-        check_result(4'b0010, "8 >> 2");
-        
-        a = 4'b1100; b = 4'b0001; // 12 >> 1
-        press_equ();
-        check_result(4'b0110, "12 >> 1");
-        
-        $display("\nAll tests completed!");
-        $finish;
-    end
-    
-    // Helper task to press the operation change button
-    task press_sig;
-    begin
-        @(posedge clk) sig = 1;
-        @(posedge clk) sig = 0;
-        #20; // Wait a little after changing operation
-    end
-    endtask
-    
-    // Helper task to press the equals button
-    task press_equ;
-    begin
-        @(posedge clk) equ = 1;
-        @(posedge clk) equ = 0;
-        #20; // Wait for calculation to complete
-    end
-    endtask
-    
-    // Helper task to check the result
-    task check_result;
-        input integer expected;
-        input string operation;
-    begin
-        $display("Operation: %s", operation);
-        $display("Input A: %d (%b), B: %d (%b)", a, a, b, b);
-        $display("Result: seg3=%b, seg2=%b, seg1=%b, seg0=%b", seg3, seg2, seg1, seg0);
-        $display("Flags: %b (Zero=%b, Sign=%b, Overflow=%b, Carry=%b, Error=%b)", 
-                flag, flag[0], flag[1], flag[2], flag[3], flag[4]);
-        
-        // For binary operations, we need to check the binary displays
-        if (uut.op >= 4'b0101 && uut.op <= 4'b1001) begin
-            // Check binary representation
-            if ({seg3[1:0], seg2[1:0], seg1[1:0], seg0[1:0]} !== expected[3:0]) begin
-                $display("ERROR: Expected binary %b, got %b%b%b%b", 
-                        expected[3:0], seg3[1:0], seg2[1:0], seg1[1:0], seg0[1:0]);
-            end
-        end else begin
-            // For arithmetic operations, check the decimal displays
-            // Note: This is a simplified check - in a real testbench you would decode the 7-seg outputs
-            if (uut.result !== expected[3:0]) begin
-                $display("ERROR: Expected %d, got %d", expected, uut.result);
+    task run_test(input logic [3:0] ta, input logic [3:0] tb, input logic [3:0] top, input logic [3:0] expected_result, input logic [4:0] expected_flags);
+        begin
+            a = ta;
+            b = tb;
+            op = top;
+            #10 equ = 1; #10 equ = 0; // Ejecuta operación
+            #50; // Mayor tiempo de espera
+            if (uut.y !== expected_result || uut.flag !== expected_flags) begin
+                $display("ERROR: A=%b, B=%b, OP=%b, Resultado esperado=%b, Obtenido=%b, Flags esperadas=%b, Obtenidas=%b", 
+                         a, b, op, expected_result, uut.y, expected_flags, uut.flag);
+            end else begin
+                $display("OK: A=%b, B=%b, OP=%b, Resultado=%b, Flags=%b", a, b, op, uut.y, uut.flag);
             end
         end
-        $display("----------------------------------------");
-    end
     endtask
-
+    
+    initial begin
+        $display("Inicio de Testbench");
+		  
+		  equ = 0; 
+        
+        $display("Suma");
+        run_test(4'b0000, 4'b0001, 4'b0000, 4'b0001, 5'b00000); // 0 + 1 = 1
+        run_test(4'b0100, 4'b0011, 4'b0000, 4'b0111, 5'b00000); // 4 + 3 = 7
+        
+        $display("Resta");
+        run_test(4'b0110, 4'b0011, 4'b0001, 4'b0011, 5'b00000); // 6 - 3 = 3
+        run_test(4'b0011, 4'b0100, 4'b0001, 4'b0001, 5'b01000); // 3 - 4 = -1 con negativo
+        
+        $display("Multiplicación");
+        run_test(4'b0010, 4'b0011, 4'b0010, 4'b0110, 5'b00000); // 2 * 3 = 6
+        run_test(4'b0100, 4'b0010, 4'b0010, 4'b1000, 5'b00000); // 4 * 2 = 8
+        
+        $display("División");
+        run_test(4'b1000, 4'b0010, 4'b0011, 4'b0100, 5'b00000); // 8 / 2 = 4
+        run_test(4'b0110, 4'b0011, 4'b0011, 4'b0010, 5'b00000); // 6 / 3 = 2
+        
+        $display("Módulo");
+        run_test(4'b1010, 4'b0011, 4'b0100, 4'b0001, 5'b00000); // 10 % 3 = 1
+        run_test(4'b0111, 4'b0010, 4'b0100, 4'b0001, 5'b00000); // 7 % 2 = 1
+        
+        $display("AND");
+        run_test(4'b1100, 4'b1010, 4'b0101, 4'b1000, 5'b00000); // 12 AND 10 = 8
+        run_test(4'b1100, 4'b0110, 4'b0101, 4'b0100, 5'b00000); // 12 AND 6 = 4
+        
+        $display("OR");
+        run_test(4'b1100, 4'b1010, 4'b0110, 4'b1110, 5'b00000); // 12 OR 10 = 14
+        run_test(4'b1100, 4'b0110, 4'b0110, 4'b1110, 5'b00000); // 12 OR 6 = 14
+        
+        $display("XOR");
+        run_test(4'b1100, 4'b1010, 4'b0111, 4'b0110, 5'b00000); // 12 XOR 10 = 6
+        run_test(4'b1100, 4'b0110, 4'b0111, 4'b1010, 5'b00000); // 12 XOR 6 = 10
+        
+        $display("SHIFT LEFT");
+        run_test(4'b0010, 4'b0001, 4'b1000, 4'b0100, 5'b00000); // 2 << 1 = 4
+        run_test(4'b0011, 4'b0001, 4'b1000, 4'b0110, 5'b00000); // 3 << 1 = 6
+        
+        $display("SHIFT RIGHT");
+        run_test(4'b1000, 4'b0001, 4'b1001, 4'b0100, 5'b00000); // 8 >> 1 = 4
+        run_test(4'b0100, 4'b0001, 4'b1001, 4'b0010, 5'b00000); // 4 >> 1 = 2
+        
+        $display("Fin de Testbench");
+        $stop;
+    end
+    
 endmodule

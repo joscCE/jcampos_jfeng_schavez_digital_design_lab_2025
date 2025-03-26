@@ -2,16 +2,16 @@
 
 module tb_top_sub;
 	
-	parameter x = 4;
+	parameter N = 4;
 	
 	//Señales DUT
 	
-	logic [x-1:0] a, b, r;
+	logic [N-1:0] a, b, r;
 	logic cin, cout, Ne;
 	
 	// Instanciar módulo
 	
-	top_sub #(.x(x)) dut (
+	top_sub #(.N(N)) dut (
 	 .a(a),
 	 .b(b),
 	 .cin(cin),
@@ -55,13 +55,21 @@ module tb_top_sub;
 		check_result(4'b0001, 1); // |2 - 3| = 1, Ne = 1
 		
 		
+		// Prueba 4: 3 - 4 
+		a = 4'b0011; // 2
+		b = 4'b0100; // 3
+		cin = 0;
+		#10;
+		check_result(4'b0001, 1); // |3 - 4| = 1, Ne = 1
+		
+		
 		$display("Todas las pruebas pasaron correctamente.");
 		$finish; 
 	end 
 	
 	
 	task check_result(
-		input logic [x-1:0] expected_r,
+		input logic [N-1:0] expected_r,
 		input logic expected_Ne
 	);
 		if (r !== expected_r || Ne !== expected_Ne) begin
