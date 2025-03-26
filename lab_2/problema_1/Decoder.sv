@@ -1,5 +1,6 @@
 module Decoder(
     input logic [3:0] a,         // Entrada de 4 bits
+	 input logic err,
     output logic [7:0] seg1, seg0 // Salidas a displays de 7 segmentos
 );
 
@@ -13,6 +14,11 @@ module Decoder(
 
     // Decodificación de los 7 segmentos (bits reordenados)
     always_comb begin
+		  if(err == 1) begin
+			seg0 = 8'b01100001;
+		   seg1 = 8'b01100001;
+		  end else begin
+		 
         case (y0)
             4'd0: seg0 = 8'b00000011;
             4'd1: seg0 = 8'b10011111;
@@ -32,6 +38,9 @@ module Decoder(
             4'd1: seg1 = 8'b10011111; // 1
             default: seg1 = 8'b11111111; // Apagado (nunca debería activarse)
         endcase
+		  
+		 end 
+		  
     end
 
 endmodule

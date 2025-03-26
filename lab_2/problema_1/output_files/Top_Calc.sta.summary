@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'equ'
-Slack : -6.813
-TNS   : -58.789
+Slack : -7.096
+TNS   : -60.417
 
 Type  : Slow 1100mV 85C Model Setup 'sig'
-Slack : -0.323
-TNS   : -1.777
-
-Type  : Slow 1100mV 85C Model Hold 'equ'
-Slack : -2.331
-TNS   : -10.481
+Slack : -0.393
+TNS   : -2.906
 
 Type  : Slow 1100mV 85C Model Hold 'sig'
-Slack : 0.265
+Slack : 0.315
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'equ'
-Slack : -0.548
-TNS   : -8.565
+Type  : Slow 1100mV 85C Model Hold 'equ'
+Slack : 0.525
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'sig'
-Slack : -0.532
-TNS   : -7.566
+Slack : -0.548
+TNS   : -7.701
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'equ'
+Slack : -0.542
+TNS   : -8.530
 
 Type  : Slow 1100mV 0C Model Setup 'equ'
-Slack : -6.667
-TNS   : -56.978
+Slack : -6.919
+TNS   : -58.223
 
 Type  : Slow 1100mV 0C Model Setup 'sig'
-Slack : -0.377
-TNS   : -2.048
-
-Type  : Slow 1100mV 0C Model Hold 'equ'
-Slack : -2.312
-TNS   : -10.743
+Slack : -0.387
+TNS   : -2.977
 
 Type  : Slow 1100mV 0C Model Hold 'sig'
-Slack : 0.245
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'equ'
+Slack : 0.424
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'equ'
 Slack : -0.510
-TNS   : -8.277
+TNS   : -8.273
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'sig'
-Slack : -0.507
-TNS   : -7.423
+Slack : -0.510
+TNS   : -7.448
 
 Type  : Fast 1100mV 85C Model Setup 'equ'
-Slack : -3.758
-TNS   : -32.132
+Slack : -3.763
+TNS   : -33.076
 
 Type  : Fast 1100mV 85C Model Setup 'sig'
-Slack : 0.243
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'sig'
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'equ'
-Slack : -1.334
-TNS   : -5.549
-
-Type  : Fast 1100mV 85C Model Hold 'sig'
-Slack : 0.157
+Slack : 0.207
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'equ'
-Slack : -0.650
-TNS   : -9.493
-
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'sig'
-Slack : -0.642
-TNS   : -8.479
+Slack : -0.653
+TNS   : -8.606
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'equ'
+Slack : -0.648
+TNS   : -9.461
 
 Type  : Fast 1100mV 0C Model Setup 'equ'
-Slack : -3.348
-TNS   : -28.777
+Slack : -3.379
+TNS   : -29.418
 
 Type  : Fast 1100mV 0C Model Setup 'sig'
-Slack : 0.266
+Slack : 0.216
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'equ'
-Slack : -1.354
-TNS   : -6.301
-
-Type  : Fast 1100mV 0C Model Hold 'sig'
-Slack : 0.141
+Slack : 0.050
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'equ'
-Slack : -0.666
-TNS   : -9.974
+Type  : Fast 1100mV 0C Model Hold 'sig'
+Slack : 0.166
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'sig'
-Slack : -0.664
-TNS   : -8.997
+Slack : -0.671
+TNS   : -9.083
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'equ'
+Slack : -0.667
+TNS   : -9.956
 
 ------------------------------------------------------------

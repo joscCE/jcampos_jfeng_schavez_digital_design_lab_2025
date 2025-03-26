@@ -57,6 +57,7 @@ module ALU #(parameter N = 4) (
             4'b0000: begin 
                 y = y_adder; 
                 f[1] = c_adder; // Acarreo
+					 f[0] = c_adder;
             end
             4'b0001: begin 
                 y = y_sub; 

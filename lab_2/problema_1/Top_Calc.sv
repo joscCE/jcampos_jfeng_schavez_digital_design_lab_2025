@@ -62,7 +62,8 @@ module Top_Calc(
     Decoder dec_inst (
         .a(result),    
         .seg1(seg1_dec),  
-        .seg0(seg0_dec)   
+        .seg0(seg0_dec),
+		  .err(f[4])
     );
 
     // Instancia del decoder binario
@@ -71,7 +72,8 @@ module Top_Calc(
         .seg3(seg3_bin), 
         .seg2(seg2_bin), 
         .seg1(seg1_bin), 
-        .seg0(seg0_bin)  
+        .seg0(seg0_bin)
+		  
     );
 
     // Selección del decoder según el código de operación
