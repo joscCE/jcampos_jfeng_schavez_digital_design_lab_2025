@@ -1,12 +1,12 @@
 |Top_Calc
-a[0] => a[0].IN1
-a[1] => a[1].IN1
-a[2] => a[2].IN1
-a[3] => a[3].IN1
-b[0] => b[0].IN1
-b[1] => b[1].IN1
-b[2] => b[2].IN1
-b[3] => b[3].IN1
+a[0] => ALU:alu_inst.a[0]
+a[1] => ALU:alu_inst.a[1]
+a[2] => ALU:alu_inst.a[2]
+a[3] => ALU:alu_inst.a[3]
+b[0] => ALU:alu_inst.b[0]
+b[1] => ALU:alu_inst.b[1]
+b[2] => ALU:alu_inst.b[2]
+b[3] => ALU:alu_inst.b[3]
 sig => op[0].CLK
 sig => op[1].CLK
 sig => op[2].CLK

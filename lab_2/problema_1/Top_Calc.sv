@@ -2,10 +2,10 @@ module Top_Calc(
     input logic [3:0] a, b,  // Entradas de la calculadora
     input logic sig, equ,    // Botones para cambiar operación y calcular
     output logic [7:0] seg1, seg0, seg2, seg3, seg4,  // Displays de 7 segmentos
-	 output logic [4:0] flag
+    output logic [4:0] flag
 );
 
-    logic [3:0] op;   // Código de operación
+    logic [3:0] op = 4'b0000;   // Código de operación con inicialización
     logic [3:0] y;    // Resultado de la ALU
     logic [4:0] f;    // Flags de la ALU
     logic [3:0] result; // Variable para almacenar el resultado de la ALU
@@ -22,9 +22,6 @@ module Top_Calc(
         .y(y),
         .f(f)
     );
-
-    // Inicialización del código de operación
-    initial op = 4'b0000;  
 
     // Lógica para cambiar la operación con SIG
     always_ff @(posedge sig) begin

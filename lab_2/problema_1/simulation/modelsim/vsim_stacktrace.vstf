@@ -1,0 +1,85 @@
+# Current time Wed Mar 26 02:06:02 2025
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = win32pe
+# Signature = a4da31216fa3031746f0a74423efc007
+# 0    0x0068386f: '<unknown (@0x68386f)>'
+# 1    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 2    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 3    0x0061a9de: '<unknown (@0x61a9de)>'
+# 4    0x0078056a: '<unknown (@0x78056a)>'
+# 5    0x5f827132: 'getenv + 0x67' in 'c:\windows\system32\msvcr120.dll'
+# End of Stack Trace
+
+
+# Current time Wed Mar 26 02:06:22 2025
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = win32pe
+# Signature = a4da31216fa3031746f0a74423efc007
+# 0    0x0068386f: '<unknown (@0x68386f)>'
+# 1    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 2    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 3    0x0061a9de: '<unknown (@0x61a9de)>'
+# 4    0x0078056a: '<unknown (@0x78056a)>'
+# 5    0x5f827132: 'getenv + 0x67' in 'c:\windows\system32\msvcr120.dll'
+# End of Stack Trace
+
+
+# Current time Wed Mar 26 02:06:51 2025
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = win32pe
+# Signature = a4da31216fa3031746f0a74423efc007
+# 0    0x0068386f: '<unknown (@0x68386f)>'
+# 1    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 2    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 3    0x0061a9de: '<unknown (@0x61a9de)>'
+# 4    0x0078056a: '<unknown (@0x78056a)>'
+# 5    0x5f827132: 'getenv + 0x67' in 'c:\windows\system32\msvcr120.dll'
+# End of Stack Trace
+
+
+# Current time Wed Mar 26 02:08:48 2025
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = win32pe
+# Signature = a4da31216fa3031746f0a74423efc007
+# 0    0x0068386f: '<unknown (@0x68386f)>'
+# 1    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 2    0xfde44f67: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:144'
+# 3    0x0061a9de: '<unknown (@0x61a9de)>'
+# 4    0x0078056a: '<unknown (@0x78056a)>'
+# 5    0x5f827132: 'getenv + 0x67' in 'c:\windows\system32\msvcr120.dll'
+# End of Stack Trace
+
+
+# Current time Wed Mar 26 02:16:01 2025
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vsim
+# Id = "10.5b"
+# Version = "2016.10"
+# Date = "Oct  5 2016"
+# Platform = win32pe
+# Signature = a4da31216fa3031746f0a74423efc007
+# 0    0x0068386f: '<unknown (@0x68386f)>'
+# 1    0xfde451f1: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:191'
+# 2    0xfde451f1: 'C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv:191'
+# 3    0x0061a9de: '<unknown (@0x61a9de)>'
+# 4    0x0078056a: '<unknown (@0x78056a)>'
+# 5    0x5f827132: 'getenv + 0x67' in 'c:\windows\system32\msvcr120.dll'
+# End of Stack Trace
+
+
