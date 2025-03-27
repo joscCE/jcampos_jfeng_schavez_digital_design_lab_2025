@@ -23,9 +23,6 @@ module Top_Calc(
         .f(f)
     );
 
-    // Inicialización del código de operación
-    initial op = 4'b0000;  
-
     // Lógica para cambiar la operación con SIG
     always_ff @(posedge sig) begin
         if (op >= 4'b1001) 

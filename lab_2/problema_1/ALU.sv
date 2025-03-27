@@ -79,8 +79,8 @@ module ALU #(parameter N = 4) (
             4'b0101: y = a & b;  // AND
             4'b0110: y = a | b;  // OR
             4'b0111: y = a ^ b;  // XOR
-            4'b1000: y = a << 1; // Shift Left (mantiene el tamaño `N`)
-            4'b1001: y = a >> 1; // Shift Right (mantiene el tamaño `N`)
+            4'b1000: y = a << b; // Shift Left (mantiene el tamaño `N`)
+            4'b1001: y = a >> b; // Shift Right (mantiene el tamaño `N`)
             default: y = {N{1'b0}}; // Valor por defecto
         endcase
 
