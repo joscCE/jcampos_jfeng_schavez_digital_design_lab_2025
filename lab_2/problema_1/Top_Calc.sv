@@ -2,13 +2,13 @@ module Top_Calc(
     input logic [3:0] a, b,  // Entradas de la calculadora
     input logic sig, equ,    // Botones para cambiar operación y calcular
     output logic [7:0] seg1, seg0, seg2, seg3, seg4,  // Displays de 7 segmentos
-    output logic [4:0] flag
+    output logic [4:0] flag,
+    output logic [3:0] result_reg  // Registro para almacenar el resultado
 );
 
     logic [3:0] op = 4'b0000;   // Código de operación con inicialización
     logic [3:0] y;    // Resultado de la ALU
     logic [4:0] f;    // Flags de la ALU
-    logic [3:0] result; // Variable para almacenar el resultado de la ALU
 
     // Salidas temporales de cada decoder
     logic [7:0] seg1_dec, seg0_dec;
@@ -31,7 +31,7 @@ module Top_Calc(
             op <= op + 1'b1;
     end
     
-    // Lógica para mostrar el código de operación en SEG2
+    // Lógica para mostrar el código de operación en SEG4
     always_comb begin
         case (op)
             4'b0000: seg4 = 8'b01001001; // "+"
@@ -48,29 +48,27 @@ module Top_Calc(
         endcase
     end
     
-    // Mostrar el resultado solo cuando se presiona el botón "equ"
+    // Almacenar el resultado de la ALU cuando se presiona "equ"
     always_ff @(posedge equ) begin
-        result <= y;  // Almacenar el resultado de la ALU
-		  flag <= f;
-		  
+        result_reg <= y;cd
+        flag <= f;
     end
 
     // Instancia del decoder normal
     Decoder dec_inst (
-        .a(result),    
+        .a(result_reg),    
         .seg1(seg1_dec),  
         .seg0(seg0_dec),
-		  .err(f[4])
+        .err(f[4])
     );
 
     // Instancia del decoder binario
     Decoder_bin dec_bin_inst (
-        .a(result),    
+        .a(result_reg),    
         .seg3(seg3_bin), 
         .seg2(seg2_bin), 
         .seg1(seg1_bin), 
         .seg0(seg0_bin)
-		  
     );
 
     // Selección del decoder según el código de operación
@@ -81,15 +79,12 @@ module Top_Calc(
             seg2 = seg2_bin;
             seg1 = seg1_bin;
             seg0 = seg0_bin;
-				
         end else begin
             // Usar Decoder normal
-				seg3 = 8'b11111111; // Apagado o sin usar
-				seg2 = {6'b111111, ~f[3], 1'b1};
+            seg3 = 8'b11111111; // Apagado o sin usar
+            seg2 = {6'b111111, ~f[3], 1'b1};
             seg1 = seg1_dec;
             seg0 = seg0_dec;
-				
-			
         end
     end
 
