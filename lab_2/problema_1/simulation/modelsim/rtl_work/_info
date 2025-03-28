@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/simulation/modelsim
 vALU
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1743094553
+Z2 !s110 1743139490
 !i10b 1
-!s100 K_CF8ld;X:aB7K0B8e^>e1
-IZc5]^ML4i7Ii723`AWP4J1
+!s100 hTBPWTN3ET9lfXjnToVSO1
+IOmbeoM^1O67jAOIKH4Hi^3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 ALU_sv_unit
 S1
 R0
-w1743044952
+w1743138927
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv
 L0 1
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1743094553.000000
+Z5 !s108 1743139490.000000
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv|
 !i113 1
@@ -38,13 +38,13 @@ vDecoder
 R1
 R2
 !i10b 1
-!s100 4<^PdUYVXX1>4HY1M`8k52
-IN0nGFiBl6lTT=LWhaYDY@3
+!s100 FfG@G:2R<XBeWFe54bQ_H0
+I:X]R<cDRD5l_2>JJO8LZd1
 R3
 !s105 Decoder_sv_unit
 S1
 R0
-Z9 w1742965347
+w1743139147
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder.sv
 L0 1
@@ -96,7 +96,7 @@ R3
 !s105 FullAdder_sv_unit
 S1
 R0
-R9
+w1742965347
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
 L0 1
@@ -114,7 +114,7 @@ R8
 n@full@adder
 vfulladderbit
 R1
-R2
+Z9 !s110 1743139489
 !i10b 1
 !s100 4@ZcCe63P9STU_DhN9HGk3
 I7AWZ33GXO2Y_@CdnbS]3A3
@@ -130,7 +130,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1743139489.000000
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv|
 !i113 1
@@ -139,7 +139,7 @@ R7
 R8
 vfullsubstract
 R1
-Z10 !s110 1743094552
+R9
 !i10b 1
 !s100 eWVB@Q]dNz6o@gM24kaFN3
 I]W=Ke]7D`C7U7F4jfH`Ek1
@@ -155,16 +155,16 @@ R4
 r1
 !s85 0
 31
-Z15 !s108 1743094552.000000
-Z16 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
-Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
+R10
+Z15 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
 !i113 1
 R6
 R7
 R8
 vMultiplier
 R1
-R2
+R9
 !i10b 1
 !s100 [UCfSX`X;=6>ca`KJa<@73
 IS^nX]XHG><X8B@kj6Se_X1
@@ -180,7 +180,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv|
 !i113 1
@@ -190,15 +190,15 @@ R8
 n@multiplier
 vtb_Top_Calc
 R1
-!s110 1743094554
+R2
 !i10b 1
-!s100 SS<ji:9@6mQ[?Fed;O5WP2
-I`k8VMBVc`h0ZU:fX3]dc<1
+!s100 hG?=lng7?DMHemk`<VR5n0
+I20odYgD2^ePo8MO8Sff@]3
 R3
 !s105 tb_Top_Calc_sv_unit
 S1
 R0
-w1743094517
+w1743139346
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv
 L0 1
@@ -216,15 +216,15 @@ R8
 ntb_@top_@calc
 vTop_Calc
 R1
-R2
+R9
 !i10b 1
-!s100 C5[_3d@JP5AXEYg7d8JS_1
-I]MnXS53<lO34z7NEPK2V`1
+!s100 JST_K4h1K@BEhCg1JAN`P2
+Infze1RkzV;TjMH[UoYTNG2
 R3
 !s105 Top_Calc_sv_unit
 S1
 R0
-w1743093489
+w1743139171
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
 L0 1
@@ -232,7 +232,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
 !i113 1
@@ -242,7 +242,7 @@ R8
 n@top_@calc
 vtop_div
 R1
-R2
+R9
 !i10b 1
 !s100 znmcPz@V:CA6zJF3Q>3Sk1
 I7l]@a9QNCj`bX`f7UkLDZ1
@@ -258,7 +258,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv|
 !i113 1
@@ -267,7 +267,7 @@ R7
 R8
 vtop_mod
 R1
-R10
+R9
 !i10b 1
 !s100 3GM^a^V7Lz=No_4D4X8j72
 IdHCgGUL6bBhledn]=6Je=3
@@ -283,7 +283,7 @@ R4
 r1
 !s85 0
 31
-R15
+R10
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv|
 !i113 1
@@ -292,7 +292,7 @@ R7
 R8
 vtop_sub
 R1
-R10
+R9
 !i10b 1
 !s100 C3jgmQM0Dz@IEkPCYa3WK1
 Ia5na^d?40cL[[3WNK[Qkg0
@@ -308,9 +308,9 @@ R4
 r1
 !s85 0
 31
+R10
 R15
 R16
-R17
 !i113 1
 R6
 R7

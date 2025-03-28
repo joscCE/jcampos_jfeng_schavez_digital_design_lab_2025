@@ -91,18 +91,18 @@ module tb_Top_Calc();
         assert (y_out == (a ^ b));
         assert (flag == 5'b00000); // ✅ Ninguna flag activada
 
-        // Shift Izquierda (4 << 1 = 8)
+        // Shift Izquierda (4 << 2 = 0)
         $display("Tiempo %0t: Shift Izquierda (4 << 1)", $time);
         #10 sig = 1; #10 sig = 0; #10 equ = 1; #10 equ = 0;
         $display("Resultado: y_out = %d, seg4 = %b, flag = %b", y_out, seg4, flag);
-        assert (y_out == (a << 1));
+        assert (y_out == (a << 4'd2));
         assert (flag == 5'b00000); // ✅ Sin carry ni overflow
 
-        // Shift Derecha (4 >> 1 = 2)
+        // Shift Derecha (4 >> 2 = 1)
         $display("Tiempo %0t: Shift Derecha (4 >> 1)", $time);
         #10 sig = 1; #10 sig = 0; #10 equ = 1; #10 equ = 0;
         $display("Resultado: y_out = %d, seg4 = %b, flag = %b", y_out, seg4, flag);
-        assert (y_out == (a >> 1));
+        assert (y_out == (a >> 4'd2));
         assert (flag == 5'b00000); // ✅ Ninguna flag activada
 		  
 		  
@@ -169,14 +169,14 @@ module tb_Top_Calc();
         $display("Tiempo %0t: Shift Izquierda (8 << 1)", $time);
         #10 sig = 1; #10 sig = 0; #10 equ = 1; #10 equ = 0;
         $display("Resultado: y_out = %d, seg4 = %b, flag = %b", y_out, seg4, flag);
-        assert (y_out == (4'd8 << 1));
+        assert (y_out == (4'd8 << 4'd7));
 
 
         // Shift Derecha (8 >> 1 = 4)
         $display("Tiempo %0t: Shift Derecha (8 >> 1)", $time);
         #10 sig = 1; #10 sig = 0; #10 equ = 1; #10 equ = 0;
         $display("Resultado: y_out = %d, seg4 = %b, flag = %b", y_out, seg4, flag);
-        assert (y_out == (4'd8 >> 1));
+        assert (y_out == (4'd8 >> 4'd7));
 
 		  
 

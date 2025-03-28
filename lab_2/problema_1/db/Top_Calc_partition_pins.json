@@ -140,10 +140,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "flag[0]",
-					"strict" : false
-				},
-				{
 					"name" : "flag[1]",
 					"strict" : false
 				},
@@ -176,6 +172,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "equ",
+					"strict" : false
+				},
+				{
 					"name" : "b[0]",
 					"strict" : false
 				},
@@ -192,11 +192,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "a[3]",
-					"strict" : false
-				},
-				{
-					"name" : "a[2]",
+					"name" : "a[0]",
 					"strict" : false
 				},
 				{
@@ -204,15 +200,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "a[0]",
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[3]",
 					"strict" : false
 				},
 				{
 					"name" : "sig",
-					"strict" : false
-				},
-				{
-					"name" : "equ",
 					"strict" : false
 				}
 			]

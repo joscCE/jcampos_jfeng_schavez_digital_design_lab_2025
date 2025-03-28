@@ -50,10 +50,10 @@ module Top_Calc(
     end
     
     // Captura del resultado al presionar "equ"
-    always_ff @(posedge equ) begin
-        result <= y;  // Guardar el resultado de la ALU
-        flag <= f;    // Guardar los flags
-    end
+		 always_ff @(posedge equ) begin
+		 result <= y;  // Guardar el resultado de la ALU
+		 flag <= f;    // Guardar los flags para que no cambien antes de equ
+		end
 
     // Asignar el resultado de la ALU a la salida directa
     assign y_out = y;
@@ -63,6 +63,7 @@ module Top_Calc(
         .a(result),    
         .seg1(seg1_dec),  
         .seg0(seg0_dec),
+		  .equ(equ),
         .err(f[4])
     );
 
@@ -76,20 +77,24 @@ module Top_Calc(
     );
 
     // Selección del decoder según el código de operación
-    always_comb begin
-        if (op >= 4'b0101 && op <= 4'b1001) begin
-            // Usar Decoder_bin
-            seg3 = seg3_bin;
-            seg2 = seg2_bin;
-            seg1 = seg1_bin;
-            seg0 = seg0_bin;
+	always_comb begin
+    if (op >= 4'b0101 && op <= 4'b1001) begin
+        // Usar Decoder_bin
+        seg3 = seg3_bin;
+        seg2 = seg2_bin;
+        seg1 = seg1_bin;
+        seg0 = seg0_bin;
+    end else begin
+        // Usar Decoder normal
+        seg3 = 8'b11111111; // Apagado o sin usar
+        if (equ) begin
+            seg2 = {6'b111111, ~flag[3], 1'b1}; // Usar flag[3] capturado en equ
         end else begin
-            // Usar Decoder normal
-            seg3 = 8'b11111111; // Apagado o sin usar
-            seg2 = {6'b111111, ~f[3], 1'b1}; // Indica estado del flag
-            seg1 = seg1_dec;
-            seg0 = seg0_dec;
+            seg2 = 8'b11111111; // Mantener apagado hasta que se presione equ
         end
+        seg1 = seg1_dec;
+        seg0 = seg0_dec;
     end
+end
 
 endmodule

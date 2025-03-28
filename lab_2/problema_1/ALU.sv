@@ -57,7 +57,6 @@ module ALU #(parameter N = 4) (
             4'b0000: begin 
                 y = y_adder; 
                 f[1] = c_adder; // Acarreo
-					 f[0] = c_adder;
             end
             4'b0001: begin 
                 y = y_sub; 
@@ -66,7 +65,7 @@ module ALU #(parameter N = 4) (
             end
             4'b0010: begin 
                 y = y_multi; 
-                f[0] = v_multi; // Desbordamiento
+                f[1] = v_multi; // Desbordamiento
             end
             4'b0011: begin 
                 y = y_div; 
@@ -79,8 +78,8 @@ module ALU #(parameter N = 4) (
             4'b0101: y = a & b;  // AND
             4'b0110: y = a | b;  // OR
             4'b0111: y = a ^ b;  // XOR
-            4'b1000: y = a << 1; // Shift Left (mantiene el tamaño `N`)
-            4'b1001: y = a >> 1; // Shift Right (mantiene el tamaño `N`)
+            4'b1000: y = a << b; // Shift Left (mantiene el tamaño `N`)
+            4'b1001: y = a >> b; // Shift Right (mantiene el tamaño `N`)
             default: y = {N{1'b0}}; // Valor por defecto
         endcase
 
