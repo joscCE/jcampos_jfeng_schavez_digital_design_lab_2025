@@ -1,0 +1,11 @@
+module Comparator #(parameter N = 9) (
+
+	input [N-1:0] A, B,
+	output equ
+);
+
+assign equal = (A==B);
+
+
+
+endmodule 

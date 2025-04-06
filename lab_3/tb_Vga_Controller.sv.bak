@@ -1,0 +1,56 @@
+module tb_Vga_Controller;
+
+    // Entradas del módulo Vga_Controller
+    logic clk;
+    logic rst;
+
+    // Salidas del módulo Vga_Controller
+    logic Hs, Vs;
+    logic [7:0] R, G, B;
+
+    // Instanciación del módulo Vga_Controller
+    Vga_Controller uut (
+        .clk(clk),
+        .rst(rst),
+        .Hs(Hs),
+        .Vs(Vs),
+        .R(R),
+        .G(G),
+        .B(B)
+    );
+
+    // Generación del reloj
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // Reloj de 100 MHz
+    end
+
+    // Inicialización y estímulos
+    initial begin
+        // Inicialización de señales
+        rst = 0;
+        
+        // Reset
+        #10 rst = 1;
+        #10 rst = 0;
+        
+        // Simulación durante 2ms (aproximadamente el tiempo de una pantalla VGA)
+        #2000;
+        
+        // Fin de la simulación
+        $finish;
+    end
+
+    // Monitorización de señales (esto mostrará el valor de las señales en la consola)
+    initial begin
+        $monitor("Time = %0t | HSync = %b, VSync = %b, R = %h, G = %h, B = %h", 
+                  $time, Hs, Vs, R, G, B);
+    end
+
+    // Archivo para guardar las simulaciones (opcional)
+    initial begin
+        $dumpfile("vga_controller_tb.vcd");
+        $dumpvars(0, tb_Vga_Controller);
+    end
+
+endmodule

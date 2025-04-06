@@ -1,0 +1,165 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/simulation/modelsim
+vComparator
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1743971159
+!i10b 1
+!s100 Q@UC0dgo[9cDc4@nVEk@A2
+IET27kWecV0@33SliOIcF13
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Comparator_sv_unit
+S1
+R0
+w1743970967
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1743971159.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3
+Z8 tCvgOpt 0
+n@comparator
+vconnect_four
+R1
+R2
+!i10b 1
+!s100 ERfb1@=D9<@`ffJHUSUeX0
+I97V89XzAB0MgW;bzS;1Sb0
+R3
+!s105 connect_four_sv_unit
+S1
+R0
+w1743970822
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv|
+!i113 1
+R6
+R7
+R8
+vCounter
+R1
+R2
+!i10b 1
+!s100 58f93o8G?5;^YDmjKDQ;E1
+IBF6IF`0=LGUeOTO1DXA`50
+R3
+!s105 Counter_sv_unit
+S1
+R0
+w1743970894
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv|
+!i113 1
+R6
+R7
+R8
+n@counter
+vRegister
+R1
+R2
+!i10b 1
+!s100 L=G837O]7n]QM?4Kh`Dl[3
+IRIKM9mYC66LTCiU6ZQ^3Q1
+R3
+!s105 Register_sv_unit
+S1
+R0
+w1743970892
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv|
+!i113 1
+R6
+R7
+R8
+n@register
+vtb_Vga_Controller
+R1
+R2
+!i10b 1
+!s100 K;eLz[?Mcc2VAKRn[MD9D3
+IIZ8=hjRLSb0HUEliG4<AK0
+R3
+!s105 tb_Vga_Controller_sv_unit
+S1
+R0
+w1743968378
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv|
+!i113 1
+R6
+R7
+R8
+ntb_@vga_@controller
+vVga_Controller
+R1
+R2
+!i10b 1
+!s100 CM`:`:hV`n8K8i@YeXRJD1
+IQ5:EP7?IMl@GoCNBM6MPQ1
+R3
+!s105 Vga_Controller_sv_unit
+S1
+R0
+w1743971140
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv|
+!i113 1
+R6
+R7
+R8
+n@vga_@controller

@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at Counter.sv(8): always construct contains both blocking and non-blocking assignments File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv Line: 8
+Warning (10268): Verilog HDL information at Register.sv(10): always construct contains both blocking and non-blocking assignments File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv Line: 10

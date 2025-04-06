@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/simulation/modelsim
 vALU
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1743139490
+Z2 !s110 1743176596
 !i10b 1
 !s100 hTBPWTN3ET9lfXjnToVSO1
 IOmbeoM^1O67jAOIKH4Hi^3
@@ -18,51 +18,51 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 ALU_sv_unit
 S1
 R0
-w1743138927
+Z4 w1743142049
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1743139490.000000
+Z6 !s108 1743176596.000000
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/ALU.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1
-Z8 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1
+Z9 tCvgOpt 0
 n@a@l@u
 vDecoder
 R1
 R2
 !i10b 1
-!s100 FfG@G:2R<XBeWFe54bQ_H0
-I:X]R<cDRD5l_2>JJO8LZd1
+!s100 ^m5>ik8PD^eRhOIVg^^1Y3
+IM0ib9QDVYo6eHJ:M>IB]<3
 R3
 !s105 Decoder_sv_unit
 S1
 R0
-w1743139147
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@decoder
 vDecoder_bin
 R1
-R2
+Z10 !s110 1743176597
 !i10b 1
 !s100 j72j=ioH[jnZ5AeBZXWYK1
 IeVRD<AJ:Obm>Sd688LlIP0
@@ -70,21 +70,21 @@ R3
 !s105 Decoder_bin_sv_unit
 S1
 R0
-w1742784296
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder_bin.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder_bin.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+Z11 !s108 1743176597.000000
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder_bin.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Decoder_bin.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@decoder_bin
 vFullAdder
 R1
@@ -96,25 +96,25 @@ R3
 !s105 FullAdder_sv_unit
 S1
 R0
-w1742965347
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/FullAdder.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@full@adder
 vfulladderbit
 R1
-Z9 !s110 1743139489
+R2
 !i10b 1
 !s100 4@ZcCe63P9STU_DhN9HGk3
 I7AWZ33GXO2Y_@CdnbS]3A3
@@ -122,49 +122,49 @@ R3
 !s105 fulladderbit_sv_unit
 S1
 R0
-w1742616339
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-Z10 !s108 1743139489.000000
+Z12 !s108 1743176595.000000
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/fulladderbit.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vfullsubstract
 R1
-R9
+Z13 !s110 1743176594
 !i10b 1
 !s100 eWVB@Q]dNz6o@gM24kaFN3
 I]W=Ke]7D`C7U7F4jfH`Ek1
 R3
-Z11 !s105 top_sub_sv_unit
+Z14 !s105 top_sub_sv_unit
 S1
 R0
-Z12 w1742705407
-Z13 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv
-Z14 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv
-L0 2
 R4
+Z15 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv
+Z16 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv
+L0 2
+R5
 r1
 !s85 0
 31
-R10
-Z15 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
-Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
+Z17 !s108 1743176594.000000
+Z18 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
+Z19 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_sub.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vMultiplier
 R1
-R9
+Z20 !s110 1743176595
 !i10b 1
 !s100 [UCfSX`X;=6>ca`KJa<@73
 IS^nX]XHG><X8B@kj6Se_X1
@@ -172,25 +172,25 @@ R3
 !s105 Multiplier_sv_unit
 S1
 R0
-w1742705406
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R10
+R12
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Multiplier.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@multiplier
 vtb_Top_Calc
 R1
-R2
+R10
 !i10b 1
 !s100 hG?=lng7?DMHemk`<VR5n0
 I20odYgD2^ePo8MO8Sff@]3
@@ -198,51 +198,51 @@ R3
 !s105 tb_Top_Calc_sv_unit
 S1
 R0
-w1743139346
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R11
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/tb_Top_Calc.sv|
 !i113 1
-R6
 R7
 R8
+R9
 ntb_@top_@calc
 vTop_Calc
 R1
-R9
+R20
 !i10b 1
-!s100 JST_K4h1K@BEhCg1JAN`P2
-Infze1RkzV;TjMH[UoYTNG2
+!s100 a;IBBEGMd12g7_fZN0kCP0
+ICbW0^ikfD2Uz?;^hFbijj1
 R3
 !s105 Top_Calc_sv_unit
 S1
 R0
-w1743139171
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R10
+R12
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/Top_Calc.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@top_@calc
 vtop_div
 R1
-R9
+R20
 !i10b 1
 !s100 znmcPz@V:CA6zJF3Q>3Sk1
 I7l]@a9QNCj`bX`f7UkLDZ1
@@ -250,24 +250,24 @@ R3
 !s105 top_div_sv_unit
 S1
 R0
-R12
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R10
+R12
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_div.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vtop_mod
 R1
-R9
+R20
 !i10b 1
 !s100 3GM^a^V7Lz=No_4D4X8j72
 IdHCgGUL6bBhledn]=6Je=3
@@ -275,43 +275,43 @@ R3
 !s105 top_mod_sv_unit
 S1
 R0
-R12
+R4
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R10
+R17
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_2/problema_1/top_mod.sv|
 !i113 1
-R6
 R7
 R8
+R9
 vtop_sub
 R1
-R9
+R13
 !i10b 1
 !s100 C3jgmQM0Dz@IEkPCYa3WK1
 Ia5na^d?40cL[[3WNK[Qkg0
 R3
-R11
+R14
 S1
 R0
-R12
-R13
-R14
-L0 13
 R4
+R15
+R16
+L0 13
+R5
 r1
 !s85 0
 31
-R10
-R15
-R16
+R17
+R18
+R19
 !i113 1
-R6
 R7
 R8
+R9

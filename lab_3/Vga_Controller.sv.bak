@@ -1,0 +1,19 @@
+module Vga_Controller #(parameter N=8)(
+	input clk,rst
+	output Hs,Vs,
+	output [7:0] R,G,B
+
+
+);
+
+logic Q_x, Q_y;
+
+
+Counter count_x(clk,rst, 1'b1, Q_x);
+
+
+Counter count_y(clk,rst, 1'b1, Q_y);
+
+
+
+endmodule 

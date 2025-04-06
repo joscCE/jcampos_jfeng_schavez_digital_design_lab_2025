@@ -1,0 +1,7 @@
+module Register #(parameter N = 9) (
+
+	input clk, rst,
+	input [N-1:0] D,
+	output logic [N-1:0] Q
+
+);

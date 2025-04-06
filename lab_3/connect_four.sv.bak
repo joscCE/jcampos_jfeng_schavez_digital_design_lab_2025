@@ -1,0 +1,21 @@
+module connect_four (
+    input logic clk,        // Reloj de 50 MHz de la FPGA
+    input logic rst,        // Botón de reset
+    output logic Hs, Vs,    // Señales de sincronización VGA
+    output logic [7:0] R, G, B // Salida de color VGA
+);
+
+
+
+    // Instancia del controlador VGA
+    Vga_Controller vga_inst (
+        .clk(clk25),
+        .rst(rst),
+        .Hs(Hs),
+        .Vs(Vs),
+        .R(R),
+        .G(G),
+        .B(B)
+    );
+
+endmodule
