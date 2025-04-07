@@ -4,15 +4,19 @@ module tb_Vga_Controller;
     logic rst;
 
     logic Hs, Vs;
+    logic VGA_Blank, VGA_Sync_N;
     logic [7:0] R, G, B;
     logic [9:0] Q_xz;
     logic [9:0] Q_yz;
 
+    // Instanciar el módulo VGA
     Vga_Controller uut (
         .clk(clk),
         .rst(rst),
         .Hs(Hs),
         .Vs(Vs),
+        .VGA_Blank(VGA_Blank),
+        .VGA_Sync_N(VGA_Sync_N),
         .R(R),
         .G(G),
         .B(B),
@@ -20,36 +24,26 @@ module tb_Vga_Controller;
         .Q_yz(Q_yz)
     );
 
-    // Reloj de 25 MHz (20 ns de período)
+    // Reloj de 25 MHz (40 ns por ciclo completo)
     initial begin
         clk = 0;
         forever #20 clk = ~clk;
     end
 
-    // Estimulación
+    // Reset inicial
     initial begin
-        rst = 0;
-        #10 rst = 1;
-        #10 rst = 0;
-
-        // Máximo tiempo para recorrer 640x480
-        // 800 x 525 = 420,000 ciclos
-        // 420,000 x 20ns = 8.4 ms
-        #8_500_000;  
-        $display("🟢 Simulación terminada (aproximadamente 1 frame VGA).");
-        $finish;
+        rst = 1;
+        #60 rst = 0;
     end
 
-    // Mostrar solo cuando esté en la zona visible
+    // Monitor que imprime todo el recorrido (800x525)
     always_ff @(posedge clk) begin
-        if (Q_xz < 640 && Q_yz < 480) begin
-            $display("Qx=%0d Qy=%0d | RGB: %h %h %h | Hs=%b Vs=%b",
-                     Q_xz, Q_yz, R, G, B, Hs, Vs);
-        end
+        $display("Qx=%0d Qy=%0d | RGB=(%02h,%02h,%02h) | Hs=%b Vs=%b | Blank=%b Sync_N=%b",
+                  Q_xz, Q_yz, R, G, B, Hs, Vs, VGA_Blank, VGA_Sync_N);
 
-        // Cortar la simulación cuando llegue al último pixel visible
-        if (Q_xz == 639 && Q_yz == 479) begin
-            $display("✅ Se recorrió toda la zona visible de 640x480.");
+        // Fin de frame completo
+        if (Q_xz == 799 && Q_yz == 524) begin
+            $display("✅ Se recorrió toda la zona VGA (800x525).");
             $finish;
         end
     end

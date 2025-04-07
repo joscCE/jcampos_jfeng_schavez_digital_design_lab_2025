@@ -1,5 +1,5 @@
 Analysis & Synthesis report for connect_four
-Sun Apr 06 19:50:46 2025
+Mon Apr 07 13:04:44 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,14 +52,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr 06 19:50:46 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 07 13:04:44 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 41                                          ;
-; Total pins                      ; 48                                          ;
+; Total pins                      ; 31                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -194,25 +194,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 25    ;
+; Estimate of Logic utilization (ALMs needed) ; 37    ;
 ;                                             ;       ;
-; Combinational ALUT usage for logic          ; 32    ;
+; Combinational ALUT usage for logic          ; 62    ;
 ;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 4     ;
-;     -- 5 input functions                    ; 2     ;
-;     -- 4 input functions                    ; 3     ;
-;     -- <=3 input functions                  ; 23    ;
+;     -- 6 input functions                    ; 8     ;
+;     -- 5 input functions                    ; 15    ;
+;     -- 4 input functions                    ; 10    ;
+;     -- <=3 input functions                  ; 29    ;
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 41    ;
 ;                                             ;       ;
-; I/O pins                                    ; 48    ;
+; I/O pins                                    ; 31    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clk25 ;
-; Maximum fan-out                             ; 41    ;
-; Total fan-out                               ; 302   ;
-; Average fan-out                             ; 1.79  ;
+; Maximum fan-out                             ; 42    ;
+; Total fan-out                               ; 399   ;
+; Average fan-out                             ; 2.42  ;
 +---------------------------------------------+-------+
 
 
@@ -221,9 +221,9 @@ refer to the applicable agreement for further details.
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name    ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------+--------------+
-; |connect_four                ; 32 (1)              ; 41 (1)                    ; 0                 ; 0          ; 48   ; 0            ; |connect_four                                          ; connect_four   ; work         ;
-;    |Vga_Controller:vga_inst| ; 31 (8)              ; 40 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst                  ; Vga_Controller ; work         ;
-;       |Comparator:cmp_x|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Comparator:cmp_x ; Comparator     ; work         ;
+; |connect_four                ; 62 (1)              ; 41 (1)                    ; 0                 ; 0          ; 31   ; 0            ; |connect_four                                          ; connect_four   ; work         ;
+;    |Vga_Controller:vga_inst| ; 61 (37)             ; 40 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst                  ; Vga_Controller ; work         ;
+;       |Comparator:cmp_x|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Comparator:cmp_x ; Comparator     ; work         ;
 ;       |Counter:count_x|      ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_x  ; Counter        ; work         ;
 ;       |Counter:count_y|      ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_y  ; Counter        ; work         ;
 ;       |Register:reg_x|       ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_x   ; Register       ; work         ;
@@ -249,11 +249,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; N              ; 8     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++----------------+------------+----------------------------------------+
+; Parameter Name ; Value      ; Type                                   ;
++----------------+------------+----------------------------------------+
+; N              ; 8          ; Signed Integer                         ;
+; H_Va           ; 1010000000 ; Unsigned Binary                        ;
+; H_FP           ; 0000010000 ; Unsigned Binary                        ;
+; H_SycP         ; 0001100000 ; Unsigned Binary                        ;
+; H_BckP         ; 0000110000 ; Unsigned Binary                        ;
+; H_Total        ; 1100100000 ; Unsigned Binary                        ;
+; V_Va           ; 0111100000 ; Unsigned Binary                        ;
+; V_FP           ; 0000001010 ; Unsigned Binary                        ;
+; V_SycP         ; 0000000010 ; Unsigned Binary                        ;
+; V_BckP         ; 0000100001 ; Unsigned Binary                        ;
+; V_Total        ; 1000001101 ; Unsigned Binary                        ;
++----------------+------------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -359,22 +369,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 41                          ;
 ;     CLR               ; 31                          ;
 ;     ENA CLR           ; 10                          ;
-; arriav_lcell_comb     ; 33                          ;
+; arriav_lcell_comb     ; 65                          ;
 ;     arith             ; 18                          ;
 ;         1 data inputs ; 16                          ;
 ;         2 data inputs ; 2                           ;
-;     normal            ; 15                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 4                           ;
-; boundary_port         ; 48                          ;
+;     normal            ; 47                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 15                          ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 31                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.61                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -393,7 +403,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 06 19:50:35 2025
+    Info: Processing started: Mon Apr 07 13:04:33 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -410,35 +420,37 @@ Info (12021): Found 1 design units, including 1 entities, in source file compara
     Info (12023): Found entity 1: Comparator File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv Line: 1
 Info (12127): Elaborating entity "connect_four" for the top level hierarchy
 Info (12128): Elaborating entity "Vga_Controller" for hierarchy "Vga_Controller:vga_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 34
-Info (12128): Elaborating entity "Counter" for hierarchy "Vga_Controller:vga_inst|Counter:count_y" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 13
-Info (12128): Elaborating entity "Register" for hierarchy "Vga_Controller:vga_inst|Register:reg_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 17
-Info (12128): Elaborating entity "Comparator" for hierarchy "Vga_Controller:vga_inst|Comparator:cmp_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 20
+Info (12128): Elaborating entity "Counter" for hierarchy "Vga_Controller:vga_inst|Counter:count_y" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 26
+Info (12128): Elaborating entity "Register" for hierarchy "Vga_Controller:vga_inst|Register:reg_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 30
+Info (12128): Elaborating entity "Comparator" for hierarchy "Vga_Controller:vga_inst|Comparator:cmp_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "R[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "R[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "R[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "R[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "R[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "G[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "G[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "G[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "G[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "G[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "B[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "B[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "B[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "B[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-    Warning (13410): Pin "B[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "VGA_Sync_N" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "G[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "G[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "G[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "G[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "G[4]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "G[5]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "G[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "G[7]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 6
+    Warning (13410): Pin "B[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
+    Warning (13410): Pin "B[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
+    Warning (13410): Pin "B[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
+    Warning (13410): Pin "B[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
+    Warning (13410): Pin "B[4]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
+    Warning (13410): Pin "B[5]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
+    Warning (13410): Pin "B[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
+    Warning (13410): Pin "B[7]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 52 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 82 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
     Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Sun Apr 06 19:50:46 2025
+    Info: Processing ended: Mon Apr 07 13:04:44 2025
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:24
 
