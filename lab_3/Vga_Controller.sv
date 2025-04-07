@@ -24,24 +24,20 @@ module Vga_Controller #(parameter N=8)(
     
 
     // Señales de sincronización
-    assign Hs = ~(Q_x >= 656 && Q_x < 752);  // Pulso horizontal
-	 assign Vs = ~(Q_y >= 490 && Q_y < 492);  // Pulso vertical  
+    assign Hs = ~(Q_x >= 656 && Q_x < 752);  // Pulso horizontal activo en bajo
+	 assign Vs = ~(Q_y >= 490 && Q_y < 492);  // Pulso vertical activo en bajo  
 	 assign Q_xz = Q_x;
 	 assign Q_yz = Q_y;
+	 
+	  assign R = (Q_x < 640 && Q_y < 480) ? 8'b10110000 : 8'h00;
+	  assign G = (Q_x < 640 && Q_y < 480) ? 8'b10110000 : 8'h00;
+	  assign B = (Q_x < 640 && Q_y < 480) ? 8'b10110000 : 8'h00;
 	 
 
     // Zona visible y color
 	 
-	 
-	 wire visible_area;
-	assign visible_area = (Q_x < 640) && (Q_y < 480);
 
-	assign R = visible_area ? 8'hFF : 8'h00;
-	assign G = visible_area ? 8'hFF : 8'h00;
-	assign B = visible_area ? 8'hFF : 8'h00;
-
-	 
-
+//	 always_comb begin
 //        if (Q_x >= 270 && Q_x < 370 && Q_y >= 190 && Q_y < 290) begin
 //			 R = 8'hFF;
 //			 G = 8'h00;
@@ -51,6 +47,8 @@ module Vga_Controller #(parameter N=8)(
 //            G = 8'h00;
 //            B = 8'h00;
 //        end
+//		  
+//	end
 
 
 endmodule

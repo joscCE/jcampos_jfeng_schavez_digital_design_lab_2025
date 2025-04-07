@@ -105,7 +105,7 @@ set_location_assignment PIN_AJ17 -to B[5]
 set_location_assignment PIN_AJ16 -to B[6]
 set_location_assignment PIN_AK16 -to B[7]
 set_location_assignment PIN_AF14 -to clk
-set_location_assignment PIN_AA15 -to rst
+set_location_assignment PIN_AJ4 -to rst
 set_global_assignment -name SYSTEMVERILOG_FILE output_files/tb_Vga_Controller.sv
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85

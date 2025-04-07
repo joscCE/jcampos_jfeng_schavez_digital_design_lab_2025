@@ -9,10 +9,12 @@ module connect_four (
 );
 
     logic clk25;  // Reloj dividido a 25 MHz
+	 logic rst_active;
+	 
+	 assign rst_active = ~rst;
 
-
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst)
+    always_ff @(posedge clk or posedge rst_active) begin
+        if (rst_active)
             clk25 <= 0;
         else
             clk25 <= ~clk25;
@@ -21,7 +23,7 @@ module connect_four (
     // Instancia del controlador VGA
     Vga_Controller vga_inst (
         .clk(clk25),
-        .rst(rst),
+        .rst(rst_active),
         .Hs(Hs),
         .Vs(Vs),
         .R(R),

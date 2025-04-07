@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/simulation/modelsim
 vComparator
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1743971159
+Z2 !s110 1743990244
 !i10b 1
 !s100 Q@UC0dgo[9cDc4@nVEk@A2
 IET27kWecV0@33SliOIcF13
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1743971159.000000
+Z5 !s108 1743990244.000000
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv|
 !i113 1
@@ -38,13 +38,13 @@ vconnect_four
 R1
 R2
 !i10b 1
-!s100 ERfb1@=D9<@`ffJHUSUeX0
-I97V89XzAB0MgW;bzS;1Sb0
+!s100 LEl1iE[TQc6@`7@doERSk3
+IG67=8C7Y>AXi9`8<5]<;h3
 R3
 !s105 connect_four_sv_unit
 S1
 R0
-w1743970822
+w1743987858
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv
 L0 1
@@ -113,15 +113,15 @@ R8
 n@register
 vtb_Vga_Controller
 R1
-R2
+!s110 1743990245
 !i10b 1
-!s100 K;eLz[?Mcc2VAKRn[MD9D3
-IIZ8=hjRLSb0HUEliG4<AK0
+!s100 G4OG_d2?`;Z<2Q`gdP:;<3
+Ii5Vz:_@WM84DX4lQMGK`i0
 R3
 !s105 tb_Vga_Controller_sv_unit
 S1
 R0
-w1743968378
+w1743990168
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv
 L0 1
@@ -129,7 +129,7 @@ R4
 r1
 !s85 0
 31
-R5
+!s108 1743990245.000000
 !s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Vga_Controller.sv|
 !i113 1
@@ -141,13 +141,13 @@ vVga_Controller
 R1
 R2
 !i10b 1
-!s100 CM`:`:hV`n8K8i@YeXRJD1
-IQ5:EP7?IMl@GoCNBM6MPQ1
+!s100 NUjSEW^MXVZhl3VhXbi902
+IoKHN@@nhnSMe5bNZMSSQ90
 R3
 !s105 Vga_Controller_sv_unit
 S1
 R0
-w1743971140
+w1743990086
 8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv
 FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv
 L0 1

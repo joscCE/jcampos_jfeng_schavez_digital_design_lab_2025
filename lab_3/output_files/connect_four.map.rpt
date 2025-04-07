@@ -1,5 +1,5 @@
 Analysis & Synthesis report for connect_four
-Sun Apr 06 14:35:05 2025
+Sun Apr 06 19:50:46 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr 06 14:35:05 2025       ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr 06 19:50:46 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
@@ -211,8 +211,8 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clk25 ;
 ; Maximum fan-out                             ; 41    ;
-; Total fan-out                               ; 317   ;
-; Average fan-out                             ; 1.88  ;
+; Total fan-out                               ; 302   ;
+; Average fan-out                             ; 1.79  ;
 +---------------------------------------------+-------+
 
 
@@ -359,11 +359,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 41                          ;
 ;     CLR               ; 31                          ;
 ;     ENA CLR           ; 10                          ;
-; arriav_lcell_comb     ; 32                          ;
+; arriav_lcell_comb     ; 33                          ;
 ;     arith             ; 18                          ;
 ;         1 data inputs ; 16                          ;
 ;         2 data inputs ; 2                           ;
-;     normal            ; 14                          ;
+;     normal            ; 15                          ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 1                           ;
@@ -373,7 +374,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.62                        ;
+; Average LUT depth     ; 1.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -392,7 +393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 06 14:34:54 2025
+    Info: Processing started: Sun Apr 06 19:50:35 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -408,10 +409,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
     Info (12023): Found entity 1: Comparator File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv Line: 1
 Info (12127): Elaborating entity "connect_four" for the top level hierarchy
-Info (12128): Elaborating entity "Vga_Controller" for hierarchy "Vga_Controller:vga_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 32
+Info (12128): Elaborating entity "Vga_Controller" for hierarchy "Vga_Controller:vga_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 34
 Info (12128): Elaborating entity "Counter" for hierarchy "Vga_Controller:vga_inst|Counter:count_y" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 13
 Info (12128): Elaborating entity "Register" for hierarchy "Vga_Controller:vga_inst|Register:reg_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 17
 Info (12128): Elaborating entity "Comparator" for hierarchy "Vga_Controller:vga_inst|Comparator:cmp_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 20
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "R[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "R[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "R[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "R[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "R[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "G[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "G[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "G[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "G[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "G[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "B[0]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "B[1]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "B[2]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "B[3]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
+    Warning (13410): Pin "B[6]" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -419,10 +436,10 @@ Info (21057): Implemented 100 device resources after synthesis - the final resou
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 46 output pins
     Info (21061): Implemented 52 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
     Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Sun Apr 06 14:35:05 2025
+    Info: Processing ended: Sun Apr 06 19:50:46 2025
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:24
 
 

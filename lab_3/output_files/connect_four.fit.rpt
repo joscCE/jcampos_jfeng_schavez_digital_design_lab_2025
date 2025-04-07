@@ -1,5 +1,5 @@
 Fitter report for connect_four
-Sun Apr 06 14:35:42 2025
+Sun Apr 06 19:51:22 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Apr 06 14:35:42 2025       ;
+; Fitter Status                   ; Successful - Sun Apr 06 19:51:22 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 19 / 41,910 ( < 1 % )                       ;
-; Total registers                 ; 51                                          ;
+; Total registers                 ; 57                                          ;
 ; Total pins                      ; 48 / 499 ( 10 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -168,16 +168,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+--------------------------------------------------------+------------------+-----------------------+
 ; Node                                         ; Action     ; Operation                                         ; Reason                   ; Node Port ; Node Port Name ; Destination Node                                       ; Destination Port ; Destination Port Name ;
 +----------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+--------------------------------------------------------+------------------+-----------------------+
-; Vga_Controller:vga_inst|Counter:count_x|Q[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[1]~DUPLICATE ;                  ;                       ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[0]~DUPLICATE ;                  ;                       ;
 ; Vga_Controller:vga_inst|Counter:count_x|Q[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[2]~DUPLICATE ;                  ;                       ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[3]~DUPLICATE ;                  ;                       ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[4]~DUPLICATE ;                  ;                       ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[5] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[5]~DUPLICATE ;                  ;                       ;
 ; Vga_Controller:vga_inst|Counter:count_x|Q[6] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[6]~DUPLICATE ;                  ;                       ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_x|Q[1]~DUPLICATE  ;                  ;                       ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_x|Q[6]~DUPLICATE  ;                  ;                       ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_y|Q[3]~DUPLICATE  ;                  ;                       ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_y|Q[4]~DUPLICATE  ;                  ;                       ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_y|Q[6]~DUPLICATE  ;                  ;                       ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_x|Q[7]~DUPLICATE ;                  ;                       ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[9] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Counter:count_y|Q[9]~DUPLICATE ;                  ;                       ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_x|Q[0]~DUPLICATE  ;                  ;                       ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[2]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_x|Q[2]~DUPLICATE  ;                  ;                       ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[8]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_x|Q[8]~DUPLICATE  ;                  ;                       ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_x|Q[9]~DUPLICATE  ;                  ;                       ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_y|Q[1]~DUPLICATE  ;                  ;                       ;
 ; Vga_Controller:vga_inst|Register:reg_y|Q[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_y|Q[7]~DUPLICATE  ;                  ;                       ;
 ; Vga_Controller:vga_inst|Register:reg_y|Q[8]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_y|Q[8]~DUPLICATE  ;                  ;                       ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; Vga_Controller:vga_inst|Register:reg_y|Q[9]~DUPLICATE  ;                  ;                       ;
 +----------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+--------------------------------------------------------+------------------+-----------------------+
 
 
@@ -240,12 +246,12 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 19 / 41,910        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 19                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 30 / 41,910        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 7                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 10                 ;       ;
-;         [c] ALMs used for registers                         ; 13                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 31 / 41,910        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 5                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 12                 ;       ;
+;         [c] ALMs used for registers                         ; 14                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 41,910        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 12 / 41,910        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -264,19 +270,19 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ;     -- 5 input functions                                    ; 2                  ;       ;
 ;     -- 4 input functions                                    ; 3                  ;       ;
 ;     -- <=3 input functions                                  ; 24                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 8                  ;       ;
+; Combinational ALUT usage for route-throughs                 ; 13                 ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 51                 ;       ;
+; Dedicated logic registers                                   ; 57                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 40 / 83,820        ; < 1 % ;
-;         -- Secondary logic registers                        ; 11 / 83,820        ; < 1 % ;
+;         -- Primary logic registers                          ; 37 / 83,820        ; < 1 % ;
+;         -- Secondary logic registers                        ; 20 / 83,820        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 41                 ;       ;
-;         -- Routing optimization registers                   ; 10                 ;       ;
+;         -- Routing optimization registers                   ; 16                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 48 / 499           ; 10 %  ;
-;     -- Clock pins                                           ; 1 / 11             ; 9 %   ;
+;     -- Clock pins                                           ; 2 / 11             ; 18 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 39             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; Hard processor system peripheral utilization                ;                    ;       ;
@@ -334,11 +340,11 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.2% / 1.3% / 1.1% ;       ;
-; Maximum fan-out                                             ; 51                 ;       ;
-; Highest non-global fan-out                                  ; 51                 ;       ;
-; Total fan-out                                               ; 355                ;       ;
-; Average fan-out                                             ; 1.89               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.1% / 1.2% / 0.7% ;       ;
+; Maximum fan-out                                             ; 57                 ;       ;
+; Highest non-global fan-out                                  ; 57                 ;       ;
+; Total fan-out                                               ; 364                ;       ;
+; Average fan-out                                             ; 1.83               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -349,12 +355,12 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 19 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 19                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 30 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 7                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 10                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 13                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 31 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 5                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 12                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 14                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 12 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )    ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -373,18 +379,18 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ;     -- 5 input functions                                    ; 2                    ; 0                              ;
 ;     -- 4 input functions                                    ; 3                    ; 0                              ;
 ;     -- <=3 input functions                                  ; 24                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 8                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 13                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 40 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 11 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
+;         -- Primary logic registers                          ; 37 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 20 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 41                   ; 0                              ;
-;         -- Routing optimization registers                   ; 10                   ; 0                              ;
+;         -- Routing optimization registers                   ; 16                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -400,8 +406,8 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 355                  ; 0                              ;
-;     -- Registered Connections                               ; 158                  ; 0                              ;
+;     -- Total Connections                                    ; 364                  ; 0                              ;
+;     -- Registered Connections                               ; 163                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -434,7 +440,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; clk  ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; --                        ; User                 ; no        ;
-; rst  ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 30                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; --                        ; User                 ; no        ;
+; rst  ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 31                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVCMOS ; Off         ; --                        ; User                 ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -461,25 +467,25 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; G[7]    ; AH23  ; 4A       ; 70           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 2mA              ; Off                               ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; Hs      ; AK19  ; 4A       ; 60           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 2mA              ; Off                               ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; Q_xz[0] ; AJ2   ; 3A       ; 14           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[1] ; AD25  ; 5A       ; 89           ; 4            ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[2] ; AG27  ; 5A       ; 89           ; 4            ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[3] ; B8    ; 8A       ; 30           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[4] ; AG5   ; 3A       ; 14           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[5] ; D9    ; 8A       ; 30           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[6] ; Y21   ; 5A       ; 89           ; 6            ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[7] ; C8    ; 8A       ; 30           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[8] ; AH5   ; 3A       ; 14           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_xz[9] ; AH3   ; 3A       ; 16           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[0] ; E9    ; 8A       ; 30           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[1] ; AC12  ; 3A       ; 16           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[2] ; W20   ; 5A       ; 89           ; 6            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[3] ; AJ1   ; 3A       ; 14           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[4] ; AH28  ; 5A       ; 89           ; 4            ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[5] ; AC25  ; 5A       ; 89           ; 4            ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[6] ; AH29  ; 5A       ; 89           ; 6            ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[7] ; AD12  ; 3A       ; 16           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[8] ; AJ29  ; 5A       ; 89           ; 6            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Q_yz[9] ; AG2   ; 3A       ; 16           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[1] ; AG2   ; 3A       ; 16           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[2] ; AJ29  ; 5A       ; 89           ; 6            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[3] ; G15   ; 8A       ; 40           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[4] ; B13   ; 8A       ; 40           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[5] ; A13   ; 8A       ; 40           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[6] ; AE26  ; 5A       ; 89           ; 8            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[7] ; AH5   ; 3A       ; 14           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[8] ; AC12  ; 3A       ; 16           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_xz[9] ; AH29  ; 5A       ; 89           ; 6            ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[0] ; AH28  ; 5A       ; 89           ; 4            ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[1] ; H15   ; 8A       ; 40           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[2] ; AD12  ; 3A       ; 16           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[3] ; AH3   ; 3A       ; 16           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[4] ; AC25  ; 5A       ; 89           ; 4            ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[5] ; AJ1   ; 3A       ; 14           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[6] ; AG27  ; 5A       ; 89           ; 4            ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[7] ; Y21   ; 5A       ; 89           ; 6            ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[8] ; W20   ; 5A       ; 89           ; 6            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Q_yz[9] ; AD25  ; 5A       ; 89           ; 4            ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; R[0]    ; AK29  ; 4A       ; 82           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 2mA              ; Off                               ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; R[1]    ; AK28  ; 4A       ; 82           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 2mA              ; Off                               ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; R[2]    ; AK27  ; 4A       ; 80           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 2mA              ; Off                               ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -500,10 +506,10 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; B2L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; B1L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; B0L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
-; 3A       ; 8 / 32 ( 25 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 7 / 32 ( 22 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 2 / 48 ( 4 % )   ; 3.3V          ; --           ; 3.3V          ;
 ; 4A       ; 26 / 80 ( 33 % ) ; 3.3V          ; --           ; 3.3V          ;
-; 5A       ; 8 / 32 ( 25 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 9 / 32 ( 28 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -531,7 +537,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; A10      ; 465        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A11      ; 463        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A12      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; A13      ; 461        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A13      ; 461        ; 8A             ; Q_xz[5]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; A14      ; 455        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A15      ; 447        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A16      ; 439        ; 7C             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -562,7 +568,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AA12     ; 74         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA13     ; 90         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA14     ; 122        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA15     ; 120        ; 3B             ; rst                             ; input  ; 3.3-V LVCMOS ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AA15     ; 120        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA16     ; 146        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA17     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AA18     ; 168        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -619,7 +625,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AC9      ; 58         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC10     ;            ; 3A             ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC11     ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC12     ; 82         ; 3A             ; Q_yz[1]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AC12     ; 82         ; 3A             ; Q_xz[8]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AC13     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AC14     ; 104        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC15     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
@@ -632,7 +638,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AC22     ; 207        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC23     ; 205        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC24     ;            ; 5A             ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AC25     ; 215        ; 5A             ; Q_yz[5]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AC25     ; 215        ; 5A             ; Q_yz[4]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AC26     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC27     ; 242        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC28     ; 245        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -649,7 +655,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AD9      ; 55         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD10     ; 56         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD11     ; 54         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD12     ; 80         ; 3A             ; Q_yz[7]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD12     ; 80         ; 3A             ; Q_yz[2]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD13     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AD14     ; 98         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD15     ;            ;                ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -662,7 +668,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AD22     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD23     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD24     ; 211        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD25     ; 213        ; 5A             ; Q_xz[1]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AD25     ; 213        ; 5A             ; Q_yz[9]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AD26     ; 240        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD28     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -693,7 +699,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AE23     ; 189        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE24     ; 209        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE25     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
-; AE26     ; 220        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AE26     ; 220        ; 5A             ; Q_xz[6]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AE27     ; 229        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE28     ; 231        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE29     ; 253        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -729,10 +735,10 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AF29     ; 237        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AF30     ; 239        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG1      ; 71         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG2      ; 83         ; 3A             ; Q_yz[9]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG2      ; 83         ; 3A             ; Q_xz[1]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG3      ; 63         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG4      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AG5      ; 78         ; 3A             ; Q_xz[4]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG5      ; 78         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG6      ; 73         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG7      ; 68         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG8      ; 65         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -754,15 +760,15 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AG24     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG25     ; 190        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG26     ; 203        ; 4A             ; R[6]                            ; output ; 3.3-V LVCMOS ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; AG27     ; 212        ; 5A             ; Q_xz[2]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AG27     ; 212        ; 5A             ; Q_yz[6]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AG28     ; 233        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG29     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AG30     ; 243        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH2      ; 69         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH3      ; 81         ; 3A             ; Q_xz[9]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH3      ; 81         ; 3A             ; Q_yz[3]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH4      ; 61         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH5      ; 76         ; 3A             ; Q_xz[8]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH5      ; 76         ; 3A             ; Q_xz[7]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH6      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH7      ; 115        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH8      ; 113        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -785,13 +791,13 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AH25     ; 188        ; 4A             ; G[2]                            ; output ; 3.3-V LVCMOS ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AH26     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AH27     ; 201        ; 4A             ; R[4]                            ; output ; 3.3-V LVCMOS ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; AH28     ; 214        ; 5A             ; Q_yz[4]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; AH29     ; 218        ; 5A             ; Q_yz[6]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AH28     ; 214        ; 5A             ; Q_yz[0]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AH29     ; 218        ; 5A             ; Q_xz[9]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AH30     ; 241        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AJ1      ; 79         ; 3A             ; Q_yz[3]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ1      ; 79         ; 3A             ; Q_yz[5]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ2      ; 77         ; 3A             ; Q_xz[0]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AJ4      ; 94         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ4      ; 94         ; 3B             ; rst                             ; input  ; 3.3-V LVCMOS ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AJ5      ; 99         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ6      ; 102        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ7      ; 100        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -816,7 +822,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; AJ26     ; 187        ; 4A             ; R[7]                            ; output ; 3.3-V LVCMOS ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AJ27     ; 195        ; 4A             ; R[3]                            ; output ; 3.3-V LVCMOS ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AJ28     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AJ29     ; 216        ; 5A             ; Q_yz[8]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AJ29     ; 216        ; 5A             ; Q_xz[2]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AJ30     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AK2      ; 91         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK3      ; 89         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -853,12 +859,12 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; B5       ; 512        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B6       ; 510        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B7       ; 477        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B8       ; 481        ; 8A             ; Q_xz[3]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; B8       ; 481        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B9       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B10      ;            ; 8A             ; VREFB8AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B11      ; 469        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B12      ; 464        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B13      ; 459        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; B13      ; 459        ; 8A             ; Q_xz[4]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; B14      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B15      ; 451        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B16      ; 441        ; 7C             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -883,7 +889,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; C5       ; 497        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C6       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C7       ; 475        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; C8       ; 479        ; 8A             ; Q_xz[7]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C8       ; 479        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C9       ; 485        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C10      ; 483        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C11      ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -914,7 +920,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; D6       ; 495        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D7       ; 505        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D8       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; D9       ; 480        ; 8A             ; Q_xz[5]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D9       ; 480        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D10      ; 472        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D11      ; 470        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D12      ; 496        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -944,7 +950,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; E6       ; 533        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E7       ; 531        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E8       ; 503        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; E9       ; 478        ; 8A             ; Q_yz[0]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; E9       ; 478        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E10      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E11      ; 504        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E12      ; 494        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1010,7 +1016,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; G12      ; 518        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G13      ; 484        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G14      ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; G15      ; 460        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G15      ; 460        ; 8A             ; Q_xz[3]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; G16      ; 444        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G17      ; 436        ; 7C             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G18      ; 432        ; 7C             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1040,7 +1046,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; H12      ; 500        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H13      ; 498        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H14      ; 482        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H15      ; 458        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H15      ; 458        ; 8A             ; Q_yz[1]                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; H16      ;            ; 7D             ; VCCIO7D_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H17      ; 434        ; 7C             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H18      ; 422        ; 7B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1375,7 +1381,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; W17      ; 152        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W18      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W19      ; 192        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; W20      ; 217        ; 5A             ; Q_yz[2]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W20      ; 217        ; 5A             ; Q_yz[8]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; W21      ; 221        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W22      ; 223        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W23      ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1406,7 +1412,7 @@ The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital
 ; Y18      ; 178        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y19      ; 202        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y20      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y21      ; 219        ; 5A             ; Q_xz[6]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; Y21      ; 219        ; 5A             ; Q_yz[7]                         ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; Y22      ;            ; --             ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; Y23      ; 232        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y24      ; 234        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1499,13 +1505,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name    ; Library Name ;
 +------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------+----------------+--------------+
-; |connect_four                ; 18.5 (1.0)           ; 29.5 (1.3)                       ; 11.0 (0.3)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (2)              ; 51 (1)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 48   ; 0            ; |connect_four                                          ; connect_four   ; work         ;
-;    |Vga_Controller:vga_inst| ; 17.5 (3.2)           ; 28.3 (3.2)                       ; 10.8 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (8)              ; 50 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst                  ; Vga_Controller ; work         ;
-;       |Comparator:cmp_x|     ; 1.1 (1.1)            ; 1.2 (1.2)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Comparator:cmp_x ; Comparator     ; work         ;
-;       |Counter:count_x|      ; 5.0 (5.0)            ; 8.2 (8.2)                        ; 3.2 (3.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 13 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_x  ; Counter        ; work         ;
-;       |Counter:count_y|      ; 5.2 (5.2)            ; 7.9 (7.9)                        ; 2.8 (2.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_y  ; Counter        ; work         ;
-;       |Register:reg_x|       ; 1.5 (1.5)            ; 3.6 (3.6)                        ; 2.1 (2.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_x   ; Register       ; work         ;
-;       |Register:reg_y|       ; 1.3 (1.3)            ; 4.2 (4.2)                        ; 2.9 (2.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_y   ; Register       ; work         ;
+; |connect_four                ; 19.0 (1.0)           ; 30.5 (1.1)                       ; 11.5 (0.1)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (2)              ; 57 (1)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 48   ; 0            ; |connect_four                                          ; connect_four   ; work         ;
+;    |Vga_Controller:vga_inst| ; 18.0 (3.3)           ; 29.4 (3.3)                       ; 11.4 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (8)              ; 56 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst                  ; Vga_Controller ; work         ;
+;       |Comparator:cmp_x|     ; 1.2 (1.2)            ; 1.2 (1.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Comparator:cmp_x ; Comparator     ; work         ;
+;       |Counter:count_x|      ; 5.0 (5.0)            ; 9.7 (9.7)                        ; 4.7 (4.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_x  ; Counter        ; work         ;
+;       |Counter:count_y|      ; 5.5 (5.5)            ; 7.3 (7.3)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 11 (11)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_y  ; Counter        ; work         ;
+;       |Register:reg_x|       ; 1.6 (1.6)            ; 4.3 (4.3)                        ; 2.7 (2.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 14 (14)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_x   ; Register       ; work         ;
+;       |Register:reg_y|       ; 1.3 (1.3)            ; 3.5 (3.5)                        ; 2.3 (2.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 14 (14)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_y   ; Register       ; work         ;
 +------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1561,7 +1567,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Q_yz[7] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; Q_yz[8] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; Q_yz[9] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; rst     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; rst     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clk     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1572,132 +1578,133 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                          ; Pad To Core Index ; Setting ;
 +--------------------------------------------------------------+-------------------+---------+
 ; rst                                                          ;                   ;         ;
-;      - clk25                                                 ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[0]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[1]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[2]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[3]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[4]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[5]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[6]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[7]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[8]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[9]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[0]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[1]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[2]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[3]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[4]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[5]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[6]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[7]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[8]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[9]           ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|comb~0                        ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|comb~3                        ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[6]~DUPLICATE ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[4]~DUPLICATE ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[3]~DUPLICATE ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[8]~DUPLICATE ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[7]~DUPLICATE ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_y|Q[6]~DUPLICATE ; 1                 ; 0       ;
-;      - Vga_Controller:vga_inst|Register:reg_x|Q[1]~DUPLICATE ; 1                 ; 0       ;
+;      - clk25                                                 ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[0]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[1]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[2]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[3]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[4]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[5]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[6]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[7]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[8]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[9]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[0]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[1]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[2]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[3]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[4]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[5]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[6]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[7]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[8]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[9]           ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|comb~0                        ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|comb~3                        ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[9]~DUPLICATE ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[8]~DUPLICATE ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[9]~DUPLICATE ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[1]~DUPLICATE ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[8]~DUPLICATE ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_y|Q[7]~DUPLICATE ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[0]~DUPLICATE ; 0                 ; 0       ;
+;      - Vga_Controller:vga_inst|Register:reg_x|Q[2]~DUPLICATE ; 0                 ; 0       ;
 ; clk                                                          ;                   ;         ;
 ;      - clk25                                                 ; 0                 ; 0       ;
 +--------------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                ;
-+---------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                              ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Vga_Controller:vga_inst|Comparator:cmp_x|Equal0~2 ; LABCELL_X30_Y1_N33 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Vga_Controller:vga_inst|comb~0                    ; LABCELL_X30_Y1_N6  ; 13      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Vga_Controller:vga_inst|comb~3                    ; LABCELL_X30_Y1_N24 ; 10      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clk                                               ; PIN_AF14           ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk25                                             ; FF_X31_Y1_N59      ; 51      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; rst                                               ; PIN_AA15           ; 30      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                 ;
++---------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                              ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Vga_Controller:vga_inst|Comparator:cmp_x|Equal0~2 ; LABCELL_X50_Y2_N33  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Vga_Controller:vga_inst|comb~0                    ; MLABCELL_X52_Y2_N39 ; 17      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Vga_Controller:vga_inst|comb~3                    ; LABCELL_X50_Y2_N42  ; 11      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clk                                               ; PIN_AF14            ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk25                                             ; FF_X51_Y2_N53       ; 57      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; rst                                               ; PIN_AJ4             ; 31      ; Async. clear ; no     ; --                   ; --               ; --                        ;
++---------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Routing Usage Summary                                                 ;
-+---------------------------------------------+-------------------------+
-; Routing Resource Type                       ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Block interconnects                         ; 121 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 20 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 53 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 49 / 56,300 ( < 1 % )   ;
-; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
-; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
-; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 28 / 289,320 ( < 1 % )  ;
-; Global clocks                               ; 0 / 16 ( 0 % )          ;
-; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
-; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
-; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )           ;
-; HPS_INTERFACE_CLOCKS_RESETS_INPUTs          ; 0 / 7 ( 0 % )           ;
-; HPS_INTERFACE_CLOCKS_RESETS_OUTPUTs         ; 0 / 6 ( 0 % )           ;
-; HPS_INTERFACE_CROSS_TRIGGER_INPUTs          ; 0 / 18 ( 0 % )          ;
-; HPS_INTERFACE_CROSS_TRIGGER_OUTPUTs         ; 0 / 24 ( 0 % )          ;
-; HPS_INTERFACE_DBG_APB_INPUTs                ; 0 / 37 ( 0 % )          ;
-; HPS_INTERFACE_DBG_APB_OUTPUTs               ; 0 / 55 ( 0 % )          ;
-; HPS_INTERFACE_DMA_INPUTs                    ; 0 / 16 ( 0 % )          ;
-; HPS_INTERFACE_DMA_OUTPUTs                   ; 0 / 8 ( 0 % )           ;
-; HPS_INTERFACE_FPGA2HPS_INPUTs               ; 0 / 287 ( 0 % )         ;
-; HPS_INTERFACE_FPGA2HPS_OUTPUTs              ; 0 / 154 ( 0 % )         ;
-; HPS_INTERFACE_FPGA2SDRAM_INPUTs             ; 0 / 852 ( 0 % )         ;
-; HPS_INTERFACE_FPGA2SDRAM_OUTPUTs            ; 0 / 408 ( 0 % )         ;
-; HPS_INTERFACE_HPS2FPGA_INPUTs               ; 0 / 165 ( 0 % )         ;
-; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_INPUTs  ; 0 / 67 ( 0 % )          ;
-; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_OUTPUTs ; 0 / 156 ( 0 % )         ;
-; HPS_INTERFACE_HPS2FPGA_OUTPUTs              ; 0 / 282 ( 0 % )         ;
-; HPS_INTERFACE_INTERRUPTS_INPUTs             ; 0 / 64 ( 0 % )          ;
-; HPS_INTERFACE_INTERRUPTS_OUTPUTs            ; 0 / 42 ( 0 % )          ;
-; HPS_INTERFACE_JTAG_OUTPUTs                  ; 0 / 5 ( 0 % )           ;
-; HPS_INTERFACE_LOAN_IO_INPUTs                ; 0 / 142 ( 0 % )         ;
-; HPS_INTERFACE_LOAN_IO_OUTPUTs               ; 0 / 85 ( 0 % )          ;
-; HPS_INTERFACE_MPU_EVENT_STANDBY_INPUTs      ; 0 / 1 ( 0 % )           ;
-; HPS_INTERFACE_MPU_EVENT_STANDBY_OUTPUTs     ; 0 / 5 ( 0 % )           ;
-; HPS_INTERFACE_MPU_GENERAL_PURPOSE_INPUTs    ; 0 / 32 ( 0 % )          ;
-; HPS_INTERFACE_MPU_GENERAL_PURPOSE_OUTPUTs   ; 0 / 32 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_CAN_INPUTs         ; 0 / 2 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_CAN_OUTPUTs        ; 0 / 2 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_EMAC_INPUTs        ; 0 / 32 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_EMAC_OUTPUTs       ; 0 / 34 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_I2C_INPUTs         ; 0 / 8 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_I2C_OUTPUTs        ; 0 / 8 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_NAND_INPUTs        ; 0 / 12 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_NAND_OUTPUTs       ; 0 / 18 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_QSPI_INPUTs        ; 0 / 4 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_QSPI_OUTPUTs       ; 0 / 13 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_SDMMC_INPUTs       ; 0 / 13 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_SDMMC_OUTPUTs      ; 0 / 22 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_INPUTs  ; 0 / 4 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_OUTPUTs ; 0 / 14 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_INPUTs   ; 0 / 6 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_OUTPUTs  ; 0 / 4 ( 0 % )           ;
-; HPS_INTERFACE_PERIPHERAL_UART_INPUTs        ; 0 / 10 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_UART_OUTPUTs       ; 0 / 10 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_USB_INPUTs         ; 0 / 22 ( 0 % )          ;
-; HPS_INTERFACE_PERIPHERAL_USB_OUTPUTs        ; 0 / 34 ( 0 % )          ;
-; HPS_INTERFACE_STM_EVENT_INPUTs              ; 0 / 28 ( 0 % )          ;
-; HPS_INTERFACE_TEST_INPUTs                   ; 0 / 610 ( 0 % )         ;
-; HPS_INTERFACE_TEST_OUTPUTs                  ; 0 / 513 ( 0 % )         ;
-; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
-; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
-; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 33 / 84,580 ( < 1 % )   ;
-; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 58 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 76 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 69 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 67 / 266,960 ( < 1 % )  ;
-; Spine clocks                                ; 0 / 360 ( 0 % )         ;
-; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
-+---------------------------------------------+-------------------------+
++----------------------------------------------------------------------+
+; Routing Usage Summary                                                ;
++---------------------------------------------+------------------------+
+; Routing Resource Type                       ; Usage                  ;
++---------------------------------------------+------------------------+
+; Block interconnects                         ; 86 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 23 / 13,420 ( < 1 % )  ;
+; C2 interconnects                            ; 35 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 39 / 56,300 ( < 1 % )  ;
+; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
+; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
+; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
+; Direct links                                ; 14 / 289,320 ( < 1 % ) ;
+; Global clocks                               ; 0 / 16 ( 0 % )         ;
+; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
+; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_INPUTs          ; 0 / 7 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_OUTPUTs         ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_CROSS_TRIGGER_INPUTs          ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_CROSS_TRIGGER_OUTPUTs         ; 0 / 24 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_INPUTs                ; 0 / 37 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_OUTPUTs               ; 0 / 55 ( 0 % )         ;
+; HPS_INTERFACE_DMA_INPUTs                    ; 0 / 16 ( 0 % )         ;
+; HPS_INTERFACE_DMA_OUTPUTs                   ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_FPGA2HPS_INPUTs               ; 0 / 287 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2HPS_OUTPUTs              ; 0 / 154 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_INPUTs             ; 0 / 852 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_OUTPUTs            ; 0 / 408 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_INPUTs               ; 0 / 165 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_INPUTs  ; 0 / 67 ( 0 % )         ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_OUTPUTs ; 0 / 156 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_OUTPUTs              ; 0 / 282 ( 0 % )        ;
+; HPS_INTERFACE_INTERRUPTS_INPUTs             ; 0 / 64 ( 0 % )         ;
+; HPS_INTERFACE_INTERRUPTS_OUTPUTs            ; 0 / 42 ( 0 % )         ;
+; HPS_INTERFACE_JTAG_OUTPUTs                  ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_LOAN_IO_INPUTs                ; 0 / 142 ( 0 % )        ;
+; HPS_INTERFACE_LOAN_IO_OUTPUTs               ; 0 / 85 ( 0 % )         ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_INPUTs      ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_OUTPUTs     ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_INPUTs    ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_OUTPUTs   ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_CAN_INPUTs         ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_CAN_OUTPUTs        ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_INPUTs        ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_OUTPUTs       ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_I2C_INPUTs         ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_I2C_OUTPUTs        ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_NAND_INPUTs        ; 0 / 12 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_NAND_OUTPUTs       ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_INPUTs        ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_OUTPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_INPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_OUTPUTs      ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_INPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_OUTPUTs ; 0 / 14 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_INPUTs   ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_OUTPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_UART_INPUTs        ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_UART_OUTPUTs       ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_INPUTs         ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_OUTPUTs        ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_STM_EVENT_INPUTs              ; 0 / 28 ( 0 % )         ;
+; HPS_INTERFACE_TEST_INPUTs                   ; 0 / 610 ( 0 % )        ;
+; HPS_INTERFACE_TEST_OUTPUTs                  ; 0 / 513 ( 0 % )        ;
+; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
+; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
+; Local interconnects                         ; 49 / 84,580 ( < 1 % )  ;
+; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
+; R14 interconnects                           ; 50 / 12,676 ( < 1 % )  ;
+; R14/C12 interconnect drivers                ; 71 / 20,720 ( < 1 % )  ;
+; R3 interconnects                            ; 62 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 69 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 0 / 360 ( 0 % )        ;
+; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
++---------------------------------------------+------------------------+
 
 
 +------------------------------------------+
@@ -1858,8 +1865,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk25           ; clk25                ; 15.0              ;
-; clk             ; clk                  ; 4.0               ;
+; clk25           ; clk25                ; 12.0              ;
+; clk             ; clk                  ; 5.0               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1870,48 +1877,48 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------+----------------------------------------------+-------------------+
 ; Source Register                              ; Destination Register                         ; Delay Added in ns ;
 +----------------------------------------------+----------------------------------------------+-------------------+
-; clk25                                        ; clk25                                        ; 4.018             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[6] ; Vga_Controller:vga_inst|Register:reg_y|Q[6]  ; 0.748             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[9] ; Vga_Controller:vga_inst|Register:reg_y|Q[9]  ; 0.736             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[7] ; Vga_Controller:vga_inst|Register:reg_y|Q[7]  ; 0.736             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[2] ; Vga_Controller:vga_inst|Register:reg_x|Q[2]  ; 0.695             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[1] ; Vga_Controller:vga_inst|Register:reg_x|Q[1]  ; 0.690             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[4] ; Vga_Controller:vga_inst|Register:reg_y|Q[4]  ; 0.620             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; Vga_Controller:vga_inst|Register:reg_y|Q[3]  ; 0.617             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[6] ; Vga_Controller:vga_inst|Register:reg_x|Q[6]  ; 0.612             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[8] ; Vga_Controller:vga_inst|Register:reg_y|Q[8]  ; 0.585             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[5] ; Vga_Controller:vga_inst|Register:reg_y|Q[5]  ; 0.585             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[9] ; Vga_Controller:vga_inst|Register:reg_x|Q[9]  ; 0.571             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; Vga_Controller:vga_inst|Register:reg_x|Q[0]  ; 0.554             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[5] ; Vga_Controller:vga_inst|Register:reg_x|Q[5]  ; 0.546             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[8] ; Vga_Controller:vga_inst|Register:reg_x|Q[8]  ; 0.540             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[7] ; Vga_Controller:vga_inst|Register:reg_x|Q[7]  ; 0.537             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[3] ; Vga_Controller:vga_inst|Register:reg_x|Q[3]  ; 0.537             ;
-; Vga_Controller:vga_inst|Counter:count_x|Q[4] ; Vga_Controller:vga_inst|Register:reg_x|Q[4]  ; 0.536             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[5]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.517             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[2] ; Vga_Controller:vga_inst|Register:reg_y|Q[2]  ; 0.514             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[9]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.476             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[8]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.465             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[7]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.443             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; Vga_Controller:vga_inst|Register:reg_y|Q[0]  ; 0.441             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[0]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.429             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[4]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.406             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[1]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.370             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[6]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.362             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[2]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.343             ;
-; Vga_Controller:vga_inst|Register:reg_x|Q[3]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.343             ;
-; Vga_Controller:vga_inst|Counter:count_y|Q[1] ; Vga_Controller:vga_inst|Register:reg_y|Q[1]  ; 0.255             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[2]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.252             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[3]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.230             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[0]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.208             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[4]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.189             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[9]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.183             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[6]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.173             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[7]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.171             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[8]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.158             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[5]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.158             ;
-; Vga_Controller:vga_inst|Register:reg_y|Q[1]  ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.147             ;
-; rst                                          ; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; 0.133             ;
+; clk25                                        ; clk25                                        ; 4.998             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[5]  ; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; 0.609             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[9]  ; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; 0.596             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[1] ; Vga_Controller:vga_inst|Register:reg_y|Q[1]  ; 0.589             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[6] ; Vga_Controller:vga_inst|Register:reg_y|Q[6]  ; 0.576             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[3] ; Vga_Controller:vga_inst|Register:reg_y|Q[3]  ; 0.576             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[8]  ; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; 0.570             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[7]  ; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; 0.566             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[2]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.494             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[1]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.480             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[0]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.478             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[6]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.463             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[4]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.456             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[2]  ; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; 0.451             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[2] ; Vga_Controller:vga_inst|Register:reg_y|Q[2]  ; 0.428             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[7] ; Vga_Controller:vga_inst|Register:reg_y|Q[7]  ; 0.428             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[4] ; Vga_Controller:vga_inst|Register:reg_y|Q[4]  ; 0.428             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; Vga_Controller:vga_inst|Register:reg_y|Q[0]  ; 0.428             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[5] ; Vga_Controller:vga_inst|Register:reg_y|Q[5]  ; 0.422             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[9] ; Vga_Controller:vga_inst|Register:reg_y|Q[9]  ; 0.416             ;
+; Vga_Controller:vga_inst|Register:reg_x|Q[3]  ; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; 0.416             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[8] ; Vga_Controller:vga_inst|Register:reg_x|Q[8]  ; 0.385             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[7] ; Vga_Controller:vga_inst|Register:reg_x|Q[7]  ; 0.368             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[9]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.350             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[6]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.319             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[7]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.314             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[3]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.293             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[0]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.290             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[8]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.285             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[2] ; Vga_Controller:vga_inst|Counter:count_x|Q[3] ; 0.268             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[3] ; Vga_Controller:vga_inst|Counter:count_x|Q[3] ; 0.268             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[0] ; Vga_Controller:vga_inst|Counter:count_x|Q[3] ; 0.268             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[1] ; Vga_Controller:vga_inst|Counter:count_x|Q[3] ; 0.268             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[5]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.249             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[1]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.230             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[5] ; Vga_Controller:vga_inst|Register:reg_x|Q[5]  ; 0.227             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[9] ; Vga_Controller:vga_inst|Register:reg_x|Q[9]  ; 0.212             ;
+; Vga_Controller:vga_inst|Register:reg_y|Q[4]  ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.207             ;
+; Vga_Controller:vga_inst|Counter:count_y|Q[8] ; Vga_Controller:vga_inst|Register:reg_y|Q[8]  ; 0.190             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[4] ; Vga_Controller:vga_inst|Counter:count_x|Q[4] ; 0.187             ;
+; Vga_Controller:vga_inst|Counter:count_x|Q[6] ; Vga_Controller:vga_inst|Register:reg_x|Q[6]  ; 0.163             ;
+; rst                                          ; Vga_Controller:vga_inst|Counter:count_y|Q[0] ; 0.148             ;
 +----------------------------------------------+----------------------------------------------+-------------------+
 Note: This table only shows the top 42 path(s) that have the largest delay added for hold.
 
@@ -1947,11 +1954,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.54 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.46 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1960,10 +1967,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6557 megabytes
-    Info: Processing ended: Sun Apr 06 14:35:42 2025
+    Info: Peak virtual memory: 6596 megabytes
+    Info: Processing ended: Sun Apr 06 19:51:23 2025
     Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:01:08
+    Info: Total CPU time (on all processors): 00:01:07
 
 
 +----------------------------+

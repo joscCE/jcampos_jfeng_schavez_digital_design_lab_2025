@@ -20,7 +20,7 @@ module tb_Vga_Controller;
         .Q_yz(Q_yz)
     );
 
-    // Reloj de 25 MHz
+    // Reloj de 25 MHz (20 ns de período)
     initial begin
         clk = 0;
         forever #20 clk = ~clk;
@@ -28,19 +28,30 @@ module tb_Vga_Controller;
 
     // Estimulación
     initial begin
-    rst = 0;
-    #10 rst = 1;
-    #10 rst = 0;
+        rst = 0;
+        #10 rst = 1;
+        #10 rst = 0;
 
+        // Máximo tiempo para recorrer 640x480
+        // 800 x 525 = 420,000 ciclos
+        // 420,000 x 20ns = 8.4 ms
+        #8_500_000;  
+        $display("🟢 Simulación terminada (aproximadamente 1 frame VGA).");
+        $finish;
+    end
 
-    #200_000;  
-    $finish;
-	end
+    // Mostrar solo cuando esté en la zona visible
+    always_ff @(posedge clk) begin
+        if (Q_xz < 640 && Q_yz < 480) begin
+            $display("Qx=%0d Qy=%0d | RGB: %h %h %h | Hs=%b Vs=%b",
+                     Q_xz, Q_yz, R, G, B, Hs, Vs);
+        end
 
-    // Monitor
-    initial begin
-        $monitor("t=%0t | Hs=%b Vs=%b | R=%h G=%h B=%h | Qx=%d Qy=%d",
-                 $time, Hs, Vs, R, G, B, Q_xz, Q_yz);
+        // Cortar la simulación cuando llegue al último pixel visible
+        if (Q_xz == 639 && Q_yz == 479) begin
+            $display("✅ Se recorrió toda la zona visible de 640x480.");
+            $finish;
+        end
     end
 
     // Dump para GTKWave
