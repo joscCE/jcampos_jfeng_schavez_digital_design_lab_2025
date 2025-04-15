@@ -44,6 +44,7 @@ module Vga_Controller #(parameter N=8,
 	 
 	 
 	 
+	 
 
     // Zona visible y color
 	 

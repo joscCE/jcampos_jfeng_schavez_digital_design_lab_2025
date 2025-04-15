@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "04/07/2025 13:05:39"
+// DATE "04/07/2025 13:33:36"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -39,16 +39,16 @@ module connect_four (
 	R,
 	G,
 	B);
-input 	logic clk ;
-input 	logic rst ;
-output 	logic Hs ;
-output 	logic Vs ;
-output 	logic VGA_Blank ;
-output 	logic VGA_Sync_N ;
-output 	logic VGA_CLK ;
-output 	logic [7:0] R ;
-output 	logic [7:0] G ;
-output 	logic [7:0] B ;
+input 	clk;
+input 	rst;
+output 	Hs;
+output 	Vs;
+output 	VGA_Blank;
+output 	VGA_Sync_N;
+output 	VGA_CLK;
+output 	[7:0] R;
+output 	[7:0] G;
+output 	[7:0] B;
 
 // Design Ports Information
 // Hs	=>  Location: PIN_AK19,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
