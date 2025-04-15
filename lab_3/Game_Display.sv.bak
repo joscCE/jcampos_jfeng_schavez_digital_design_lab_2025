@@ -1,0 +1,29 @@
+module Game_Display(
+    input [83:0] game,              // aún no lo usamos aquí
+    input [2:0] column,             // aún no lo usamos aquí
+    input [9:0] Q_X, Q_Y,           // coordenadas del pixel actual
+    output [7:0] R, G, B            // color del pixel
+);
+
+    // Dimensiones del tablero
+    parameter CELL_W = 91;          // Ancho de una celda
+    parameter CELL_H = 80;          // Alto de una celda
+    parameter LINE_THICK = 2;       // Grosor de la línea azul
+
+    wire on_vertical_line;
+    wire on_horizontal_line;
+
+    // Detectar si Q_X está cerca de un borde de columna
+    assign on_vertical_line = (Q_X % CELL_W) < LINE_THICK;
+
+    // Detectar si Q_Y está cerca de un borde de fila
+    assign on_horizontal_line = (Q_Y % CELL_H) < LINE_THICK;
+
+    wire is_line = on_vertical_line || on_horizontal_line;
+
+    // Asignar color: azul para la línea, blanco para el fondo
+    assign R = is_line ? 8'd0   : 8'd255;
+    assign G = is_line ? 8'd0   : 8'd255;
+    assign B = is_line ? 8'd255 : 8'd255;
+
+endmodule

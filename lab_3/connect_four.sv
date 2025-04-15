@@ -8,6 +8,8 @@ module connect_four (
 
     logic clk25;  // Reloj dividido a 25 MHz
 	 logic rst_active;
+	 logic [9:0] Q_X, Q_Y;
+	 
 	 
 	 assign rst_active = ~rst;
 	 assign VGA_CLK = clk25;
@@ -20,14 +22,16 @@ module connect_four (
     end
 	 
 	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
+	 Game_Display GD (
+		.game(84'h00),
+		.column(3'h00),
+		.Q_X(Q_X),
+		.Q_Y(Q_Y),
+		.R(R),
+		.G(G), 
+		.B(B)
+		);
+		
 
     // Instancia del controlador VGA
     Vga_Controller vga_inst (
@@ -35,11 +39,10 @@ module connect_four (
         .rst(rst_active),
         .Hs(Hs),
         .Vs(Vs),
-        .R(R),
-        .G(G),
-        .B(B),
 		  .VGA_Blank(VGA_Blank),
-		  .VGA_Sync_N(VGA_Sync_N)
+		  .VGA_Sync_N(VGA_Sync_N),
+		  .Q_X(Q_X), 
+		  .Q_Y(Q_Y)
     );
 
 endmodule

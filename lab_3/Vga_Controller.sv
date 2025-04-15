@@ -16,7 +16,7 @@ module Vga_Controller #(parameter N=8,
     input logic clk, rst,
     output logic Hs, Vs,
 	 output logic VGA_Blank, VGA_Sync_N,
-    output logic [7:0] R, G, B
+	 output logic [9:0] Q_X, Q_Y
 	 
 );	 
 
@@ -41,39 +41,10 @@ module Vga_Controller #(parameter N=8,
 	 assign Vs = ~(Q_y >= V_Va + V_FP && Q_y < V_Va + V_FP + V_SycP); 
 	 assign VGA_Sync_N = 1'b1;
 	 assign VGA_Blank = (Q_x <= H_Va) && (Q_y <= V_Va);
+	 assign Q_X = Q_x;
+	 assign Q_Y = Q_y;
 	 
 	 
-	 
-	 
-
-    // Zona visible y color
-	 
-
-always_comb begin
-    // Fondo negro
-    R = 8'h00;
-    G = 8'h00;
-    B = 8'h00;
-
-    // Corazón rojo (forma tipo pixel)
-    if (
-        // Parte superior del corazón (dos cuadrados)
-        (Q_x >= 290 && Q_x < 310 && Q_y >= 200 && Q_y < 220) ||
-        (Q_x >= 330 && Q_x < 350 && Q_y >= 200 && Q_y < 220) ||
-
-        // Parte media del corazón (más ancha)
-        (Q_x >= 280 && Q_x < 360 && Q_y >= 220 && Q_y < 240) ||
-
-        // Parte inferior
-        (Q_x >= 290 && Q_x < 350 && Q_y >= 240 && Q_y < 260) ||
-        (Q_x >= 300 && Q_x < 340 && Q_y >= 260 && Q_y < 270) ||
-        (Q_x >= 310 && Q_x < 330 && Q_y >= 270 && Q_y < 280)
-    ) begin
-        R = 8'hFF;
-        G = 8'h00;
-        B = 8'h00;
-    end
-end
 
 
 endmodule

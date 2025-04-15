@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at Counter.sv(8): always construct contains both blocking and non-blocking assignments File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv Line: 8
-Warning (10268): Verilog HDL information at Register.sv(10): always construct contains both blocking and non-blocking assignments File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv Line: 10
+Info (10281): Verilog HDL Declaration information at Vga_Controller.sv(19): object "Q_X" differs only in case from object "Q_x" in the same scope File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 19
+Info (10281): Verilog HDL Declaration information at Vga_Controller.sv(21): object "Q_Y" differs only in case from object "Q_y" in the same scope File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 21
