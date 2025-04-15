@@ -19,6 +19,15 @@ module connect_four (
             clk25 <= ~clk25;
     end
 	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 
     // Instancia del controlador VGA
     Vga_Controller vga_inst (
