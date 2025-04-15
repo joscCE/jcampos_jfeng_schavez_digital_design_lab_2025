@@ -1,0 +1,36 @@
+module Write_play(
+    input  logic [83:0] game,
+    input  logic [4:0]  play,
+    output logic [83:0] new_game,
+    output logic        s
+);
+
+    logic        player;
+    logic [2:0]  row;
+    logic [2:0]  i;
+    logic [3:0]  col;
+    logic [83:0] temp_game;
+    logic        placed;
+
+    assign player = play[4];
+    assign col    = play[3:0];
+
+    always_comb begin
+        temp_game = game;
+        placed = 0;
+        for (i = 0; i < 6; i++) begin
+            row = i;
+            int index = (row * 14) + (col * 2) + 1; // apuntamos al bit de ocupado
+            if (temp_game[index] == 1'b0) begin
+                // celda libre
+                temp_game[index]     = 1'b1;     // ocupado
+                temp_game[index - 1] = player;   // jugador
+                placed = 1;
+                break;
+            end
+        end
+        s = placed;
+        new_game = temp_game;
+    end
+
+endmodule
