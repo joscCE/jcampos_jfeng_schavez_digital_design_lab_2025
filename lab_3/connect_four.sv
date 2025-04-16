@@ -3,34 +3,29 @@ module connect_four (
     input logic rst, 
 	 input [2:0] player0, player1, //[P,R,L]
 
-
     output logic Hs, Vs,
-	 
 	 
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B
 );
 
-
     logic clk25;  // Reloj dividido a 25 MHz
 	 logic rst_active;
 	 logic [9:0] Q_X, Q_Y;
-	 
 	 
 	 
 	 assign rst_active = ~rst;
 	 assign VGA_CLK = clk25;
 	 
 	 
-	 
 	 wire j_turn, select_turn, j_Column, Q_reg_Column, new_game, Q_reg_game; 
-	 wire j_turn_time, Q_reg_count_time, j_count_random;
+	 wire j_turn_time, Q_reg_count_time, j_count_random, Q_reg_random, Q_reg_Play, Q_Reg_Select_Move, c_Mux_Play;
 	 
-	 
+	
 	 clk_div CLK25(
 		.clk(clk),
-		.rst_active(rst_active),
+		.rst_active(rst),
 		.clk25(clk25)
 	 
 	 );
@@ -106,9 +101,9 @@ module connect_four (
 	 );
 	 
 	 // Comparador Columna Derecha
-	 Comparator #(.N(4)) Comp_Column_Right(
+	 Comparator #(.N(3)) Comp_Column_Right(
 			.A(Q_reg_Column),
-			.B(4'd8),
+			.B(3'd7),
 			.equ(comp_right)
 	 );
 	 
@@ -159,7 +154,7 @@ module connect_four (
 	 );
 	 
 //===============logica random================== 
-	 Counter #(.N(4)) Count_Random(
+	 Counter #(.N(3)) Count_Random(
 		.clk(clk25),
 		.rst(rst | rst_random),
 		.en(en_random_play),
@@ -167,7 +162,7 @@ module connect_four (
 		.Q(j_count_random)
 		);
 		
-	Register #(.N(4)) Reg_Random(
+	Register #(.N(3)) Reg_Random(
 		.clk(clk25),
 		.rst(rst | rst_random),
 		.D(j_count_random),
@@ -175,16 +170,71 @@ module connect_four (
 		.Q(Q_reg_random)
 	);
 	
-	Comparator #(.N(4)) Compa_Random(
+	Comparator #(.N(3)) Compa_Random(
 		.A(Q_reg_random),
-		.B(4'd8),
+		.B(3'd7),
 		.equ(comp_random)
 	 );
+	 
+	 
+//===============reg jugada================== 
+
+		logic Move;
+		logic Random_Move;
+		assign Move = {select_turn, Q_reg_Column};
+		assign Random_Move = {select_turn, Q_reg_random};
+	
+	 Register #(.N(5)) Reg_Play(
+		.clk(clk25),
+		.rst(rst),
+		.D(Move),
+		.en(1'b1),
+		.Q(Q_reg_Play)
+	 
+	 );
+	 
+	 
+	 
+		 Register #(.N(1)) Reg_Select_Move(
+		.clk(clk25),
+		.rst(rst),
+		.D(play_selection),
+		.en(en_reg_selection),
+		.Q(Q_Reg_Select_Move)
+	 
+	 );
+	 
+	 
+	 Mux #(.N(5)) Mux_Play(
+	 	.A(Q_reg_Play),
+		.B(Random_Move),
+		.S(Q_Reg_Select_Move),
+		.C(c_Mux_Play)
+	 
+	 );
+	 
+	 
+	 
+	 Write_play WP_inst(
+	 .game(Q_reg_game),
+    .play(c_Mux_Play),
+    .new_game(new_game),
+    .s(valid_play)
+	 
+	 );
+	 
+	 
+	 Check_win CW_Inst(
+	 .reg_game_M(Q_reg_game), 
+    .reg_jugada(c_Mux_Play), 
+    .S(winning) 
+	 );
+	 
+	 
 
 	 
+	 
 	 //entradas
-	 logic clk;
-    logic rst;
 	 logic [2:0] play; //[P,R,L]
     logic time_out;
     logic winning;

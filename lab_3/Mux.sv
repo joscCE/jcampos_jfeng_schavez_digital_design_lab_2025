@@ -6,7 +6,7 @@ module Mux #(parameter N = 4)(
 	output [N-1:0] C
 
 
-);:
+);
 
 
 assign c = S? A: B;
