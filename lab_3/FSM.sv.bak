@@ -1,0 +1,40 @@
+
+module FSM (
+	input clk, rst, L, R, time_out, winning, valid_play, play, start,
+	input comp_turn, comp_right, comp_left, comp_random,
+	output rst_timer, rst_turn, rst_game, rst_random,
+	output en_turn, en_count_column, en_random_play, en_new_game, 
+	output mode_count_column, play_selection, display_select
+);
+
+// Logica de estado actual
+
+	logic [12:0] state, next_state;
+
+
+	always_ff @(posedge clk or posedge rst)
+		if(rst) state = 4'b0000;
+		else
+		 state = next_state;
+		 
+// Logica de siguiente estado
+
+	always_comb 
+		case (state)
+		4'b0000:
+		4'b0001:
+		4'b0010:
+		4'b0011:
+		4'b0100:
+		4'b0101:
+		4'b0110:
+		4'b0111:
+		4'b1000:
+		4'b1011:
+		4'b1010:
+		4'b1001:
+		4'b1100:
+		default
+	end
+
+endmodule 

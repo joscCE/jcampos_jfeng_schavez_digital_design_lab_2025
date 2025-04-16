@@ -1,3 +1,4 @@
+
 module Write_play(
     input  logic [83:0] game,
     input  logic [4:0]  play,
@@ -11,7 +12,7 @@ module Write_play(
     logic [3:0]  col;
     logic [83:0] temp_game;
     logic        placed;
-    integer      index; // ✅ Declarar index aquí, fuera del for
+    integer      index; 
 
     assign player = play[4];
     assign col    = play[3:0];

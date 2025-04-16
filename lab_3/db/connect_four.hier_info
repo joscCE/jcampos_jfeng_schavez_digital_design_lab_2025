@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 |Mux
 A[0] => ~NO_FANOUT~
 A[1] => ~NO_FANOUT~
@@ -11,5 +12,61 @@ B[3] => ~NO_FANOUT~
 B[4] => ~NO_FANOUT~
 S => ~NO_FANOUT~
 C <= <GND>
+=======
+|FSM
+clk => state~1.DATAIN
+rst => Selector0.IN6
+rst => rst_game.DATAIN
+rst => state~3.DATAIN
+rst => Selector3.IN1
+L => next_state.OUTPUTSELECT
+L => next_state.OUTPUTSELECT
+L => next_state.OUTPUTSELECT
+L => next_state.DATAA
+R => next_state.OUTPUTSELECT
+R => next_state.OUTPUTSELECT
+R => next_state.OUTPUTSELECT
+R => next_state.OUTPUTSELECT
+R => next_state.1001.DATAB
+time_out => next_state.OUTPUTSELECT
+time_out => next_state.OUTPUTSELECT
+time_out => next_state.DATAA
+winning => Selector3.IN3
+winning => next_state.1000.DATAB
+valid_play => next_state.0110.DATAB
+valid_play => Selector1.IN3
+play => next_state.DATAA
+play => next_state.DATAA
+start => next_state.DATAA
+start => next_state.DATAA
+comp_turn => rst_turn.DATAIN
+comp_turn => en_turn.IN0
+comp_right => Selector1.IN6
+comp_right => next_state.1010.DATAB
+comp_left => Selector1.IN7
+comp_left => next_state.1100.DATAB
+comp_random => rst_random.DATAIN
+comp_random => en_random_play.DATAIN
+p1 => next_state.OUTPUTSELECT
+p1 => next_state.OUTPUTSELECT
+p1 => next_state.DATAA
+p0 => next_state.OUTPUTSELECT
+p0 => next_state.OUTPUTSELECT
+p0 => next_state.OUTPUTSELECT
+p0 => next_state.0001.DATAB
+rst_timer <= rst_timer.DB_MAX_OUTPUT_PORT_TYPE
+rst_turn <= comp_turn.DB_MAX_OUTPUT_PORT_TYPE
+rst_game <= rst.DB_MAX_OUTPUT_PORT_TYPE
+rst_random <= comp_random.DB_MAX_OUTPUT_PORT_TYPE
+en_turn <= en_turn.DB_MAX_OUTPUT_PORT_TYPE
+en_count_column <= en_count_column.DB_MAX_OUTPUT_PORT_TYPE
+en_random_play <= comp_random.DB_MAX_OUTPUT_PORT_TYPE
+en_new_game <= en_new_game.DB_MAX_OUTPUT_PORT_TYPE
+en_reg_selection <= en_reg_selection.DB_MAX_OUTPUT_PORT_TYPE
+mode_count_column <= mode_count_column.DB_MAX_OUTPUT_PORT_TYPE
+play_selection <= play_selection.DB_MAX_OUTPUT_PORT_TYPE
+display_select[0] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+display_select[1] <= display_select[1].DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> FSM_Game
 
 
