@@ -1,5 +1,5 @@
 Fitter report for connect_four
-Wed Apr 16 17:43:32 2025
+Wed Apr 16 17:46:19 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -60,7 +60,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Apr 16 17:43:32 2025       ;
+; Fitter Status                   ; Successful - Wed Apr 16 17:46:19 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
@@ -1815,9 +1815,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/connect_four.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 7068 megabytes
-    Info: Processing ended: Wed Apr 16 17:43:33 2025
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:01:25
+    Info: Processing ended: Wed Apr 16 17:46:19 2025
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:01:23
 
 
 +----------------------------+
