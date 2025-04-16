@@ -25,6 +25,7 @@ module connect_four (
 	 
 	 
 	 wire j_turn, select_turn, j_Column, Q_reg_Column, new_game, Q_reg_game; 
+	 wire j_turn_time, Q_reg_count_time;
 	 
 	 
 	 clk_div CLK25(
@@ -86,7 +87,7 @@ module connect_four (
 	 // Contador columna
 	 Counter #(.N(3)) Count_Column(
 	 .clk(clk25),
-    .rst(rst),
+    .rst(rst | rst_game),
     .en(en_count_column),
     .mode(mode_count_column),                
     .Q(j_Column)
@@ -97,7 +98,7 @@ module connect_four (
 	 // Registro columna
 	 Register #(.N(3)) Reg_Column(
 	 .clk(clk25),
-	 .rst(rst),
+	 .rst(rst | rst_game),
 	 .D(j_Column),
 	 .en(en_count_column),
     .Q(Q_reg_Column)
@@ -132,14 +133,34 @@ module connect_four (
 	
 //===============logica timeout================== 
 
-	Counter #(.N(3)) Count_turn_time(
+	// Contador tiempo
+	Counter #(.N(28)) Count_turn_time(
 		.clk(clk25),
-		.rst(rst),
+		.rst(rst | rst_timer),
 		.en(~rst),
-		.mode(1'1),                
-		.Q(j_Column)
+		.mode(1'b1),                
+		.Q(j_turn_time)
 	);
+	
+	// Registro de contador tiempo
+	Register #(.N(28)) Reg_count_time(
+		.clk(clk25),
+		.rst(rst | rst_timer),
+		.D(j_turn_time),
+		.en(1'b1),
+		.Q(Q_reg_count_time)
+	);
+	
+	// Comparador de contador tiempo
+	 Comparator #(.N(28)) Comp_count_turn_time(
+		.A(Q_reg_count_time),
+		.B(28'd250_000_000),
+		.equ(time_out)
+	 );
 	 
+//===============logica random================== 
+	 
+
 	 
 	 //entradas
 	 logic clk;
