@@ -1,0 +1,56 @@
+# Quartus database and output files
+*.rpt
+*.summary
+*.smsg
+*.jdi
+*.pin
+*.sof
+*.pof
+*.jbc
+*.ttf
+*.vcd
+*.vpd
+*.sld
+*.cdf
+*.rpd
+*.ekp
+*.mif
+*.srec
+*.raw
+*.hex
+*.bin
+*.pfg
+*.sopcinfo
+*.sdc
+*.qpf
+*.qsf
+*.qws
+*.qdz
+*.qip
+*.qsys
+*.bak
+*.drc
+*.eqn
+*.tcl
+*.log
+*.qar
+*.smsg
+*.pzs
+*.vqm
+*.saf
+*.hps
+
+# Output folders
+db/
+incremental_db/
+output_files/
+simulation/
+*.sim/
+
+# Temporary files
+*.tmp
+*.~*
+
+# System-specific
+.DS_Store
+Thumbs.db
