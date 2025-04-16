@@ -25,7 +25,7 @@ module connect_four (
 	 
 	 
 	 wire j_turn, select_turn, j_Column, Q_reg_Column, new_game, Q_reg_game; 
-	 wire j_turn_time, Q_reg_count_time;
+	 wire j_turn_time, Q_reg_count_time, j_count_random;
 	 
 	 
 	 clk_div CLK25(
@@ -159,7 +159,27 @@ module connect_four (
 	 );
 	 
 //===============logica random================== 
-	 
+	 Counter #(.N(4)) Count_Random(
+		.clk(clk25),
+		.rst(rst | rst_random),
+		.en(en_random_play),
+		.mode(1'b1),                
+		.Q(j_count_random)
+		);
+		
+	Register #(.N(4)) Reg_Random(
+		.clk(clk25),
+		.rst(rst | rst_random),
+		.D(j_count_random),
+		.en(1'b1),
+		.Q(Q_reg_random)
+	);
+	
+	Comparator #(.N(4)) Compa_Random(
+		.A(Q_reg_random),
+		.B(4'd8),
+		.equ(comp_random)
+	 );
 
 	 
 	 //entradas
