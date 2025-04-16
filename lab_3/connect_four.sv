@@ -24,7 +24,7 @@ module connect_four (
 	 
 	 
 	 
-	 wire j_turn, select_turn, j_Column, Q_reg_Column; 
+	 wire j_turn, select_turn, j_Column, Q_reg_Column, new_game, Q_reg_game; 
 	 
 	 
 	 clk_div CLK25(
@@ -36,7 +36,7 @@ module connect_four (
 	 
 	 
 	 
-	 //logica turno 
+//===============logica turno================== 
 	 
 	 Mux #(.N(3)) Mux_Player(
 		.A(player1),
@@ -72,9 +72,18 @@ module connect_four (
 	 
 	 );
 	 
-	 //logica columna \ parte jugada
+	// Comparador turno
 	 
+	Comparator #(.N(2)) Comp_turn(
+		.A(select_turn),
+		.B(2'b10),
+		.equ(comp_turn)
+
+	);
+	
+//===============logica columna / jugada================== 
 	 
+	 // Contador columna
 	 Counter #(.N(3)) Count_Column(
 	 .clk(clk25),
     .rst(rst),
@@ -85,7 +94,7 @@ module connect_four (
 	 
 	 );
 	 
-	 
+	 // Registro columna
 	 Register #(.N(3)) Reg_Column(
 	 .clk(clk25),
 	 .rst(rst),
@@ -95,31 +104,41 @@ module connect_four (
 	 
 	 );
 	 
-	 
-	 
-	 Comparator #(.N(3)) Comp_Column_Right(
+	 // Comparador Columna Derecha
+	 Comparator #(.N(4)) Comp_Column_Right(
 			.A(Q_reg_Column),
-			.B(3'd7),
+			.B(4'd8),
 			.equ(comp_right)
-	 
-	 
 	 );
 	 
 	 
-	 
-	 	 Comparator #(.N(3)) Comp_Column_Left(
-			.A(Q_reg_Column),
-			.B(3'h00),
-			.equ(comp_left)
-	 
+	 // Comparador Columna Izquierda
+	 Comparator #(.N(3)) Comp_Column_Left(
+		.A(Q_reg_Column),
+		.B(3'h7),
+		.equ(comp_left)
+	 );
+	
+//===============logica juego================== 
+	
+	// Registro de juego
+	Register #(.N(84)) Reg_game_M(
+		.clk(clk25),
+		.rst(rst | rst_game),
+		.D(new_game),
+		.en(en_new_game),
+		.Q(Q_reg_game)
+	);
+	
+//===============logica timeout================== 
 
-	 );
-	 
-	 
-	 
-	 
-	 
-	 
+	Counter #(.N(3)) Count_turn_time(
+		.clk(clk25),
+		.rst(rst),
+		.en(~rst),
+		.mode(1'1),                
+		.Q(j_Column)
+	);
 	 
 	 
 	 //entradas
