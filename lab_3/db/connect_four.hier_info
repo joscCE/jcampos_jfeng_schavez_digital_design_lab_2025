@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-|Mux
-A[0] => ~NO_FANOUT~
-A[1] => ~NO_FANOUT~
-A[2] => ~NO_FANOUT~
-A[3] => ~NO_FANOUT~
-A[4] => ~NO_FANOUT~
-B[0] => ~NO_FANOUT~
-B[1] => ~NO_FANOUT~
-B[2] => ~NO_FANOUT~
-B[3] => ~NO_FANOUT~
-B[4] => ~NO_FANOUT~
-S => ~NO_FANOUT~
-C <= <GND>
-=======
 |FSM
 clk => state~1.DATAIN
 rst => Selector0.IN6
@@ -67,6 +52,5 @@ mode_count_column <= mode_count_column.DB_MAX_OUTPUT_PORT_TYPE
 play_selection <= play_selection.DB_MAX_OUTPUT_PORT_TYPE
 display_select[0] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
 display_select[1] <= display_select[1].DB_MAX_OUTPUT_PORT_TYPE
->>>>>>> FSM_Game
 
 

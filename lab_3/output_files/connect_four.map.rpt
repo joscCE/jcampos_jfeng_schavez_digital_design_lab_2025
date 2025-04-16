@@ -1,9 +1,5 @@
 Analysis & Synthesis report for connect_four
-<<<<<<< HEAD
-Wed Apr 16 10:30:42 2025
-=======
-Wed Apr 16 12:09:20 2025
->>>>>>> FSM_Game
+Wed Apr 16 12:20:44 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,14 +13,6 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-<<<<<<< HEAD
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |Mux
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
-=======
   8. State Machine - |FSM|state
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
@@ -32,7 +20,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
->>>>>>> FSM_Game
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -58,17 +46,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-<<<<<<< HEAD
-; Analysis & Synthesis Status     ; Successful - Wed Apr 16 10:30:42 2025       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; connect_four                                ;
-; Top-level Entity Name           ; Mux                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 12                                          ;
-=======
-; Analysis & Synthesis Status     ; Successful - Wed Apr 16 12:09:20 2025       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 16 12:20:44 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; FSM                                         ;
@@ -76,7 +54,6 @@ refer to the applicable agreement for further details.
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 12                                          ;
 ; Total pins                      ; 28                                          ;
->>>>>>> FSM_Game
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -95,11 +72,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-<<<<<<< HEAD
-; Top-level entity name                                                           ; Mux                ; connect_four       ;
-=======
 ; Top-level entity name                                                           ; FSM                ; connect_four       ;
->>>>>>> FSM_Game
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -189,49 +162,6 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-<<<<<<< HEAD
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 12    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; A[0]  ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 12    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-=======
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -274,7 +204,6 @@ refer to the applicable agreement for further details.
 ; Total fan-out                               ; 141       ;
 ; Average fan-out                             ; 1.60      ;
 +---------------------------------------------+-----------+
->>>>>>> FSM_Game
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -282,11 +211,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-<<<<<<< HEAD
-; |Mux                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 12   ; 0            ; |Mux                ; Mux         ; work         ;
-=======
 ; |FSM                       ; 20 (20)             ; 12 (12)                   ; 0                 ; 0          ; 28   ; 0            ; |FSM                ; FSM         ; work         ;
->>>>>>> FSM_Game
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -341,50 +266,21 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-<<<<<<< HEAD
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-=======
 ; Total registers                              ; 12    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 12    ;
->>>>>>> FSM_Game
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-<<<<<<< HEAD
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |Mux ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; N              ; 4     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-=======
->>>>>>> FSM_Game
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-<<<<<<< HEAD
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 12                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-=======
 ; arriav_ff             ; 12                          ;
 ;     CLR               ; 12                          ;
 ; arriav_lcell_comb     ; 24                          ;
@@ -399,7 +295,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
 ; Average LUT depth     ; 1.45                        ;
->>>>>>> FSM_Game
 +-----------------------+-----------------------------+
 
 
@@ -418,14 +313,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-<<<<<<< HEAD
-    Info: Processing started: Wed Apr 16 10:30:29 2025
-=======
-    Info: Processing started: Wed Apr 16 12:09:12 2025
->>>>>>> FSM_Game
+    Info: Processing started: Wed Apr 16 12:20:36 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
+    Info (12023): Found entity 1: FSM File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
     Info (12023): Found entity 1: Counter File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
@@ -436,62 +329,17 @@ Warning (12019): Can't analyze file -- file output_files/tb_Vga_Controller.sv is
 Info (12021): Found 1 design units, including 1 entities, in source file register.sv
     Info (12023): Found entity 1: Register File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Register.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
-<<<<<<< HEAD
-    Info (12023): Found entity 1: Comparator File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm_play.sv
-    Info (12023): Found entity 1: FSM_Play File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM_Play.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file write_play.sv
-    Info (12023): Found entity 1: Write_play File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file game_display.sv
-    Info (12023): Found entity 1: Game_Display File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file output_files/piece_rom.sv
-    Info (12023): Found entity 1: Piece_ROM File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 1
-Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
-    Info (12023): Found entity 1: Mux File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Mux.sv(13): created implicit net for "c" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 13
-Info (12127): Elaborating entity "Mux" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Mux.sv(13): object "c" assigned a value but never read File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at Mux.sv(13): truncated value with size 5 to match size of target (1) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 13
-Warning (10034): Output port "C" at Mux.sv(9) has no driver File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 9
-Warning (12158): Entity "Mux" contains only dangling pins
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "C" is stuck at GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 9
-Info (144001): Generated suppressed messages file C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "A[0]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "A[1]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "A[2]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "A[3]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "A[4]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "B[0]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "B[1]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "B[2]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "B[3]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "B[4]" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 4
-    Warning (15610): No output dependent on input pin "S" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv Line: 5
-Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Wed Apr 16 10:30:42 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg.
-=======
     Info (12023): Found entity 1: Comparator File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Comparator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file write_play.sv
     Info (12023): Found entity 1: Write_play File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Write_Play.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
-    Info (12023): Found entity 1: FSM File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file game_display.sv
+    Info (12023): Found entity 1: Game_Display File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Game_Display.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/piece_rom.sv
+    Info (12023): Found entity 1: Piece_ROM File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 1
+Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
+    Info (12023): Found entity 1: Mux File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Mux.sv(12): created implicit net for "c" File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux.sv Line: 12
 Info (12127): Elaborating entity "FSM" for the top level hierarchy
 Info (10264): Verilog HDL Case Statement information at FSM.sv(79): all case item expressions in this case statement are onehot File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv Line: 79
 Warning (12069): Ignored assignment(s) for "R[0]" because "R" is not a bus or array File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv Line: 3
@@ -512,17 +360,23 @@ Warning (12069): Ignored assignment(s) for "R[6]" because "R" is not a bus or ar
 Warning (12069): Ignored assignment(s) for "R[7]" because "R" is not a bus or array File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv Line: 3
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 20 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Wed Apr 16 12:09:20 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4879 megabytes
+    Info: Processing ended: Wed Apr 16 12:20:44 2025
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:16
->>>>>>> FSM_Game
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg.
 
 
