@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "04/16/2025 16:53:33"
+// DATE "04/16/2025 17:26:33"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -33,6 +33,9 @@ module connect_four (
 	rst,
 	player0,
 	player1,
+	p0,
+	p1,
+	start,
 	Hs,
 	Vs,
 	VGA_Blank,
@@ -45,6 +48,9 @@ input 	logic clk ;
 input 	logic rst ;
 input 	logic [2:0] player0 ;
 input 	logic [2:0] player1 ;
+input 	reg p0 ;
+input 	reg p1 ;
+input 	reg start ;
 output 	logic Hs ;
 output 	logic Vs ;
 output 	logic VGA_Blank ;
@@ -55,12 +61,12 @@ output 	logic [7:0] G ;
 output 	logic [7:0] B ;
 
 // Design Ports Information
-// player0[0]	=>  Location: PIN_AJ9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// player0[1]	=>  Location: PIN_H12,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// player0[2]	=>  Location: PIN_AC25,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// player1[0]	=>  Location: PIN_W21,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// player1[1]	=>  Location: PIN_AD9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// player1[2]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// player0[0]	=>  Location: PIN_B11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// player0[1]	=>  Location: PIN_B13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// player0[2]	=>  Location: PIN_AK13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// player1[0]	=>  Location: PIN_Y27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// player1[1]	=>  Location: PIN_AG21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// player1[2]	=>  Location: PIN_AG22,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Hs	=>  Location: PIN_AK19,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
 // Vs	=>  Location: PIN_AK18,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
 // VGA_Blank	=>  Location: PIN_AK22,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
@@ -90,6 +96,9 @@ output 	logic [7:0] B ;
 // B[5]	=>  Location: PIN_AJ17,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
 // B[6]	=>  Location: PIN_AJ16,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
 // B[7]	=>  Location: PIN_AK16,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: 2mA
+// start	=>  Location: PIN_AG18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// p1	=>  Location: PIN_AJ12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// p0	=>  Location: PIN_B12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clk	=>  Location: PIN_AF14,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: Default
 // rst	=>  Location: PIN_AJ4,	 I/O Standard: 3.3-V LVCMOS,	 Current Strength: Default
 
@@ -111,6 +120,9 @@ wire \player0[2]~input_o ;
 wire \player1[0]~input_o ;
 wire \player1[1]~input_o ;
 wire \player1[2]~input_o ;
+wire \start~input_o ;
+wire \p1~input_o ;
+wire \p0~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 wire \clk~input_o ;
 wire \rst~input_o ;
@@ -611,7 +623,7 @@ dffeas \CLK25|clk25 (
 	.clk(\clk~input_o ),
 	.d(\CLK25|clk25~feeder_combout ),
 	.asdata(vcc),
-	.clrn(\rst~input_o ),
+	.clrn(!\rst~input_o ),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
@@ -678,7 +690,7 @@ dffeas \CLK25|clk25~DUPLICATE (
 	.clk(\clk~input_o ),
 	.d(\CLK25|clk25~feeder_combout ),
 	.asdata(vcc),
-	.clrn(\rst~input_o ),
+	.clrn(!\rst~input_o ),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
@@ -692,7 +704,7 @@ defparam \CLK25|clk25~DUPLICATE .is_wysiwyg = "true";
 defparam \CLK25|clk25~DUPLICATE .power_up = "low";
 // synopsys translate_on
 
-// Location: IOIBUF_X30_Y0_N35
+// Location: IOIBUF_X36_Y81_N52
 cyclonev_io_ibuf \player0[0]~input (
 	.i(player0[0]),
 	.ibar(gnd),
@@ -703,7 +715,7 @@ defparam \player0[0]~input .bus_hold = "false";
 defparam \player0[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X20_Y81_N18
+// Location: IOIBUF_X40_Y81_N35
 cyclonev_io_ibuf \player0[1]~input (
 	.i(player0[1]),
 	.ibar(gnd),
@@ -714,7 +726,7 @@ defparam \player0[1]~input .bus_hold = "false";
 defparam \player0[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X89_Y4_N61
+// Location: IOIBUF_X36_Y0_N52
 cyclonev_io_ibuf \player0[2]~input (
 	.i(player0[2]),
 	.ibar(gnd),
@@ -725,7 +737,7 @@ defparam \player0[2]~input .bus_hold = "false";
 defparam \player0[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X89_Y8_N4
+// Location: IOIBUF_X89_Y25_N21
 cyclonev_io_ibuf \player1[0]~input (
 	.i(player1[0]),
 	.ibar(gnd),
@@ -736,7 +748,7 @@ defparam \player1[0]~input .bus_hold = "false";
 defparam \player1[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X2_Y0_N75
+// Location: IOIBUF_X54_Y0_N1
 cyclonev_io_ibuf \player1[1]~input (
 	.i(player1[1]),
 	.ibar(gnd),
@@ -747,7 +759,7 @@ defparam \player1[1]~input .bus_hold = "false";
 defparam \player1[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X38_Y81_N52
+// Location: IOIBUF_X66_Y0_N75
 cyclonev_io_ibuf \player1[2]~input (
 	.i(player1[2]),
 	.ibar(gnd),
@@ -758,7 +770,40 @@ defparam \player1[2]~input .bus_hold = "false";
 defparam \player1[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X31_Y36_N0
+// Location: IOIBUF_X58_Y0_N75
+cyclonev_io_ibuf \start~input (
+	.i(start),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\start~input_o ));
+// synopsys translate_off
+defparam \start~input .bus_hold = "false";
+defparam \start~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X38_Y0_N52
+cyclonev_io_ibuf \p1~input (
+	.i(p1),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\p1~input_o ));
+// synopsys translate_off
+defparam \p1~input .bus_hold = "false";
+defparam \p1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X38_Y81_N18
+cyclonev_io_ibuf \p0~input (
+	.i(p0),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\p0~input_o ));
+// synopsys translate_off
+defparam \p0~input .bus_hold = "false";
+defparam \p0~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X23_Y51_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

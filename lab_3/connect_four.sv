@@ -2,6 +2,8 @@ module connect_four (
     input logic clk,        // Reloj de 50 MHz de la FPGA
     input logic rst, 
 	 input [2:0] player0, player1, //[P,R,L]
+	 input p0, p1,
+	 input start,
 
     output logic Hs, Vs,
 	 
@@ -23,14 +25,38 @@ module connect_four (
 	 wire j_turn_time, Q_reg_count_time, j_count_random, Q_reg_random, Q_reg_Play, Q_Reg_Select_Move, c_Mux_Play;
 	 
 	
+	
+	 	 //entradas
+	 logic [2:0] play; //[P,R,L]
+    logic time_out;
+    logic winning;
+    logic valid_play;
+    logic comp_turn;
+    logic comp_right;
+    logic comp_left;
+    logic comp_random;
+
+    // Salidas
+    logic rst_timer;
+    logic rst_turn;
+    logic rst_game;
+    logic rst_random;
+    logic en_turn;
+    logic en_count_column;
+    logic en_random_play;
+    logic en_new_game;
+    logic en_reg_selection;
+    logic mode_count_column;
+    logic play_selection;
+    logic [1:0] display_select;
+	 
+	 
 	 clk_div CLK25(
 		.clk(clk),
 		.rst_active(rst),
 		.clk25(clk25)
 	 
 	 );
-	 
-	 
 	 
 //===============logica turno================== 
 	 
@@ -234,37 +260,7 @@ module connect_four (
 
 	 
 	 
-	 //entradas
-	 logic [2:0] play; //[P,R,L]
-    logic time_out;
-    logic winning;
-    logic valid_play;
-    logic start;
-    logic comp_turn;
-    logic comp_right;
-    logic comp_left;
-    logic comp_random;
-    logic p1, p0;
 
-    // Salidas
-    logic rst_timer;
-    logic rst_turn;
-    logic rst_game;
-    logic rst_random;
-    logic en_turn;
-    logic en_count_column;
-    logic en_random_play;
-    logic en_new_game;
-    logic en_reg_selection;
-    logic mode_count_column;
-    logic play_selection;
-    logic [1:0] display_select;
-	 
-	 
-	 
-	 
-	 
-	 
 	    FSM fsm_inst (
         .clk(clk25),
         .rst(rst),

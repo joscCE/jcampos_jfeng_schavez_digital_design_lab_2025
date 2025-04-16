@@ -6,7 +6,7 @@ module FSM (
 	output rst_timer, rst_turn, rst_game, rst_random,
 	output en_turn, en_count_column, en_random_play, en_new_game, en_reg_selection,
 	output mode_count_column, play_selection, 
-	output [1:0] display_select
+	output logic [1:0] display_select
 );
 
 // Logica de estado actual
