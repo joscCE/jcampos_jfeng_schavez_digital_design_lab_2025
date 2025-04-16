@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Apr 15 17:34:02 2025
+Analysis & Synthesis Status : Successful - Wed Apr 16 10:30:42 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : connect_four
-Top-level Entity Name : connect_four
+Top-level Entity Name : Mux
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 41
-Total pins : 31
+Total registers : 0
+Total pins : 12
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 1
+Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
