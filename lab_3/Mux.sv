@@ -1,12 +1,12 @@
 module Mux #(parameter N = 4)(
 
 
-	input [N:0] A,B,
+	input [N-1:0] A,B,
 	input S,
-	output C
+	output [N-1:0] C
 
 
-);
+);:
 
 
 assign c = S? A: B;

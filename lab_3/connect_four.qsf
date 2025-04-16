@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY FSM
+set_global_assignment -name TOP_LEVEL_ENTITY connect_four
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:57:47  APRIL 05, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -99,6 +99,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE Write_Play.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Game_Display.sv
 set_global_assignment -name SYSTEMVERILOG_FILE output_files/Piece_ROM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Check_win.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_Check_win.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -136,6 +138,5 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rst
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Blank
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Sync_N
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_CLK
+set_global_assignment -name SYSTEMVERILOG_FILE clk_div.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE Check_win.sv
-set_global_assignment -name SYSTEMVERILOG_FILE tb_Check_win.sv

@@ -1,5 +1,5 @@
 Flow report for connect_four
-Wed Apr 16 12:21:33 2025
+Wed Apr 16 13:57:19 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Apr 16 12:21:33 2025       ;
+; Flow Status                     ; Successful - Wed Apr 16 13:57:19 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
-; Top-level Entity Name           ; FSM                                         ;
+; Top-level Entity Name           ; connect_four                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 12 / 41,910 ( < 1 % )                       ;
-; Total registers                 ; 12                                          ;
-; Total pins                      ; 28 / 499 ( 6 % )                            ;
+; Logic utilization (in ALMs)     ; 792 / 41,910 ( 2 % )                        ;
+; Total registers                 ; 53                                          ;
+; Total pins                      ; 31 / 499 ( 6 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
+; Total DSP Blocks                ; 1 / 112 ( < 1 % )                           ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/16/2025 12:20:37 ;
+; Start date & time ; 04/16/2025 13:55:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; connect_four        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
-; COMPILER_SIGNATURE_ID                ; 250745398926570.174482763725824        ; --            ; --          ; --                ;
+; COMPILER_SIGNATURE_ID                ; 153951931180250.174483334317784        ; --            ; --          ; --                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_Vga_Controller ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Vga_Controller                      ; --            ; --          ; eda_simulation    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation    ;
@@ -90,13 +90,12 @@ refer to the applicable agreement for further details.
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; FSM         ; Top               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; FSM         ; Top               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; FSM         ; Top               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                ;
-; TOP_LEVEL_ENTITY                     ; FSM                                    ; connect_four  ; --          ; --                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
 
 
@@ -105,12 +104,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4879 MB             ; 00:00:16                           ;
-; Fitter               ; 00:00:32     ; 1.0                     ; 7113 MB             ; 00:01:59                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4826 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5204 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4735 MB             ; 00:00:01                           ;
-; Total                ; 00:00:52     ; --                      ; --                  ; 00:02:25                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4861 MB             ; 00:00:32                           ;
+; Fitter               ; 00:00:55     ; 1.1                     ; 6617 MB             ; 00:02:07                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4836 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.6                     ; 5143 MB             ; 00:00:11                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4756 MB             ; 00:00:02                           ;
+; Total                ; 00:01:31     ; --                      ; --                  ; 00:02:59                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -119,11 +118,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; winjimmy         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; winjimmy         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; winjimmy         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; winjimmy         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; winjimmy         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DellCE           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DellCE           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DellCE           ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DellCE           ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DellCE           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

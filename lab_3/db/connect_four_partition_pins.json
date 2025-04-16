@@ -4,59 +4,115 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "rst_timer",
+					"name" : "Hs",
 					"strict" : false
 				},
 				{
-					"name" : "rst_turn",
+					"name" : "Vs",
 					"strict" : false
 				},
 				{
-					"name" : "rst_game",
+					"name" : "VGA_Blank",
 					"strict" : false
 				},
 				{
-					"name" : "rst_random",
+					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "en_turn",
+					"name" : "R[0]",
 					"strict" : false
 				},
 				{
-					"name" : "en_count_column",
+					"name" : "R[1]",
 					"strict" : false
 				},
 				{
-					"name" : "en_random_play",
+					"name" : "R[2]",
 					"strict" : false
 				},
 				{
-					"name" : "en_new_game",
+					"name" : "R[3]",
 					"strict" : false
 				},
 				{
-					"name" : "en_reg_selection",
+					"name" : "R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "mode_count_column",
+					"name" : "R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "play_selection",
+					"name" : "R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "display_select[0]",
+					"name" : "R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "display_select[1]",
+					"name" : "G[0]",
 					"strict" : false
 				},
 				{
-					"name" : "comp_turn",
+					"name" : "G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "B[7]",
 					"strict" : false
 				},
 				{
@@ -64,55 +120,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "comp_random",
-					"strict" : false
-				},
-				{
-					"name" : "winning",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "comp_right",
-					"strict" : false
-				},
-				{
-					"name" : "comp_left",
-					"strict" : false
-				},
-				{
-					"name" : "valid_play",
-					"strict" : false
-				},
-				{
-					"name" : "start",
-					"strict" : false
-				},
-				{
-					"name" : "p1",
-					"strict" : false
-				},
-				{
-					"name" : "p0",
-					"strict" : false
-				},
-				{
-					"name" : "time_out",
-					"strict" : false
-				},
-				{
-					"name" : "L",
-					"strict" : false
-				},
-				{
-					"name" : "R",
-					"strict" : false
-				},
-				{
-					"name" : "play",
 					"strict" : false
 				}
 			]
