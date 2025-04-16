@@ -1,3 +1,4 @@
+
 module Write_play(
     input  logic [83:0] game,
     input  logic [4:0]  play,
@@ -11,6 +12,7 @@ module Write_play(
     logic [3:0]  col;
     logic [83:0] temp_game;
     logic        placed;
+    integer      index; 
 
     assign player = play[4];
     assign col    = play[3:0];
@@ -20,7 +22,7 @@ module Write_play(
         placed = 0;
         for (i = 0; i < 6; i++) begin
             row = i;
-            int index = (row * 14) + (col * 2) + 1; // apuntamos al bit de ocupado
+            index = (row * 14) + (col * 2) + 1; // apuntamos al bit de ocupado
             if (temp_game[index] == 1'b0) begin
                 // celda libre
                 temp_game[index]     = 1'b1;     // ocupado

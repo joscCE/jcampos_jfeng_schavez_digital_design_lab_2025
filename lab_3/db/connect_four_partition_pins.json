@@ -4,51 +4,59 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Hs",
+					"name" : "rst_timer",
 					"strict" : false
 				},
 				{
-					"name" : "Vs",
+					"name" : "rst_turn",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_Blank",
+					"name" : "rst_game",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_CLK",
+					"name" : "rst_random",
 					"strict" : false
 				},
 				{
-					"name" : "R[0]",
+					"name" : "en_turn",
 					"strict" : false
 				},
 				{
-					"name" : "R[1]",
+					"name" : "en_count_column",
 					"strict" : false
 				},
 				{
-					"name" : "R[2]",
+					"name" : "en_random_play",
 					"strict" : false
 				},
 				{
-					"name" : "R[3]",
+					"name" : "en_new_game",
 					"strict" : false
 				},
 				{
-					"name" : "R[4]",
+					"name" : "en_reg_selection",
 					"strict" : false
 				},
 				{
-					"name" : "R[5]",
+					"name" : "mode_count_column",
 					"strict" : false
 				},
 				{
-					"name" : "R[6]",
+					"name" : "play_selection",
 					"strict" : false
 				},
 				{
-					"name" : "R[7]",
+					"name" : "display_select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "comp_turn",
 					"strict" : false
 				},
 				{
@@ -56,7 +64,55 @@
 					"strict" : false
 				},
 				{
+					"name" : "comp_random",
+					"strict" : false
+				},
+				{
+					"name" : "winning",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "comp_right",
+					"strict" : false
+				},
+				{
+					"name" : "comp_left",
+					"strict" : false
+				},
+				{
+					"name" : "valid_play",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "p1",
+					"strict" : false
+				},
+				{
+					"name" : "p0",
+					"strict" : false
+				},
+				{
+					"name" : "time_out",
+					"strict" : false
+				},
+				{
+					"name" : "L",
+					"strict" : false
+				},
+				{
+					"name" : "R",
+					"strict" : false
+				},
+				{
+					"name" : "play",
 					"strict" : false
 				}
 			]
