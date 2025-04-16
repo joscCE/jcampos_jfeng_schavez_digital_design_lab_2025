@@ -4,123 +4,367 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Hs",
+					"name" : "S",
 					"strict" : false
 				},
 				{
-					"name" : "Vs",
+					"name" : "reg_game_M[0]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_Blank",
+					"name" : "reg_game_M[4]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_CLK",
+					"name" : "reg_game_M[8]",
 					"strict" : false
 				},
 				{
-					"name" : "R[0]",
+					"name" : "reg_game_M[12]",
 					"strict" : false
 				},
 				{
-					"name" : "R[1]",
+					"name" : "reg_game_M[16]",
 					"strict" : false
 				},
 				{
-					"name" : "R[2]",
+					"name" : "reg_game_M[20]",
 					"strict" : false
 				},
 				{
-					"name" : "R[3]",
+					"name" : "reg_game_M[24]",
 					"strict" : false
 				},
 				{
-					"name" : "R[4]",
+					"name" : "reg_game_M[28]",
 					"strict" : false
 				},
 				{
-					"name" : "R[5]",
+					"name" : "reg_game_M[2]",
 					"strict" : false
 				},
 				{
-					"name" : "R[6]",
+					"name" : "reg_game_M[6]",
 					"strict" : false
 				},
 				{
-					"name" : "R[7]",
+					"name" : "reg_game_M[10]",
 					"strict" : false
 				},
 				{
-					"name" : "G[0]",
+					"name" : "reg_game_M[14]",
 					"strict" : false
 				},
 				{
-					"name" : "G[1]",
+					"name" : "reg_game_M[18]",
 					"strict" : false
 				},
 				{
-					"name" : "G[2]",
+					"name" : "reg_game_M[22]",
 					"strict" : false
 				},
 				{
-					"name" : "G[3]",
+					"name" : "reg_game_M[26]",
 					"strict" : false
 				},
 				{
-					"name" : "G[4]",
+					"name" : "reg_game_M[30]",
 					"strict" : false
 				},
 				{
-					"name" : "G[5]",
+					"name" : "reg_game_M[32]",
 					"strict" : false
 				},
 				{
-					"name" : "G[6]",
+					"name" : "reg_game_M[40]",
 					"strict" : false
 				},
 				{
-					"name" : "G[7]",
+					"name" : "reg_game_M[48]",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "reg_game_M[56]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "reg_game_M[36]",
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
+					"name" : "reg_game_M[44]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "reg_game_M[52]",
 					"strict" : false
 				},
 				{
-					"name" : "B[4]",
+					"name" : "reg_game_M[60]",
 					"strict" : false
 				},
 				{
-					"name" : "B[5]",
+					"name" : "reg_game_M[34]",
 					"strict" : false
 				},
 				{
-					"name" : "B[6]",
+					"name" : "reg_game_M[42]",
 					"strict" : false
 				},
 				{
-					"name" : "B[7]",
+					"name" : "reg_game_M[50]",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "reg_game_M[58]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "reg_game_M[38]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[46]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[54]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[62]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[64]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[68]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[66]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[70]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[72]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[76]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[74]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[78]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[80]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[82]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[17]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[21]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[9]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[13]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[25]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[29]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[19]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[23]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[11]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[15]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[27]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[31]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[33]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[41]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[49]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[57]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[37]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[45]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[53]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[61]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[35]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[43]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[51]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[59]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[39]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[47]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[55]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[63]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[65]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[69]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[67]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[71]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[73]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[77]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[75]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[79]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[81]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_game_M[83]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_jugada[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_jugada[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_jugada[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_jugada[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_jugada[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_jugada[2]",
 					"strict" : false
 				}
 			]

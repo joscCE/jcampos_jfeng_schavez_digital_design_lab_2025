@@ -1,0 +1,60 @@
+module Check_win(
+    input  logic [83:0] reg_game_M,
+    input  logic [5:0]  reg_jugada,
+    output logic        S
+);
+
+    function automatic int contar(
+        input int row, col,
+        input int dx, dy,
+        input logic [1:0] jugador,
+        input logic [83:0] board
+    );
+        int count = 0;
+        int r = row + dy;
+        int c = col + dx;
+        int idx;
+        while (r >= 0 && r < 6 && c >= 0 && c < 7) begin
+            idx = r * 7 + c;
+            if (board[idx*2 +: 2] == jugador)
+                count++;
+            else
+                break;
+            r += dy;
+            c += dx;
+        end
+        return count;
+    endfunction
+
+    always_comb begin
+        int row = reg_jugada / 7;
+        int col = reg_jugada % 7;
+        logic [1:0] jugador = reg_game_M[reg_jugada*2 +: 2];
+        S = 0;
+
+        if (jugador != 2'b00) begin
+            int total;
+
+            // Horizontal
+            total = 1 + contar(row, col, -1,  0, jugador, reg_game_M) +
+                        contar(row, col,  1,  0, jugador, reg_game_M);
+            if (total >= 4) S = 1;
+
+            // Vertical
+            total = 1 + contar(row, col, 0, -1, jugador, reg_game_M) +
+                        contar(row, col, 0,  1, jugador, reg_game_M);
+            if (total >= 4) S = 1;
+
+            // Diagonal ↘
+            total = 1 + contar(row, col, -1, -1, jugador, reg_game_M) +
+                        contar(row, col,  1,  1, jugador, reg_game_M);
+            if (total >= 4) S = 1;
+
+            // Diagonal ↙
+            total = 1 + contar(row, col,  1, -1, jugador, reg_game_M) +
+                        contar(row, col, -1,  1, jugador, reg_game_M);
+            if (total >= 4) S = 1;
+        end
+    end
+
+endmodule

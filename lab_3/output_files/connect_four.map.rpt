@@ -1,5 +1,5 @@
-Analysis & Synthesis report for connect_four
-Tue Apr 15 17:34:02 2025
+Analysis & Elaboration report for connect_four
+Wed Apr 16 10:23:43 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,31 +7,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst
- 11. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_y
- 12. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_x
- 13. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_x
- 14. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_y
- 15. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_x
- 16. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_y
- 17. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod1
- 19. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_y"
- 20. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_x"
- 21. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_x"
- 22. Port Connectivity Checks: "Game_Display:GD"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -54,36 +34,47 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 15 17:34:02 2025       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; connect_four                                ;
-; Top-level Entity Name           ; connect_four                                ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 41                                          ;
-; Total pins                      ; 31                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 1                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Apr 16 10:23:43 2025       ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                 ; connect_four                                ;
+; Top-level Entity Name         ; Check_win                                   ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; connect_four       ; connect_four       ;
+; Top-level entity name                                                           ; Check_win          ; connect_four       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -164,426 +155,51 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; Counter.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv                 ;         ;
-; Vga_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv          ;         ;
-; connect_four.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv            ;         ;
-; Register.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv                ;         ;
-; Comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv              ;         ;
-; Game_Display.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv            ;         ;
-; output_files/Piece_ROM.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv  ;         ;
-; piece.mem                        ; yes             ; Auto-Found Unspecified File  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/piece.mem                  ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                            ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                           ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                       ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                            ;         ;
-; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/lpm_divide_k3m.tdf      ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/sign_div_unsign_nlh.tdf ;         ;
-; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/alt_u_div_kve.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                  ;
-+---------------------------------------------+--------------------------------+
-; Resource                                    ; Usage                          ;
-+---------------------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 797                            ;
-;                                             ;                                ;
-; Combinational ALUT usage for logic          ; 1121                           ;
-;     -- 7 input functions                    ; 86                             ;
-;     -- 6 input functions                    ; 384                            ;
-;     -- 5 input functions                    ; 110                            ;
-;     -- 4 input functions                    ; 252                            ;
-;     -- <=3 input functions                  ; 289                            ;
-;                                             ;                                ;
-; Dedicated logic registers                   ; 41                             ;
-;                                             ;                                ;
-; I/O pins                                    ; 31                             ;
-;                                             ;                                ;
-; Total DSP Blocks                            ; 1                              ;
-;                                             ;                                ;
-; Maximum fan-out node                        ; Game_Display:GD|inside_board~1 ;
-; Maximum fan-out                             ; 289                            ;
-; Total fan-out                               ; 5378                           ;
-; Average fan-out                             ; 4.39                           ;
-+---------------------------------------------+--------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |connect_four                             ; 1121 (1)            ; 41 (1)                    ; 0                 ; 1          ; 31   ; 0            ; |connect_four                                                                                                                 ; connect_four        ; work         ;
-;    |Game_Display:GD|                      ; 1087 (49)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |connect_four|Game_Display:GD                                                                                                 ; Game_Display        ; work         ;
-;       |Piece_ROM:rom|                     ; 904 (904)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|Piece_ROM:rom                                                                                   ; Piece_ROM           ; work         ;
-;       |lpm_divide:Mod0|                   ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_k3m:auto_generated|  ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
-;                |alt_u_div_kve:divider|    ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
-;       |lpm_divide:Mod1|                   ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_k3m:auto_generated|  ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
-;                |alt_u_div_kve:divider|    ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
-;    |Vga_Controller:vga_inst|              ; 33 (10)             ; 40 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst                                                                                         ; Vga_Controller      ; work         ;
-;       |Comparator:cmp_x|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Comparator:cmp_x                                                                        ; Comparator          ; work         ;
-;       |Counter:count_x|                   ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_x                                                                         ; Counter             ; work         ;
-;       |Counter:count_y|                   ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_y                                                                         ; Counter             ; work         ;
-;       |Register:reg_x|                    ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_x                                                                          ; Register            ; work         ;
-;       |Register:reg_y|                    ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_y                                                                          ; Register            ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 1           ;
-; Total number of DSP blocks      ; 1           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 1           ;
-+---------------------------------+-------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 41    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 41    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst ;
-+----------------+------------+----------------------------------------+
-; Parameter Name ; Value      ; Type                                   ;
-+----------------+------------+----------------------------------------+
-; N              ; 8          ; Signed Integer                         ;
-; H_Va           ; 1010000000 ; Unsigned Binary                        ;
-; H_FP           ; 0000010000 ; Unsigned Binary                        ;
-; H_SycP         ; 0001100000 ; Unsigned Binary                        ;
-; H_BckP         ; 0000110000 ; Unsigned Binary                        ;
-; H_Total        ; 1100100000 ; Unsigned Binary                        ;
-; V_Va           ; 0111100000 ; Unsigned Binary                        ;
-; V_FP           ; 0000001010 ; Unsigned Binary                        ;
-; V_SycP         ; 0000000010 ; Unsigned Binary                        ;
-; V_BckP         ; 0000100001 ; Unsigned Binary                        ;
-; V_Total        ; 1000001101 ; Unsigned Binary                        ;
-+----------------+------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_y ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; N              ; 10    ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_x ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; N              ; 10    ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_x ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; N              ; 10    ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_y ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; N              ; 10    ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_x ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; N              ; 10    ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_y ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; N              ; 10    ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod0 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                ;
-; LPM_WIDTHD             ; 7              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod1 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                ;
-; LPM_WIDTHD             ; 7              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_y" ;
-+---------+-------+----------+-----------------------------------------+
-; Port    ; Type  ; Severity ; Details                                 ;
-+---------+-------+----------+-----------------------------------------+
-; B[3..2] ; Input ; Info     ; Stuck at VCC                            ;
-; B[8..4] ; Input ; Info     ; Stuck at GND                            ;
-; B[9]    ; Input ; Info     ; Stuck at VCC                            ;
-; B[1]    ; Input ; Info     ; Stuck at GND                            ;
-; B[0]    ; Input ; Info     ; Stuck at VCC                            ;
-+---------+-------+----------+-----------------------------------------+
-
-
-+----------------------------------------------------------------------+
-; Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_x" ;
-+---------+-------+----------+-----------------------------------------+
-; Port    ; Type  ; Severity ; Details                                 ;
-+---------+-------+----------+-----------------------------------------+
-; B[9..8] ; Input ; Info     ; Stuck at VCC                            ;
-; B[7..6] ; Input ; Info     ; Stuck at GND                            ;
-; B[4..0] ; Input ; Info     ; Stuck at GND                            ;
-; B[5]    ; Input ; Info     ; Stuck at VCC                            ;
-+---------+-------+----------+-----------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_x" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; en   ; Input ; Info     ; Stuck at VCC                              ;
-+------+-------+----------+-------------------------------------------+
-
-
-+---------------------------------------------+
-; Port Connectivity Checks: "Game_Display:GD" ;
-+--------+-------+----------+-----------------+
-; Port   ; Type  ; Severity ; Details         ;
-+--------+-------+----------+-----------------+
-; game   ; Input ; Info     ; Stuck at GND    ;
-; column ; Input ; Info     ; Stuck at GND    ;
-+--------+-------+----------+-----------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 41                          ;
-;     CLR               ; 31                          ;
-;     ENA CLR           ; 10                          ;
-; arriav_lcell_comb     ; 1123                        ;
-;     arith             ; 108                         ;
-;         0 data inputs ; 12                          ;
-;         1 data inputs ; 43                          ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 12                          ;
-;     extend            ; 86                          ;
-;         7 data inputs ; 86                          ;
-;     normal            ; 913                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 84                          ;
-;         3 data inputs ; 90                          ;
-;         4 data inputs ; 240                         ;
-;         5 data inputs ; 110                         ;
-;         6 data inputs ; 384                         ;
-;     shared            ; 16                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 14                          ;
-; arriav_mac            ; 1                           ;
-; boundary_port         ; 31                          ;
-;                       ;                             ;
-; Max LUT depth         ; 19.50                       ;
-; Average LUT depth     ; 15.80                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:07     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 15 17:33:43 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four
+    Info: Processing started: Wed Apr 16 10:23:29 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
-    Info (12023): Found entity 1: Counter File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv Line: 1
+    Info (12023): Found entity 1: Counter File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
-    Info (12023): Found entity 1: Vga_Controller File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 1
+    Info (12023): Found entity 1: Vga_Controller File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file connect_four.sv
-    Info (12023): Found entity 1: connect_four File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 1
+    Info (12023): Found entity 1: connect_four File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 1
 Warning (12019): Can't analyze file -- file output_files/tb_Vga_Controller.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file register.sv
-    Info (12023): Found entity 1: Register File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv Line: 1
+    Info (12023): Found entity 1: Register File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
-    Info (12023): Found entity 1: Comparator File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv Line: 1
+    Info (12023): Found entity 1: Comparator File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_play.sv
-    Info (12023): Found entity 1: FSM_Play File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM_Play.sv Line: 1
+    Info (12023): Found entity 1: FSM_Play File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM_Play.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file write_play.sv
-    Info (12023): Found entity 1: Write_play File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv Line: 1
+    Info (12023): Found entity 1: Write_play File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file game_display.sv
-    Info (12023): Found entity 1: Game_Display File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 1
+    Info (12023): Found entity 1: Game_Display File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/piece_rom.sv
-    Info (12023): Found entity 1: Piece_ROM File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 1
-Info (12127): Elaborating entity "connect_four" for the top level hierarchy
-Info (12128): Elaborating entity "Game_Display" for hierarchy "Game_Display:GD" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(39): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 39
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(40): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(41): truncated value with size 32 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 41
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(42): truncated value with size 32 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 42
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(43): truncated value with size 32 to match size of target (13) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 43
-Info (12128): Elaborating entity "Piece_ROM" for hierarchy "Game_Display:GD|Piece_ROM:rom" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 51
-Warning (10030): Net "memory.data_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
-Warning (10030): Net "memory.waddr_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
-Warning (10030): Net "memory.we_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
-Info (12128): Elaborating entity "Vga_Controller" for hierarchy "Vga_Controller:vga_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 46
-Info (12128): Elaborating entity "Counter" for hierarchy "Vga_Controller:vga_inst|Counter:count_y" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 26
-Info (12128): Elaborating entity "Register" for hierarchy "Vga_Controller:vga_inst|Register:reg_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 30
-Info (12128): Elaborating entity "Comparator" for hierarchy "Vga_Controller:vga_inst|Comparator:cmp_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 33
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "Game_Display:GD|Piece_ROM:rom|memory" is uninferred due to asynchronous read logic File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
-Critical Warning (127005): Memory depth (8192) in the design file differs from memory depth (4900) in the Memory Initialization File "C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/connect_four.ram0_Piece_ROM_fa22a24a.hdl.mif" -- setting initial value for remaining addresses to 0
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Mod0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 41
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Mod1" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 42
-Info (12130): Elaborated megafunction instantiation "Game_Display:GD|lpm_divide:Mod0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 41
-Info (12133): Instantiated megafunction "Game_Display:GD|lpm_divide:Mod0" with the following parameter: File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 41
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
-    Info (12023): Found entity 1: lpm_divide_k3m File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/lpm_divide_k3m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/sign_div_unsign_nlh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/alt_u_div_kve.tdf Line: 22
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_Sync_N" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 5
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1173 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 1141 logic cells
-    Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Tue Apr 15 17:34:02 2025
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:32
+    Info (12023): Found entity 1: Piece_ROM File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file check_win.sv
+    Info (12023): Found entity 1: Check_win File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_check_win.sv
+    Info (12023): Found entity 1: tb_Check_win File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 1
+Info (12127): Elaborating entity "Check_win" for the top level hierarchy
+Info (144001): Generated suppressed messages file C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Wed Apr 16 10:23:43 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:24
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg.
 
 

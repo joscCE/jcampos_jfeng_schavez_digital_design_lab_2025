@@ -1,0 +1,63 @@
+module tb_Check_win();
+
+    logic [83:0] game;
+    logic [5:0]  jugada;
+    logic        win;
+
+    // Instanciar el módulo Check_win
+    Check_win uut (
+        .reg_game_M(game),
+        .reg_jugada(jugada),
+        .S(win)
+    );
+
+    // Función para codificar ficha (jugador en fila/columna)
+    function automatic void set_cell(
+        inout logic [83:0] board,
+        input int row, col,
+        input logic [1:0] player
+    );
+        int idx = (row * 7 + col) * 2;
+        board[idx +: 2] = player;
+    endfunction
+
+    initial begin
+        $display("---- INICIANDO TEST ----");
+        
+        // Limpia tablero
+        game = '0;
+
+        // Simular 3 fichas horizontales y una jugada final
+        // Jugador = 2'b01
+        set_cell(game, 2, 3, 2'b01);
+        set_cell(game, 2, 4, 2'b01);
+        set_cell(game, 2, 5, 2'b01);
+
+        // Jugada actual: colocar en columna 6 (completa las 4 en línea)
+        set_cell(game, 2, 6, 2'b01);
+        jugada = {3'd2, 3'd6}; // fila 2, columna 6
+
+        #1;
+        if (win)
+            $display("✅ Test PASÓ: Victoria horizontal detectada");
+        else
+            $display("❌ Test FALLÓ: No se detectó victoria horizontal");
+
+        // Probar sin victoria
+        game = '0;
+        set_cell(game, 3, 1, 2'b01);
+        set_cell(game, 3, 2, 2'b10);
+        set_cell(game, 3, 3, 2'b01);
+        set_cell(game, 3, 4, 2'b10);
+        jugada = {3'd3, 3'd4}; // fila 3, columna 4
+
+        #1;
+        if (!win)
+            $display("✅ Test PASÓ: No hay victoria (correcto)");
+        else
+            $display("❌ Test FALLÓ: Falsa victoria detectada");
+
+        $finish;
+    end
+
+endmodule
