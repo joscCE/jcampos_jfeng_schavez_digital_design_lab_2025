@@ -1,0 +1,144 @@
+module FSM_tb;
+
+  // Entradas
+  logic clk, rst, L, R, time_out, winning, valid_play, play, start;
+  logic comp_turn, comp_right, comp_left, comp_random;
+  logic p1, p0;
+
+  // Salidas
+  logic rst_timer, rst_turn, rst_game, rst_random;
+  logic en_turn, en_count_column, en_random_play, en_new_game, en_reg_selection;
+  logic mode_count_column, play_selection, en_turn_timer;
+  logic [1:0] display_select;
+  logic [3:0] state_debug;
+
+  // Instancia del módulo FSM
+  FSM dut (
+    .clk(clk), .rst(rst), .L(L), .R(R), .time_out(time_out), .winning(winning),
+    .valid_play(valid_play), .play(play), .start(start),
+    .comp_turn(comp_turn), .comp_right(comp_right), .comp_left(comp_left), .comp_random(comp_random),
+    .p1(p1), .p0(p0),
+    .rst_timer(rst_timer), .rst_turn(rst_turn), .rst_game(rst_game), .rst_random(rst_random),
+    .en_turn(en_turn), .en_count_column(en_count_column), .en_random_play(en_random_play),
+    .en_new_game(en_new_game), .en_reg_selection(en_reg_selection),
+    .mode_count_column(mode_count_column), .play_selection(play_selection),
+    .en_turn_timer(en_turn_timer), .display_select(display_select), .state_debug(state_debug)
+  );
+
+  // Reloj
+  always #5 clk = ~clk;
+
+  // Procedimiento de prueba
+  initial begin
+    // Inicialización
+    clk = 0;
+    rst = 1;
+    L = 0;
+	 R = 0;
+	 time_out = 0;
+	 winning = 0;
+	 valid_play = 1;
+	 play = 0;
+	 start = 0;
+    comp_turn = 0;
+	 comp_right = 0;
+	 comp_left = 0;
+	 comp_random = 0;
+    p0 = 0;
+	 p1 = 0;
+
+    $display("Iniciando testbench...");
+    #10;
+
+    rst = 0; // Quitamos reset
+    #10;
+
+    // Selección modo P1 (jugador vs computadora)
+    p1 = 1;
+    #10;
+    p1 = 0;
+    #10;
+
+    // Iniciar juego
+    start = 1;
+    #10;
+    start = 0;
+    #10;
+
+    // Simular movimiento a la derecha
+    R = 1;
+    #10;
+    R = 0;
+    #10;
+	 
+	 
+	 // Simular movimiento a la derecha
+    R = 1;
+    #10;
+    R = 0;
+    #10;
+
+    // Simular jugada inválida
+    play = 1;
+    #10;
+    play = 0;
+    #10;
+
+
+    // Simular jugada válida
+    play = 1;
+    #10;
+    play = 0;
+    valid_play = 0;
+    #10;
+
+    // Simular que no hay victoria
+    winning = 0;
+    #10;
+
+    // Simular siguiente turn
+
+    // Simular victoria
+    play = 1;
+    #10;
+    play = 0;
+    valid_play = 0;
+    #10;
+	 
+	 
+	 // Simular movimiento a la derecha
+    L = 1;
+    #10;
+    L = 0;
+    #10;
+	 
+	 
+	 // Simular movimiento a la derecha
+    L = 1;
+    #10;
+    L = 0;
+    #10;
+	 
+	 play = 1;
+    #10;
+    play = 0;
+    valid_play = 0;
+    #10;
+	 
+
+    // Simular reset después de victoria
+    rst = 1;
+    #10;
+    rst = 0;
+    #10;
+
+    $display("Finalizado.");
+    $stop;
+  end
+
+  // Mostrar el estado en cada flanco de subida
+  always_ff @(posedge clk) begin
+    $display("Tiempo: %0t | Estado actual: %b", $time, state_debug);
+  end
+
+endmodule

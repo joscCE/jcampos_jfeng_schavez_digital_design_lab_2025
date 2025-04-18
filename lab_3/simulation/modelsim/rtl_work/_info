@@ -7,261 +7,339 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/simulation/modelsim
+Z0 dC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/simulation/modelsim
 vCheck_win
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1744846013
+Z2 !s110 1744929784
 !i10b 1
-!s100 Wbd?McKKEbk5R2nG6=6>g3
-I@ofH<JJcF5798P]C[VLId0
+!s100 WgO[n[5IkRaA?>0I<MY0V2
+I==C2:>>=R67XYhSo;Cdb`2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 Check_win_sv_unit
 S1
 R0
-Z4 w1744844352
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Check_win.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Check_win.sv
+w1744922471
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv
 L0 1
-Z5 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1744846013.000000
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Check_win.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Check_win.sv|
+Z5 !s108 1744929784.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3
-Z9 tCvgOpt 0
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3
+Z8 tCvgOpt 0
 n@check_win
 vclk_div
 R1
 R2
 !i10b 1
 !s100 lhOOXjj74e;GjS=VbBB<D3
-ImTTz9o8YPhc>Bc4lP5_G02
+Iikn^RO[UMkhXKzL@N29R?2
 R3
 !s105 clk_div_sv_unit
 S1
 R0
-Z10 w1744836112
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/clk_div.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/clk_div.sv
+w1744832886
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/clk_div.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/clk_div.sv|
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vComparator
 R1
 R2
 !i10b 1
-!s100 Q@UC0dgo[9cDc4@nVEk@A2
-IP`bgc9Ydn3Pc7bO;G4lSL2
+!s100 2OANd8KMOg@LmU]EE<>]^0
+I@FgL5>jK2fQ:j8Di6h5]n3
 R3
 !s105 Comparator_sv_unit
 S1
 R0
-w1744758050
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Comparator.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Comparator.sv
+w1744914783
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Comparator.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Comparator.sv|
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@comparator
 vconnect_four
 R1
 R2
 !i10b 1
-!s100 l1ngI`6Z8lJh=^:>MMbkX3
-IDan3<i_anFX]7;cWPc^CT1
+!s100 Zz^;zbimZOlIG3BoE5E:h0
+IIDO^D;iE7;SMHJXAfFikU0
 R3
 !s105 connect_four_sv_unit
 S1
 R0
-w1744845942
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/connect_four.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/connect_four.sv
+w1744929373
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/connect_four.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/connect_four.sv|
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vCounter
 R1
-R2
+Z9 !s110 1744929783
 !i10b 1
-!s100 9n8A1MUKWbR8W?1^^J?6j2
-I[<C92f9d<:KiF;7`]Ro<D2
+!s100 cNPDdY:P[S@1l]Z[[`oJZ2
+I;57EX3EJFRZg8L2K9j]mK2
 R3
 !s105 Counter_sv_unit
 S1
 R0
-R10
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Counter.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Counter.sv
+w1744913212
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Counter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Counter.sv|
+Z10 !s108 1744929783.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@counter
 vFSM
 R1
-R2
+R9
 !i10b 1
-!s100 ;]_>b8U9RbIi8fe>dWkWV2
-I6]e0JVfR<Kl;I;mU4E7Pi2
+!s100 cORifb:5j_Z[Z46j48=X23
+IJmF`<g4nWC6oi1>[[@:1D2
 R3
 !s105 FSM_sv_unit
 S1
 R0
-w1744845746
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv
+w1744922490
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv
 L0 2
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM.sv|
+R10
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@f@s@m
+vGame_Display
+R1
+R2
+!i10b 1
+!s100 DI;bA8K2=D;?=hcAS[cJh1
+IA?^1HjSh;WhzPbo@egUXS0
+R3
+!s105 Game_Display_sv_unit
+S1
+R0
+w1744928143
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv|
+!i113 1
+R6
+R7
+R8
+n@game_@display
 vMux
 R1
 R2
 !i10b 1
-!s100 RVcDN@L`O:j2`BBnmCS@o2
-Ik_nPz6Re_8S@AIl]02BQJ2
+!s100 P6zF7hFL5fSLFC1J:dP:]2
+Ijk6G64H5C1Qj554iDHTHe2
 R3
 !s105 Mux_sv_unit
 S1
 R0
-R4
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux.sv
+w1744912848
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux.sv|
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@mux
+vPiece_ROM
+R1
+Z11 !s110 1744929785
+!i10b 1
+!s100 EoM[[o_cHz:]FVG3gD0U=2
+ICT6S^X;_hVH5Z>H:C:4]F2
+R3
+!s105 Piece_ROM_sv_unit
+S1
+R0
+w1744760376
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files
+R8
+n@piece_@r@o@m
 vRegister
 R1
 R2
 !i10b 1
-!s100 H=iP6k9;E2a6_9ARmkol^3
-I8cX2n?SW@4UaK8S[?RZYA1
+!s100 ?:ikH`Pi:D`K;lmUnd<2]1
+I;:RH^W^@cA<S1b2aaQb7B0
 R3
 !s105 Register_sv_unit
 S1
 R0
-R10
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Register.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Register.sv
+w1744913214
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Register.sv|
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@register
 vtb_connect_four
 R1
-!s110 1744846014
+R11
 !i10b 1
-!s100 0zhBeKgU73Le0z7lE97l50
-IbNo7N4R`JfAA_3LT3?N9_3
+!s100 dP4N?FE;VCehhj[eSj:_D3
+Illa@4gc4k03UL<^d4zVR<1
 R3
 !s105 tb_connect_four_sv_unit
 S1
 R0
-w1744845446
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_connect_four.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_connect_four.sv
-L0 4
-R5
+w1744929713
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv
+L0 1
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_connect_four.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_connect_four.sv|
+!s108 1744929785.000000
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv|
 !i113 1
+R6
 R7
 R8
-R9
+vVga_Controller
+R1
+R2
+!i10b 1
+!s100 GM2iD2S`M:?@TPFOC7Qk82
+IHJaS;9ljGOaU0Y<662k^:2
+R3
+!s105 Vga_Controller_sv_unit
+S1
+R0
+w1744927092
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv|
+!i113 1
+R6
+R7
+R8
+n@vga_@controller
 vWrite_play
 R1
 R2
 !i10b 1
-!s100 UNdUog<GGWYZ40Yh[P?kF3
-I5NgX==Egd>16ZkRz;4OMG1
+!s100 6@eG]?0o[b?mdLD?2FH@G2
+Ijb=T>_icDWPed45Gf]o5G0
 R3
 !s105 Write_Play_sv_unit
 S1
 R0
-w1744827413
-8C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Write_Play.sv
-FC:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Write_Play.sv
+w1744922393
+8C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv
+FC:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv
 L0 2
-R5
+R4
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Write_Play.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3|C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Write_Play.sv|
+R5
+!s107 C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@write_play

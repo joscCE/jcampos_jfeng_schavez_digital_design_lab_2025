@@ -23,12 +23,12 @@ module Vga_Controller #(parameter N=8,
 	logic [9:0] Q_x, Q_y, D_x, D_y;         
    logic rstx,rsty;
 
-	Counter count_y(clk, (rstx & rsty)| rst, rstx, D_y);			
-	Counter count_x(clk, rstx | rst , 1'b1, D_x);
+	Counter count_y(clk, (rstx & rsty)| rst, rstx, 1'b1 ,D_y);			
+	Counter count_x(clk, rstx | rst , 1'b1, 1'b1 ,D_x);
    
 
-	Register reg_x(clk, rst, D_x, Q_x);
-	Register reg_y(clk, rst, D_y, Q_y);
+	Register reg_x(clk, rst, D_x, 1'b1 ,Q_x);
+	Register reg_y(clk, rst, D_y, 1'b1 ,Q_y);
 	
 	Comparator cmp_x(Q_x, H_Total, rstx);
 	Comparator cmp_y(Q_y, V_Total, rsty);

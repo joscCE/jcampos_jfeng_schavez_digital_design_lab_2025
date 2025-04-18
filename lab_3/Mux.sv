@@ -9,7 +9,7 @@ module Mux #(parameter N = 4)(
 );
 
 
-assign c = S? A: B;
+assign C = S? A: B;
 
 
 

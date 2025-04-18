@@ -5,7 +5,7 @@ module Counter #(parameter N = 10)(
     input logic mode,                
     output logic [N-1:0] Q
 );
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(negedge clk or posedge rst) begin
         if (rst)
             Q <= '0;                
         else if (en) begin

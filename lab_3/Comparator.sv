@@ -7,5 +7,4 @@ module Comparator #(parameter N = 10) (
 assign equ = (A==B);
 
 
-
 endmodule 

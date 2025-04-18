@@ -14,8 +14,8 @@ module Write_play(
     logic        placed;
     integer      index; 
 
-    assign player = play[4];
-    assign col    = play[3:0];
+    assign player = play[3];
+    assign col    = play[2:0];
 
     always_comb begin
         temp_game = game;

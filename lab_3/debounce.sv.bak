@@ -1,0 +1,42 @@
+module debounce (
+    input  logic clk,          // reloj
+    input  logic rst_n,        // reset activo en bajo
+    input  logic btn_in,       // señal ruidosa del botón
+    output logic btn_debounced // señal limpia
+);
+
+    parameter integer STABLE_CYCLES = 50000; // ajusta según frecuencia del reloj
+    logic [15:0] counter;
+    logic btn_sync_0, btn_sync_1;
+    logic btn_prev;
+
+    // Sincronizador doble para evitar metastabilidad
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            btn_sync_0 <= 1'b0;
+            btn_sync_1 <= 1'b0;
+        end else begin
+            btn_sync_0 <= btn_in;
+            btn_sync_1 <= btn_sync_0;
+        end
+    end
+
+    // Lógica de debounce
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            counter <= 0;
+            btn_prev <= 0;
+            btn_debounced <= 0;
+        end else begin
+            if (btn_sync_1 != btn_prev) begin
+                counter <= 0; // cambio detectado, reinicia el contador
+            end else if (counter < STABLE_CYCLES) begin
+                counter <= counter + 1;
+            end else begin
+                btn_debounced <= btn_sync_1;
+            end
+            btn_prev <= btn_sync_1;
+        end
+    end
+
+endmodule

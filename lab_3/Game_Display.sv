@@ -21,14 +21,30 @@ module Game_Display(
     logic [12:0] addr;
     logic [23:0] color;
     logic inside_board;
+    logic inside_indicator;
+    logic [2:0] safe_column;
+    logic       valid_column;
 
-    // Determinar si estamos dentro del tablero
+    // Protección por si column > 6
+    assign safe_column = (column < 7) ? column : 3'd6;
+    assign valid_column = (column < 7);
+
+    // Cálculo robusto del área horizontal de la columna seleccionada
+    logic [9:0] column_x_start, column_x_end;
+    assign column_x_start = OFFSET_X + (safe_column * TILE_W);
+    assign column_x_end   = column_x_start + TILE_W;
+
+    // Detectar si estamos dentro del tablero
     assign inside_board = (Q_X >= OFFSET_X) && (Q_X < OFFSET_X + BOARD_W) &&
                           (Q_Y >= OFFSET_Y) && (Q_Y < OFFSET_Y + BOARD_H);
 
+    // Detectar si estamos en la zona del indicador (encima del tablero)
+    assign inside_indicator = valid_column &&
+                              (Q_Y >= OFFSET_Y - 20) && (Q_Y < OFFSET_Y) &&
+                              (Q_X >= column_x_start) && (Q_X < column_x_end);
+
     // Calcular dirección de acceso a la ROM
     always_comb begin
-        // Valores por defecto para evitar inferencia de latch
         local_x = 0;
         local_y = 0;
         rel_x   = 0;
@@ -50,14 +66,21 @@ module Game_Display(
         .color(color)
     );
 
-    // Selección de color final
+    // Color final con indicador
     always_comb begin
-        if (inside_board) begin
+        if (inside_indicator) begin
+            // Indicador visual (amarillo brillante)
+            R = 8'd255;
+            G = 8'd255;
+            B = 8'd0;
+        end else if (inside_board) begin
+            // Color del tablero
             R = color[23:16];
             G = color[15:8];
             B = color[7:0];
         end else begin
-            R = 8'd255; // blanco fuera del tablero
+            // Fondo blanco fuera del tablero
+            R = 8'd255;
             G = 8'd255;
             B = 8'd255;
         end

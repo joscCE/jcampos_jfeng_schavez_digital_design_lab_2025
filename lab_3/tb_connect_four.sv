@@ -1,77 +1,80 @@
-
-`timescale 1ns / 1ps
-
 module tb_connect_four;
 
-    // Entradas
-    logic clk, rst, p0, p1;
-    logic [2:0] player0, player1;
-	 logic start;
+  // Inputs
+  logic clk, rst;
+  logic [2:0] player0, player1;
+  logic p0, p1, start;
 
-    // Salidas
-    logic Hs, Vs;
-    logic VGA_Blank, VGA_Sync_N, VGA_CLK;
-    logic [7:0] R, G, B;
+  // Outputs
+  logic Hs, Vs;
+  logic VGA_Blank, VGA_Sync_N, VGA_CLK;
+  logic [7:0] R, G, B;
+  
+  logic [2:0] debug_colum;
 
-    // Instancia del DUT
-    connect_four uut (
-        .clk(clk),
-        .rst(rst),
-        .player0(player0),
-        .player1(player1),
-        .p0(p0),
-        .p1(p1),
-		  .start(start),
-        .Hs(Hs),
-        .Vs(Vs),
-        .VGA_Blank(VGA_Blank),
-        .VGA_Sync_N(VGA_Sync_N),
-        .VGA_CLK(VGA_CLK),
-        .R(R),
-        .G(G),
-        .B(B)
-    );
 
-    // Generación de reloj 50MHz
-    initial clk = 0;
-    always #10 clk = ~clk;
+  // Instancia del DUT
+  connect_four dut (
+    .clk(clk),
+    .rstin(rst),
+    .player0in(player0),
+    .player1in(player1),
+    .p0in(p0),
+    .p1in(p1),
+    .startin(start),
+    .Hs(Hs), .Vs(Vs),
+    .VGA_Blank(VGA_Blank), .VGA_Sync_N(VGA_Sync_N), .VGA_CLK(VGA_CLK),
+    .R(R), .G(G), .B(B),
+	 .debug_colum(debug_colum)
+	 
+  );
 
-    // Proceso de simulación
-    initial begin
-        // Inicialización
-        $display("Iniciando simulación...");
-        rst = 1;
-		  #50
-		  rst = 0;
-        p0 = 0;
-        p1 = 0;
-        player0 = 3'b000;  // Movimiento de jugador 0 (por ejemplo: Presionar botón Izquierda)
-        player1 = 3'b000;  // Movimiento de jugador 1 (por ejemplo: Presionar botón Derecha)
-        #100;
+  // Clock
+  always #10 clk = ~clk;
 
-        // Turno del jugador 0
-        $display("Turno del jugador 0");
-        p0 = 1;    // Activamos señal de jugador 0
-        #50;
-        p0 = 0;
-        #200;
+  // Test sequence
+  initial begin
+    $display("Inicio del Testbench");
 
-        // Turno del jugador 1
-        $display("Turno del jugador 1");
-        p1 = 1;    // Activamos señal de jugador 1
-        #50;
-        p1 = 0;
-        #200;
-		  
-		  $display("Comenzar juego");
-		  start = 0;
-		  start = 1;
-		  #50
-		  start = 0;
+    // Inicialización
+    clk = 0;
+    rst = 0;
+    p0 = 1; p1 = 1; start = 1;
+    player0 = 3'b111;  // Solo Play activo
+    player1 = 3'b111;
 
-        // Final de la simulación
-        $display("Fin de simulación.");
-        $finish;
-    end
+    #50;
+    rst = 1;
+
+    // Esperamos algunos ciclos
+    #100;
+    // Empezamos el juego
+    start = 0; #100;
+    start = 1;
+
+    // Esperamos que el FSM pase a estado 3
+    #200;
+
+    // Simulamos una jugada (p0)
+
+
+    // Simulamos una jugada de player0
+    player0 = 3'b101; // Play
+    #200;
+	 
+	 player0 = 3'b111; // Play
+    #200;
+	 
+	  player0 = 3'b101; // Play
+    #200;
+	 
+	 player0 = 3'b111; // Play
+    #1000;
+	 
+
+	 
+    // Fin del test
+    $finish;
+  end
 
 endmodule

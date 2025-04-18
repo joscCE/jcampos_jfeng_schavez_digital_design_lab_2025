@@ -1,6 +1,6 @@
 module Check_win(
     input  logic [83:0] reg_game_M,  // 7 columnas x 6 filas x 2 bits = 84 bits
-    input  logic [4:0]  reg_jugada,  // [4] = jugador, [2:0] = columna (0-6)
+    input  logic [3:0]  reg_jugada,  // [4] = jugador, [2:0] = columna (0-6)
     output logic        S            // Señal de victoria
 );
 
@@ -9,7 +9,7 @@ module Check_win(
     logic       jugador;
     logic [1:0] celda_tmp;  // <== MOVIDO AQUÍ
 
-    assign jugador = reg_jugada[4];
+    assign jugador = reg_jugada[3];
     assign columna = reg_jugada[2:0];
 
     // Función para obtener una celda
