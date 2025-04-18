@@ -136,19 +136,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "player1in[1]",
-					"strict" : false
-				},
-				{
-					"name" : "player0in[1]",
-					"strict" : false
-				},
-				{
 					"name" : "player1in[0]",
 					"strict" : false
 				},
 				{
 					"name" : "player0in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "player1in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "player0in[1]",
 					"strict" : false
 				},
 				{

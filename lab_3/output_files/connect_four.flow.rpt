@@ -1,5 +1,5 @@
 Flow report for connect_four
-Thu Apr 17 18:32:08 2025
+Thu Apr 17 19:33:26 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Apr 17 18:32:08 2025       ;
+; Flow Status                     ; Successful - Thu Apr 17 19:33:26 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,611 / 41,910 ( 4 % )                      ;
-; Total registers                 ; 231                                         ;
+; Logic utilization (in ALMs)     ; 1,706 / 41,910 ( 4 % )                      ;
+; Total registers                 ; 248                                         ;
 ; Total pins                      ; 43 / 499 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/17/2025 18:29:51 ;
+; Start date & time ; 04/17/2025 19:31:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; connect_four        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id      ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 153951931180250.174493619103404        ; --            ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 153951931180250.174493986503980        ; --            ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_connect_four ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_connect_four                        ; --            ; --          ; eda_simulation  ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation  ;
@@ -104,12 +104,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4863 MB             ; 00:00:30                           ;
-; Fitter               ; 00:01:31     ; 1.4                     ; 6558 MB             ; 00:04:09                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4850 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:11     ; 2.1                     ; 5164 MB             ; 00:00:21                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4777 MB             ; 00:00:03                           ;
-; Total                ; 00:02:13     ; --                      ; --                  ; 00:05:11                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4882 MB             ; 00:00:31                           ;
+; Fitter               ; 00:01:36     ; 1.4                     ; 6544 MB             ; 00:04:18                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4851 MB             ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:12     ; 2.1                     ; 5169 MB             ; 00:00:22                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4780 MB             ; 00:00:02                           ;
+; Total                ; 00:02:16     ; --                      ; --                  ; 00:05:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

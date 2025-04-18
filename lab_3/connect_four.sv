@@ -286,7 +286,7 @@ module connect_four (
 
 	 
 	 Game_Display GD (
-		.game(84'h00),
+		.game(Q_reg_game),
 		.column(Q_reg_Column),
 		.Q_X(Q_X),
 		.Q_Y(Q_Y),

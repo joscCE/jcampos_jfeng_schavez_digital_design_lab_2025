@@ -1,5 +1,5 @@
 Analysis & Synthesis report for connect_four
-Thu Apr 17 18:30:10 2025
+Thu Apr 17 19:31:23 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -39,30 +39,31 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  31. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_y
  32. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_x
  33. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_y
- 34. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod0
- 35. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod1
- 36. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_y"
- 37. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_x"
- 38. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_y"
- 39. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_x"
- 40. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_x"
- 41. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_y"
- 42. Port Connectivity Checks: "Game_Display:GD"
- 43. Port Connectivity Checks: "FSM:fsm_inst"
- 44. Port Connectivity Checks: "Check_win:CW_Inst"
- 45. Port Connectivity Checks: "Mux:Mux_Play"
- 46. Port Connectivity Checks: "Register:Reg_Play"
- 47. Port Connectivity Checks: "Comparator:Compa_Random"
- 48. Port Connectivity Checks: "Counter:Count_Random"
- 49. Port Connectivity Checks: "Comparator:Comp_count_turn_time"
- 50. Port Connectivity Checks: "Counter:Count_turn_time"
- 51. Port Connectivity Checks: "Comparator:Comp_Column_Left"
- 52. Port Connectivity Checks: "Comparator:Comp_Column_Right"
- 53. Port Connectivity Checks: "Counter:Count_Turn"
- 54. Post-Synthesis Netlist Statistics for Top Partition
- 55. Elapsed Time Per Partition
- 56. Analysis & Synthesis Messages
- 57. Analysis & Synthesis Suppressed Messages
+ 34. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Div0
+ 35. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Div1
+ 36. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod0
+ 37. Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod1
+ 38. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_y"
+ 39. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_x"
+ 40. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_y"
+ 41. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_x"
+ 42. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_x"
+ 43. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_y"
+ 44. Port Connectivity Checks: "FSM:fsm_inst"
+ 45. Port Connectivity Checks: "Check_win:CW_Inst"
+ 46. Port Connectivity Checks: "Mux:Mux_Play"
+ 47. Port Connectivity Checks: "Register:Reg_Play"
+ 48. Port Connectivity Checks: "Comparator:Compa_Random"
+ 49. Port Connectivity Checks: "Counter:Count_Random"
+ 50. Port Connectivity Checks: "Comparator:Comp_count_turn_time"
+ 51. Port Connectivity Checks: "Counter:Count_turn_time"
+ 52. Port Connectivity Checks: "Comparator:Comp_Column_Left"
+ 53. Port Connectivity Checks: "Comparator:Comp_Column_Right"
+ 54. Port Connectivity Checks: "Counter:Count_Turn"
+ 55. Post-Synthesis Netlist Statistics for Top Partition
+ 56. Elapsed Time Per Partition
+ 57. Analysis & Synthesis Messages
+ 58. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -88,7 +89,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 17 18:30:10 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 17 19:31:23 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
@@ -236,37 +237,38 @@ refer to the applicable agreement for further details.
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                           ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                       ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                            ;         ;
-; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/lpm_divide_k3m.tdf      ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/lpm_divide_hbm.tdf      ;         ;
 ; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/sign_div_unsign_nlh.tdf ;         ;
 ; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/alt_u_div_kve.tdf       ;         ;
+; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/lpm_divide_k3m.tdf      ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1769                       ;
-;                                             ;                            ;
-; Combinational ALUT usage for logic          ; 2292                       ;
-;     -- 7 input functions                    ; 92                         ;
-;     -- 6 input functions                    ; 1150                       ;
-;     -- 5 input functions                    ; 309                        ;
-;     -- 4 input functions                    ; 310                        ;
-;     -- <=3 input functions                  ; 431                        ;
-;                                             ;                            ;
-; Dedicated logic registers                   ; 177                        ;
-;                                             ;                            ;
-; I/O pins                                    ; 43                         ;
-;                                             ;                            ;
-; Total DSP Blocks                            ; 2                          ;
-;                                             ;                            ;
-; Maximum fan-out node                        ; Game_Display:GD|addr[3]~10 ;
-; Maximum fan-out                             ; 294                        ;
-; Total fan-out                               ; 12143                      ;
-; Average fan-out                             ; 4.75                       ;
-+---------------------------------------------+----------------------------+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 1867                      ;
+;                                             ;                           ;
+; Combinational ALUT usage for logic          ; 2466                      ;
+;     -- 7 input functions                    ; 93                        ;
+;     -- 6 input functions                    ; 1171                      ;
+;     -- 5 input functions                    ; 310                       ;
+;     -- 4 input functions                    ; 339                       ;
+;     -- <=3 input functions                  ; 553                       ;
+;                                             ;                           ;
+; Dedicated logic registers                   ; 177                       ;
+;                                             ;                           ;
+; I/O pins                                    ; 43                        ;
+;                                             ;                           ;
+; Total DSP Blocks                            ; 2                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; Game_Display:GD|addr[1]~7 ;
+; Maximum fan-out                             ; 295                       ;
+; Total fan-out                               ; 12706                     ;
+; Average fan-out                             ; 4.65                      ;
++---------------------------------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -274,16 +276,24 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |connect_four                             ; 2292 (2)            ; 177 (0)                   ; 0                 ; 2          ; 43   ; 0            ; |connect_four                                                                                                                 ; connect_four        ; work         ;
-;    |Check_win:CW_Inst|                    ; 936 (936)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Check_win:CW_Inst                                                                                               ; Check_win           ; work         ;
+; |connect_four                             ; 2466 (2)            ; 177 (0)                   ; 0                 ; 2          ; 43   ; 0            ; |connect_four                                                                                                                 ; connect_four        ; work         ;
+;    |Check_win:CW_Inst|                    ; 933 (933)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Check_win:CW_Inst                                                                                               ; Check_win           ; work         ;
 ;    |Comparator:Comp_count_turn_time|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Comparator:Comp_count_turn_time                                                                                 ; Comparator          ; work         ;
 ;    |Counter:Count_Column|                 ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Counter:Count_Column                                                                                            ; Counter             ; work         ;
 ;    |Counter:Count_Random|                 ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Counter:Count_Random                                                                                            ; Counter             ; work         ;
 ;    |Counter:Count_Turn|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Counter:Count_Turn                                                                                              ; Counter             ; work         ;
 ;    |Counter:Count_turn_time|              ; 28 (28)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Counter:Count_turn_time                                                                                         ; Counter             ; work         ;
 ;    |FSM:fsm_inst|                         ; 23 (23)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|FSM:fsm_inst                                                                                                    ; FSM                 ; work         ;
-;    |Game_Display:GD|                      ; 1106 (103)          ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |connect_four|Game_Display:GD                                                                                                 ; Game_Display        ; work         ;
-;       |Piece_ROM:rom|                     ; 869 (869)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|Piece_ROM:rom                                                                                   ; Piece_ROM           ; work         ;
+;    |Game_Display:GD|                      ; 1282 (154)          ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |connect_four|Game_Display:GD                                                                                                 ; Game_Display        ; work         ;
+;       |Piece_ROM:rom|                     ; 874 (874)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|Piece_ROM:rom                                                                                   ; Piece_ROM           ; work         ;
+;       |lpm_divide:Div0|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_hbm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Div1|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_hbm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
 ;       |lpm_divide:Mod0|                   ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_k3m:auto_generated|  ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
 ;             |sign_div_unsign_nlh:divider| ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Game_Display:GD|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
@@ -303,7 +313,7 @@ refer to the applicable agreement for further details.
 ;       |Counter:count_y|                   ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Counter:count_y                                                                         ; Counter             ; work         ;
 ;       |Register:reg_x|                    ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_x                                                                          ; Register            ; work         ;
 ;       |Register:reg_y|                    ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Vga_Controller:vga_inst|Register:reg_y                                                                          ; Register            ; work         ;
-;    |Write_play:WP_inst|                   ; 46 (46)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Write_play:WP_inst                                                                                              ; Write_play          ; work         ;
+;    |Write_play:WP_inst|                   ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Write_play:WP_inst                                                                                              ; Write_play          ; work         ;
 ;    |clk_div:CLK25|                        ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|clk_div:CLK25                                                                                                   ; clk_div             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -386,38 +396,41 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |connect_four|Game_Display:GD|B[2]         ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |connect_four|Write_play:WP_inst|Mux5      ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |connect_four|Write_play:WP_inst|temp_game ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |connect_four|Write_play:WP_inst|temp_game ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |connect_four|Write_play:WP_inst|temp_game ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |connect_four|Game_Display:GD|G[0]         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |connect_four|Game_Display:GD|R[1]         ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |connect_four|Game_Display:GD|B[0]         ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |connect_four|Write_play:WP_inst|Mux0      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux5       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |connect_four|Write_play:WP_inst|Mux5      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux51      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux53      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux55      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux54      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux44      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux46      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux48      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux39      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux41      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux43      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux40      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux42      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux33      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux35      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux37      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux26      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux36      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux27      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux29      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux31      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux21      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux23      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux24      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux30      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux20      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux22      ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux25      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux15      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux17      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux18      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux8       ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux9       ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux11      ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux13      ;
-; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux7       ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Check_win:CW_Inst|Mux6       ;
+; 43:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |connect_four|Game_Display:GD|owner_bit    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -632,6 +645,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                ;
+; LPM_WIDTHD             ; 7              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                ;
+; LPM_WIDTHD             ; 7              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: Game_Display:GD|lpm_divide:Mod0 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
@@ -737,15 +796,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------+
 ; mode ; Input ; Info     ; Stuck at VCC                              ;
 +------+-------+----------+-------------------------------------------+
-
-
-+---------------------------------------------+
-; Port Connectivity Checks: "Game_Display:GD" ;
-+------+-------+----------+-------------------+
-; Port ; Type  ; Severity ; Details           ;
-+------+-------+----------+-------------------+
-; game ; Input ; Info     ; Stuck at GND      ;
-+------+-------+----------+-------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -874,32 +924,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff             ; 177                         ;
 ;     CLR               ; 136                         ;
 ;     ENA CLR           ; 41                          ;
-; arriav_lcell_comb     ; 2294                        ;
-;     arith             ; 304                         ;
-;         0 data inputs ; 12                          ;
-;         1 data inputs ; 103                         ;
-;         2 data inputs ; 19                          ;
-;         3 data inputs ; 37                          ;
-;         4 data inputs ; 41                          ;
+; arriav_lcell_comb     ; 2468                        ;
+;     arith             ; 366                         ;
+;         0 data inputs ; 24                          ;
+;         1 data inputs ; 113                         ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 61                          ;
+;         4 data inputs ; 53                          ;
 ;         5 data inputs ; 92                          ;
-;     extend            ; 92                          ;
-;         7 data inputs ; 92                          ;
-;     normal            ; 1882                        ;
+;     extend            ; 93                          ;
+;         7 data inputs ; 93                          ;
+;     normal            ; 1971                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 106                         ;
-;         3 data inputs ; 132                         ;
-;         4 data inputs ; 269                         ;
-;         5 data inputs ; 217                         ;
-;         6 data inputs ; 1150                        ;
-;     shared            ; 16                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 14                          ;
+;         2 data inputs ; 143                         ;
+;         3 data inputs ; 149                         ;
+;         4 data inputs ; 282                         ;
+;         5 data inputs ; 218                         ;
+;         6 data inputs ; 1171                        ;
+;     shared            ; 38                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 4                           ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 43                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 19.50                       ;
-; Average LUT depth     ; 12.90                       ;
+; Max LUT depth         ; 20.10                       ;
+; Average LUT depth     ; 13.41                       ;
 +-----------------------+-----------------------------+
 
 
@@ -908,7 +961,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -918,7 +971,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Apr 17 18:29:50 2025
+    Info: Processing started: Thu Apr 17 19:31:05 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -980,14 +1033,17 @@ Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm_inst" File: C:/Use
 Info (10264): Verilog HDL Case Statement information at FSM.sv(86): all case item expressions in this case statement are onehot File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv Line: 86
 Warning (10034): Output port "rst_turn" at FSM.sv(6) has no driver File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv Line: 6
 Info (12128): Elaborating entity "Game_Display" for hierarchy "Game_Display:GD" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 296
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(34): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 34
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(35): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 35
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(55): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(56): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(57): truncated value with size 32 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 57
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(58): truncated value with size 32 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 58
-Warning (10230): Verilog HDL assignment warning at Game_Display.sv(59): truncated value with size 32 to match size of target (13) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 59
-Info (12128): Elaborating entity "Piece_ROM" for hierarchy "Game_Display:GD|Piece_ROM:rom" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 67
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(40): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(41): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 41
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(66): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 66
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(67): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 67
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(69): truncated value with size 32 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(70): truncated value with size 32 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(71): truncated value with size 32 to match size of target (13) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(73): truncated value with size 32 to match size of target (3) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(74): truncated value with size 32 to match size of target (3) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at Game_Display.sv(76): truncated value with size 32 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 76
+Info (12128): Elaborating entity "Piece_ROM" for hierarchy "Game_Display:GD|Piece_ROM:rom" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 87
 Warning (10030): Net "memory.data_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
 Warning (10030): Net "memory.waddr_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
 Warning (10030): Net "memory.we_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
@@ -1038,21 +1094,31 @@ Warning (12011): Net is missing source, defaulting to GND
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "Game_Display:GD|Piece_ROM:rom|memory" is uninferred due to asynchronous read logic File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
 Critical Warning (127005): Memory depth (8192) in the design file differs from memory depth (4900) in the Memory Initialization File "C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/connect_four.ram0_Piece_ROM_fa22a24a.hdl.mif" -- setting initial value for remaining addresses to 0
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Mod0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 57
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Mod1" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 58
-Info (12130): Elaborated megafunction instantiation "Game_Display:GD|lpm_divide:Mod0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 57
-Info (12133): Instantiated megafunction "Game_Display:GD|lpm_divide:Mod0" with the following parameter: File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 57
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Div0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 73
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Div1" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Mod0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 69
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Display:GD|Mod1" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 70
+Info (12130): Elaborated megafunction instantiation "Game_Display:GD|lpm_divide:Div0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 73
+Info (12133): Instantiated megafunction "Game_Display:GD|lpm_divide:Div0" with the following parameter: File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 73
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/lpm_divide_hbm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/sign_div_unsign_nlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/alt_u_div_kve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Game_Display:GD|lpm_divide:Mod0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 69
+Info (12133): Instantiated megafunction "Game_Display:GD|lpm_divide:Mod0" with the following parameter: File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 69
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
     Info (12023): Found entity 1: lpm_divide_k3m File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/lpm_divide_k3m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/sign_div_unsign_nlh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/db/alt_u_div_kve.tdf Line: 22
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_Sync_N" is stuck at VCC File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 10
@@ -1061,16 +1127,16 @@ Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2361 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2535 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 2316 logic cells
+    Info (21061): Implemented 2490 logic cells
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Thu Apr 17 18:30:10 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 4882 megabytes
+    Info: Processing ended: Thu Apr 17 19:31:23 2025
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:31
 
 
 +------------------------------------------+
