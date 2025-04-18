@@ -9,7 +9,8 @@ module connect_four (
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B,
-	 output logic [2:0] debug_colum
+	 output logic [2:0] debug_colum,
+	 output logic [2:0] debounce_input
 	 
 	 
 	 
@@ -20,6 +21,20 @@ module connect_four (
 	 logic [2:0] player0;
 	 logic [2:0] player1;
 	 
+	 logic [2:0] player0De;
+	 logic [2:0] Player1De;
+	 
+	 debounce #(.N(3), .DIV_CNT(21)) deboun_player0(
+    .clk(clk25),
+    .btn(player0in),
+    .out(player0De)
+	);
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 	 logic p0, p1, start;
 	 
@@ -28,7 +43,7 @@ module connect_four (
 	 
 	 
 	 assign rst = ~rstin;
-	 assign player0 = ~player0in;
+	 assign player0 = ~player0De;
 	 assign player1 = ~player1in;
 	 assign p0 = ~p0in;
 	 assign p1 = ~p1in;
@@ -36,6 +51,9 @@ module connect_four (
 	 
 	 
 	 assign VGA_CLK = clk25;
+	 
+	
+	 
 	 
 	 
 	 
@@ -80,7 +98,7 @@ module connect_four (
 	 
 	 
 	 assign debug_colum = Q_reg_Column;
-		 
+	 assign debounce_input = player0De;
 	 
 	 clk_div CLK25(
 		.clk(clk),
@@ -125,10 +143,10 @@ module connect_four (
 	 .clk(clk25),
     .rst(rst | rst_column),
     .en(en_count_column),
-    .mode(mode_count_column),                
+    .mode(1'b1),                
     .Q(Q_reg_Column)
 
-	 
+
 	 );
 
 	 
@@ -243,6 +261,9 @@ module connect_four (
     .reg_jugada(c_Mux_Play), 
     .S(winning) 
 	 );
+	 
+	 
+
 	 
 	 
 

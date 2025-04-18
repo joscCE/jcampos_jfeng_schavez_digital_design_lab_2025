@@ -42,7 +42,7 @@ module FSM (
 					if (R)
 						next_state <= 4'b1001;
 					else if (L)
-						next_state <= 4'b1011;
+						next_state <= 4'b0011;
 					else if (time_out)
 						next_state <= 4'b0100;
 					else if (play) 
@@ -73,11 +73,11 @@ module FSM (
 	assign rst_random = comp_random;
 	
 	assign en_turn = ((state == 4'b1000) | (state==4'b0010) | (state==4'b0001));
-	assign en_count_column = (state == 4'b1010) | (state == 4'b1100);
+	assign en_count_column = (state == 4'b1010) & R;
 	assign en_random_play = ~comp_random;
 	assign en_new_game = (state == 4'b1000);
 	assign en_reg_selection = (state == 4'b0011) | (state == 4'b0100);
-	assign rst_column = (state == 4'b1000);
+	assign rst_column = (state == 4'b1000) | comp_right;
 	
 	assign mode_count_column = (state == 4'b1010);
 	assign play_selection = ~(state == 4'b0100);

@@ -11,6 +11,7 @@ module tb_connect_four;
   logic [7:0] R, G, B;
   
   logic [2:0] debug_colum;
+  logic [2:0] debounce_input;
 
 
   // Instancia del DUT
@@ -25,7 +26,8 @@ module tb_connect_four;
     .Hs(Hs), .Vs(Vs),
     .VGA_Blank(VGA_Blank), .VGA_Sync_N(VGA_Sync_N), .VGA_CLK(VGA_CLK),
     .R(R), .G(G), .B(B),
-	 .debug_colum(debug_colum)
+	 .debug_colum(debug_colum),
+	 .debounce_input(debounce_input)
   );
 
   // Clock
@@ -59,16 +61,16 @@ module tb_connect_four;
 
     // Simulamos una jugada de player0
     player0 = 3'b101; // Play
-    #200;
+    #100;
 	 
 	 player0 = 3'b111; // Play
-    #200;
+    #100;
 	 
 	  player0 = 3'b101; // Play
-    #200;
+    #100;
 	 
 	 player0 = 3'b111; // Play
-    #1000;
+    #100;
 	 
 
 	 

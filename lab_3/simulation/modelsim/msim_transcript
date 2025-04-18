@@ -10,61 +10,215 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/debounce.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:07:47 on Apr 18,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3" C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/debounce.sv 
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv 
+# -- Compiling module FSM
+# 
+# Top level modules:
+# 	FSM
+# End time: 13:05:27 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 13:05:27 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv 
+# -- Compiling module Vga_Controller
+# 
+# Top level modules:
+# 	Vga_Controller
+# End time: 13:05:27 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv 
+# -- Compiling module connect_four
+# 
+# Top level modules:
+# 	connect_four
+# End time: 13:05:27 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv 
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	Register
+# End time: 13:05:27 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv 
+# -- Compiling module Comparator
+# 
+# Top level modules:
+# 	Comparator
+# End time: 13:05:27 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv 
+# -- Compiling module Write_play
+# 
+# Top level modules:
+# 	Write_play
+# End time: 13:05:27 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:27 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv 
+# -- Compiling module Game_Display
+# 
+# Top level modules:
+# 	Game_Display
+# End time: 13:05:28 on Apr 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:28 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv 
+# -- Compiling module Mux
+# 
+# Top level modules:
+# 	Mux
+# End time: 13:05:28 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:28 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv 
+# -- Compiling module Check_win
+# 
+# Top level modules:
+# 	Check_win
+# End time: 13:05:28 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:28 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv 
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# End time: 13:05:28 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/debounce.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:28 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/debounce.sv 
 # -- Compiling module debounce
 # 
 # Top level modules:
 # 	debounce
-# End time: 01:07:47 on Apr 18,2025, Elapsed time: 0:00:00
+# End time: 13:05:28 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_debounce.sv}
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:07:47 on Apr 18,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3" C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_debounce.sv 
-# -- Compiling module tb_debounce
+# Start time: 13:05:28 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv 
+# -- Compiling module Piece_ROM
 # 
 # Top level modules:
-# 	tb_debounce
-# End time: 01:07:47 on Apr 18,2025, Elapsed time: 0:00:00
+# 	Piece_ROM
+# End time: 13:05:28 on Apr 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_debounce
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_debounce 
-# Start time: 01:07:47 on Apr 18,2025
+# vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:05:28 on Apr 18,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv 
+# -- Compiling module tb_connect_four
+# 
+# Top level modules:
+# 	tb_connect_four
+# End time: 13:05:28 on Apr 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_connect_four
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_connect_four 
+# Start time: 13:05:28 on Apr 18,2025
 # Loading sv_std.std
-# Loading work.tb_debounce
+# Loading work.tb_connect_four
+# Loading work.connect_four
 # Loading work.debounce
+# Loading work.clk_div
+# Loading work.Mux
+# Loading work.Counter
+# Loading work.Comparator
+# Loading work.Register
+# Loading work.Write_play
+# Loading work.Check_win
+# Loading work.FSM
+# Loading work.Game_Display
+# Loading work.Piece_ROM
+# Loading work.Vga_Controller
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv(221): [PCDPC] - Port size (4) does not match connection size (5) for port 'Q'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_connect_four/dut/Reg_Play File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv(240): [PCDPC] - Port size (4) does not match connection size (5) for port 'A'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_connect_four/dut/Mux_Play File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv(240): [PCDPC] - Port size (4) does not match connection size (5) for port 'C'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_connect_four/dut/Mux_Play File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv(259): [PCDPC] - Port size (4) does not match connection size (5) for port 'reg_jugada'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_connect_four/dut/CW_Inst File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv(270): [PCDPC] - Port size (4) does not match connection size (1) for port 'state_debug'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_connect_four/dut/fsm_inst File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: josee  Hostname: DELLCE  ProcessID: 5784
-#           Attempting to use alternate WLF file "./wlftfbwmvi".
+#           Attempting to use alternate WLF file "./wlft8a1d48".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfbwmvi
+#           Using alternate file: ./wlft8a1d48
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# == Inicio de simulacion ==
-# Prueba 1: rebotes y mantener presionado
-# Prueba 1: out = 1 tras rebotes
-# Prueba 1: out = 0 tras soltar
-# Prueba 2: pulso limpio y largo
-# Prueba 2: out = 1 tras pulso largo
-# Prueba 2: out = 0 tras soltar
-# Prueba 3: pulso corto
-# Prueba 3: pulso corto ignorado correctamente
-# Prueba 4: dos pulsos validos separados
-# Prueba 4: dos pulsos reconocidos correctamente
-# == Fin de simulacion exitosa ==
-# ** Note: $finish    : C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_debounce.sv(87)
-#    Time: 84208830 ns  Iteration: 0  Instance: /tb_debounce
+# ** Warning: (vsim-7) Failed to open readmem file "piece.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv(9)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_connect_four/dut/GD/rom
+# Inicio del Testbench
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 0
+# Q_reg_Column: 1
+# Q_reg_Column: 1
+# Q_reg_Column: 1
+# Q_reg_Column: 1
+# Q_reg_Column: 1
+# ** Note: $finish    : C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv(78)
+#    Time: 850 ps  Iteration: 0  Instance: /tb_connect_four
 # 1
-# Break in Module tb_debounce at C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_debounce.sv line 87
-# End time: 01:10:52 on Apr 18,2025, Elapsed time: 0:03:05
-# Errors: 0, Warnings: 2
+# Break in Module tb_connect_four at C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_connect_four.sv line 78
+# End time: 13:13:12 on Apr 18,2025, Elapsed time: 0:07:44
+# Errors: 0, Warnings: 8
