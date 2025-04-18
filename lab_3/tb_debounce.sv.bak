@@ -1,0 +1,55 @@
+module tb_debounce;
+
+  // Inputs
+  logic clk, clk_25MHz;    
+  logic pb_1;              
+
+  // Outputs
+  logic pb_out;            
+
+
+  Debounce debounce_inst (
+    .clk(clk_25MHz),        
+    .pb_1(pb_1),
+    .pb_out(pb_out)
+  );
+
+  // Generación del reloj de 50 MHz 
+  always #10 clk = ~clk;
+
+  // Generación del reloj de 25 MHz 
+  always @(posedge clk) begin
+    clk_25MHz <= ~clk_25MHz;
+  end
+
+  // Test sequence
+  initial begin
+    // Inicialización
+    clk = 0;
+    clk_25MHz = 0;
+    pb_1 = 1;  
+    
+    $monitor("Tiempo = %0t | pb_1 = %b | pb_out = %b", $time, pb_1, pb_out);
+
+    // Primera presión de botón
+    pb_1 = 0;  // Botón presionado
+    #5;
+    pb_1 = 1;  // Botón liberado
+    #5;
+
+    pb_1 = 0;  // Botón presionado
+    #5;
+    pb_1 = 1;  // Botón liberado
+    #5;
+
+    // Mantener el botón presionado durante más tiempo 
+    pb_1 = 0;  // Botón presionado
+    #50;
+    pb_1 = 1;  // Botón liberado
+    #50;
+
+    // Fin del test
+    $finish;
+  end
+
+endmodule

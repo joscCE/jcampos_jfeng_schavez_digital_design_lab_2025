@@ -26,7 +26,6 @@ module tb_connect_four;
     .VGA_Blank(VGA_Blank), .VGA_Sync_N(VGA_Sync_N), .VGA_CLK(VGA_CLK),
     .R(R), .G(G), .B(B),
 	 .debug_colum(debug_colum)
-	 
   );
 
   // Clock

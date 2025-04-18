@@ -1,5 +1,5 @@
 Fitter report for connect_four
-Thu Apr 17 19:33:00 2025
+Fri Apr 18 01:40:20 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Apr 17 19:33:00 2025       ;
+; Fitter Status                   ; Successful - Fri Apr 18 01:40:20 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
@@ -151,17 +151,23 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.38        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.13        ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  13.3%      ;
-;     Processor 3            ;  12.6%      ;
-;     Processor 4            ;  12.5%      ;
+;     Processor 2            ;   2.9%      ;
+;     Processor 3            ;   2.7%      ;
+;     Processor 4            ;   2.7%      ;
+;     Processor 5            ;   0.7%      ;
+;     Processor 6            ;   0.7%      ;
+;     Processor 7            ;   0.7%      ;
+;     Processor 8            ;   0.7%      ;
+;     Processor 9            ;   0.7%      ;
+;     Processor 10           ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -301,7 +307,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.pin.
+The pin-out file can be found in C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/connect_four.pin.
 
 
 +---------------------------------------------------------------------------------------------+
@@ -2255,7 +2261,7 @@ Note: This table only shows the top 100 path(s) that have the largest delay adde
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (119006): Selected device 5CSXFC6D6F31C6 for design "connect_four"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2273,37 +2279,37 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:12
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:12
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:43
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 22% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:17
-Info (11888): Total time spent on timing analysis during the Fitter is 12.28 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:11
+Info (11888): Total time spent on timing analysis during the Fitter is 5.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:09
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/connect_four.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6544 megabytes
-    Info: Processing ended: Thu Apr 17 19:33:01 2025
-    Info: Elapsed time: 00:01:37
-    Info: Total CPU time (on all processors): 00:04:19
+    Info: Peak virtual memory: 7202 megabytes
+    Info: Processing ended: Fri Apr 18 01:40:21 2025
+    Info: Elapsed time: 00:02:40
+    Info: Total CPU time (on all processors): 00:12:31
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.fit.smsg.
+The suppressed messages can be found in C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/connect_four.fit.smsg.
 
 
