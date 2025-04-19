@@ -73,7 +73,7 @@ module FSM (
 	assign rst_random = comp_random;
 	
 	assign en_turn = ((state == 4'b1000) | (state==4'b0010) | (state==4'b0001));
-	assign en_count_column = (state == 4'b1010) & R;
+	assign en_count_column = (state == 4'b1010);
 	assign en_random_play = ~comp_random;
 	assign en_new_game = (state == 4'b1000);
 	assign en_reg_selection = (state == 4'b0011) | (state == 4'b0100);

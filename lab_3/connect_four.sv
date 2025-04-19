@@ -9,8 +9,7 @@ module connect_four (
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B,
-	 output logic [2:0] debug_colum,
-	 output logic [2:0] debounce_input
+	 output logic [2:0] debug_colum
 	 
 	 
 	 
@@ -20,17 +19,6 @@ module connect_four (
 	 logic rst;
 	 logic [2:0] player0;
 	 logic [2:0] player1;
-	 
-	 logic [2:0] player0De;
-	 logic [2:0] Player1De;
-	 
-	 debounce #(.N(3), .DIV_CNT(21)) deboun_player0(
-    .clk(clk25),
-    .btn(player0in),
-    .out(player0De)
-	);
-	 
-	 
 	 
 	 
 	 
@@ -43,7 +31,7 @@ module connect_four (
 	 
 	 
 	 assign rst = ~rstin;
-	 assign player0 = ~player0De;
+	 assign player0 = ~player0in;
 	 assign player1 = ~player1in;
 	 assign p0 = ~p0in;
 	 assign p1 = ~p1in;
@@ -52,9 +40,16 @@ module connect_four (
 	 
 	 assign VGA_CLK = clk25;
 	 
+	 
+	 
 	
 	 
-	 
+	 	 debounce deboun_player0(
+    .clk(clk25),
+    .rst(rst),
+    .ent(player0in[1]),       // botón con lógica inversa: presionado = 0
+    .out(R_player)
+	);
 	 
 	 
 	 
@@ -98,7 +93,6 @@ module connect_four (
 	 
 	 
 	 assign debug_colum = Q_reg_Column;
-	 assign debounce_input = player0De;
 	 
 	 clk_div CLK25(
 		.clk(clk),
@@ -153,7 +147,7 @@ module connect_four (
 	 // Comparador Columna Derecha
 	 Comparator #(.N(3)) Comp_Column_Right(
 			.A(Q_reg_Column),
-			.B(3'd6),
+			.B(3'd7),
 			.equ(comp_right)
 	 );
 	 
@@ -264,14 +258,14 @@ module connect_four (
 	 
 	 
 
-	 
+	 logic R_player;
 	 
 
 	    FSM fsm_inst (
         .clk(clk25),
         .rst(rst),
         .L(play[0]),
-        .R(play[1]),
+        .R(R_player),
 		  .play(play[2]),
 		  
         .time_out(time_out),

@@ -128,18 +128,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "debounce_input[0]",
-					"strict" : false
-				},
-				{
-					"name" : "debounce_input[1]",
-					"strict" : false
-				},
-				{
-					"name" : "debounce_input[2]",
-					"strict" : false
-				},
-				{
 					"name" : "rstin",
 					"strict" : false
 				},
@@ -148,23 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "player1in[1]",
+					"name" : "player1in[0]",
 					"strict" : false
 				},
 				{
 					"name" : "player0in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "player0in[1]",
-					"strict" : false
-				},
-				{
-					"name" : "player0in[2]",
-					"strict" : false
-				},
-				{
-					"name" : "player1in[0]",
 					"strict" : false
 				},
 				{
@@ -181,6 +157,14 @@
 				},
 				{
 					"name" : "player1in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "player0in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "player0in[1]",
 					"strict" : false
 				}
 			]

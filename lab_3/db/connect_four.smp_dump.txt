@@ -14,3 +14,10 @@ state.1001 0 0 0 1 0 0 0 0 0 0 0 0 1
 state.1010 0 0 1 0 0 0 0 0 0 0 0 0 1 
 state.1011 0 1 0 0 0 0 0 0 0 0 0 0 1 
 state.1100 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |connect_four|debounce:deboun_player0|state
+Name state.011 state.010 state.001 state.000 
+state.000 0 0 0 0 
+state.001 0 0 1 1 
+state.010 0 1 0 1 
+state.011 1 0 0 1 

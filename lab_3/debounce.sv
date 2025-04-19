@@ -1,46 +1,71 @@
-module debounce #(
-    parameter N = 1,             // Número de botones
-    parameter DIV_CNT = 17       // Tiempo de debounce (por default, 2^18 ciclos ≈ 10.5ms a 25MHz)
-) (
+module debounce (
     input clk,
-    input [N-1:0] btn,           // Entradas de botones
-    output [N-1:0] out           // Pulsos de 1 ciclo por pulsación
+    input rst,
+    input ent,         
+    output logic out   
 );
 
-    reg [DIV_CNT:0] clk_div [N-1:0];  // Contadores independientes por botón
-    reg [N-1:0] btn_sync;
-    reg [N-1:0] btn_prev;
-    reg [N-1:0] out_reg;
+    parameter N = 800000;  
 
-    assign out = out_reg;
+    logic [2:0] state, next_state;
+    logic [19:0] counter;
 
-    integer i;
-    always @(posedge clk) begin
-        for (i = 0; i < N; i = i + 1) begin
-            btn_sync[i] <= btn[i];
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            state <= 3'b000;
+        else
+            state <= next_state;
+    end
 
-            // Detecta flanco de subida limpio
-            if (btn_sync[i] && !btn_prev[i]) begin
-                out_reg[i] <= 1'b1;     // Genera pulso
-                clk_div[i] <= 0;        // Reinicia contador
-            end else begin
-                out_reg[i] <= 1'b0;     // Pulso solo un ciclo
-            end
-
-            // Mientras el botón esté presionado, sigue contando
-            if (btn_sync[i]) begin
-                clk_div[i] <= clk_div[i] + 1'b1;
-            end
-
-            // Actualizar estado previo 
-            if (clk_div[i][DIV_CNT]) begin
-                btn_prev[i] <= btn_sync[i];
-            end
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            counter <= 20'b0;
+        else begin
+            case (state)
+                3'b000: counter <= 20'b0;
+                3'b001: begin
+                    if (ent == 0 && counter < N)
+                        counter <= counter + 1;
+                end
+                default: counter <= counter; 
+            endcase
         end
     end
 
+
+    always_comb begin
+        next_state = 3'b000;
+        case (state)
+            3'b000: begin
+                if (ent == 0)
+                    next_state = 3'b001;
+                else
+                    next_state = 3'b000;
+            end
+
+            3'b001: begin
+                if (ent == 1)
+                    next_state = 3'b000;
+                else if (counter >= N)
+                    next_state = 3'b010;
+                else
+                    next_state = 3'b001;
+            end
+
+            3'b010: next_state = 3'b011;
+
+            3'b011: begin
+                if (ent == 1)
+                    next_state = 3'b000;
+                else
+                    next_state = 3'b011;
+            end
+
+            default: next_state = 3'b000;
+        endcase
+    end
+
+
+    assign out = (state == 3'b010);
+
 endmodule
-
-
-
-// referencia: https://github.com/njmarencik/debouncer
