@@ -1,5 +1,5 @@
 Timing Analyzer report for connect_four
-Fri Apr 18 18:31:14 2025
+Sat Apr 19 19:51:42 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -101,14 +101,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.08        ;
+; Average used               ; 2.04        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  36.1%      ;
-;     Processor 3            ;  35.8%      ;
-;     Processor 4            ;  35.7%      ;
+;     Processor 2            ;  34.8%      ;
+;     Processor 3            ;  34.6%      ;
+;     Processor 4            ;  34.3%      ;
 +----------------------------+-------------+
 
 
@@ -127,7 +127,7 @@ refer to the applicable agreement for further details.
 +-----------+-----------------+---------------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
 +-----------+-----------------+---------------------+------+
-; 42.09 MHz ; 42.09 MHz       ; clk_div:CLK25|clk25 ;      ;
+; 39.88 MHz ; 39.88 MHz       ; clk_div:CLK25|clk25 ;      ;
 +-----------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -143,8 +143,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+---------+---------------+
 ; Clock               ; Slack   ; End Point TNS ;
 +---------------------+---------+---------------+
-; clk_div:CLK25|clk25 ; -11.378 ; -1195.880     ;
-; clk                 ; -2.687  ; -2.687        ;
+; clk_div:CLK25|clk25 ; -12.037 ; -1158.753     ;
+; clk                 ; -1.938  ; -1.938        ;
 +---------------------+---------+---------------+
 
 
@@ -153,8 +153,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.333 ; 0.000         ;
-; clk                 ; 0.979 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.304 ; 0.000         ;
+; clk                 ; 0.498 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -163,7 +163,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -2.805 ; -143.905      ;
+; clk_div:CLK25|clk25 ; -2.619 ; -149.369      ;
 +---------------------+--------+---------------+
 
 
@@ -172,7 +172,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.851 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.886 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -181,8 +181,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; clk                 ; -0.642 ; -1.038             ;
-; clk_div:CLK25|clk25 ; -0.394 ; -163.765           ;
+; clk                 ; -0.647 ; -1.048             ;
+; clk_div:CLK25|clk25 ; -0.400 ; -149.471           ;
 +---------------------+--------+--------------------+
 
 
@@ -197,7 +197,7 @@ No synchronizer chains to report.
 +-----------+-----------------+---------------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
 +-----------+-----------------+---------------------+------+
-; 42.51 MHz ; 42.51 MHz       ; clk_div:CLK25|clk25 ;      ;
+; 40.35 MHz ; 40.35 MHz       ; clk_div:CLK25|clk25 ;      ;
 +-----------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -207,8 +207,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+---------+---------------+
 ; Clock               ; Slack   ; End Point TNS ;
 +---------------------+---------+---------------+
-; clk_div:CLK25|clk25 ; -11.263 ; -1163.068     ;
-; clk                 ; -2.457  ; -2.457        ;
+; clk_div:CLK25|clk25 ; -11.892 ; -1121.928     ;
+; clk                 ; -1.814  ; -1.814        ;
 +---------------------+---------+---------------+
 
 
@@ -217,8 +217,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.364 ; 0.000         ;
-; clk                 ; 0.830 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.303 ; 0.000         ;
+; clk                 ; 0.409 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -227,7 +227,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -2.628 ; -135.005      ;
+; clk_div:CLK25|clk25 ; -2.484 ; -139.989      ;
 +---------------------+--------+---------------+
 
 
@@ -236,7 +236,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.805 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.808 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -246,7 +246,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
 ; clk                 ; -0.671 ; -1.127            ;
-; clk_div:CLK25|clk25 ; -0.394 ; -156.480          ;
+; clk_div:CLK25|clk25 ; -0.394 ; -147.616          ;
 +---------------------+--------+-------------------+
 
 
@@ -261,8 +261,8 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -6.911 ; -665.687      ;
-; clk                 ; -2.153 ; -2.153        ;
+; clk_div:CLK25|clk25 ; -7.151 ; -649.176      ;
+; clk                 ; -1.621 ; -1.621        ;
 +---------------------+--------+---------------+
 
 
@@ -272,7 +272,7 @@ No synchronizer chains to report.
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
 ; clk_div:CLK25|clk25 ; 0.159 ; 0.000         ;
-; clk                 ; 1.035 ; 0.000         ;
+; clk                 ; 0.678 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -281,7 +281,7 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -1.671 ; -73.868       ;
+; clk_div:CLK25|clk25 ; -1.612 ; -75.408       ;
 +---------------------+--------+---------------+
 
 
@@ -290,7 +290,7 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.372 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.402 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -299,8 +299,8 @@ No synchronizer chains to report.
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; clk                 ; -0.735 ; -1.281             ;
-; clk_div:CLK25|clk25 ; -0.097 ; -6.976             ;
+; clk                 ; -0.716 ; -1.243             ;
+; clk_div:CLK25|clk25 ; -0.142 ; -7.092             ;
 +---------------------+--------+--------------------+
 
 
@@ -315,8 +315,8 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -6.151 ; -579.767      ;
-; clk                 ; -1.779 ; -1.779        ;
+; clk_div:CLK25|clk25 ; -6.431 ; -566.851      ;
+; clk                 ; -1.342 ; -1.342        ;
 +---------------------+--------+---------------+
 
 
@@ -326,7 +326,7 @@ No synchronizer chains to report.
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
 ; clk_div:CLK25|clk25 ; 0.147 ; 0.000         ;
-; clk                 ; 0.752 ; 0.000         ;
+; clk                 ; 0.439 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -335,7 +335,7 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -1.474 ; -63.320       ;
+; clk_div:CLK25|clk25 ; -1.420 ; -65.613       ;
 +---------------------+--------+---------------+
 
 
@@ -344,7 +344,7 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.359 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.390 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -353,8 +353,8 @@ No synchronizer chains to report.
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; clk                 ; -0.777 ; -1.425            ;
-; clk_div:CLK25|clk25 ; -0.055 ; -2.502            ;
+; clk                 ; -0.756 ; -1.383            ;
+; clk_div:CLK25|clk25 ; -0.091 ; -2.753            ;
 +---------------------+--------+-------------------+
 
 
@@ -369,12 +369,12 @@ No synchronizer chains to report.
 +----------------------+-----------+-------+----------+---------+---------------------+
 ; Clock                ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; -11.378   ; 0.147 ; -2.805   ; 0.359   ; -0.777              ;
-;  clk                 ; -2.687    ; 0.752 ; N/A      ; N/A     ; -0.777              ;
-;  clk_div:CLK25|clk25 ; -11.378   ; 0.147 ; -2.805   ; 0.359   ; -0.394              ;
-; Design-wide TNS      ; -1198.567 ; 0.0   ; -143.905 ; 0.0     ; -164.803            ;
-;  clk                 ; -2.687    ; 0.000 ; N/A      ; N/A     ; -1.425              ;
-;  clk_div:CLK25|clk25 ; -1195.880 ; 0.000 ; -143.905 ; 0.000   ; -163.765            ;
+; Worst-case Slack     ; -12.037   ; 0.147 ; -2.619   ; 0.390   ; -0.756              ;
+;  clk                 ; -1.938    ; 0.409 ; N/A      ; N/A     ; -0.756              ;
+;  clk_div:CLK25|clk25 ; -12.037   ; 0.147 ; -2.619   ; 0.390   ; -0.400              ;
+; Design-wide TNS      ; -1160.691 ; 0.0   ; -149.369 ; 0.0     ; -150.519            ;
+;  clk                 ; -1.938    ; 0.000 ; N/A      ; N/A     ; -1.383              ;
+;  clk_div:CLK25|clk25 ; -1158.753 ; 0.000 ; -149.369 ; 0.000   ; -149.471            ;
 +----------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -426,11 +426,11 @@ No synchronizer chains to report.
 ; player1in[1] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; rstin        ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; clk          ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
-; player1in[0] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
-; player0in[0] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; startin      ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; p1in         ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; p0in         ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
+; player1in[0] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
+; player0in[0] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; player1in[2] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; player0in[2] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; player0in[1] ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
@@ -603,7 +603,7 @@ No synchronizer chains to report.
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
 ; clk_div:CLK25|clk25 ; clk                 ; 1        ; 1        ; 0        ; 0        ;
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 563      ; 4345682  ; 170      ; 26335    ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 561      ; 4065966  ; 158      ; 24467    ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -614,7 +614,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
 ; clk_div:CLK25|clk25 ; clk                 ; 1        ; 1        ; 0        ; 0        ;
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 563      ; 4345682  ; 170      ; 26335    ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 561      ; 4065966  ; 158      ; 24467    ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -624,7 +624,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 37       ; 414      ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 37       ; 434      ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -634,7 +634,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 37       ; 414      ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 37       ; 434      ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -659,9 +659,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 309   ; 309  ;
+; Unconstrained Input Port Paths  ; 287   ; 287  ;
 ; Unconstrained Output Ports      ; 31    ; 31   ;
-; Unconstrained Output Port Paths ; 2415  ; 2415 ;
+; Unconstrained Output Port Paths ; 2327  ; 2327 ;
 +---------------------------------+-------+------+
 
 
@@ -793,7 +793,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 18 18:31:02 2025
+    Info: Processing started: Sat Apr 19 19:51:28 2025
 Info: Command: quartus_sta connect_four -c connect_four
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -811,120 +811,120 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.378
+Info (332146): Worst-case setup slack is -12.037
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.378           -1195.880 clk_div:CLK25|clk25 
-    Info (332119):    -2.687              -2.687 clk 
-Info (332146): Worst-case hold slack is 0.333
+    Info (332119):   -12.037           -1158.753 clk_div:CLK25|clk25 
+    Info (332119):    -1.938              -1.938 clk 
+Info (332146): Worst-case hold slack is 0.304
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.333               0.000 clk_div:CLK25|clk25 
-    Info (332119):     0.979               0.000 clk 
-Info (332146): Worst-case recovery slack is -2.805
+    Info (332119):     0.304               0.000 clk_div:CLK25|clk25 
+    Info (332119):     0.498               0.000 clk 
+Info (332146): Worst-case recovery slack is -2.619
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.805            -143.905 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is 0.851
+    Info (332119):    -2.619            -149.369 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.886
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.851               0.000 clk_div:CLK25|clk25 
-Info (332146): Worst-case minimum pulse width slack is -0.642
+    Info (332119):     0.886               0.000 clk_div:CLK25|clk25 
+Info (332146): Worst-case minimum pulse width slack is -0.647
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.642              -1.038 clk 
-    Info (332119):    -0.394            -163.765 clk_div:CLK25|clk25 
+    Info (332119):    -0.647              -1.048 clk 
+    Info (332119):    -0.400            -149.471 clk_div:CLK25|clk25 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.263
+Info (332146): Worst-case setup slack is -11.892
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.263           -1163.068 clk_div:CLK25|clk25 
-    Info (332119):    -2.457              -2.457 clk 
-Info (332146): Worst-case hold slack is 0.364
+    Info (332119):   -11.892           -1121.928 clk_div:CLK25|clk25 
+    Info (332119):    -1.814              -1.814 clk 
+Info (332146): Worst-case hold slack is 0.303
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.364               0.000 clk_div:CLK25|clk25 
-    Info (332119):     0.830               0.000 clk 
-Info (332146): Worst-case recovery slack is -2.628
+    Info (332119):     0.303               0.000 clk_div:CLK25|clk25 
+    Info (332119):     0.409               0.000 clk 
+Info (332146): Worst-case recovery slack is -2.484
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.628            -135.005 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is 0.805
+    Info (332119):    -2.484            -139.989 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.808
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.805               0.000 clk_div:CLK25|clk25 
+    Info (332119):     0.808               0.000 clk_div:CLK25|clk25 
 Info (332146): Worst-case minimum pulse width slack is -0.671
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -0.671              -1.127 clk 
-    Info (332119):    -0.394            -156.480 clk_div:CLK25|clk25 
+    Info (332119):    -0.394            -147.616 clk_div:CLK25|clk25 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.911
+Info (332146): Worst-case setup slack is -7.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.911            -665.687 clk_div:CLK25|clk25 
-    Info (332119):    -2.153              -2.153 clk 
+    Info (332119):    -7.151            -649.176 clk_div:CLK25|clk25 
+    Info (332119):    -1.621              -1.621 clk 
 Info (332146): Worst-case hold slack is 0.159
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.159               0.000 clk_div:CLK25|clk25 
-    Info (332119):     1.035               0.000 clk 
-Info (332146): Worst-case recovery slack is -1.671
+    Info (332119):     0.678               0.000 clk 
+Info (332146): Worst-case recovery slack is -1.612
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.671             -73.868 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is 0.372
+    Info (332119):    -1.612             -75.408 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.402
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.372               0.000 clk_div:CLK25|clk25 
-Info (332146): Worst-case minimum pulse width slack is -0.735
+    Info (332119):     0.402               0.000 clk_div:CLK25|clk25 
+Info (332146): Worst-case minimum pulse width slack is -0.716
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.735              -1.281 clk 
-    Info (332119):    -0.097              -6.976 clk_div:CLK25|clk25 
+    Info (332119):    -0.716              -1.243 clk 
+    Info (332119):    -0.142              -7.092 clk_div:CLK25|clk25 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.151
+Info (332146): Worst-case setup slack is -6.431
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.151            -579.767 clk_div:CLK25|clk25 
-    Info (332119):    -1.779              -1.779 clk 
+    Info (332119):    -6.431            -566.851 clk_div:CLK25|clk25 
+    Info (332119):    -1.342              -1.342 clk 
 Info (332146): Worst-case hold slack is 0.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.147               0.000 clk_div:CLK25|clk25 
-    Info (332119):     0.752               0.000 clk 
-Info (332146): Worst-case recovery slack is -1.474
+    Info (332119):     0.439               0.000 clk 
+Info (332146): Worst-case recovery slack is -1.420
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.474             -63.320 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is 0.359
+    Info (332119):    -1.420             -65.613 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.390
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.359               0.000 clk_div:CLK25|clk25 
-Info (332146): Worst-case minimum pulse width slack is -0.777
+    Info (332119):     0.390               0.000 clk_div:CLK25|clk25 
+Info (332146): Worst-case minimum pulse width slack is -0.756
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.777              -1.425 clk 
-    Info (332119):    -0.055              -2.502 clk_div:CLK25|clk25 
+    Info (332119):    -0.756              -1.383 clk 
+    Info (332119):    -0.091              -2.753 clk_div:CLK25|clk25 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5171 megabytes
-    Info: Processing ended: Fri Apr 18 18:31:14 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 5175 megabytes
+    Info: Processing ended: Sat Apr 19 19:51:42 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:24
 
 

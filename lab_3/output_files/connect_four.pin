@@ -162,7 +162,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB22      :        :                   :      
 debug_colum[1]               : AB23      : output : 3.3-V LVCMOS      :         : 5A        : Y              
 VCCIO5A                      : AB24      : power  :                   : 3.3V    : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5A        :                
-player1in[1]                 : AB26      : input  : 3.3-V LVCMOS      :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB27      :        :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB28      :        :                   :         : 5B        :                
 GND                          : AB29      : gnd    :                   :         :           :                
@@ -244,8 +244,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE14      :        :                   :      
 VCCIO3B                      : AE15      : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE16      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4A        :                
-player1in[2]                 : AE18      : input  : 3.3-V LVCMOS      :         : 4A        : N              
-p0in                         : AE19      : input  : 3.3-V LVCMOS      :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE18      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4A        :                
 GND                          : AE20      : gnd    :                   :         :           :                
 VCCPD3B4A                    : AE21      : power  :                   : 3.3V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4A        :                
@@ -314,7 +314,7 @@ GND                          : AG24      : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
 R[6]                         : AG26      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG27      :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG28      :        :                   :         : 5A        :                
+p1in                         : AG28      : input  : 3.3-V LVCMOS      :         : 5A        : N              
 VCCIO5A                      : AG29      : power  :                   : 3.3V    : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG30      :        :                   :         : 5A        :                
 GND                          : AH1       : gnd    :                   :         :           :                
@@ -338,7 +338,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH18      :        :                   :      
 B[4]                         : AH19      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 B[2]                         : AH20      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 GND                          : AH21      : gnd    :                   :         :           :                
-p1in                         : AH22      : input  : 3.3-V LVCMOS      :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH22      :        :                   :         : 4A        :                
 G[7]                         : AH23      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 G[5]                         : AH24      : output : 3.3-V LVCMOS      :         : 4A        : Y              
 G[2]                         : AH25      : output : 3.3-V LVCMOS      :         : 4A        : Y              
@@ -357,7 +357,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AJ7       :        :                   :      
 VCCIO3B                      : AJ8       : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ9       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ10      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ11      :        :                   :         : 3B        :                
+player1in[2]                 : AJ11      : input  : 3.3-V LVCMOS      :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ12      :        :                   :         : 3B        :                
 VCCIO3B                      : AJ13      : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ14      :        :                   :         : 3B        :                
@@ -382,12 +382,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AK3       :        :                   :      
 player0in[0]                 : AK4       : input  : 3.3-V LVCMOS      :         : 3B        : Y              
 GND                          : AK5       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK6       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK7       :        :                   :         : 3B        :                
+p0in                         : AK7       : input  : 3.3-V LVCMOS      :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK8       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK9       :        :                   :         : 3B        :                
+player1in[1]                 : AK9       : input  : 3.3-V LVCMOS      :         : 3B        : N              
 VCCIO3B                      : AK10      : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK12      :        :                   :         : 3B        :                
+player1in[0]                 : AK12      : input  : 3.3-V LVCMOS      :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK13      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK14      :        :                   :         : 3B        :                
 GND                          : AK15      : gnd    :                   :         :           :                
@@ -931,7 +931,7 @@ GND                          : W13       : gnd    :                   :         
 VCC                          : W14       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 4A        :                
-player1in[0]                 : W17       : input  : 3.3-V LVCMOS      :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4A        :                
 GND                          : W18       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5A        :                

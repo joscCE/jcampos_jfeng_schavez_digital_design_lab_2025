@@ -89,8 +89,9 @@ module connect_four (
 	 logic select_turn;
 	 logic en_turn_timer;
 	 logic [83:0] new_game, Q_reg_game;
+
 	 
-	 
+//============== clk de 25MH =========================
 	 
 	 assign debug_colum = Q_reg_Column;
 	 
@@ -101,7 +102,10 @@ module connect_four (
 	 
 	 );
 	
-	 
+
+	
+
+
 	 
 	 
 	 
@@ -295,19 +299,51 @@ module connect_four (
     );
 	 
 	 
-		always_ff @(posedge clk25) begin
-		 $display("Q_reg_Column: %0d", Q_reg_Column);
-	end
+	
+	//=============== MUx de display ====================
 
+ logic [23:0] RGB_menu, RGB_game, RBG_End, RGB;
+ assign R = RGB[23:16];
+ assign G = RGB[15:8];
+ assign B = RGB[7:0];
+ 
+
+Mux_31 #(.N(24)) Mux_display(
+	.A(RGB_menu),
+	.B(RGB_game),
+	.C(24'h00),
+	.S(display_select),
+	.D(RGB)
+
+);
+
+
+
+
+//============== Display menu ================
+	
+	
+
+	display_menu Display_M(
+
+			.Q_X(Q_X), 
+			.Q_Y(Q_Y),
+			.R(RGB_menu[23:16]),
+			.G(RGB_menu[15:8]),
+			.B(RGB_menu[7:0])
+
+	);
+	
+// =================== diplay game ===============
 	 
 	 Game_Display GD (
 		.game(Q_reg_game),
 		.column(Q_reg_Column),
 		.Q_X(Q_X),
 		.Q_Y(Q_Y),
-		.R(R),
-		.G(G), 
-		.B(B)
+		.R(RGB_game[23:16]),
+		.G(RGB_game[15:8]), 
+		.B(RGB_game[7:0])
 		);
 		
 

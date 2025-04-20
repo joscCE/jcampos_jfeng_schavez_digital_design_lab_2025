@@ -96,6 +96,32 @@ set_global_assignment -name SYSTEMVERILOG_FILE output_files/Piece_ROM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mux.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Check_win.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Check_win.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clk_div.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_connect_four.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_connect_four -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_connect_four
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_connect_four -section_id tb_connect_four
+set_global_assignment -name SYSTEMVERILOG_FILE FSM_tb.sv
+set_location_assignment PIN_AA15 -to player0in[2]
+set_location_assignment PIN_AA14 -to player0in[1]
+set_location_assignment PIN_AK4 -to player0in[0]
+set_location_assignment PIN_AJ4 -to rstin
+set_location_assignment PIN_AB30 -to startin
+set_location_assignment PIN_AA24 -to debug_colum[0]
+set_location_assignment PIN_AB23 -to debug_colum[1]
+set_location_assignment PIN_AC23 -to debug_colum[2]
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_Debounce
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_debounce -section_id tb_debounce
+set_global_assignment -name SYSTEMVERILOG_FILE debounce.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_debounce -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_connect_four.sv -section_id tb_connect_four
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_debounce.sv -section_id tb_debounce
+set_global_assignment -name SYSTEMVERILOG_FILE Mux_31.sv
+set_global_assignment -name SYSTEMVERILOG_FILE menu_ROM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE display_menu.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B[5]
@@ -130,12 +156,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rst
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Blank
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Sync_N
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_CLK
-set_global_assignment -name SYSTEMVERILOG_FILE clk_div.sv
-set_global_assignment -name SYSTEMVERILOG_FILE tb_connect_four.sv
-set_global_assignment -name EDA_TEST_BENCH_NAME tb_connect_four -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_connect_four
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_connect_four -section_id tb_connect_four
-set_global_assignment -name SYSTEMVERILOG_FILE FSM_tb.sv
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to start
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to player0[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to player0[1]
@@ -152,25 +172,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to player1in[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to player1in
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rstin
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to startin
-set_location_assignment PIN_AA15 -to player0in[2]
-set_location_assignment PIN_AA14 -to player0in[1]
-set_location_assignment PIN_AK4 -to player0in[0]
-set_location_assignment PIN_AJ4 -to rstin
-set_location_assignment PIN_AB30 -to startin
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug_colum[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug_colum[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug_colum[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug_colum
-set_location_assignment PIN_AA24 -to debug_colum[0]
-set_location_assignment PIN_AB23 -to debug_colum[1]
-set_location_assignment PIN_AC23 -to debug_colum[2]
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_Debounce
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_debounce -section_id tb_debounce
-set_global_assignment -name SYSTEMVERILOG_FILE debounce.sv
-set_global_assignment -name EDA_TEST_BENCH_NAME tb_debounce -section_id eda_simulation
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_connect_four.sv -section_id tb_connect_four
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_debounce.sv -section_id tb_debounce
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

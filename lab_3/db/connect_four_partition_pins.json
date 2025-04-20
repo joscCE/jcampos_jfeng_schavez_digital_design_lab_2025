@@ -136,14 +136,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "player1in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "player0in[0]",
-					"strict" : false
-				},
-				{
 					"name" : "startin",
 					"strict" : false
 				},
@@ -153,6 +145,14 @@
 				},
 				{
 					"name" : "p0in",
+					"strict" : false
+				},
+				{
+					"name" : "player1in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "player0in[0]",
 					"strict" : false
 				},
 				{

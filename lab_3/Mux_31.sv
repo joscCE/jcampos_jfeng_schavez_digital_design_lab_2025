@@ -1,0 +1,32 @@
+module Mux_31 #(parameter N = 3)(
+
+	input [N-1:0] A,B,C,
+	input [1:0] S,
+	output [N-1:0] D
+
+);
+
+
+logic [N-1:0] Inter;
+
+Mux #(.N(N)) Mux1(
+	.A(A),
+	.B(B),
+	.S(S[0]),
+	.C(Inter)
+
+
+);
+
+Mux #(.N(N)) Mux2(
+	.A(Inter),
+	.B(C),
+	.S(S[1]),
+	.C(D)
+
+);
+
+
+
+
+endmodule
