@@ -9,24 +9,21 @@ module Mux_31 #(parameter N = 3)(
 
 logic [N-1:0] Inter;
 
-Mux #(.N(N)) Mux1(
-	.A(A),
-	.B(B),
-	.S(S[0]),
-	.C(Inter)
-
-
-);
-
-Mux #(.N(N)) Mux2(
-	.A(Inter),
-	.B(C),
-	.S(S[1]),
-	.C(D)
-
-);
-
-
-
+always_comb begin 
+	case (S) 
+		2'b00: D = A;
+		2'b01: D = B;
+		2'b10: D = C;
+		default: D = A; // valor por defecto
+	endcase
+end
 
 endmodule
+
+
+
+
+
+
+
+

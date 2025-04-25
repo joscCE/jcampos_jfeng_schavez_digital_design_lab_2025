@@ -9,7 +9,7 @@ module connect_four (
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B,
-	 output logic [2:0] debug_colum
+	 output logic [3:0] debug_colum
 	 
 	 
 	 
@@ -35,7 +35,7 @@ module connect_four (
 	 assign player1 = ~player1in;
 	 assign p0 = ~p0in;
 	 assign p1 = ~p1in;
-	 assign start = ~startin;
+
 	 
 	 
 	 assign VGA_CLK = clk25;
@@ -44,14 +44,30 @@ module connect_four (
 	 
 	
 	 
-	 	 debounce deboun_player0(
+	 	 debounce deboun_play_R(
     .clk(clk25),
     .rst(rst),
-    .ent(player0in[1]),       // botón con lógica inversa: presionado = 0
+    .ent(~play[1]),       // botón con lógica inversa: presionado = 0
     .out(R_player)
 	);
-	 
-	 
+	
+	
+		 	 debounce deboun_play_P(
+    .clk(clk25),
+    .rst(rst),
+    .ent(~play[2]),       // botón con lógica inversa: presionado = 0
+    .out(P_player)
+	);
+	
+			 	 debounce deboun_start(
+    .clk(clk25),
+    .rst(rst),
+    .ent(~startin),       // botón con lógica inversa: presionado = 0
+    .out(start)
+	);
+	
+	
+
 	 
     logic [27:0] Q_reg_count_time;  // Asumiendo que es un contador de 28 bits (por comparación con 28'd250_000_000)
     logic [2:0] j_count_random;
@@ -93,7 +109,7 @@ module connect_four (
 	 
 //============== clk de 25MH =========================
 	 
-	 assign debug_colum = Q_reg_Column;
+	 assign debug_colum = Q_reg_Play;
 	 
 	 clk_div CLK25(
 		.clk(clk),
@@ -220,7 +236,7 @@ module connect_four (
 		.clk(clk25),
 		.rst(rst),
 		.D(Move),
-		.en(1'b1),
+		.en(P_player),
 		.Q(Q_reg_Play)
 	 
 	 );
@@ -263,6 +279,7 @@ module connect_four (
 	 
 
 	 logic R_player;
+	 logic P_player;
 	 
 
 	    FSM fsm_inst (
@@ -270,7 +287,7 @@ module connect_four (
         .rst(rst),
         .L(play[0]),
         .R(R_player),
-		  .play(play[2]),
+		  .play(P_player),
 		  
         .time_out(time_out),
         .winning(winning),
@@ -309,9 +326,9 @@ module connect_four (
  
 
 Mux_31 #(.N(24)) Mux_display(
-	.A(RGB_menu),
-	.B(RGB_game),
-	.C(24'h00),
+	.A(RGB_game),
+	.B(RGB_menu),
+	.C(RGB_menu),
 	.S(display_select),
 	.D(RGB)
 
@@ -325,7 +342,7 @@ Mux_31 #(.N(24)) Mux_display(
 	
 
 	display_menu Display_M(
-
+			.clk(clk),
 			.Q_X(Q_X), 
 			.Q_Y(Q_Y),
 			.R(RGB_menu[23:16]),
@@ -333,7 +350,7 @@ Mux_31 #(.N(24)) Mux_display(
 			.B(RGB_menu[7:0])
 
 	);
-	
+//	
 // =================== diplay game ===============
 	 
 	 Game_Display GD (

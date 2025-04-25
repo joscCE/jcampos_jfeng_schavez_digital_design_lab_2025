@@ -16,7 +16,7 @@ module Write_play(
 
     assign player = play[3];
     assign col    = play[2:0];
-
+	 
     always_comb begin
         temp_game = game;
         placed = 0;

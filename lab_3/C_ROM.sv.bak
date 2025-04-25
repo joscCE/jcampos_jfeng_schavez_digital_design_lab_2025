@@ -1,0 +1,14 @@
+module C_ROM (
+    input  logic [12:0] addr,         // hasta 4900 direcciones
+    output logic [23:0] color         // RRGGBB
+);
+
+    logic [23:0] memory [0:4899];     // 70 x 70 = 4900
+
+    initial begin
+        $readmemh("C_clean.mem", memory); // Archivo generado sin transparencia
+    end
+
+    assign color = memory[addr];
+
+endmodule

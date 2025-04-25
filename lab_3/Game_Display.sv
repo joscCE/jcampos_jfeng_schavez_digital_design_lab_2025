@@ -95,9 +95,9 @@ module Game_Display(
         end else if (inside_board) begin
             if (occupied_bit) begin
                 if (owner_bit == 1'b0) begin
-                    R = color[23:16]; G = 8'd0; B = 8'd0; // Jugador 0 - rojo
+                   B = 8'd0; G = color[15:8]; R = 8'd0; // Jugador 0 - verde
                 end else begin
-                    R = 8'd0; G = 8'd0; B = color[7:0];   // Jugador 1 - azul
+                    B = 8'd0; G = 8'd0; R = color[7:0];   // Jugador 1 - azul
                 end
             end else begin
                 R = color[23:16]; G = color[15:8]; B = color[7:0]; // Vacía

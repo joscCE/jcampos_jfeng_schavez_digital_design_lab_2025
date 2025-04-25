@@ -1,5 +1,5 @@
 Flow report for connect_four
-Sat Apr 19 20:32:52 2025
+Fri Apr 25 11:40:48 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Apr 19 20:32:52 2025       ;
+; Flow Status                     ; Successful - Fri Apr 25 11:40:48 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,717 / 41,910 ( 4 % )                      ;
-; Total registers                 ; 245                                         ;
-; Total pins                      ; 43 / 499 ( 9 % )                            ;
+; Logic utilization (in ALMs)     ; 4,320 / 41,910 ( 10 % )                     ;
+; Total registers                 ; 365                                         ;
+; Total pins                      ; 44 / 499 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
-; Total DSP Blocks                ; 2 / 112 ( 2 % )                             ;
+; Total DSP Blocks                ; 3 / 112 ( 3 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/19/2025 18:46:27 ;
+; Start date & time ; 04/25/2025 11:37:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; connect_four        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id      ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 153951931180250.174510998705864        ; --            ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 153951931180250.174560265115432        ; --            ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_connect_four ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_Debounce     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_connect_four                        ; --            ; --          ; eda_simulation  ;
@@ -108,12 +108,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 01:03:03     ; 1.0                     ; 5949 MB             ; 01:02:03                           ;
-; Fitter               ; 00:01:43     ; 1.4                     ; 6582 MB             ; 00:04:18                           ;
-; Assembler            ; 00:00:12     ; 1.0                     ; 4853 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:14     ; 2.0                     ; 5175 MB             ; 00:00:24                           ;
-; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 4781 MB             ; 00:00:06                           ;
-; Total                ; 01:05:21     ; --                      ; --                  ; 01:06:59                           ;
+; Analysis & Synthesis ; 00:00:53     ; 1.0                     ; 4970 MB             ; 00:01:05                           ;
+; Fitter               ; 00:01:49     ; 1.3                     ; 6688 MB             ; 00:04:28                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 4878 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:15     ; 2.4                     ; 5217 MB             ; 00:00:33                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 4816 MB             ; 00:00:04                           ;
+; Total                ; 00:03:11     ; --                      ; --                  ; 00:06:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
