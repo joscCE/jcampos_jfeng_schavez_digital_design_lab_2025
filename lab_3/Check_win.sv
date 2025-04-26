@@ -1,86 +1,86 @@
 module Check_win(
-    input  logic [83:0] reg_game_M,  // 7 columnas x 6 filas x 2 bits = 84 bits
-    input  logic [3:0]  reg_jugada,  // [4] = jugador, [2:0] = columna (0-6)
-    output logic        S            // Señal de victoria
+    input  logic [83:0] reg_game_M,   // La matriz de juego
+    input  logic [6:0]  play_made,     // Movimiento realizado
+    output logic        S              // Señal de victoria
 );
 
-    logic [2:0] fila;
-    logic [2:0] columna;
-    logic       jugador;
-    logic [1:0] celda_tmp;  // <== MOVIDO AQUÍ
+    logic [2:0] col;                   // Columna del movimiento
+    logic [2:0] fila;                  // Fila del movimiento
+    logic player;                      // Jugador que hizo el movimiento
 
-    assign jugador = reg_jugada[3];
-    assign columna = reg_jugada[2:0];
+    // Cuentan las piezas en cada dirección
+    logic [3:0] count_horiz, count_vert, count_diag1, count_diag2;
 
-    // Función para obtener una celda
-    function automatic void get_celda(
-        input int f, input int c,
-        input logic [83:0] board,
-        output logic [1:0] value
-    );
-        int idx;
-        begin
-            idx = (f * 7 + c) * 2;
-            value[1] = board[idx + 1];
-            value[0] = board[idx];
-        end
-    endfunction
+    // Señales de victoria por dirección
+    logic win_horiz, win_vert, win_diag1, win_diag2;
 
-    // Función para contar en una dirección
-    function automatic int contar(
-        input int row, col,
-        input int dx, dy,
-        input logic jugador_buscado,
-        input logic [83:0] board
-    );
-        int count;
-        int r, c;
-        logic [1:0] celda;
-        begin
-            count = 0;
-            for (int i = 1; i < 4; i = i + 1) begin
-                r = row + dy * i;
-                c = col + dx * i;
-                if (r < 0 || r >= 6 || c < 0 || c >= 7)
-                    break;
-                get_celda(r, c, board, celda);
-                if (celda[1] && celda[0] == jugador_buscado)
-                    count = count + 1;
-                else
-                    break;
-            end
-            return count;
-        end
+    assign player = play_made[6];       // Jugador que hace el movimiento (0 o 1)
+    assign col = play_made[5:3];       // Columna del movimiento
+    assign fila = play_made[2:0];      // Fila del movimiento
+
+    // Función para verificar si una celda coincide con el jugador
+    function logic cell_matches(input logic [2:0] c, input logic [2:0] f);
+        if (c > 6 || f > 5) return 0; // Si está fuera de la tabla, retorna 0
+        return (reg_game_M[c*2 + f*14] == 1'b1) && (reg_game_M[c*2 + f*14 + 1] == player);
     endfunction
 
     always_comb begin
-        S = 0;
-        fila = 0;
+        // Inicializamos los contadores a 1 (porque ya contamos la celda actual)
+        count_horiz = 1;
+        count_vert = 1;
+        count_diag1 = 1;
+        count_diag2 = 1;
 
-        // Buscar la fila más baja ocupada en esa columna
-        for (int f = 0; f < 6; f = f + 1) begin
-            get_celda(f, columna, reg_game_M, celda_tmp);
-            if (celda_tmp[1])
-                fila = f;
-            else
-                break;
+        // Verificación en dirección horizontal (→ y ←)
+        // → derecha
+        for (int i = 1; i < 4; i++) begin
+            if (cell_matches(col+i, fila)) count_horiz++;
+            else break;
+        end
+        // ← izquierda
+        for (int i = 1; i < 4; i++) begin
+            if (cell_matches(col-i, fila)) count_horiz++;
+            else break;
         end
 
-        get_celda(fila, columna, reg_game_M, celda_tmp);
-        if (celda_tmp[1] && celda_tmp[0] == jugador) begin
-            if ((contar(fila, columna, 1, 0, jugador, reg_game_M) +
-                 contar(fila, columna, -1, 0, jugador, reg_game_M)) >= 3)
-                S = 1;
-            else if ((contar(fila, columna, 0, 1, jugador, reg_game_M) +
-                      contar(fila, columna, 0, -1, jugador, reg_game_M)) >= 3)
-                S = 1;
-            else if ((contar(fila, columna, 1, -1, jugador, reg_game_M) +
-                      contar(fila, columna, -1, 1, jugador, reg_game_M)) >= 3)
-                S = 1;
-            else if ((contar(fila, columna, 1, 1, jugador, reg_game_M) +
-                      contar(fila, columna, -1, -1, jugador, reg_game_M)) >= 3)
-                S = 1;
+        // Verificación en dirección vertical (↓)
+        for (int i = 1; i < 4; i++) begin
+            if (cell_matches(col, fila-i)) count_vert++;
+            else break;
         end
+
+        // Verificación en diagonal \ (↘ y ↖)
+        // ↘ diagonal abajo-derecha
+        for (int i = 1; i < 4; i++) begin
+            if (cell_matches(col+i, fila-i)) count_diag1++;
+            else break;
+        end
+        // ↖ diagonal arriba-izquierda
+        for (int i = 1; i < 4; i++) begin
+            if (cell_matches(col-i, fila+i)) count_diag1++;
+            else break;
+        end
+
+        // Verificación en diagonal / (↙ y ↗)
+        // ↙ diagonal abajo-izquierda
+        for (int i = 1; i < 4; i++) begin
+            if (cell_matches(col-i, fila-i)) count_diag2++;
+            else break;
+        end
+        // ↗ diagonal arriba-derecha
+        for (int i = 1; i < 4; i++) begin
+            if (cell_matches(col+i, fila+i)) count_diag2++;
+            else break;
+        end
+
+        // Comprobamos si alguna dirección alcanzó 4 piezas consecutivas
+        win_horiz = (count_horiz >= 4);
+        win_vert  = (count_vert  >= 4);
+        win_diag1 = (count_diag1 >= 4);
+        win_diag2 = (count_diag2 >= 4);
+
+        // Si alguna dirección tiene 4 piezas consecutivas, es un ganador
+        S = win_horiz | win_vert | win_diag1 | win_diag2;
     end
 
 endmodule

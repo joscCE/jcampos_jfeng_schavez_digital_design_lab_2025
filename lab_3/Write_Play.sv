@@ -2,7 +2,8 @@ module Write_play(
     input  logic [83:0] game,
     input  logic [3:0]  play,
     output logic [83:0] new_game,
-    output logic        s
+    output logic        s,
+    output logic [6:0] play_made 
 );
 
     logic valid;
@@ -49,5 +50,5 @@ module Write_play(
     end
 
     assign new_game = temp;
-
+    assign play_made = {player,col,fila_cambiar};
 endmodule

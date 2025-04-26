@@ -18,7 +18,9 @@ module connect_four (
 	 logic rst;
 	 logic [2:0] player0;
 	 logic [2:0] player1;
-	 
+	
+	logic [6:0] play_made;
+ 
 	 
 	 
 	 
@@ -78,7 +80,7 @@ module connect_four (
 	
 	
 	 	 //entradas
-	 logic [2:0] play; //[P,R,L]
+	logic [2:0] play; //[P,R,L]
     logic time_out;
     logic winning;
     logic valid_play;
@@ -104,7 +106,7 @@ module connect_four (
 	 logic select_turn;
 	 logic en_turn_timer;
 	 logic [83:0] new_game, Q_reg_game;
-
+	logic [6:0] Q_Reg_play_made;
 	 
 //============== clk de 25MH =========================
 	 
@@ -264,14 +266,25 @@ module connect_four (
 	 .game(Q_reg_game),
     .play(c_Mux_Play),
     .new_game(new_game),
-    .s(valid_play)
-	 
+    .s(valid_play),
+	.play_made(play_made)
 	 );
 	 
 	 
+	Register #(.N(7)) Reg_play_made(
+		.clk(clk25),
+		.rst(rst),
+		.D(play_made),
+		.en(valid_play),
+		.Q(Q_Reg_play_made)
+	);
+
+
+
+	
 	 Check_win CW_Inst(
 	 .reg_game_M(Q_reg_game), 
-    .reg_jugada(c_Mux_Play), 
+	.play_made(Q_Reg_play_made), 
     .S(winning) 
 	 );
 	 
