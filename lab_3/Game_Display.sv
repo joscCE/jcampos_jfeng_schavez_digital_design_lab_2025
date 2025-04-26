@@ -73,7 +73,7 @@ module Game_Display(
             col_idx = local_x / TILE_W;
             row_idx = local_y / TILE_H;
 
-            tile_index = row_idx * BOARD_COLS + (BOARD_COLS - 1 - col_idx); // INVERSIÓN
+            tile_index = (BOARD_ROWS - 1 - row_idx) * BOARD_COLS + (BOARD_COLS - 1 - col_idx);
 
             occupied_bit = game[tile_index * 2];
             owner_bit    = game[tile_index * 2 + 1];

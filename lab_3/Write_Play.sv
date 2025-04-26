@@ -1,38 +1,53 @@
-
 module Write_play(
     input  logic [83:0] game,
-    input  logic [4:0]  play,
+    input  logic [3:0]  play,
     output logic [83:0] new_game,
     output logic        s
 );
 
-    logic        player;
-    logic [2:0]  row;
-    logic [2:0]  i;
-    logic [3:0]  col;
-    logic [83:0] temp_game;
-    logic        placed;
-    integer      index; 
+    logic valid;
+    logic [83:0] temp;
+    logic [2:0] fila_cambiar;
+    logic [5:0] filas;
+    logic player;
+    logic [2:0] col;
 
     assign player = play[3];
-    assign col    = play[2:0];
-	 
+    assign col    = 6 - play[2:0];
+
+    // Leer el estado de ocupación de cada fila en la columna seleccionada
     always_comb begin
-        temp_game = game;
-        placed = 0;
-        for (i = 0; i < 6; i++) begin
-            row = i;
-            index = (row * 14) + (col * 2) + 1; // apuntamos al bit de ocupado
-            if (temp_game[index] == 1'b0) begin
-                // celda libre
-                temp_game[index]     = 1'b1;     // ocupado
-                temp_game[index - 1] = player;   // jugador
-                placed = 1;
-                break;
-            end
+        filas = 6'b0;
+        for (int fila = 0; fila < 6; fila++) begin
+             filas[fila] = game[col*2 + 14*fila];
         end
-        s = placed;
-        new_game = temp_game;
     end
+
+    assign s = ~(&filas);
+    assign valid = s;
+
+    // Detectar la primera fila libre
+    always_comb begin
+        case(filas)
+            6'b000000: fila_cambiar = 3'd0;
+            6'b000001: fila_cambiar = 3'd1;
+            6'b000011: fila_cambiar = 3'd2;
+            6'b000111: fila_cambiar = 3'd3;
+            6'b001111: fila_cambiar = 3'd4;
+            6'b011111: fila_cambiar = 3'd5;
+            default:   fila_cambiar = 3'd0;
+        endcase
+    end
+
+    // Actualizar el juego
+    always_comb begin
+        temp = game;
+        if (valid) begin
+            temp[col*2 + 14*fila_cambiar] = 1'b1;       // Marcar celda como ocupada
+            temp[col*2 + 14*fila_cambiar + 1] = player;  // Guardar quién la jugó
+        end
+    end
+
+    assign new_game = temp;
 
 endmodule

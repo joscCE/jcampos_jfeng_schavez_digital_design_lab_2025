@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Apr 25 11:40:14 2025
+Fitter Status : Successful - Sat Apr 26 10:42:14 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : connect_four
 Top-level Entity Name : connect_four
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 4,320 / 41,910 ( 10 % )
-Total registers : 365
+Logic utilization (in ALMs) : 4,315 / 41,910 ( 10 % )
+Total registers : 355
 Total pins : 44 / 499 ( 9 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )

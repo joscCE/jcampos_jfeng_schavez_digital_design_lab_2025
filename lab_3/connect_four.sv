@@ -12,7 +12,6 @@ module connect_four (
 	 output logic [3:0] debug_colum
 	 
 	 
-	 
 );
 
     logic clk25;  // Reloj dividido a 25 MHz
@@ -109,7 +108,7 @@ module connect_four (
 	 
 //============== clk de 25MH =========================
 	 
-	 assign debug_colum = Q_reg_Play;
+	 assign debug_colum = c_Mux_Play;
 	 
 	 clk_div CLK25(
 		.clk(clk),
