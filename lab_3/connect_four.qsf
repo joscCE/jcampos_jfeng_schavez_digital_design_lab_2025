@@ -79,7 +79,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_connect_four -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_Mouse_Controller -section_id eda_simulation
 set_location_assignment PIN_AK22 -to VGA_Blank
 set_location_assignment PIN_AJ22 -to VGA_Sync_N
 set_location_assignment PIN_AK21 -to VGA_CLK
@@ -98,9 +98,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE Check_win.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Check_win.sv
 set_global_assignment -name SYSTEMVERILOG_FILE clk_div.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_connect_four.sv
-set_global_assignment -name EDA_TEST_BENCH_NAME tb_connect_four -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_connect_four
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_connect_four -section_id tb_connect_four
 set_global_assignment -name SYSTEMVERILOG_FILE FSM_tb.sv
 set_location_assignment PIN_AA15 -to player0in[2]
 set_location_assignment PIN_AA14 -to player0in[1]
@@ -110,17 +107,9 @@ set_location_assignment PIN_AB30 -to startin
 set_location_assignment PIN_AA24 -to debug_colum[0]
 set_location_assignment PIN_AB23 -to debug_colum[1]
 set_location_assignment PIN_AC23 -to debug_colum[2]
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_Debounce
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_debounce -section_id tb_debounce
 set_global_assignment -name SYSTEMVERILOG_FILE debounce.sv
-set_global_assignment -name EDA_TEST_BENCH_NAME tb_debounce -section_id eda_simulation
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_connect_four.sv -section_id tb_connect_four
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_debounce.sv -section_id tb_debounce
 set_global_assignment -name SYSTEMVERILOG_FILE Mux_31.sv
 set_global_assignment -name SYSTEMVERILOG_FILE display_menu.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B[5]
@@ -182,4 +171,16 @@ set_global_assignment -name SYSTEMVERILOG_FILE E_ROM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE T_ROM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Start_B_ROM.sv
 set_location_assignment PIN_AD24 -to debug_colum[3]
+set_global_assignment -name SYSTEMVERILOG_FILE Adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FSM_Mouse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Shift_Reg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Mouse_Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_Mouse_Controller.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_Mouse_Controller -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_Mouse_Controller
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_Mouse_Controller -section_id tb_Mouse_Controller
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_Mouse_Controller.sv -section_id tb_Mouse_Controller
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

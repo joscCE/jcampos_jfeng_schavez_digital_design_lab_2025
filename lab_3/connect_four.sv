@@ -20,6 +20,8 @@ module connect_four (
 	 logic [2:0] player1;
 	
 	logic [6:0] play_made;
+	logic R_player;
+	logic P_player;
  
 	 
 	 
@@ -40,6 +42,19 @@ module connect_four (
 	 
 	 
 	 assign VGA_CLK = clk25;
+	 
+	 	 	 //entradas
+	 logic [2:0] play; //[P,R,L]
+    logic time_out;
+    logic winning;
+    logic valid_play;
+    logic comp_turn;
+    logic comp_right;
+    logic comp_left;
+    logic comp_random;
+	 
+	 
+	 
 	 
 	 
 	 
@@ -79,15 +94,7 @@ module connect_four (
 
 	
 	
-	 	 //entradas
-	logic [2:0] play; //[P,R,L]
-    logic time_out;
-    logic winning;
-    logic valid_play;
-    logic comp_turn;
-    logic comp_right;
-    logic comp_left;
-    logic comp_random;
+
 
     // Salidas
     logic rst_timer;
@@ -290,8 +297,7 @@ module connect_four (
 	 
 	 
 
-	 logic R_player;
-	 logic P_player;
+
 	 
 
 	    FSM fsm_inst (

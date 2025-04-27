@@ -26,14 +26,13 @@ module FSM_Mouse(
     output logic shft_DY,
     output logic en_Sumandor,
     output logic mode_sum_X,
-    output logic mode_sum_y,
-	 output logic [2:0] debug_state
+    output logic mode_sum_y
 );
 
     logic [2:0] state, next_state;
 
     // Estado actual
-    always_ff @(negedge clk or posedge rst) begin
+    always_ff @(posedge clk or posedge rst) begin
         if (rst) 
             state <= 3'b000;
         else 
@@ -76,12 +75,10 @@ module FSM_Mouse(
     assign en_Sumandor = (state == 3'b101);
     assign mode_sum_X = sig_x;
     assign mode_sum_y = sig_y;
-    assign en_Bit_Counter = (state ==3'b001) | (state == 3'b010) | (state == 3'b100); 
-    assign en_Byte_Counter = (state == 3'b11);
-   assign en_Reg_Y_pos = (state == 3'b101);
-   assign en_Reg_X_pos = (state == 3'b101);
-	
-	assign debug_state = state;
+    assign en_Bit_Counter = (state ==3'001) | (state == 3'010) | (state == 3'100); 
+    assign en_Byte_Counter = (state == 3'011);
+   assign en_Reg_Y_pos = (state == 3'101);
+   assign en_Reg_X_pos = (state == 3'101);
 
 
 endmodule

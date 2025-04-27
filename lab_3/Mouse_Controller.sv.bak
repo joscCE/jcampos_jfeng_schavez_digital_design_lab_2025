@@ -1,47 +1,46 @@
 module Mouse_Controller(
     input PS2_CLK,
     input PS2_DAT,
-    output logic [9:0] Mouse_CoordsX,
-	 output logic [9:0] Mouse_CoordsY,
-	 output logic [2:0] debug_state
+    output loigc [19:0] Mouse_Coords
 
 );
 
 //entrada y salidas de la FSM
 
-    logic BO;
-    logic B1;
-    logic B2;
-    logic Byte_Out;
-    logic Bit_Out;
-    logic sig_x;
-    logic sig_y;
-    logic clk;
-    logic rst; 
-    logic rst_Bit_Counter;
-    logic rst_Byte_Counter;
+    logic BO,
+    logic B1,
+    logic B2,
+    logic Byte_Out,
+    logic Bit_Out,
+    logic sig_x,
+    logic sig_y,
+    logic clk,
+    logic rst,  
+    logic rst_Bit_Counter,
+    logic rst_Byte_Counter,
     
-    logic en_Bit_Counter;
-    logic en_Byte_Counter;
+    logic en_Bit_Counter,
+    logic en_Byte_Counter,
 
-    logic en_Reg_Status;
-    logic en_Reg_DX;
-    logic en_Reg_DY;
-    logic shft_Status;
-    logic shft_DX;
-    logic shft_DY;
-    logic en_Sumandor;
-    logic mode_sum_X;
-    logic mode_sum_y;
-    logic [7:0] Q_Reg_Status, Q_Reg_DY,Q_Reg_DX;
-    logic [3:0] Q_Counter_Bit;
-    logic [1:0] Q_Counter_Byte;
-    logic eq_Comp_Byte_0,eq_Comp_Byte_1,eq_Comp_Byte_2,eq_Comp_Byte_3, eq_Comp_Bite;
+    logic en_Reg_Status,
+    logic en_Reg_DX,
+    logic en_Reg_DY,
+    logic shft_Status,
+    logic shft_DX,
+    logic shft_DY,
+    logic en_Sumandor,
+    logic mode_sum_X,
+    logic mode_sum_y,
+    logic [7:0] Q_Reg_Status, Q_Reg_DY,Q_Reg_DX,
+    logic [3:0] Q_Counter_Bit,
+    logic [1:0] Q_Counter_Byte,
+    logic eq_Comp_Byte_0,eq_Comp_Byte_1,eq_Comp_Byte_2,eq_Comp_Byte_3, eq_Comp_Bite
+
 //shif registers
 
 
 Shift_Reg #(.N(8)) Reg_shift_status (
-    .clk(PS2_CLK),
+    .clk(PS2_CLK) 
     .rst(rst),
 	.D(PS2_DAT),
 	.en(en_Reg_Status),
@@ -51,7 +50,7 @@ Shift_Reg #(.N(8)) Reg_shift_status (
 );
 
 Shift_Reg #(.N(8)) Reg_shift_DX(
-  .clk(PS2_CLK),
+  .clk(PS2_CLK) 
     .rst(rst),
 	.D(PS2_DAT),
 	.en(en_Reg_DX),
@@ -61,7 +60,7 @@ Shift_Reg #(.N(8)) Reg_shift_DX(
 );
 
 Shift_Reg #(.N(8))Reg_shift_DY(
-  .clk(PS2_CLK), 
+  .clk(PS2_CLK) 
     .rst(rst),
 	.D(PS2_DAT),
 	.en(en_Reg_DY),
@@ -74,7 +73,7 @@ Shift_Reg #(.N(8))Reg_shift_DY(
 
 
 Counter #(.N(2)) Byte_Counter (
-.clk(PS2_CLK),
+.clk(PS2_CLK)
 .rst(rst_Byte_Counter),
 .en(en_Byte_Counter),
 .mode(1'b1),                
@@ -85,7 +84,7 @@ Counter #(.N(2)) Byte_Counter (
 
 
 Counter #(.N(4))Bit_Counter(
-.clk(PS2_CLK),
+.clk(PS2_CLK)
 .rst(rst_Bit_Counter),
 .en(en_Bit_Counter),
 .mode(1'b1),                
@@ -95,39 +94,39 @@ Counter #(.N(4))Bit_Counter(
 
 //comparator
 
-Comparator #(.N(2)) Byte_Comparator_0(    
-	.A(Q_Counter_Byte), 
-    .B(1'b0),
-	.equ(eq_Comp_Byte_0)
+Comparador #(N.(2)) Byte_Comparator_0(    
+	A(Q_Counter_Byte), 
+    B(1'b0),
+	equ(eq_Comp_Byte_0)
 
 );
 
 
-Comparator #(.N(2)) Byte_Comparator_1(    
-	.A(Q_Counter_Byte), 
-    .B(1'b1),
-	.equ(eq_Comp_Byte_1)
+Comparador #(N.(2)) Byte_Comparator_1(    
+	A(Q_Counter_Byte), 
+    B(1'b1),
+	equ(eq_Comp_Byte_1)
 
 );
 
-Comparator #(.N(2)) Byte_Comparator_2(    
-	.A(Q_Counter_Byte), 
-    .B(2'b10),
-	.equ(eq_Comp_Byte_2)
+Comparador #(N.(2)) Byte_Comparator_2(    
+	A(Q_Counter_Byte), 
+    B(2'b10),
+	equ(eq_Comp_Byte_2)
 
 );
 
-Comparator #(.N(2))Byte_Comparator_3(    
-	.A(Q_Counter_Byte), 
-    .B(2'b11),
-	.equ(eq_Comp_Byte_3)
+Comparador #(.N(2))Byte_Comparator_3(    
+	A(Q_Counter_Byte), 
+    B(2'b11),
+	equ(eq_Comp_Byte_3)
 
 );
 
-Comparator #(.N(4)) Bit_Comparator(    
-	.A(Q_Counter_Bit), 
-    .B(4'b1000),
-	.equ(eq_Comp_Bite)
+Comparador #(.N(4)) Bit_Comparator(    
+	A(Q_Counter_Bit), 
+    B(4'b1000),
+	equ(eq_Comp_Bite)
 
 );
 
@@ -156,7 +155,7 @@ Adder #(.N(16)) Sum_Y (
 //registros de la posicion
 
 Register #(.N(16)) Reg_X_Pos(
-    .clk(PS2_CLK),
+    .clk(PS2_CLK) 
     .rst(rst),
 	.D(D_Red_X_Pos),
 	.en(en_Reg_X_pos),
@@ -166,7 +165,7 @@ Register #(.N(16)) Reg_X_Pos(
 );
 
 Register #(.N(16))Reg_Y_Pos(
-    .clk(PS2_CLK), 
+    .clk(PS2_CLK) 
     .rst(rst),
 	.D(D_Red_Y_Pos),
 	.en(en_Reg_Y_pos),
@@ -198,13 +197,12 @@ FSM_Mouse FSM_M (
     .mode_sum_X(mode_sum_X),
     .mode_sum_y(mode_sum_y),
     .en_Reg_Y_pos(en_Reg_Y_pos),
-    .en_Reg_X_pos(en_Reg_X_pos),
-	 .debug_state(debug_state)
+    .en_Reg_X_pos(en_Reg_X_pos)
 );
 
 
-assign Mouse_CoordsX = Q_Reg_X_pos; 
-assign Mouse_CoordsY = Q_Reg_Y_pos; 
+assign Mouse_Coords = {Q_Reg_X_pos, Q_Reg_Y_pos}; // si quieres juntar X e Y
+
 
 endmodule
 
