@@ -6,6 +6,7 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv}
+vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv}
 
 vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv}
 

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sun Apr 27 12:25:54 2025
+Analysis & Elaboration Status : Successful - Sun Apr 27 13:28:08 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : connect_four
-Top-level Entity Name : Check_win
+Top-level Entity Name : tb_Check_win
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

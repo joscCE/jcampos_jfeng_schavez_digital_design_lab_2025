@@ -10,53 +10,53 @@ cModel Technology
 Z0 dC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/simulation/modelsim
 vCheck_win
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1745778363
+!s110 1745782806
 !i10b 1
-!s100 ehZla1HZi[3aeYgn15]=Y0
-IXVETl[6NIGcX3jAIED2UI1
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 Jb@`4DA3H=cGDb?gnV0ZM1
+IJTZ;E4_NS@8__?GnedUeV1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 Check_win_sv_unit
 S1
 R0
-w1745778341
+w1745782070
 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv
 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1745778363.000000
+!s108 1745782806.000000
 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3
-Z8 tCvgOpt 0
+Z4 o-sv -work work
+Z5 !s92 -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3
+Z6 tCvgOpt 0
 n@check_win
 vtb_Check_win
 R1
-R2
+!s110 1745782807
 !i10b 1
-!s100 ON`OoD7X0nKUg5Z?;A=1n2
-IlhRoXAUB_I:X^oa28cG`B2
-R3
+!s100 ;z5FcMG8j17h_<DU5W<C31
+II9Y_gNi`SalhT_eX2LUj21
+R2
 !s105 tb_Check_win_sv_unit
 S1
 R0
-w1745778125
+w1745782790
 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv
 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv
-L0 1
-R4
+L0 3
+R3
 r1
 !s85 0
 31
-R5
+!s108 1745782807.000000
 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv|
 !i113 1
+R4
+R5
 R6
-R7
-R8
 ntb_@check_win
