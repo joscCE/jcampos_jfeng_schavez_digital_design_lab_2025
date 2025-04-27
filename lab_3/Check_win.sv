@@ -1,85 +1,71 @@
 module Check_win(
-    input  logic [83:0] reg_game_M,  // 7 columnas x 6 filas x 2 bits = 84 bits
-    input  logic [3:0]  reg_jugada,  // [4] = jugador, [2:0] = columna (0-6)
-    output logic        S            // Señal de victoria
+    input logic [83:0] reg_game_M,  // 7 columnas x 6 filas x 2 bits = 84 bits
+    output logic S                  // Señal de victoria
 );
 
-    logic [2:0] fila;
-    logic [2:0] columna;
-    logic       jugador;
-    logic [1:0] celda_tmp;  // <== MOVIDO AQUÍ
+    // Parámetros para la matriz
+    localparam WIDTH = 7;  // columnas
+    localparam HEIGHT = 6; // filas
+    localparam CONECTA = 4; // cantidad de piezas consecutivas para ganar
 
-    assign jugador = reg_jugada[3];
-    assign columna = reg_jugada[2:0];
-
-    // Función para obtener una celda
-    function automatic void get_celda(
-        input int f, input int c,
-        input logic [83:0] board,
-        output logic [1:0] value
-    );
-        int idx;
-        begin
-            idx = (f * 7 + c) * 2;
-            value[1] = board[idx + 1];
-            value[0] = board[idx];
-        end
-    endfunction
-
-    // Función para contar en una dirección
-    function automatic int contar(
-        input int row, col,
-        input int dx, dy,
-        input logic jugador_buscado,
-        input logic [83:0] board
-    );
-        int count;
-        int r, c;
-        logic [1:0] celda;
-        begin
-            count = 0;
-            for (int i = 1; i < 4; i = i + 1) begin
-                r = row + dy * i;
-                c = col + dx * i;
-                if (r < 0 || r >= 6 || c < 0 || c >= 7)
-                    break;
-                get_celda(r, c, board, celda);
-                if (celda[1] && celda[0] == jugador_buscado)
-                    count = count + 1;
-                else
-                    break;
-            end
-            return count;
-        end
-    endfunction
-
+    // Verificación de victoria
     always_comb begin
-        S = 0;
-        fila = 0;
-
-        // Buscar la fila más baja ocupada en esa columna
-        for (int f = 0; f < 6; f = f + 1) begin
-            get_celda(f, columna, reg_game_M, celda_tmp);
-            if (celda_tmp[1])
-                fila = f;
-            else
-                break;
+        S = 0; // Inicialmente no hay victoria
+        
+        // Comprobación de victorias horizontales
+        for (int y = 0; y < HEIGHT; y++) begin
+            for (int x = 0; x <= WIDTH - CONECTA; x++) begin
+                logic [1:0] player;
+                player = reg_game_M[(y * WIDTH + x) * 2 +: 2];  // Obtener el valor de la celda
+                if (player != 2'b00 && 
+                    player == reg_game_M[((y * WIDTH + x + 1) * 2) +: 2] && 
+                    player == reg_game_M[((y * WIDTH + x + 2) * 2) +: 2] && 
+                    player == reg_game_M[((y * WIDTH + x + 3) * 2) +: 2]) begin
+                    S = 1; // Victoria horizontal
+                end
+            end
         end
-
-        get_celda(fila, columna, reg_game_M, celda_tmp);
-        if (celda_tmp[1] && celda_tmp[0] == jugador) begin
-            if ((contar(fila, columna, 1, 0, jugador, reg_game_M) +
-                 contar(fila, columna, -1, 0, jugador, reg_game_M)) >= 3)
-                S = 1;
-            else if ((contar(fila, columna, 0, 1, jugador, reg_game_M) +
-                      contar(fila, columna, 0, -1, jugador, reg_game_M)) >= 3)
-                S = 1;
-            else if ((contar(fila, columna, 1, -1, jugador, reg_game_M) +
-                      contar(fila, columna, -1, 1, jugador, reg_game_M)) >= 3)
-                S = 1;
-            else if ((contar(fila, columna, 1, 1, jugador, reg_game_M) +
-                      contar(fila, columna, -1, -1, jugador, reg_game_M)) >= 3)
-                S = 1;
+        
+        // Comprobación de victorias verticales
+        for (int x = 0; x < WIDTH; x++) begin
+            for (int y = 0; y <= HEIGHT - CONECTA; y++) begin
+                logic [1:0] player;
+                player = reg_game_M[(y * WIDTH + x) * 2 +: 2];  // Obtener el valor de la celda
+                if (player != 2'b00 && 
+                    player == reg_game_M[((y + 1) * WIDTH + x) * 2 +: 2] && 
+                    player == reg_game_M[((y + 2) * WIDTH + x) * 2 +: 2] && 
+                    player == reg_game_M[((y + 3) * WIDTH + x) * 2 +: 2]) begin
+                    S = 1; // Victoria vertical
+                end
+            end
+        end
+        
+        // Comprobación de victorias diagonales (de izquierda a derecha)
+        for (int x = 0; x <= WIDTH - CONECTA; x++) begin
+            for (int y = 0; y <= HEIGHT - CONECTA; y++) begin
+                logic [1:0] player;
+                player = reg_game_M[(y * WIDTH + x) * 2 +: 2];  // Obtener el valor de la celda
+                if (player != 2'b00 && 
+                    player == reg_game_M[((y + 1) * WIDTH + x + 1) * 2 +: 2] && 
+                    player == reg_game_M[((y + 2) * WIDTH + x + 2) * 2 +: 2] && 
+                    player == reg_game_M[((y + 3) * WIDTH + x + 3) * 2 +: 2]) begin
+                    S = 1; // Victoria diagonal izquierda a derecha
+                end
+            end
+        end
+        
+        // Comprobación de victorias diagonales (de derecha a izquierda)
+        for (int x = 3; x < WIDTH; x++) begin
+            for (int y = 0; y <= HEIGHT - CONECTA; y++) begin
+                logic [1:0] player;
+                player = reg_game_M[(y * WIDTH + x) * 2 +: 2];  // Obtener el valor de la celda
+                if (player != 2'b00 && 
+                    player == reg_game_M[((y + 1) * WIDTH + x - 1) * 2 +: 2] && 
+                    player == reg_game_M[((y + 2) * WIDTH + x - 2) * 2 +: 2] && 
+                    player == reg_game_M[((y + 3) * WIDTH + x - 3) * 2 +: 2]) begin
+                    S = 1; // Victoria diagonal derecha a izquierda
+                end
+            end
         end
     end
 
