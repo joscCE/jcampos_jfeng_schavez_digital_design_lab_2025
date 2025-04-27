@@ -182,4 +182,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE E_ROM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE T_ROM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Start_B_ROM.sv
 set_location_assignment PIN_AD24 -to debug_colum[3]
+set_global_assignment -name SYSTEMVERILOG_FILE Decoder7Seg.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

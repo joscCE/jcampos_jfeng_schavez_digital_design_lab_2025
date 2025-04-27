@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Apr 26 14:25:35 2025
+Analysis & Synthesis Status : Successful - Sun Apr 27 17:12:20 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : connect_four
 Top-level Entity Name : connect_four
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 298
-Total pins : 44
+Total registers : 302
+Total pins : 60
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 3

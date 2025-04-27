@@ -9,7 +9,8 @@ module connect_four (
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B,
-	 output logic [3:0] debug_colum
+	 output logic [3:0] debug_colum,
+	 output logic [7:0] seg0, seg1
 	 
 	 
 );
@@ -71,16 +72,18 @@ module connect_four (
 
 	 
     logic [27:0] Q_reg_count_time;  // Asumiendo que es un contador de 28 bits (por comparación con 28'd250_000_000)
-    logic [2:0] j_count_random;
+    logic [3:0] Q_reg_sec_counter;  //Registro para contador 1 segundo
+	 logic [2:0] j_count_random;
     logic [2:0] Q_reg_random;
     logic [4:0] Q_reg_Play;
     logic Q_Reg_Select_Move;
     logic [4:0] c_Mux_Play;
+	 logic one_second;
 
 	
 	
 	 	 //entradas
-	logic [2:0] play; //[P,R,L]
+	 logic [2:0] play; //[P,R,L]
     logic time_out;
     logic winning;
     logic valid_play;
@@ -118,14 +121,7 @@ module connect_four (
 		.clk25(clk25)
 	 
 	 );
-	
-
-	
-
-
-	 
-	 
-	 
+		 
 
 	 
 //===============logica turno================== 
@@ -191,6 +187,7 @@ module connect_four (
 		.Q(Q_reg_game)
 	);
 	
+
 //===============logica timeout================== 
 
 	// Contador tiempo
@@ -208,6 +205,28 @@ module connect_four (
 		.B(28'd250_000_000),
 		.equ(time_out)
 	 );
+	 
+//======== Logica temporizador 1 segundo =========
+	
+	Comparator #(.N(28)) Comp_one_sec(
+		.A(Q_reg_count_time),
+		.B(28'd25_000_000),
+		.equ(one_second)
+	);
+
+	Counter #(.N(4)) Count_seconds (
+		.clk(clk25),
+		.rst(rst | rst_timer),
+		.en(one_second & en_turn_timer),
+		.mode(1'b1),
+		.Q(Q_reg_sec_counter)
+	);
+	
+	Decoder7Seg sec_display (
+		.a(Q_reg_sec_counter),
+		.seg1(seg1),
+		.seg0(seg0)
+	);
 	 
 //===============logica random================== 
 	 Counter #(.N(3)) Count_Random(
