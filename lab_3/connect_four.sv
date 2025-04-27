@@ -11,6 +11,9 @@ module connect_four (
     output logic [7:0] R, G, B,
 	 output logic [3:0] debug_colum
 	 
+
+	 
+	 
 	 
 );
 
@@ -55,7 +58,14 @@ module connect_four (
 	 
 	 
 	 
-	 
+Mouse_Controller dut (
+    .PS2_CLK(1'b0), 
+    .PS2_DAT(1'b0), 
+    .Mouse_CoordsX(),
+    .Mouse_CoordsY(),
+	 .rst(1'b0),
+    .debug_state()
+);
 	 
 	 
 	

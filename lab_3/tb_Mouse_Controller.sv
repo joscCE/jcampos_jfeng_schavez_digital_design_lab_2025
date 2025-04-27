@@ -1,78 +1,98 @@
-`timescale 1ns/1ps
-
 module tb_Mouse_Controller;
 
-    // Entradas
-    logic PS2_CLK;
-    logic PS2_DAT;
+    reg PS2_CLK;
+    reg PS2_DAT;
+    reg rst;
 
-    // Salidas
-    logic [9:0] Mouse_CoordsX;
-    logic [9:0] Mouse_CoordsY;
-    logic [2:0] debug_state;
+    wire [15:0] Mouse_CoordsX;
+    wire [15:0] Mouse_CoordsY;
+    wire [2:0] debug_state;
+    wire [3:0] debug_bit_counter;
+    wire [1:0] debug_byte_counter;
+    wire [7:0] debug_status, debug_dx, debug_dy;
 
-    // Instancia del DUT (Device Under Test)
-    Mouse_Controller dut (
+    Mouse_Controller uut (
         .PS2_CLK(PS2_CLK),
         .PS2_DAT(PS2_DAT),
+        .rst(rst),
         .Mouse_CoordsX(Mouse_CoordsX),
         .Mouse_CoordsY(Mouse_CoordsY),
-        .debug_state(debug_state)
+        .debug_state(debug_state),
+        .debug_bit_counter(debug_bit_counter),
+        .debug_byte_counter(debug_byte_counter),
+        .debug_status(debug_status),
+        .debug_dx(debug_dx),
+        .debug_dy(debug_dy)
     );
 
-    // Clock generation: PS2_CLK (vamos a simularlo lento)
-    initial begin
-        PS2_CLK = 1;
-        forever #50 PS2_CLK = ~PS2_CLK; // 100ns de periodo (10 MHz aprox)
+    // Simular PS2_CLK (baja y sube cada 5ns)
+    always begin
+        PS2_CLK = 0;
+        #5 PS2_CLK = 1;
+        #5;
     end
 
-    // Variables para el estímulo
-    logic [23:0] packet;  // 3 bytes = 24 bits
-    int i;
-
-    // Task para enviar un paquete PS/2
-    task send_packet(input [23:0] pckt);
+    // Tarea para mandar un byte al mouse con protocolo PS/2
+    task send_ps2_byte(input [7:0] data);
+        integer i;
+        reg parity;
         begin
-            for (i = 0; i < 24; i = i + 1) begin
+            parity = 1'b1;  // Odd parity inicial (se invierte en el proceso)
+
+            // Start bit
+            @(negedge PS2_CLK);
+            PS2_DAT = 0;
+
+            // Data bits (LSB first)
+            for (i = 0; i < 8; i = i + 1) begin
                 @(negedge PS2_CLK);
-                PS2_DAT = pckt[i];
+                PS2_DAT = data[i];
+                parity = parity ^ data[i];  // actualizar paridad
             end
+
+            // Parity bit
+            @(negedge PS2_CLK);
+            PS2_DAT = parity;
+
+            // Stop bit
+            @(negedge PS2_CLK);
+            PS2_DAT = 1;
+
+            // Idle state
+            @(negedge PS2_CLK);
+            PS2_DAT = 1;
         end
     endtask
 
-    // Test principal
     initial begin
         // Inicialización
-        PS2_DAT = 1; // Idle de PS/2 es línea alta
-        #1000;
+        PS2_DAT = 1;
+        rst = 0;
+        #10 rst = 1;
+        #20 rst = 0;
 
-        // Primer paquete: movimiento pequeño hacia la derecha y abajo
-        // Formato típico:
-        // Byte 1 (estado): 8'b00001000 -> solo bit 3 (signo X) = 0, (signo Y) = 0
-        // Byte 2 (delta X): 8'b00000101 -> +5
-        // Byte 3 (delta Y): 8'b00000101 -> +5
-        packet = {8'b00000101, 8'b00000101, 8'b00001000};
-        send_packet(packet);
+        // Esperar un poquito
+        #50;
 
-        #5000;
+        // Mandar un paquete típico de mouse
+        // Normalmente el mouse manda 3 bytes: Status, DX, DY
+        // Puedes inventar datos como:
+        // status = 8'b0000_1000 (solo bit de Y sign=1)
+        // dx = 8'b0000_0011 (mover 3 en x)
+        // dy = 8'b1111_1110 (mover -2 en y)
 
-        // Segundo paquete: movimiento hacia la izquierda y arriba (negativo)
-        // Byte 1: 8'b00001100 -> bit 3 (signo X) = 1, bit 2 (signo Y) = 1
-        // Byte 2: 8'b11111011 -> -5 (complemento a dos)
-        // Byte 3: 8'b11111011 -> -5
-        packet = {8'b11111011, 8'b11111011, 8'b00001100};
-        send_packet(packet);
+        send_ps2_byte(8'b0000_1000); // Status byte
+        send_ps2_byte(8'b0000_0011); // DX byte
+        send_ps2_byte(8'b1111_1110); // DY byte
 
-        #5000;
+        // Esperar un poco y terminar
+        #1000 $finish;
+    end
 
-        // Otro paquete: sin movimiento
-        packet = {8'b00000000, 8'b00000000, 8'b00001000};
-        send_packet(packet);
-
-        #5000;
-
-        // Finalizar simulación
-        $stop;
+    initial begin
+        $monitor("At time %t ns: X=%d, Y=%d, Status=%b, DX=%d, DY=%d, State=%b, BitCounter=%d, ByteCounter=%d",
+                 $time, Mouse_CoordsX, Mouse_CoordsY, debug_status, debug_dx, debug_dy,
+                 debug_state, debug_bit_counter, debug_byte_counter);
     end
 
 endmodule

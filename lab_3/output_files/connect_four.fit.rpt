@@ -1,5 +1,5 @@
 Fitter report for connect_four
-Sun Apr 27 12:34:27 2025
+Sun Apr 27 16:03:04 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Apr 27 12:34:27 2025       ;
+; Fitter Status                   ; Successful - Sun Apr 27 16:03:04 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
@@ -163,7 +163,7 @@ refer to the applicable agreement for further details.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   7.3%      ;
 ;     Processor 3            ;   6.8%      ;
-;     Processor 4            ;   6.7%      ;
+;     Processor 4            ;   6.6%      ;
 +----------------------------+-------------+
 
 
@@ -2227,7 +2227,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:15
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:18
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:20
@@ -2240,7 +2240,7 @@ Info (170195): Router estimated average interconnect usage is 1% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:22
-Info (11888): Total time spent on timing analysis during the Fitter is 6.62 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 6.49 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2249,10 +2249,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:20
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 6598 megabytes
-    Info: Processing ended: Sun Apr 27 12:34:29 2025
-    Info: Elapsed time: 00:02:19
-    Info: Total CPU time (on all processors): 00:05:33
+    Info: Peak virtual memory: 6610 megabytes
+    Info: Processing ended: Sun Apr 27 16:03:06 2025
+    Info: Elapsed time: 00:02:21
+    Info: Total CPU time (on all processors): 00:05:29
 
 
 +----------------------------+

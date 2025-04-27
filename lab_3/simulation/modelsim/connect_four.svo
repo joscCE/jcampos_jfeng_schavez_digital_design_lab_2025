@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "04/27/2025 12:35:07"
+// DATE "04/27/2025 16:03:42"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -6261,17 +6261,17 @@ wire \Mux_display|Mux17~1_combout ;
 wire \Mux_display|Mux16~0_combout ;
 wire [15:0] \Display_M|addr ;
 wire [28:0] \Display_M|blink_counter ;
+wire [19:0] \deboun_start|counter ;
 wire [19:0] \deboun_play_P|counter ;
 wire [83:0] \Reg_game_M|Q ;
 wire [9:0] \vga_inst|reg_x|Q ;
-wire [19:0] \deboun_start|counter ;
 wire [19:0] \deboun_play_R|counter ;
 wire [9:0] \vga_inst|reg_y|Q ;
 wire [2:0] \Count_Column|Q ;
 wire [3:0] \Reg_Play|Q ;
 wire [0:0] \Reg_Select_Move|Q ;
-wire [2:0] \Count_Random|Q ;
 wire [0:0] \Count_Turn|Q ;
+wire [2:0] \Count_Random|Q ;
 wire [9:0] \vga_inst|count_x|Q ;
 wire [9:0] \vga_inst|count_y|Q ;
 wire [6:0] \Reg_play_made|Q ;
