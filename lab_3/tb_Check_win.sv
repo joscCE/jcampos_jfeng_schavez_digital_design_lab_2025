@@ -126,6 +126,14 @@ module tb_Check_win();
         place_piece(3, 0, 1);
         place_piece(4, 0, 1);
         check_win(4, 0, 1, 0);
+		  
+		  // Test adicional para verificar distinción entre jugador 0 y celda vacia
+		  $display("\n# Test 10: Distincion jugador 0 celda vacia");
+		  clear_board();
+		  place_piece(0, 0, 0); // Jugador 0
+		  // Dejar celdas (1,0), (2,0), (3,0) vacías
+		  place_piece(4, 0, 0);
+		  check_win(4, 0, 0, 0); // No deberia detectar victoria
         
         $display("\n# Fin de las pruebas");
         $finish;

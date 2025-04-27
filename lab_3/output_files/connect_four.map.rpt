@@ -1,5 +1,5 @@
 Analysis & Elaboration report for connect_four
-Sun Apr 27 13:28:08 2025
+Sun Apr 27 14:31:03 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Apr 27 13:28:08 2025       ;
+; Analysis & Elaboration Status ; Successful - Sun Apr 27 14:31:03 2025       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; connect_four                                ;
 ; Top-level Entity Name         ; tb_Check_win                                ;
@@ -183,7 +183,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 27 13:27:54 2025
+    Info: Processing started: Sun Apr 27 14:30:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -231,40 +231,43 @@ Warning (10236): Verilog HDL Implicit Net warning at connect_four.sv(142): creat
 Warning (10236): Verilog HDL Implicit Net warning at connect_four.sv(297): created implicit net for "state_debug" File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 297
 Info (12127): Elaborating entity "tb_Check_win" for the top level hierarchy
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(59): \n# Test 1: Victoria horizontal File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 59
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=4, row=0, player=1. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=4, row=0, player=1. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
 Warning (10175): Verilog HDL warning at tb_Check_win.sv(51): ignoring unsupported system task File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 51
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(68): \n# Test 2: Victoria vertical File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 68
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=0, row=5, player=0. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=0, row=5, player=0. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(77): \n# Test 3: Victoria diagonal ascendente File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 77
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=4, row=4, player=1. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=4, row=4, player=1. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(86): \n# Test 4: Victoria diagonal descendente File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 86
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=6, row=2, player=0. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=6, row=2, player=0. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(95): \n# Test 5: Sin victoria (3 en línea) File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 95
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=6, row=2, player=1. Resultado esperado=0, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(95): \n# Test 5: Sin victoria (3 en linea) File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 95
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=6, row=2, player=1. Resultado esperado=0, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(103): \n# Test 6: Victoria en columna 6 File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 103
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=6, row=3, player=1. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=6, row=3, player=1. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(112): \n# Test 7: Victoria en fila 5 File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 112
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=3, row=5, player=0. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=3, row=5, player=0. Resultado esperado=1, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(121): \n# Test 8: Victoria interrumpida File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 121
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): OK: col=4, row=0, player=1. Resultado esperado=0, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=4, row=0, player=1. Resultado esperado=0, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
 Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
-Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(130): \n# ¡Todas las pruebas pasaron con exito! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 130
-Warning (10175): Verilog HDL warning at tb_Check_win.sv(131): ignoring unsupported system task File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 131
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(131): \n# Test 10: Distincion jugador 0 vs celda vacia File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 131
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(47): col=4, row=0, player=0. Resultado esperado=0, Obtenido=. File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(50): ERROR: Resultado incorrecto! File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 50
+Info (10648): Verilog HDL Display System Task info at tb_Check_win.sv(138): \n# Fin de las pruebas File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 138
+Warning (10175): Verilog HDL warning at tb_Check_win.sv(139): ignoring unsupported system task File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 139
 Info (12128): Elaborating entity "Check_win" for hierarchy "Check_win:dut" File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv Line: 18
 Warning (10036): Verilog HDL or VHDL warning at Check_win.sv(9): object "player" assigned a value but never read File: C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv Line: 9
 Info (144001): Generated suppressed messages file C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Sun Apr 27 13:28:08 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Sun Apr 27 14:31:03 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +--------------------------------------------+

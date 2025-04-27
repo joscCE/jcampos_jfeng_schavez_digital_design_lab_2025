@@ -12,39 +12,39 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:40:06 on Apr 27,2025
+# Start time: 14:31:11 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv 
 # -- Compiling module Check_win
 # 
 # Top level modules:
 # 	Check_win
-# End time: 13:40:06 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 14:31:11 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:40:06 on Apr 27,2025
+# Start time: 14:31:11 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv 
 # -- Compiling module tb_Check_win
 # 
 # Top level modules:
 # 	tb_Check_win
-# End time: 13:40:06 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 14:31:12 on Apr 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:40:07 on Apr 27,2025
+# Start time: 14:31:12 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv 
 # -- Compiling module tb_Check_win
 # 
 # Top level modules:
 # 	tb_Check_win
-# End time: 13:40:07 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 14:31:12 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_Check_win
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_Check_win 
-# Start time: 13:40:07 on Apr 27,2025
+# Start time: 14:31:12 on Apr 27,2025
 # Loading sv_std.std
 # Loading work.tb_Check_win
 # Loading work.Check_win
@@ -52,9 +52,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: josee  Hostname: DELLCE  ProcessID: 5784
-#           Attempting to use alternate WLF file "./wlfth4qg7h".
+#           Attempting to use alternate WLF file "./wlfthdne03".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfth4qg7h
+#           Using alternate file: ./wlfthdne03
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -73,7 +73,7 @@
 # Test 4: Victoria diagonal descendente
 # col=6, row=2, player=0. Resultado esperado=1, Obtenido=1
 # 
-# Test 5: Sin victoria (3 en línea)
+# Test 5: Sin victoria (3 en linea)
 # col=6, row=2, player=1. Resultado esperado=0, Obtenido=0
 # 
 # Test 6: Victoria en columna 6
@@ -85,10 +85,13 @@
 # Test 8: Victoria interrumpida
 # col=4, row=0, player=1. Resultado esperado=0, Obtenido=0
 # 
+# Test 10: Distincion jugador 0 vs celda vacia
+# col=4, row=0, player=0. Resultado esperado=0, Obtenido=0
+# 
 # Fin de las pruebas
-# ** Note: $finish    : C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv(131)
-#    Time: 80 ns  Iteration: 0  Instance: /tb_Check_win
+# ** Note: $finish    : C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv(139)
+#    Time: 90 ns  Iteration: 0  Instance: /tb_Check_win
 # 1
-# Break in Module tb_Check_win at C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv line 131
-# End time: 13:42:28 on Apr 27,2025, Elapsed time: 0:02:21
+# Break in Module tb_Check_win at C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv line 139
+# End time: 14:31:39 on Apr 27,2025, Elapsed time: 0:00:27
 # Errors: 0, Warnings: 2

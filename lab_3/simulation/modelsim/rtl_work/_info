@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/simulation/modelsim
 vCheck_win
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1745782806
+!s110 1745785871
 !i10b 1
-!s100 Jb@`4DA3H=cGDb?gnV0ZM1
-IJTZ;E4_NS@8__?GnedUeV1
+!s100 7^=:Kk7RAU6PA7jzJGNXR0
+IAXgLOGWR;^6_XSB[zkzAX2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 Check_win_sv_unit
 S1
 R0
-w1745782070
+w1745785780
 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv
 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv
 L0 1
@@ -26,7 +26,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1745782806.000000
+!s108 1745785871.000000
 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv|
 !i113 1
@@ -36,15 +36,15 @@ Z6 tCvgOpt 0
 n@check_win
 vtb_Check_win
 R1
-!s110 1745782807
+!s110 1745785872
 !i10b 1
-!s100 ;z5FcMG8j17h_<DU5W<C31
-II9Y_gNi`SalhT_eX2LUj21
+!s100 5DG5T:3VoPk3VA7Z`Ehh12
+I^RX<=@Y5K]LzFjgEVLi422
 R2
 !s105 tb_Check_win_sv_unit
 S1
 R0
-w1745782790
+w1745785544
 8C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv
 FC:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv
 L0 3
@@ -52,7 +52,7 @@ R3
 r1
 !s85 0
 31
-!s108 1745782807.000000
+!s108 1745785872.000000
 !s107 C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3|C:/Users/Ayudapls/Documents/GitHub/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Check_win.sv|
 !i113 1

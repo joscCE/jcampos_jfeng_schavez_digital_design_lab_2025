@@ -20,12 +20,13 @@ module Check_win(
 
     // Función para verificar si una celda coincide con el jugador
     function logic cell_matches(input logic [2:0] c, input logic [2:0] f);
-        if (c > 6 || f > 5) return 0; // Si está fuera de la tabla, retorna 0
-        return (reg_game_M[c*2 + f*14] == 1'b1) && (reg_game_M[c*2 + f*14 + 1] == player);
-    endfunction
+    if (c > 6 || f > 5) return 0; // Fuera de límites
+    // Celda debe estar ocupada Y ser del jugador actual
+		return (reg_game_M[c*2 + f*14] && (reg_game_M[c*2 + f*14 + 1] == player));
+	endfunction
 
     always_comb begin
-        // Inicializamos los contadores a 1 (porque ya contamos la celda actual)
+        // Contador
         count_horiz = 1;
         count_vert = 1;
         count_diag1 = 1;
