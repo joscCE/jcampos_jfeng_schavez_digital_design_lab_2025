@@ -1,5 +1,5 @@
 Analysis & Elaboration report for connect_four
-Sun Apr 27 17:37:43 2025
+Sun Apr 27 23:37:20 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,66 +19,70 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Comparator:Byte_Comparator_2
  12. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Comparator:Byte_Comparator_3
  13. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Comparator:Bit_Comparator
- 14. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Adder:Sum_X
- 15. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Adder:Sum_Y
- 16. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Register:Reg_X_Pos
- 17. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Register:Reg_Y_Pos
- 18. Parameter Settings for User Entity Instance: debounce:deboun_play_R
- 19. Parameter Settings for User Entity Instance: debounce:deboun_play_P
- 20. Parameter Settings for User Entity Instance: debounce:deboun_start
- 21. Parameter Settings for User Entity Instance: Mux:Mux_Player
- 22. Parameter Settings for User Entity Instance: Counter:Count_Turn
- 23. Parameter Settings for User Entity Instance: Counter:Count_Column
- 24. Parameter Settings for User Entity Instance: Comparator:Comp_Column_Right
- 25. Parameter Settings for User Entity Instance: Comparator:Comp_Column_Left
- 26. Parameter Settings for User Entity Instance: Register:Reg_game_M
- 27. Parameter Settings for User Entity Instance: Counter:Count_turn_time
- 28. Parameter Settings for User Entity Instance: Comparator:Comp_count_turn_time
- 29. Parameter Settings for User Entity Instance: Counter:Count_Random
- 30. Parameter Settings for User Entity Instance: Comparator:Compa_Random
- 31. Parameter Settings for User Entity Instance: Register:Reg_Play
- 32. Parameter Settings for User Entity Instance: Register:Reg_Select_Move
- 33. Parameter Settings for User Entity Instance: Mux:Mux_Play
- 34. Parameter Settings for User Entity Instance: Register:Reg_play_made
- 35. Parameter Settings for User Entity Instance: Mux_31:Mux_display
- 36. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst
- 37. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_y
- 38. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_x
- 39. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_x
- 40. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_y
- 41. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_x
- 42. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_y
- 43. Analysis & Elaboration Settings
- 44. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_y"
- 45. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_x"
- 46. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_y"
- 47. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_x"
- 48. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_x"
- 49. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_y"
- 50. Port Connectivity Checks: "FSM:fsm_inst"
- 51. Port Connectivity Checks: "Write_play:WP_inst"
- 52. Port Connectivity Checks: "Mux:Mux_Play"
- 53. Port Connectivity Checks: "Register:Reg_Play"
- 54. Port Connectivity Checks: "Comparator:Compa_Random"
- 55. Port Connectivity Checks: "Counter:Count_Random"
- 56. Port Connectivity Checks: "Comparator:Comp_count_turn_time"
- 57. Port Connectivity Checks: "Counter:Count_turn_time"
- 58. Port Connectivity Checks: "Comparator:Comp_Column_Left"
- 59. Port Connectivity Checks: "Comparator:Comp_Column_Right"
- 60. Port Connectivity Checks: "Counter:Count_Column"
- 61. Port Connectivity Checks: "Counter:Count_Turn"
- 62. Port Connectivity Checks: "Mouse_Controller:dut|Adder:Sum_Y"
- 63. Port Connectivity Checks: "Mouse_Controller:dut|Adder:Sum_X"
- 64. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Bit_Comparator"
- 65. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_3"
- 66. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_2"
- 67. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_1"
- 68. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_0"
- 69. Port Connectivity Checks: "Mouse_Controller:dut|Counter:Bit_Counter"
- 70. Port Connectivity Checks: "Mouse_Controller:dut|Counter:Byte_Counter"
- 71. Port Connectivity Checks: "Mouse_Controller:dut"
- 72. Analysis & Elaboration Messages
- 73. Analysis & Elaboration Suppressed Messages
+ 14. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Comparator:Lim_X
+ 15. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Comparator:Lim_Y
+ 16. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Adder:Sum_X
+ 17. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Adder:Sum_Y
+ 18. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Register:Reg_X_Pos
+ 19. Parameter Settings for User Entity Instance: Mouse_Controller:dut|Register:Reg_Y_Pos
+ 20. Parameter Settings for User Entity Instance: debounce:deboun_play_R
+ 21. Parameter Settings for User Entity Instance: debounce:deboun_play_P
+ 22. Parameter Settings for User Entity Instance: debounce:deboun_start
+ 23. Parameter Settings for User Entity Instance: Mux:Mux_Player
+ 24. Parameter Settings for User Entity Instance: Counter:Count_Turn
+ 25. Parameter Settings for User Entity Instance: Counter:Count_Column
+ 26. Parameter Settings for User Entity Instance: Comparator:Comp_Column_Right
+ 27. Parameter Settings for User Entity Instance: Comparator:Comp_Column_Left
+ 28. Parameter Settings for User Entity Instance: Register:Reg_game_M
+ 29. Parameter Settings for User Entity Instance: Counter:Count_turn_time
+ 30. Parameter Settings for User Entity Instance: Comparator:Comp_count_turn_time
+ 31. Parameter Settings for User Entity Instance: Counter:Count_Random
+ 32. Parameter Settings for User Entity Instance: Comparator:Compa_Random
+ 33. Parameter Settings for User Entity Instance: Register:Reg_Play
+ 34. Parameter Settings for User Entity Instance: Register:Reg_Select_Move
+ 35. Parameter Settings for User Entity Instance: Mux:Mux_Play
+ 36. Parameter Settings for User Entity Instance: Register:Reg_play_made
+ 37. Parameter Settings for User Entity Instance: Mux_31:Mux_display
+ 38. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst
+ 39. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_y
+ 40. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Counter:count_x
+ 41. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_x
+ 42. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Register:reg_y
+ 43. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_x
+ 44. Parameter Settings for User Entity Instance: Vga_Controller:vga_inst|Comparator:cmp_y
+ 45. Analysis & Elaboration Settings
+ 46. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_y"
+ 47. Port Connectivity Checks: "Vga_Controller:vga_inst|Comparator:cmp_x"
+ 48. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_y"
+ 49. Port Connectivity Checks: "Vga_Controller:vga_inst|Register:reg_x"
+ 50. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_x"
+ 51. Port Connectivity Checks: "Vga_Controller:vga_inst|Counter:count_y"
+ 52. Port Connectivity Checks: "FSM:fsm_inst"
+ 53. Port Connectivity Checks: "Write_play:WP_inst"
+ 54. Port Connectivity Checks: "Mux:Mux_Play"
+ 55. Port Connectivity Checks: "Register:Reg_Play"
+ 56. Port Connectivity Checks: "Comparator:Compa_Random"
+ 57. Port Connectivity Checks: "Counter:Count_Random"
+ 58. Port Connectivity Checks: "Comparator:Comp_count_turn_time"
+ 59. Port Connectivity Checks: "Counter:Count_turn_time"
+ 60. Port Connectivity Checks: "Comparator:Comp_Column_Left"
+ 61. Port Connectivity Checks: "Comparator:Comp_Column_Right"
+ 62. Port Connectivity Checks: "Counter:Count_Column"
+ 63. Port Connectivity Checks: "Counter:Count_Turn"
+ 64. Port Connectivity Checks: "Mouse_Controller:dut|Adder:Sum_Y"
+ 65. Port Connectivity Checks: "Mouse_Controller:dut|Adder:Sum_X"
+ 66. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Lim_Y"
+ 67. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Lim_X"
+ 68. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Bit_Comparator"
+ 69. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_3"
+ 70. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_2"
+ 71. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_1"
+ 72. Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Byte_Comparator_0"
+ 73. Port Connectivity Checks: "Mouse_Controller:dut|Counter:Bit_Counter"
+ 74. Port Connectivity Checks: "Mouse_Controller:dut|Counter:Byte_Counter"
+ 75. Port Connectivity Checks: "Mouse_Controller:dut"
+ 76. Analysis & Elaboration Messages
+ 77. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -104,7 +108,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Apr 27 17:37:43 2025       ;
+; Analysis & Elaboration Status ; Successful - Sun Apr 27 23:37:20 2025       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; connect_four                                ;
 ; Top-level Entity Name         ; connect_four                                ;
@@ -232,6 +236,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------+
 ; N              ; 4     ; Signed Integer                                                     ;
 +----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mouse_Controller:dut|Comparator:Lim_X ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mouse_Controller:dut|Comparator:Lim_Y ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 9     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -827,6 +851,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+--------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Lim_Y"                                                                                                                                               ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                           ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A       ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (9 bits) it drives.  The 7 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B[8..5] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                      ;
+; B[4..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                      ;
+; equ     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                               ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Lim_X"                                                                                                                                                ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; A       ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (10 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; B[6..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; B[9]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; B[8]    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; B[7]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; equ     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Mouse_Controller:dut|Comparator:Bit_Comparator" ;
 +---------+-------+----------+-----------------------------------------------+
@@ -898,11 +948,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port               ; Type   ; Severity ; Details                                                                                                  ;
 +--------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; PS2_CLK            ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; PS2_DAT            ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; Mouse_CoordsX      ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; Mouse_CoordsY      ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; rst                ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Mouse_CoordsX      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; Mouse_CoordsY      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; debug_state        ; Output ; Info     ; Explicitly unconnected                                                                                   ;
 ; debug_bit_counter  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; debug_byte_counter ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
@@ -918,7 +965,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 27 17:37:23 2025
+    Info: Processing started: Sun Apr 27 23:37:07 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -982,54 +1029,57 @@ Info (12021): Found 1 design units, including 1 entities, in source file shift_r
 Info (12021): Found 1 design units, including 1 entities, in source file mouse_controller.sv
     Info (12023): Found entity 1: Mouse_Controller File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_mouse_controller.sv
-    Info (12023): Found entity 1: tb_Mouse_Controller File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at connect_four.sv(176): created implicit net for "rst_column" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 176
-Warning (10236): Verilog HDL Implicit Net warning at connect_four.sv(342): created implicit net for "state_debug" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 342
+    Info (12023): Found entity 1: tb_Mouse_Controller File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at connect_four.sv(180): created implicit net for "rst_column" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 180
+Warning (10236): Verilog HDL Implicit Net warning at connect_four.sv(346): created implicit net for "state_debug" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 346
+Warning (10236): Verilog HDL Implicit Net warning at Mouse_Controller.sv(134): created implicit net for "eq_Comp_Byte_3" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 134
 Info (12127): Elaborating entity "connect_four" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at connect_four.sv(130): truncated value with size 5 to match size of target (4) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 130
-Info (12128): Elaborating entity "Mouse_Controller" for hierarchy "Mouse_Controller:dut" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 68
-Info (12128): Elaborating entity "Shift_Reg" for hierarchy "Mouse_Controller:dut|Shift_Reg:Reg_shift_status" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 60
-Info (12128): Elaborating entity "Counter" for hierarchy "Mouse_Controller:dut|Counter:Byte_Counter" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 92
-Info (12128): Elaborating entity "Counter" for hierarchy "Mouse_Controller:dut|Counter:Bit_Counter" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 102
-Info (12128): Elaborating entity "Comparator" for hierarchy "Mouse_Controller:dut|Comparator:Byte_Comparator_0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 112
-Info (12128): Elaborating entity "Comparator" for hierarchy "Mouse_Controller:dut|Comparator:Bit_Comparator" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 141
-Info (12128): Elaborating entity "Adder" for hierarchy "Mouse_Controller:dut|Adder:Sum_X" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 153
-Info (12128): Elaborating entity "Register" for hierarchy "Mouse_Controller:dut|Register:Reg_X_Pos" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 175
-Info (12128): Elaborating entity "FSM_Mouse" for hierarchy "Mouse_Controller:dut|FSM_Mouse:FSM_M" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 216
-Info (12128): Elaborating entity "debounce" for hierarchy "debounce:deboun_play_R" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at connect_four.sv(134): truncated value with size 5 to match size of target (4) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 134
+Info (12128): Elaborating entity "Mouse_Controller" for hierarchy "Mouse_Controller:dut" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 72
+Info (12128): Elaborating entity "Shift_Reg" for hierarchy "Mouse_Controller:dut|Shift_Reg:Reg_shift_status" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 61
+Info (12128): Elaborating entity "Counter" for hierarchy "Mouse_Controller:dut|Counter:Byte_Counter" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 93
+Info (12128): Elaborating entity "Counter" for hierarchy "Mouse_Controller:dut|Counter:Bit_Counter" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 103
+Info (12128): Elaborating entity "Comparator" for hierarchy "Mouse_Controller:dut|Comparator:Byte_Comparator_0" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 113
+Info (12128): Elaborating entity "Comparator" for hierarchy "Mouse_Controller:dut|Comparator:Bit_Comparator" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 145
+Info (12128): Elaborating entity "Comparator" for hierarchy "Mouse_Controller:dut|Comparator:Lim_X" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 154
+Info (12128): Elaborating entity "Comparator" for hierarchy "Mouse_Controller:dut|Comparator:Lim_Y" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 163
+Info (12128): Elaborating entity "Adder" for hierarchy "Mouse_Controller:dut|Adder:Sum_X" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 176
+Info (12128): Elaborating entity "Register" for hierarchy "Mouse_Controller:dut|Register:Reg_X_Pos" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 198
+Info (12128): Elaborating entity "FSM_Mouse" for hierarchy "Mouse_Controller:dut|FSM_Mouse:FSM_M" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv Line: 243
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:deboun_play_R" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 82
 Warning (10230): Verilog HDL assignment warning at debounce.sv(28): truncated value with size 32 to match size of target (20) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/debounce.sv Line: 28
 Info (10264): Verilog HDL Case Statement information at debounce.sv(24): all case item expressions in this case statement are onehot File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/debounce.sv Line: 24
-Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:CLK25" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 137
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:Mux_Player" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 156
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Count_Turn" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 168
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Count_Column" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 182
-Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:Comp_Column_Right" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 190
-Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_game_M" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 209
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Count_turn_time" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 220
-Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:Comp_count_turn_time" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 227
-Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_Play" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 260
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:CLK25" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 141
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:Mux_Player" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 160
+Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Count_Turn" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 172
+Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Count_Column" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 186
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:Comp_Column_Right" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 194
+Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_game_M" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 213
+Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Count_turn_time" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 224
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:Comp_count_turn_time" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 231
+Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_Play" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 264
 Warning (10230): Verilog HDL assignment warning at Register.sv(12): truncated value with size 10 to match size of target (4) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv Line: 12
-Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_Select_Move" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 269
+Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_Select_Move" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 273
 Warning (10230): Verilog HDL assignment warning at Register.sv(12): truncated value with size 10 to match size of target (1) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv Line: 12
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:Mux_Play" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 278
-Info (12128): Elaborating entity "Write_play" for hierarchy "Write_play:WP_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 288
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:Mux_Play" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 282
+Info (12128): Elaborating entity "Write_play" for hierarchy "Write_play:WP_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 292
 Warning (10230): Verilog HDL assignment warning at Write_Play.sv(17): truncated value with size 32 to match size of target (3) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv Line: 17
 Warning (10027): Verilog HDL or VHDL warning at the Write_Play.sv(23): index expression is not wide enough to address all of the elements in the array File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv Line: 23
-Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_play_made" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 297
+Info (12128): Elaborating entity "Register" for hierarchy "Register:Reg_play_made" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 301
 Warning (10230): Verilog HDL assignment warning at Register.sv(12): truncated value with size 10 to match size of target (7) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv Line: 12
-Info (12128): Elaborating entity "Check_win" for hierarchy "Check_win:CW_Inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 306
+Info (12128): Elaborating entity "Check_win" for hierarchy "Check_win:CW_Inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 310
 Warning (10036): Verilog HDL or VHDL warning at Check_win.sv(9): object "player" assigned a value but never read File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv Line: 9
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 344
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 348
 Info (10264): Verilog HDL Case Statement information at FSM.sv(89): all case item expressions in this case statement are onehot File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv Line: 89
 Warning (10034): Output port "rst_turn" at FSM.sv(6) has no driver File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv Line: 6
-Info (12128): Elaborating entity "Mux_31" for hierarchy "Mux_31:Mux_display" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 363
-Info (12128): Elaborating entity "display_menu" for hierarchy "display_menu:Display_M" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 380
+Info (12128): Elaborating entity "Mux_31" for hierarchy "Mux_31:Mux_display" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 367
+Info (12128): Elaborating entity "display_menu" for hierarchy "display_menu:Display_M" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 384
 Warning (10230): Verilog HDL assignment warning at display_menu.sv(24): truncated value with size 32 to match size of target (29) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_menu.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at display_menu.sv(35): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_menu.sv Line: 35
 Warning (10230): Verilog HDL assignment warning at display_menu.sv(36): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_menu.sv Line: 36
 Warning (10230): Verilog HDL assignment warning at display_menu.sv(41): truncated value with size 32 to match size of target (16) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_menu.sv Line: 41
 Info (12128): Elaborating entity "Start_B_ROM" for hierarchy "display_menu:Display_M|Start_B_ROM:rom" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_menu.sv Line: 50
-Info (12128): Elaborating entity "Game_Display" for hierarchy "Game_Display:GD" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 392
+Info (12128): Elaborating entity "Game_Display" for hierarchy "Game_Display:GD" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 396
 Warning (10230): Verilog HDL assignment warning at Game_Display.sv(40): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 40
 Warning (10230): Verilog HDL assignment warning at Game_Display.sv(41): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 41
 Warning (10230): Verilog HDL assignment warning at Game_Display.sv(66): truncated value with size 32 to match size of target (10) File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv Line: 66
@@ -1044,69 +1094,69 @@ Info (12128): Elaborating entity "Piece_ROM" for hierarchy "Game_Display:GD|Piec
 Warning (10030): Net "memory.data_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
 Warning (10030): Net "memory.waddr_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
 Warning (10030): Net "memory.we_a" at Piece_ROM.sv(6) has no driver or initial value, using a default initial value '0' File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv Line: 6
-Info (12128): Elaborating entity "Vga_Controller" for hierarchy "Vga_Controller:vga_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 405
+Info (12128): Elaborating entity "Vga_Controller" for hierarchy "Vga_Controller:vga_inst" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 409
 Info (12128): Elaborating entity "Counter" for hierarchy "Vga_Controller:vga_inst|Counter:count_y" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 26
 Info (12128): Elaborating entity "Register" for hierarchy "Vga_Controller:vga_inst|Register:reg_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 30
 Info (12128): Elaborating entity "Comparator" for hierarchy "Vga_Controller:vga_inst|Comparator:cmp_x" File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv Line: 33
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 101
-    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 103
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Warning (12110): Net "Q_reg_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 105
+    Warning (12110): Net "c_Mux_Play[4]" is missing source, defaulting to GND File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv Line: 107
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 85 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 86 warnings
     Info: Peak virtual memory: 4958 megabytes
-    Info: Processing ended: Sun Apr 27 17:37:43 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Processing ended: Sun Apr 27 23:37:20 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +--------------------------------------------+

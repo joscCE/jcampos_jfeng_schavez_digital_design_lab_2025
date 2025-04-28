@@ -11,7 +11,7 @@ always_ff @(negedge clk or posedge rst) begin
     if (rst)
         Q <= '0;
     else if (en && shf)
-        Q <= {Q[N-2:0], D}; // <<<< shift a la derecha, insertando D en MSB
+        Q <= {D, Q[N-1:1]};
 end
 
 endmodule

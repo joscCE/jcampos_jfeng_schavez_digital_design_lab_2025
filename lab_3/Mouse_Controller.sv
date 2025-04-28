@@ -4,7 +4,7 @@ module Mouse_Controller(
 	 input rst,
     output logic [15:0] Mouse_CoordsX,
 	 output logic [15:0] Mouse_CoordsY,
-	 output logic [2:0] debug_state,
+	 output logic [1:0] debug_state,
 	 
 	 output logic [3:0] debug_bit_counter,
 	 output logic [1:0] debug_byte_counter,
@@ -40,10 +40,11 @@ module Mouse_Controller(
     logic [7:0] Q_Reg_Status, Q_Reg_DY,Q_Reg_DX;
     logic [3:0] Q_Counter_Bit;
     logic [1:0] Q_Counter_Byte;
-    logic eq_Comp_Byte_0,eq_Comp_Byte_1,eq_Comp_Byte_2,eq_Comp_Byte_3, eq_Comp_Bite;
+    logic eq_Comp_Byte_0,eq_Comp_Byte_1,eq_Comp_Byte_2, eq_Comp_Bite, eq_Comp_Lim_x, eq_Comp_Lim_Y;
 	 logic [15:0] Q_Reg_X_pos, Q_Reg_Y_pos;
 	logic [15:0] D_Red_X_Pos, D_Red_Y_Pos;
 	logic en_Reg_X_pos, en_Reg_Y_pos;
+	
 	 
 	 
 	 //shif registers
@@ -126,12 +127,15 @@ Comparator #(.N(2)) Byte_Comparator_2(
 
 );
 
-Comparator #(.N(2))Byte_Comparator_3(    
+
+Comparator #(.N(2)) Byte_Comparator_3(    
 	.A(Q_Counter_Byte), 
     .B(2'b11),
 	.equ(eq_Comp_Byte_3)
 
 );
+
+
 
 Comparator #(.N(4)) Bit_Comparator(    
 	.A(Q_Counter_Bit), 
@@ -139,6 +143,9 @@ Comparator #(.N(4)) Bit_Comparator(
 	.equ(eq_Comp_Bite)
 
 );
+
+
+
 
 //Adders
 
@@ -157,7 +164,7 @@ Adder #(.N(16)) Sum_Y (
     .A(Q_Reg_Y_pos),
     .en(en_Sumandor),
     .Mode(mode_sum_y),
-    .B({8'h00,Q_Reg_DX}),
+    .B({8'h00,Q_Reg_DY}),
     .C(D_Red_Y_Pos)
 
 );
@@ -183,16 +190,20 @@ Register #(.N(16))Reg_Y_Pos(
 
 );
 
+
+
+
 //FSM
 
 FSM_Mouse FSM_M (
+	 .Data(PS2_DAT),
     .BO(eq_Comp_Byte_0),
     .B1(eq_Comp_Byte_1),
     .B2(eq_Comp_Byte_2),
     .Byte_Out(eq_Comp_Byte_3),
     .Bit_Out(eq_Comp_Bite),
-    .sig_x(Q_Reg_Status[3]),
-    .sig_y(Q_Reg_Status[2]),
+    .sig_x(Q_Reg_Status[4]),
+    .sig_y(~Q_Reg_Status[5]),
     .clk(PS2_CLK),
     .rst(rst),  
     .rst_Bit_Counter(rst_Bit_Counter),

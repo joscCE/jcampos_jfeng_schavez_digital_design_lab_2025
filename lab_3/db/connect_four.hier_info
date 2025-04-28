@@ -1,6 +1,6 @@
 |connect_four
 clk => clk.IN2
-rstin => rst.IN10
+rstin => rst.IN11
 player0in[0] => player0[0].IN1
 player0in[1] => player0[1].IN1
 player0in[2] => player0[2].IN1
@@ -10,6 +10,8 @@ player1in[2] => player1[2].IN1
 p0in => p0.IN1
 p1in => p1.IN1
 startin => _.IN1
+PS2_CLK => PS2_CLK.IN1
+PS2_DAT => PS2_DAT.IN1
 Hs << Vga_Controller:vga_inst.Hs
 Vs << Vga_Controller:vga_inst.Vs
 VGA_Blank << Vga_Controller:vga_inst.VGA_Blank
@@ -47,7 +49,7 @@ debug_colum[3] << c_Mux_Play[3].DB_MAX_OUTPUT_PORT_TYPE
 
 |connect_four|Mouse_Controller:dut
 PS2_CLK => PS2_CLK.IN8
-PS2_DAT => PS2_DAT.IN3
+PS2_DAT => PS2_DAT.IN4
 rst => rst.IN6
 Mouse_CoordsX[0] <= Q_Reg_X_pos[0].DB_MAX_OUTPUT_PORT_TYPE
 Mouse_CoordsX[1] <= Q_Reg_X_pos[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -83,7 +85,6 @@ Mouse_CoordsY[14] <= Q_Reg_Y_pos[14].DB_MAX_OUTPUT_PORT_TYPE
 Mouse_CoordsY[15] <= Q_Reg_Y_pos[15].DB_MAX_OUTPUT_PORT_TYPE
 debug_state[0] <= FSM_Mouse:FSM_M.debug_state
 debug_state[1] <= FSM_Mouse:FSM_M.debug_state
-debug_state[2] <= FSM_Mouse:FSM_M.debug_state
 debug_bit_counter[0] <= Q_Counter_Bit[0].DB_MAX_OUTPUT_PORT_TYPE
 debug_bit_counter[1] <= Q_Counter_Bit[1].DB_MAX_OUTPUT_PORT_TYPE
 debug_bit_counter[2] <= Q_Counter_Bit[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -92,9 +93,9 @@ debug_byte_counter[0] <= Q_Counter_Byte[0].DB_MAX_OUTPUT_PORT_TYPE
 debug_byte_counter[1] <= Q_Counter_Byte[1].DB_MAX_OUTPUT_PORT_TYPE
 debug_status[0] <= Shift_Reg:Reg_shift_status.Q
 debug_status[1] <= Shift_Reg:Reg_shift_status.Q
-debug_status[2] <= Q_Reg_Status[2].DB_MAX_OUTPUT_PORT_TYPE
-debug_status[3] <= Q_Reg_Status[3].DB_MAX_OUTPUT_PORT_TYPE
-debug_status[4] <= Shift_Reg:Reg_shift_status.Q
+debug_status[2] <= Shift_Reg:Reg_shift_status.Q
+debug_status[3] <= Shift_Reg:Reg_shift_status.Q
+debug_status[4] <= Q_Reg_Status[4].DB_MAX_OUTPUT_PORT_TYPE
 debug_status[5] <= Shift_Reg:Reg_shift_status.Q
 debug_status[6] <= Shift_Reg:Reg_shift_status.Q
 debug_status[7] <= Shift_Reg:Reg_shift_status.Q
@@ -106,14 +107,14 @@ debug_dx[4] <= Q_Reg_DX[4].DB_MAX_OUTPUT_PORT_TYPE
 debug_dx[5] <= Q_Reg_DX[5].DB_MAX_OUTPUT_PORT_TYPE
 debug_dx[6] <= Q_Reg_DX[6].DB_MAX_OUTPUT_PORT_TYPE
 debug_dx[7] <= Q_Reg_DX[7].DB_MAX_OUTPUT_PORT_TYPE
-debug_dy[0] <= Shift_Reg:Reg_shift_DY.Q
-debug_dy[1] <= Shift_Reg:Reg_shift_DY.Q
-debug_dy[2] <= Shift_Reg:Reg_shift_DY.Q
-debug_dy[3] <= Shift_Reg:Reg_shift_DY.Q
-debug_dy[4] <= Shift_Reg:Reg_shift_DY.Q
-debug_dy[5] <= Shift_Reg:Reg_shift_DY.Q
-debug_dy[6] <= Shift_Reg:Reg_shift_DY.Q
-debug_dy[7] <= Shift_Reg:Reg_shift_DY.Q
+debug_dy[0] <= Q_Reg_DY[0].DB_MAX_OUTPUT_PORT_TYPE
+debug_dy[1] <= Q_Reg_DY[1].DB_MAX_OUTPUT_PORT_TYPE
+debug_dy[2] <= Q_Reg_DY[2].DB_MAX_OUTPUT_PORT_TYPE
+debug_dy[3] <= Q_Reg_DY[3].DB_MAX_OUTPUT_PORT_TYPE
+debug_dy[4] <= Q_Reg_DY[4].DB_MAX_OUTPUT_PORT_TYPE
+debug_dy[5] <= Q_Reg_DY[5].DB_MAX_OUTPUT_PORT_TYPE
+debug_dy[6] <= Q_Reg_DY[6].DB_MAX_OUTPUT_PORT_TYPE
+debug_dy[7] <= Q_Reg_DY[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |connect_four|Mouse_Controller:dut|Shift_Reg:Reg_shift_status
@@ -283,6 +284,52 @@ B[0] => Equal0.IN7
 B[1] => Equal0.IN6
 B[2] => Equal0.IN5
 B[3] => Equal0.IN4
+equ <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|connect_four|Mouse_Controller:dut|Comparator:Lim_X
+A[0] => Equal0.IN9
+A[1] => Equal0.IN8
+A[2] => Equal0.IN7
+A[3] => Equal0.IN6
+A[4] => Equal0.IN5
+A[5] => Equal0.IN4
+A[6] => Equal0.IN3
+A[7] => Equal0.IN2
+A[8] => Equal0.IN1
+A[9] => Equal0.IN0
+B[0] => Equal0.IN19
+B[1] => Equal0.IN18
+B[2] => Equal0.IN17
+B[3] => Equal0.IN16
+B[4] => Equal0.IN15
+B[5] => Equal0.IN14
+B[6] => Equal0.IN13
+B[7] => Equal0.IN12
+B[8] => Equal0.IN11
+B[9] => Equal0.IN10
+equ <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|connect_four|Mouse_Controller:dut|Comparator:Lim_Y
+A[0] => Equal0.IN8
+A[1] => Equal0.IN7
+A[2] => Equal0.IN6
+A[3] => Equal0.IN5
+A[4] => Equal0.IN4
+A[5] => Equal0.IN3
+A[6] => Equal0.IN2
+A[7] => Equal0.IN1
+A[8] => Equal0.IN0
+B[0] => Equal0.IN17
+B[1] => Equal0.IN16
+B[2] => Equal0.IN15
+B[3] => Equal0.IN14
+B[4] => Equal0.IN13
+B[5] => Equal0.IN12
+B[6] => Equal0.IN11
+B[7] => Equal0.IN10
+B[8] => Equal0.IN9
 equ <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -683,21 +730,20 @@ Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |connect_four|Mouse_Controller:dut|FSM_Mouse:FSM_M
-BO => next_state.OUTPUTSELECT
-BO => next_state.OUTPUTSELECT
-BO => next_state.OUTPUTSELECT
-BO => Selector1.IN3
-B1 => next_state.OUTPUTSELECT
-B1 => next_state.OUTPUTSELECT
-B1 => next_state.DATAA
-B2 => next_state.DATAA
-B2 => next_state.DATAA
-Byte_Out => next_state.101.DATAB
-Byte_Out => Selector0.IN3
-Bit_Out => Selector3.IN1
-Bit_Out => Selector1.IN1
-Bit_Out => Selector2.IN2
-Bit_Out => Selector4.IN2
+Data => Selector0.IN2
+Data => Selector1.IN1
+BO => en_Reg_Status.IN0
+B1 => en_Reg_DX.IN0
+B2 => en_Reg_DY.IN0
+Byte_Out => rst_Byte_Counter.IN0
+Byte_Out => en_Reg_X_pos.DATAIN
+Byte_Out => en_Reg_Y_pos.DATAIN
+Byte_Out => en_Sumandor.DATAIN
+Bit_Out => next_state.10.DATAB
+Bit_Out => en_Reg_Status.IN1
+Bit_Out => en_Reg_DX.IN1
+Bit_Out => en_Reg_DY.IN1
+Bit_Out => Selector1.IN2
 sig_x => mode_sum_X.DATAIN
 sig_y => mode_sum_y.DATAIN
 clk => state~1.DATAIN
@@ -708,18 +754,17 @@ en_Bit_Counter <= en_Bit_Counter.DB_MAX_OUTPUT_PORT_TYPE
 en_Byte_Counter <= en_Byte_Counter.DB_MAX_OUTPUT_PORT_TYPE
 en_Reg_Status <= en_Reg_Status.DB_MAX_OUTPUT_PORT_TYPE
 en_Reg_DX <= en_Reg_DX.DB_MAX_OUTPUT_PORT_TYPE
-en_Reg_X_pos <= en_Reg_X_pos.DB_MAX_OUTPUT_PORT_TYPE
-en_Reg_Y_pos <= en_Reg_Y_pos.DB_MAX_OUTPUT_PORT_TYPE
+en_Reg_X_pos <= Byte_Out.DB_MAX_OUTPUT_PORT_TYPE
+en_Reg_Y_pos <= Byte_Out.DB_MAX_OUTPUT_PORT_TYPE
 en_Reg_DY <= en_Reg_DY.DB_MAX_OUTPUT_PORT_TYPE
-shft_Status <= shft_Status.DB_MAX_OUTPUT_PORT_TYPE
-shft_DX <= shft_DX.DB_MAX_OUTPUT_PORT_TYPE
-shft_DY <= shft_DY.DB_MAX_OUTPUT_PORT_TYPE
-en_Sumandor <= en_Sumandor.DB_MAX_OUTPUT_PORT_TYPE
+shft_Status <= en_Reg_Status.DB_MAX_OUTPUT_PORT_TYPE
+shft_DX <= en_Reg_DX.DB_MAX_OUTPUT_PORT_TYPE
+shft_DY <= en_Reg_DY.DB_MAX_OUTPUT_PORT_TYPE
+en_Sumandor <= Byte_Out.DB_MAX_OUTPUT_PORT_TYPE
 mode_sum_X <= sig_x.DB_MAX_OUTPUT_PORT_TYPE
 mode_sum_y <= sig_y.DB_MAX_OUTPUT_PORT_TYPE
-debug_state[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-debug_state[1] <= debug_state.DB_MAX_OUTPUT_PORT_TYPE
-debug_state[2] <= debug_state.DB_MAX_OUTPUT_PORT_TYPE
+debug_state[0] <= debug_state[0].DB_MAX_OUTPUT_PORT_TYPE
+debug_state[1] <= debug_state[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |connect_four|debounce:deboun_play_R

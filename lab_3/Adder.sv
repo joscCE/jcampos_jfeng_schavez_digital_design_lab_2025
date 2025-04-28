@@ -8,7 +8,7 @@ module Adder #(parameter N = 4) (
 
 always_comb begin
     if (en) begin
-        if (Mode)
+        if (~Mode)
             C = A + B;
         else
             C = A - B;

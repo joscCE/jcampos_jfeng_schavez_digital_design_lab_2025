@@ -12,219 +12,219 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:09 on Apr 27,2025
+# Start time: 23:53:16 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM.sv 
 # -- Compiling module FSM
 # 
 # Top level modules:
 # 	FSM
-# End time: 17:44:09 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:16 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:09 on Apr 27,2025
+# Start time: 23:53:16 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:01
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Vga_Controller.sv 
 # -- Compiling module Vga_Controller
 # 
 # Top level modules:
 # 	Vga_Controller
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/connect_four.sv 
 # -- Compiling module connect_four
 # 
 # Top level modules:
 # 	connect_four
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Register.sv 
 # -- Compiling module Register
 # 
 # Top level modules:
 # 	Register
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv 
 # -- Compiling module Comparator
 # 
 # Top level modules:
 # 	Comparator
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Write_Play.sv 
 # -- Compiling module Write_play
 # 
 # Top level modules:
 # 	Write_play
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Game_Display.sv 
 # -- Compiling module Game_Display
 # 
 # Top level modules:
 # 	Game_Display
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux.sv 
 # -- Compiling module Mux
 # 
 # Top level modules:
 # 	Mux
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Check_win.sv 
 # -- Compiling module Check_win
 # 
 # Top level modules:
 # 	Check_win
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/clk_div.sv 
 # -- Compiling module clk_div
 # 
 # Top level modules:
 # 	clk_div
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/debounce.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/debounce.sv 
 # -- Compiling module debounce
 # 
 # Top level modules:
 # 	debounce
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:17 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux_31.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:10 on Apr 27,2025
+# Start time: 23:53:17 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mux_31.sv 
 # -- Compiling module Mux_31
 # 
 # Top level modules:
 # 	Mux_31
-# End time: 17:44:10 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_menu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_menu.sv 
 # -- Compiling module display_menu
 # 
 # Top level modules:
 # 	display_menu
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Start_B_ROM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Start_B_ROM.sv 
 # -- Compiling module Start_B_ROM
 # 
 # Top level modules:
 # 	Start_B_ROM
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Adder.sv 
 # -- Compiling module Adder
 # 
 # Top level modules:
 # 	Adder
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM_Mouse.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM_Mouse.sv 
 # -- Compiling module FSM_Mouse
 # 
 # Top level modules:
 # 	FSM_Mouse
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Shift_Reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Shift_Reg.sv 
 # -- Compiling module Shift_Reg
 # 
 # Top level modules:
 # 	Shift_Reg
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv 
 # -- Compiling module Mouse_Controller
 # 
 # Top level modules:
 # 	Mouse_Controller
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv 
 # -- Compiling module Piece_ROM
 # 
 # Top level modules:
 # 	Piece_ROM
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3" C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv 
 # -- Compiling module tb_Mouse_Controller
 # 
 # Top level modules:
 # 	tb_Mouse_Controller
-# End time: 17:44:11 on Apr 27,2025, Elapsed time: 0:00:00
+# End time: 23:53:18 on Apr 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_Mouse_Controller
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_Mouse_Controller 
-# Start time: 17:44:11 on Apr 27,2025
+# Start time: 23:53:18 on Apr 27,2025
 # Loading sv_std.std
 # Loading work.tb_Mouse_Controller
 # Loading work.Mouse_Controller
@@ -234,56 +234,27 @@
 # Loading work.Adder
 # Loading work.Register
 # Loading work.FSM_Mouse
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv(149): [PCDPC] - Port size (10) does not match connection size (16) for port 'A'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_Mouse_Controller/uut/Lim_X File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv
+# ** Warning: (vsim-3015) C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv(158): [PCDPC] - Port size (9) does not match connection size (16) for port 'A'. The port definition is at: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_Mouse_Controller/uut/Lim_Y File: C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Comparator.sv
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: josee  Hostname: DELLCE  ProcessID: 5784
-#           Attempting to use alternate WLF file "./wlft4tkqw3".
+#           Attempting to use alternate WLF file "./wlftc41hen".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft4tkqw3
+#           Using alternate file: ./wlftc41hen
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# At time                    0, Mouse_X: xxxx, Mouse_Y: xxxx, Debug State: 000, Bit Counter: 0000, Byte Counter: xx
-# At time                   10, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 000, Bit Counter: 0000, Byte Counter: 00
-# At time                   30, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0000, Byte Counter: 00
-# At time                   40, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0001, Byte Counter: 00
-# At time                   50, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0010, Byte Counter: 00
-# At time                   60, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0011, Byte Counter: 00
-# At time                   70, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0100, Byte Counter: 00
-# At time                   80, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0101, Byte Counter: 00
-# At time                   90, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0110, Byte Counter: 00
-# At time                  100, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 0111, Byte Counter: 00
-# At time                  110, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 001, Bit Counter: 1000, Byte Counter: 00
-# At time                  120, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 011, Bit Counter: 1001, Byte Counter: 00
-# At time                  130, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 000, Bit Counter: 0000, Byte Counter: 01
-# At time                  140, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0000, Byte Counter: 01
-# At time                  150, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0001, Byte Counter: 01
-# At time                  160, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0010, Byte Counter: 01
-# At time                  170, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0011, Byte Counter: 01
-# At time                  180, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0100, Byte Counter: 01
-# At time                  190, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0101, Byte Counter: 01
-# At time                  200, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0110, Byte Counter: 01
-# At time                  210, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 0111, Byte Counter: 01
-# At time                  220, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 010, Bit Counter: 1000, Byte Counter: 01
-# At time                  230, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 011, Bit Counter: 1001, Byte Counter: 01
-# At time                  240, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 000, Bit Counter: 0000, Byte Counter: 10
-# At time                  250, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0000, Byte Counter: 10
-# At time                  260, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0001, Byte Counter: 10
-# At time                  270, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0010, Byte Counter: 10
-# At time                  280, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0011, Byte Counter: 10
-# At time                  290, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0100, Byte Counter: 10
-# At time                  300, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0101, Byte Counter: 10
-# At time                  310, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0110, Byte Counter: 10
-# At time                  320, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 0111, Byte Counter: 10
-# At time                  330, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 100, Bit Counter: 1000, Byte Counter: 10
-# At time                  340, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 011, Bit Counter: 1001, Byte Counter: 10
-# At time                  350, Mouse_X: 0000, Mouse_Y: 0000, Debug State: 000, Bit Counter: 0000, Byte Counter: 11
-# ** Note: $finish    : C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv(68)
-#    Time: 500 ps  Iteration: 0  Instance: /tb_Mouse_Controller
+# Mouse_CoordsX:    10
+# Mouse_CoordsY: 65516
+# ** Note: $finish    : C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv(92)
+#    Time: 8950 ns  Iteration: 0  Instance: /tb_Mouse_Controller
 # 1
-# Break in Module tb_Mouse_Controller at C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv line 68
-# End time: 17:46:15 on Apr 27,2025, Elapsed time: 0:02:04
-# Errors: 0, Warnings: 2
+# Break in Module tb_Mouse_Controller at C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv line 92
+# End time: 23:55:34 on Apr 27,2025, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 4

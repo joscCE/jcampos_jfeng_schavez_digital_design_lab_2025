@@ -4,12 +4,15 @@ module connect_four (
 	 input [2:0] player0in, player1in, //[P,R,L]
 	 input p0in, p1in,
 	 input startin,
+	 input PS2_CLK,
+	 input PS2_DAT,
 
     output logic Hs, Vs,
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B,
 	 output logic [3:0] debug_colum
+	 
 	 
 
 	 
@@ -25,6 +28,7 @@ module connect_four (
 	logic [6:0] play_made;
 	logic R_player;
 	logic P_player;
+	logic [15:0] Mouse_CoordsX, Mouse_CoordsY;
  
 	 
 	 
@@ -59,11 +63,11 @@ module connect_four (
 	 
 	 
 Mouse_Controller dut (
-    .PS2_CLK(1'b0), 
-    .PS2_DAT(1'b0), 
-    .Mouse_CoordsX(),
-    .Mouse_CoordsY(),
-	 .rst(1'b0),
+    .PS2_CLK(PS2_CLK), 
+    .PS2_DAT(PS2_DAT), 
+    .Mouse_CoordsX(Mouse_CoordsX),
+    .Mouse_CoordsY(Mouse_CoordsY),
+	 .rst(rst),
     .debug_state()
 );
 	 
