@@ -210,7 +210,7 @@ module connect_four (
 	
 	Comparator #(.N(28)) Comp_one_sec(
 		.A(Q_reg_count_time),
-		.B(28'd25_000_000),
+		.B(28'd25_000_000 * (Q_reg_sec_counter + 1)),
 		.equ(one_second)
 	);
 

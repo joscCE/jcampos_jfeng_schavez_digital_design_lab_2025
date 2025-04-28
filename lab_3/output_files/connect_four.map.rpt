@@ -1,5 +1,5 @@
 Analysis & Synthesis report for connect_four
-Sun Apr 27 17:42:04 2025
+Sun Apr 27 18:04:07 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -104,7 +104,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr 27 17:42:04 2025       ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr 27 18:04:07 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; connect_four                                ;
 ; Top-level Entity Name           ; connect_four                                ;
@@ -114,7 +114,7 @@ refer to the applicable agreement for further details.
 ; Total pins                      ; 60                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 3                                           ;
+; Total DSP Blocks                ; 4                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -277,25 +277,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 4379                           ;
+; Estimate of Logic utilization (ALMs needed) ; 4387                           ;
 ;                                             ;                                ;
-; Combinational ALUT usage for logic          ; 5347                           ;
+; Combinational ALUT usage for logic          ; 5357                           ;
 ;     -- 7 input functions                    ; 563                            ;
-;     -- 6 input functions                    ; 2833                           ;
-;     -- 5 input functions                    ; 627                            ;
-;     -- 4 input functions                    ; 490                            ;
-;     -- <=3 input functions                  ; 834                            ;
+;     -- 6 input functions                    ; 2839                           ;
+;     -- 5 input functions                    ; 622                            ;
+;     -- 4 input functions                    ; 497                            ;
+;     -- <=3 input functions                  ; 836                            ;
 ;                                             ;                                ;
 ; Dedicated logic registers                   ; 302                            ;
 ;                                             ;                                ;
 ; I/O pins                                    ; 60                             ;
 ;                                             ;                                ;
-; Total DSP Blocks                            ; 3                              ;
+; Total DSP Blocks                            ; 4                              ;
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; display_menu:Display_M|addr[3] ;
 ; Maximum fan-out                             ; 1641                           ;
-; Total fan-out                               ; 29417                          ;
-; Average fan-out                             ; 5.10                           ;
+; Total fan-out                               ; 29451                          ;
+; Average fan-out                             ; 5.09                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -304,9 +304,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |connect_four                             ; 5347 (8)            ; 302 (0)                   ; 0                 ; 3          ; 60   ; 0            ; |connect_four                                                                                                                         ; connect_four        ; work         ;
+; |connect_four                             ; 5357 (17)           ; 302 (0)                   ; 0                 ; 4          ; 60   ; 0            ; |connect_four                                                                                                                         ; connect_four        ; work         ;
 ;    |Check_win:CW_Inst|                    ; 764 (764)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Check_win:CW_Inst                                                                                                       ; Check_win           ; work         ;
-;    |Comparator:Comp_count_turn_time|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Comparator:Comp_count_turn_time                                                                                         ; Comparator          ; work         ;
+;    |Comparator:Comp_count_turn_time|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Comparator:Comp_count_turn_time                                                                                         ; Comparator          ; work         ;
 ;    |Counter:Count_Column|                 ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Counter:Count_Column                                                                                                    ; Counter             ; work         ;
 ;    |Counter:Count_Random|                 ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Counter:Count_Random                                                                                                    ; Counter             ; work         ;
 ;    |Counter:Count_Turn|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |connect_four|Counter:Count_Turn                                                                                                      ; Counter             ; work         ;
@@ -367,9 +367,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Independent 9x9                 ; 2           ;
 ; Independent 18x18 plus 36       ; 1           ;
-; Total number of DSP blocks      ; 3           ;
+; Independent 27x27               ; 1           ;
+; Total number of DSP blocks      ; 4           ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 3           ;
+; Fixed Point Unsigned Multiplier ; 4           ;
 +---------------------------------+-------------+
 
 
@@ -484,7 +485,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 256   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 193   ;
+; Number of registers using Clock Enable       ; 197   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1064,23 +1065,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------+
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "Comparator:Comp_one_sec" ;
-+-----------+-------+----------+----------------------+
-; Port      ; Type  ; Severity ; Details              ;
-+-----------+-------+----------+----------------------+
-; B[22..18] ; Input ; Info     ; Stuck at VCC         ;
-; B[14..11] ; Input ; Info     ; Stuck at VCC         ;
-; B[27..25] ; Input ; Info     ; Stuck at GND         ;
-; B[10..7]  ; Input ; Info     ; Stuck at GND         ;
-; B[5..0]   ; Input ; Info     ; Stuck at GND         ;
-; B[24]     ; Input ; Info     ; Stuck at VCC         ;
-; B[23]     ; Input ; Info     ; Stuck at GND         ;
-; B[17]     ; Input ; Info     ; Stuck at GND         ;
-; B[16]     ; Input ; Info     ; Stuck at VCC         ;
-; B[15]     ; Input ; Info     ; Stuck at GND         ;
-; B[6]      ; Input ; Info     ; Stuck at VCC         ;
-+-----------+-------+----------+----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:Comp_one_sec"                                                                                                                                                          ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; B    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (28 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------+
@@ -1156,12 +1147,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 302                         ;
-;     CLR               ; 63                          ;
-;     ENA CLR           ; 133                         ;
+;     CLR               ; 59                          ;
+;     ENA CLR           ; 137                         ;
 ;     ENA CLR SCLR      ; 60                          ;
 ;     SCLR              ; 45                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 5352                        ;
+; arriav_lcell_comb     ; 5362                        ;
 ;     arith             ; 463                         ;
 ;         0 data inputs ; 27                          ;
 ;         1 data inputs ; 212                         ;
@@ -1171,25 +1162,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 7                           ;
 ;     extend            ; 563                         ;
 ;         7 data inputs ; 563                         ;
-;     normal            ; 4283                        ;
+;     normal            ; 4293                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 175                         ;
-;         3 data inputs ; 198                         ;
-;         4 data inputs ; 447                         ;
-;         5 data inputs ; 620                         ;
-;         6 data inputs ; 2833                        ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 177                         ;
+;         3 data inputs ; 197                         ;
+;         4 data inputs ; 454                         ;
+;         5 data inputs ; 615                         ;
+;         6 data inputs ; 2839                        ;
 ;     shared            ; 43                          ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 32                          ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 4                           ;
-; arriav_mac            ; 3                           ;
+; arriav_mac            ; 4                           ;
 ; boundary_port         ; 60                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.10                       ;
-; Average LUT depth     ; 10.23                       ;
+; Average LUT depth     ; 10.18                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1208,7 +1199,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 27 17:41:30 2025
+    Info: Processing started: Sun Apr 27 18:03:34 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off connect_four -c connect_four
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -1423,7 +1414,7 @@ Info (12133): Instantiated megafunction "Game_Display:GD|lpm_divide:Div0" with t
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
     Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/db/lpm_divide_hbm.tdf Line: 24
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_Sync_N" is stuck at VCC File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/connect_four.sv Line: 10
     Warning (13410): Pin "seg0[0]" is stuck at VCC File: C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/connect_four.sv Line: 13
@@ -1436,16 +1427,16 @@ Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/connect_four.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5539 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5553 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 49 output pins
-    Info (21061): Implemented 5476 logic cells
-    Info (21062): Implemented 3 DSP elements
+    Info (21061): Implemented 5489 logic cells
+    Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 4975 megabytes
-    Info: Processing ended: Sun Apr 27 17:42:04 2025
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 4984 megabytes
+    Info: Processing ended: Sun Apr 27 18:04:07 2025
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +------------------------------------------+
