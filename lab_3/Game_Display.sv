@@ -2,6 +2,7 @@ module Game_Display(
     input  logic [83:0] game,
     input  logic [2:0]  column,
     input  logic [9:0]  Q_X, Q_Y,
+    input  logic [15:0] Mouse_CoordsX, Mouse_CoordsY, // Nuevos outputs de las coordenadas del mouse
     output logic [7:0]  R, G, B
 );
 
@@ -14,7 +15,7 @@ module Game_Display(
     localparam int BOARD_H = TILE_H * BOARD_ROWS;
     localparam int OFFSET_X = (640 - BOARD_W) / 2;
     localparam int OFFSET_Y = (480 - BOARD_H) / 2;
-
+    
     // Variables internas
     logic [9:0] local_x, local_y;
     logic [6:0] rel_x, rel_y;
@@ -86,9 +87,26 @@ module Game_Display(
         .color(color)
     );
 
+    // Lógica para dibujar el cuadro rojo alrededor del mouse
+    // Limitar las coordenadas del mouse dentro del rango de la pantalla (640x480)
+    wire [15:0] limited_mouse_x = (Mouse_CoordsX >= 0 && Mouse_CoordsX < 640) ? Mouse_CoordsX : (Mouse_CoordsX < 0 ? 16'd0 : 16'd639);
+    wire [15:0] limited_mouse_y = (Mouse_CoordsY >= 0 && Mouse_CoordsY < 480) ? Mouse_CoordsY : (Mouse_CoordsY < 0 ? 16'd0 : 16'd479);
+
+    // Dimensiones del cuadro rojo
+    localparam int BOX_SIZE = 20;
+
+    // Verificar si la coordenada actual está dentro del área del cuadro rojo
+    logic inside_red_box;
+    assign inside_red_box = (Q_X >= limited_mouse_x - BOX_SIZE && Q_X <= limited_mouse_x + BOX_SIZE) &&
+                            (Q_Y >= limited_mouse_y - BOX_SIZE && Q_Y <= limited_mouse_y + BOX_SIZE);
+
     // Color final
     always_comb begin
-        if (inside_indicator) begin
+        if (inside_red_box) begin
+            R = 8'd255;  // Rojo
+            G = 8'd0;
+            B = 8'd0;
+        end else if (inside_indicator) begin
             R = 8'd255;
             G = 8'd255;
             B = 8'd0;

@@ -24,6 +24,10 @@ vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_desi
 vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/FSM_Mouse.sv}
 vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Shift_Reg.sv}
 vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Mouse_Controller.sv}
+vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Reg_Shift_Out.sv}
+vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/display_game_over.sv}
+vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Whomp_Rom.sv}
+vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/Falling_Edge.sv}
 vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv}
 
 vlog -sv -work work +incdir+C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3 {C:/Users/josee/joscCE_JimF04_Sebas36762_digital_design_lab_2025/lab_3/tb_Mouse_Controller.sv}

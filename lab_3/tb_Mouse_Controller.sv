@@ -1,25 +1,29 @@
-`timescale 1ns/1ps
-
 module tb_Mouse_Controller;
 
-  // Entradas
-  reg PS2_CLK;
-  reg PS2_DAT;
-  reg rst;
-  
-  // Salidas
-  wire [15:0] Mouse_CoordsX;
-  wire [15:0] Mouse_CoordsY;
-  wire [1:0] debug_state;
+  reg clk = 0;
+  reg rst = 1;
+
+  wire PS2_DAT;
+  wire PS2_CLK;
+
+  wire [15:0] Mouse_CoordsX, Mouse_CoordsY;
+  wire [2:0] debug_state;
   wire [3:0] debug_bit_counter;
   wire [1:0] debug_byte_counter;
   wire [7:0] debug_status, debug_dx, debug_dy;
 
-  // Instancia del módulo
-  Mouse_Controller uut (
+  // Drivers (bidireccionales simulados)
+  reg ps2_clk_drv = 1;
+  reg ps2_dat_drv = 1;
+
+  assign PS2_CLK = ps2_clk_drv ? 1'bz : 1'b0;
+  assign PS2_DAT = ps2_dat_drv ? 1'bz : 1'b0;
+
+  Mouse_Controller dut (
+    .clk(clk),
+    .rst(rst),
     .PS2_CLK(PS2_CLK),
     .PS2_DAT(PS2_DAT),
-    .rst(rst),
     .Mouse_CoordsX(Mouse_CoordsX),
     .Mouse_CoordsY(Mouse_CoordsY),
     .debug_state(debug_state),
@@ -30,66 +34,56 @@ module tb_Mouse_Controller;
     .debug_dy(debug_dy)
   );
 
-  // Clock de prueba para PS2 (emula el reloj del protocolo PS/2)
-  initial begin
-    PS2_CLK = 1;
-    forever #50 PS2_CLK = ~PS2_CLK; // Periodo de 100ns => 10MHz clock
-  end
+  // Clock 50 MHz
+  always #10 clk = ~clk;
 
-  // Tarea para enviar un byte en formato PS/2
-  task send_ps2_byte(input [7:0] data);
+  // Task alternativa para Verilog puro
+  task simulate_ps2_clk_pulses;
+    input integer count;
     integer i;
     begin
-      // START bit (always 0)
-      PS2_DAT = 0;
-      @(negedge PS2_CLK);
-
-      // 8 data bits (LSB first)
-      for (i = 0; i < 8; i = i + 1) begin
-        PS2_DAT = data[i];
-        @(negedge PS2_CLK);
+      for (i = 0; i < count; i = i + 1) begin
+        #2 ps2_clk_drv = 0;
+        #2 ps2_clk_drv = 1;
+        #20;
       end
-
-      // PARITY bit (odd parity)
-      PS2_DAT = ~(^data); // Odd parity
-      @(negedge PS2_CLK);
-
-      // STOP bit (always 1)
-      PS2_DAT = 1;
-      @(negedge PS2_CLK);
     end
   endtask
 
-  // Prueba principal
+  integer bit_index;
+  reg [10:0] transmitted_bits;
+
   initial begin
-    // Inicializa señales
-    rst = 1;
-    PS2_DAT = 1;
-
-    // Reset
-    #200;
+    #100;
     rst = 0;
-    #200;
 
-    // Simular el envío de un paquete de 3 bytes
-    // Por ejemplo:
-    // status = 8'b00001000 (sin clics, x positivo, y negativo)
-    // dx = 8'd5
-    // dy = 8'd10
+    // Liberamos DAT
+    ps2_dat_drv = 1;
 
-    send_ps2_byte(8'b00001000); // Status byte
-    send_ps2_byte(8'd5);        // dx byte
-    send_ps2_byte(8'd10);
-	 send_ps2_byte(8'b00001000); // Status byte
-	 send_ps2_byte(8'd5); 
-	 send_ps2_byte(8'd10);
-    // Esperar a que procese
-    #2000;
+    // Esperamos a que entre al estado 4
+    wait (debug_state == 3'b100);
+    $display(">> Estado 4 detectado: comenzando captura...");
 
-    $display("Mouse_CoordsX: %d", Mouse_CoordsX);
-    $display("Mouse_CoordsY: %d", Mouse_CoordsY);
+    bit_index = 0;
 
-    $finish;
+    while (bit_index < 11) begin
+      ps2_clk_drv = 0;
+      #2;
+      $display("Bit %0d transmitido: %b", bit_index, PS2_DAT);
+      transmitted_bits[bit_index] = PS2_DAT;
+      bit_index = bit_index + 1;
+      ps2_clk_drv = 1;
+      #20;
+    end
+
+    $display("Bits capturados: %b", transmitted_bits);
+
+    if (transmitted_bits[8:1] == 8'hF4 && transmitted_bits[0] == 0 && transmitted_bits[10] == 1)
+      $display("✅ Comando F4 enviado correctamente.");
+    else
+      $display("❌ Error en el comando enviado.");
+
+    $stop;
   end
 
 endmodule

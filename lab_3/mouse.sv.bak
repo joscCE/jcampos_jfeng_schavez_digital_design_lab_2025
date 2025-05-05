@@ -1,0 +1,189 @@
+module mouse (
+   input  logic        iSTART,      // press the button for transmitting instructions to device
+   input  logic        iRST_n,      // FSM reset signal
+   input  logic        iCLK_50,     // clock source
+   inout               PS2_CLK,     // PS/2 clock signal
+   inout               PS2_DAT,     // PS/2 data signal
+   output logic        oLEFBUT,     // left button press display
+   output logic        oMIDBUT,     // middle button press display
+   output logic        oRIGBUT,     // right button press display
+   output logic [7:0]  oX,          // X displacement
+   output logic [7:0]  oY           // Y displacement
+);
+
+//-----------------------------------------------------------
+// Parameters and localparams
+//-----------------------------------------------------------
+localparam logic [8:0] ENABLE_BYTE = 9'b011110100;  // Command 0xF4 with odd parity
+localparam logic [1:0] LISTEN = 2'b00,
+                       PULLCLK = 2'b01,
+                       PULLDAT = 2'b10,
+                       TRANS = 2'b11;
+
+//-----------------------------------------------------------
+// Internal signals
+//-----------------------------------------------------------
+logic [1:0] cur_state, nex_state;
+logic ce, de;
+logic [3:0] byte_cnt, delay;
+logic [5:0] ct;
+logic [7:0] cnt, x_latch, y_latch;
+logic [8:0] clk_div;
+logic [9:0] dout_reg;
+logic [32:0] shift_reg;
+logic ps2_clk_in, ps2_clk_syn1;
+logic ps2_dat_in, ps2_dat_syn1;
+logic clk, ps2_clk_syn0, ps2_dat_syn0;
+logic ps2_dat_out, ps2_clk_out, flag;
+
+//-----------------------------------------------------------
+// Output assignments
+//-----------------------------------------------------------
+assign oX = x_latch;
+assign oY = y_latch;
+assign oLEFBUT = leflatch;
+assign oRIGBUT = riglatch;
+assign oMIDBUT = midlatch;
+
+//-----------------------------------------------------------
+// Tristate buffers and synchronizers
+//-----------------------------------------------------------
+assign PS2_CLK = ce ? ps2_clk_out : 1'bZ;
+assign PS2_DAT = de ? ps2_dat_out : 1'bZ;
+assign ps2_clk_out = 1'b0;
+assign ps2_dat_out = dout_reg[0];
+assign ps2_clk_syn0 = ce ? 1'b1 : PS2_CLK;
+assign ps2_dat_syn0 = de ? 1'b1 : PS2_DAT;
+
+//-----------------------------------------------------------
+// Clock divider (50 MHz to ~97.65625 kHz)
+//-----------------------------------------------------------
+always_ff @(posedge iCLK_50) begin
+   clk_div <= clk_div + 1;
+end
+
+assign clk = clk_div[8];
+
+//-----------------------------------------------------------
+// Synchronize PS/2 signals to internal clock
+//-----------------------------------------------------------
+always_ff @(posedge clk) begin
+   ps2_clk_syn1 <= ps2_clk_syn0;
+   ps2_clk_in   <= ps2_clk_syn1;
+   ps2_dat_syn1 <= ps2_dat_syn0;
+   ps2_dat_in   <= ps2_dat_syn1;
+end
+
+//-----------------------------------------------------------
+// FSM transition logic
+//-----------------------------------------------------------
+always_comb begin
+   case (cur_state)
+      LISTEN: begin
+         ce = 1'b0;
+         de = 1'b0;
+         nex_state = (!iSTART && cnt == 8'hFF) ? PULLCLK : LISTEN;
+      end
+      PULLCLK: begin
+         ce = 1'b1;
+         de = 1'b0;
+         nex_state = (delay == 4'd12) ? PULLDAT : PULLCLK;
+      end
+      PULLDAT: begin
+         ce = 1'b1;
+         de = 1'b1;
+         nex_state = TRANS;
+      end
+      TRANS: begin
+         ce = 1'b0;
+         de = 1'b1;
+         nex_state = (byte_cnt == 4'd10) ? LISTEN : TRANS;
+      end
+      default: nex_state = LISTEN;
+   endcase
+end
+
+//-----------------------------------------------------------
+// Idle counter
+//-----------------------------------------------------------
+always_ff @(posedge clk) begin
+   cnt <= ({ps2_clk_in, ps2_dat_in} == 2'b11) ? cnt + 1 : 8'd0;
+end
+
+//-----------------------------------------------------------
+// Data length counter
+//-----------------------------------------------------------
+assign flag = (cnt == 8'hFF);
+
+always_ff @(posedge ps2_clk_in or posedge flag) begin
+   if (flag)
+      ct <= 6'd0;
+   else
+      ct <= ct + 1;
+end
+
+//-----------------------------------------------------------
+// Latch received data
+//-----------------------------------------------------------
+logic leflatch, riglatch, midlatch;
+
+always_ff @(posedge clk or negedge iRST_n) begin
+   if (!iRST_n) begin
+      leflatch <= 1'b0;
+      riglatch <= 1'b0;
+      midlatch <= 1'b0;
+      x_latch  <= 8'd0;
+      y_latch  <= 8'd0;
+   end
+   else if (cnt == 8'd30 && (ct[5] || ct[4])) begin
+      leflatch <= shift_reg[1];
+      riglatch <= shift_reg[2];
+      midlatch <= shift_reg[3];
+      x_latch  <= x_latch + shift_reg[19:12];
+      y_latch  <= y_latch + shift_reg[30:23];
+   end
+end
+
+//-----------------------------------------------------------
+// Delay counter during PULLCLK
+//-----------------------------------------------------------
+always_ff @(posedge clk) begin
+   delay <= (cur_state == PULLCLK) ? delay + 1 : 4'd0;
+end
+
+//-----------------------------------------------------------
+// Transmit byte shifting
+//-----------------------------------------------------------
+always_ff @(negedge ps2_clk_in) begin
+   if (cur_state == TRANS)
+      dout_reg <= {1'b0, dout_reg[9:1]};
+   else
+      dout_reg <= {ENABLE_BYTE, 1'b0};
+end
+
+//-----------------------------------------------------------
+// Byte counter during transmit
+//-----------------------------------------------------------
+always_ff @(negedge ps2_clk_in) begin
+   byte_cnt <= (cur_state == TRANS) ? byte_cnt + 1 : 4'd0;
+end
+
+//-----------------------------------------------------------
+// Shift in received bits
+//-----------------------------------------------------------
+always_ff @(negedge ps2_clk_in) begin
+   if (cur_state == LISTEN)
+      shift_reg <= {ps2_dat_in, shift_reg[32:1]};
+end
+
+//-----------------------------------------------------------
+// FSM state register
+//-----------------------------------------------------------
+always_ff @(posedge clk or negedge iRST_n) begin
+   if (!iRST_n)
+      cur_state <= LISTEN;
+   else
+      cur_state <= nex_state;
+end
+
+endmodule

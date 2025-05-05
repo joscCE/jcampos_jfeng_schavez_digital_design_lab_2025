@@ -36,9 +36,9 @@ state.001 0 0 1 1
 state.010 0 1 0 1 
 state.011 1 0 0 1 
 
-State Machine - |connect_four|Mouse_Controller:dut|FSM_Mouse:FSM_M|state
-Name state.11 state.10 state.01 state.00 
-state.00 0 0 0 0 
-state.01 0 0 1 1 
-state.10 0 1 0 1 
-state.11 1 0 0 1 
+State Machine - |connect_four|mouse:Mo|cur_state
+Name cur_state.TRANSMIT cur_state.PULLDAT cur_state.PULLCLK cur_state.LISTEN 
+cur_state.LISTEN 0 0 0 0 
+cur_state.PULLCLK 0 0 1 1 
+cur_state.PULLDAT 0 1 0 1 
+cur_state.TRANSMIT 1 0 0 1 

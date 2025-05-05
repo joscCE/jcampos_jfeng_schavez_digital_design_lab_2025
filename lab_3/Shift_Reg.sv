@@ -1,9 +1,8 @@
 module Shift_Reg #(parameter N = 10) (
-    input clk,
-    input rst,
-    input D,
-    input en,
-    input shf,
+    input logic clk, rst,
+    input logic D,              // un solo bit de entrada
+    input logic en,
+    input logic shf,
     output logic [N-1:0] Q
 );
 

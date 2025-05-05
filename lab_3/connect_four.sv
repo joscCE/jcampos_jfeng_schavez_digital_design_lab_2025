@@ -4,19 +4,22 @@ module connect_four (
 	 input [2:0] player0in, player1in, //[P,R,L]
 	 input p0in, p1in,
 	 input startin,
-	 input PS2_CLK,
-	 input PS2_DAT,
+	 inout  PS2_CLK,
+	 inout  PS2_DAT,
 
     output logic Hs, Vs,
+	 output logic [10:0] Q_Reg_shift_DG, 
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
-    output logic [7:0] R, G, B,
-	 output logic [3:0] debug_colum
-	 
-	 
+     output logic [7:0] R, G, B,
+	 output logic [2:0] debug_colum,
+	 output logic Data_debug,
+	 output click,
+	 output [15:0] x_cor,
+	 output [15:0] y_cor
 
 	 
-	 
+
 	 
 );
 
@@ -29,11 +32,8 @@ module connect_four (
 	logic R_player;
 	logic P_player;
 	logic [15:0] Mouse_CoordsX, Mouse_CoordsY;
- 
-	 
-	 
-	 
-	 
+	
+
 	 logic p0, p1, start;
 	 
 	 
@@ -60,19 +60,22 @@ module connect_four (
     logic comp_left;
     logic comp_random;
 	 
-	 
-	 
-Mouse_Controller dut (
-    .PS2_CLK(PS2_CLK), 
-    .PS2_DAT(PS2_DAT), 
-    .Mouse_CoordsX(Mouse_CoordsX),
-    .Mouse_CoordsY(Mouse_CoordsY),
-	 .rst(rst),
-    .debug_state()
+
+mouse Mo(
+    .iRST_n(rst),    // Active-low reset
+    .iCLK_50(clk),   // 50 MHz clock
+    .PS2_CLK(PS2_CLK),   // PS2 clock line
+    .PS2_DAT(PS2_DAT),   // PS2 data line
+    .oLEFBUT(click),   // Left button
+    .oMIDBUT(),   // Middle button
+    .oRIGBUT(),   // Right button
+    .oX(x_cor),        // Absolute X position
+    .oY(y_cor)         // Absolute Y position
 );
-	 
-	 
-	
+
+
+
+
 	 
 	 	 debounce deboun_play_R(
     .clk(clk25),
@@ -89,16 +92,18 @@ Mouse_Controller dut (
     .out(P_player)
 	);
 	
-			 	 debounce deboun_start(
+
+	debounce deboun_start(
     .clk(clk25),
     .rst(rst),
     .ent(~startin),       // botón con lógica inversa: presionado = 0
     .out(start)
 	);
 	
+
 	
 
-	 
+
     logic [27:0] Q_reg_count_time;  // Asumiendo que es un contador de 28 bits (por comparación con 28'd250_000_000)
     logic [2:0] j_count_random;
     logic [2:0] Q_reg_random;
@@ -107,8 +112,6 @@ Mouse_Controller dut (
     logic [4:0] c_Mux_Play;
 
 	
-	
-
 
     // Salidas
     logic rst_timer;
@@ -131,7 +134,7 @@ Mouse_Controller dut (
 	 
 //============== clk de 25MH =========================
 	 
-	 assign debug_colum = c_Mux_Play;
+
 	 
 	 clk_div CLK25(
 		.clk(clk),
@@ -141,12 +144,6 @@ Mouse_Controller dut (
 	 );
 	
 
-	
-
-
-	 
-	 
-	 
 
 	 
 //===============logica turno================== 
@@ -360,11 +357,26 @@ Mouse_Controller dut (
 Mux_31 #(.N(24)) Mux_display(
 	.A(RGB_game),
 	.B(RGB_menu),
-	.C(RGB_menu),
+	.C(RBG_End),
 	.S(display_select),
 	.D(RGB)
 
 );
+
+//=================Display Game_Over ==========
+
+
+
+	display_game_over Display_Over(
+			.clk(clk),
+			.Q_X(Q_X), 
+			.Q_Y(Q_Y),
+			.R(RBG_End[23:16]),
+			.G(RBG_End[15:8]),
+			.B(RBG_End[7:0])
+
+	);
+
 
 
 
@@ -390,6 +402,8 @@ Mux_31 #(.N(24)) Mux_display(
 		.column(Q_reg_Column),
 		.Q_X(Q_X),
 		.Q_Y(Q_Y),
+		.Mouse_CoordsX(Mouse_CoordsX), 
+		.Mouse_CoordsY(Mouse_CoordsY),
 		.R(RGB_game[23:16]),
 		.G(RGB_game[15:8]), 
 		.B(RGB_game[7:0])
@@ -408,4 +422,6 @@ Mux_31 #(.N(24)) Mux_display(
 		  .Q_Y(Q_Y)
     );
 
+	 
+	 
 endmodule

@@ -1,0 +1,28 @@
+module PS2_Synchronizer (
+    input  logic clk,           // Reloj de tu sistema (ej. 50 MHz)
+    input  logic PS2_CLK,       // Señal cruda desde el mouse
+    input  logic PS2_DAT,       // Señal cruda desde el mouse
+    output logic ps2_clk_falling, // Pulso de flanco de bajada sincronizado
+    output logic ps2_clk_in,      // PS2_CLK sincronizado (2 FFs)
+    output logic ps2_dat_in       // PS2_DAT sincronizado (2 FFs)
+);
+
+    logic ps2_clk_sync_0, ps2_clk_sync_1;
+    logic ps2_dat_sync_0, ps2_dat_sync_1;
+
+    // Sincronización doble para PS2_CLK y PS2_DAT
+    always_ff @(posedge clk) begin
+        ps2_clk_sync_0 <= PS2_CLK;
+        ps2_clk_sync_1 <= ps2_clk_sync_0;
+        ps2_dat_sync_0 <= PS2_DAT;
+        ps2_dat_sync_1 <= ps2_dat_sync_0;
+    end
+
+    // Salidas sincronizadas
+    assign ps2_clk_in = ps2_clk_sync_1;
+    assign ps2_dat_in = ps2_dat_sync_1;
+
+    // Detección de flanco de bajada en la señal sincronizada
+    assign ps2_clk_falling = (ps2_clk_sync_1 && !ps2_clk_sync_0);
+
+endmodule

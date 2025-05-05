@@ -1,0 +1,435 @@
+$date
+	Wed Apr 30 23:02:04 2025
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_Mouse_Controller $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # ps2_clk_falling $end
+$var reg 1 $ Data $end
+$var reg 1 % BO $end
+$var reg 1 & B1 $end
+$var reg 1 ' B2 $end
+$var reg 1 ( Byte_Out $end
+$var reg 1 ) Bit_Out $end
+$var reg 1 * sig_x $end
+$var reg 1 + sig_y $end
+$var reg 1 , write_out $end
+$var reg 1 - rst_Bit_Counter $end
+$var reg 1 . rst_Byte_Counter $end
+$var reg 1 / en_Bit_Counter $end
+$var reg 1 0 en_Byte_Counter $end
+$var reg 1 1 en_Reg_Status $end
+$var reg 1 2 en_Reg_DX $end
+$var reg 1 3 en_Reg_DY $end
+$var reg 1 4 en_Reg_X_pos $end
+$var reg 1 5 en_Reg_Y_pos $end
+$var reg 1 6 shft_Status $end
+$var reg 1 7 shft_DX $end
+$var reg 1 8 shft_DY $end
+$var reg 1 9 en_Sumandor $end
+$var reg 1 : mode_sum_X $end
+$var reg 1 ; mode_sum_y $end
+$var reg 3 < debug_state [2:0] $end
+$var reg 1 = ps2_clk_oe $end
+$var reg 1 > ps2_data_oe $end
+$var reg 1 ? en_reg_out $end
+$var reg 1 @ rst_reg_out $end
+$var reg 1 A shift_reg_out $end
+$var reg 1 B rst_Write_Counter $end
+$var reg 1 C en_Write_Counter $end
+
+$scope module dut $end
+$var wire 1 D ps2_clk_falling $end
+$var wire 1 E Data $end
+$var wire 1 F BO $end
+$var wire 1 G B1 $end
+$var wire 1 H B2 $end
+$var wire 1 I Byte_Out $end
+$var wire 1 J Bit_Out $end
+$var wire 1 K sig_x $end
+$var wire 1 L sig_y $end
+$var wire 1 M clk $end
+$var wire 1 N rst $end
+$var wire 1 O write_out $end
+$var reg 1 P rst_Bit_Counter $end
+$var reg 1 Q rst_Byte_Counter $end
+$var reg 1 R en_Bit_Counter $end
+$var reg 1 S en_Byte_Counter $end
+$var reg 1 T en_Reg_Status $end
+$var reg 1 U en_Reg_DX $end
+$var reg 1 V en_Reg_X_pos $end
+$var reg 1 W en_Reg_Y_pos $end
+$var reg 1 X en_Reg_DY $end
+$var reg 1 Y shft_Status $end
+$var reg 1 Z shft_DX $end
+$var reg 1 [ shft_DY $end
+$var reg 1 \ en_Sumandor $end
+$var reg 1 ] mode_sum_X $end
+$var reg 1 ^ mode_sum_y $end
+$var reg 3 _ debug_state [2:0] $end
+$var reg 1 ` ps2_clk_oe $end
+$var reg 1 a ps2_data_oe $end
+$var reg 1 b en_reg_out $end
+$var reg 1 c rst_reg_out $end
+$var reg 1 d shift_reg_out $end
+$var reg 1 e rst_Write_Counter $end
+$var reg 1 f en_Write_Counter $end
+$var reg 3 g state [2:0] $end
+$var reg 3 h next_state [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+1$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+1-
+0.
+0/
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+0:
+0;
+b0 <
+0=
+0>
+0?
+1@
+0A
+xB
+0C
+1P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+b0 _
+0`
+0a
+0b
+1c
+0d
+xe
+0f
+b0 g
+b11 h
+0M
+1N
+0D
+1E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0O
+$end
+#5
+1!
+1M
+#10
+0"
+0!
+0N
+0M
+#15
+1!
+1M
+b11 g
+0P
+1`
+1a
+1b
+0c
+b11 _
+b11 <
+0@
+1?
+1>
+1=
+0-
+b100 h
+#20
+0!
+0M
+#25
+1!
+1M
+b100 g
+0b
+b100 _
+b100 <
+0?
+b101 h
+#30
+0!
+0M
+#35
+1!
+1M
+b101 g
+0`
+1d
+1f
+b101 _
+b101 <
+1C
+1A
+0=
+#40
+0!
+0M
+#45
+1!
+1M
+#50
+1#
+0!
+1D
+0M
+#55
+1!
+1M
+#60
+0#
+0!
+0D
+0M
+#65
+1!
+1M
+#70
+1#
+0!
+1D
+0M
+#75
+1!
+1M
+#80
+0#
+0!
+0D
+0M
+#85
+1!
+1M
+#90
+1#
+0!
+1D
+0M
+#95
+1!
+1M
+#100
+0#
+0!
+0D
+0M
+#105
+1!
+1M
+#110
+1#
+0!
+1D
+0M
+#115
+1!
+1M
+#120
+0#
+0!
+0D
+0M
+#125
+1!
+1M
+#130
+1#
+0!
+1D
+0M
+#135
+1!
+1M
+#140
+0#
+0!
+0D
+0M
+#145
+1!
+1M
+#150
+1#
+0!
+1D
+0M
+#155
+1!
+1M
+#160
+0#
+0!
+0D
+0M
+#165
+1!
+1M
+#170
+1#
+0!
+1D
+0M
+#175
+1!
+1M
+#180
+0#
+0!
+0D
+0M
+#185
+1!
+1M
+#190
+1#
+0!
+1D
+0M
+#195
+1!
+1M
+#200
+0#
+0!
+0D
+0M
+#205
+1!
+1M
+#210
+1#
+0!
+1D
+0M
+#215
+1!
+1M
+#220
+0#
+0!
+0D
+0M
+#225
+1!
+1M
+#230
+1#
+0!
+1D
+0M
+#235
+1!
+1M
+#240
+0#
+0!
+0D
+0M
+#245
+1!
+1M
+#250
+0!
+0M
+#255
+1!
+1M
+#260
+0!
+0M
+#265
+1!
+1M
+#270
+0!
+0M
+#275
+1!
+1M
+#280
+0!
+0M
+#285
+1!
+1M
+#290
+0!
+0M
+#295
+1!
+1M
+#300
+0!
+0M
+#305
+1!
+1M
+#310
+0!
+0M
+#315
+1!
+1M
+#320
+0!
+0M
+#325
+1!
+1M
+#330
+0!
+0M
+#335
+1!
+1M

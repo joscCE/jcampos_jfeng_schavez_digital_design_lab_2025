@@ -116,19 +116,143 @@
 					"strict" : false
 				},
 				{
-					"name" : "debug_colum[0]",
+					"name" : "click",
 					"strict" : false
 				},
 				{
-					"name" : "debug_colum[1]",
+					"name" : "x_cor[0]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_colum[2]",
+					"name" : "x_cor[1]",
 					"strict" : false
 				},
 				{
-					"name" : "debug_colum[3]",
+					"name" : "x_cor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[7]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[12]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[13]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[14]",
+					"strict" : false
+				},
+				{
+					"name" : "x_cor[15]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[3]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[4]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[5]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[6]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[7]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[8]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[9]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[10]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[11]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[12]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[13]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[14]",
+					"strict" : false
+				},
+				{
+					"name" : "y_cor[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_DAT",
 					"strict" : false
 				},
 				{
@@ -152,19 +276,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "player1in[2]",
-					"strict" : false
-				},
-				{
-					"name" : "player0in[2]",
-					"strict" : false
-				},
-				{
 					"name" : "player1in[0]",
 					"strict" : false
 				},
 				{
 					"name" : "player0in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "player1in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "player0in[2]",
 					"strict" : false
 				},
 				{

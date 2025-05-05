@@ -1,239 +1,188 @@
 module Mouse_Controller(
-    input PS2_CLK,
-    input PS2_DAT,
-	 input rst,
-    output logic [15:0] Mouse_CoordsX,
-	 output logic [15:0] Mouse_CoordsY,
-	 output logic [1:0] debug_state,
-	 
-	 output logic [3:0] debug_bit_counter,
-	 output logic [1:0] debug_byte_counter,
-	 output logic [7:0] debug_status, debug_dx, debug_dy
+    inout  PS2_CLK,
+    input clk,
+    inout  PS2_DAT,
+		input rst,
+		output logic [2:0] debug_state,
+    output logic [33:0] debug_data,
+	 output debug_clk_in,
+	 output [9:0] Q_write_debug,
+	 output [9:0] Q_T_debug
 
 );
 
-//entrada y salidas de la FSM
+logic clk_oe;
+logic data_oe;
 
-    logic BO;
-    logic B1;
-    logic B2;
-    logic Byte_Out;
-    logic Bit_Out;
-    logic sig_x;
-    logic sig_y;
-    logic clk;
-    logic rst_Bit_Counter;
-    logic rst_Byte_Counter;
+assign PS2_CLK = clk_oe? 1'b0:1'bZ;
+assign PS2_DAT = data_oe? ps2_dat_out:1'bZ;
+
+
+logic  ps2_dat_out;
+logic clk_div;
+
+clk_div_custom clkcos (
+    .clk(clk),         // clk de 50MHz
+    .rst(rst),         // reset
+    .clk_out(clk_div)      // clk de ~12.5kHz
+);
+
+logic ps2_clk_falling;    
+logic ps2_clk_in;         
+logic ps2_dat_in;
+
+PS2_Synchronizer  PS2_Syc(
+    .de(data_oe),
+    .ce(clk_oe),
+    .clk(clk_div),           
+    .PS2_CLK(PS2_CLK),       
+    .PS2_DAT(PS2_DAT),       
+    .ps2_clk_falling(ps2_clk_falling), 
+    .ps2_clk_in(ps2_clk_in),      
+    .ps2_dat_in(ps2_dat_in)       
+);
+
+assign debug_clk_in = ps2_clk_in;
+
+
+//logica para ver si hay que escribir al mouse en el estado 0
+
+logic [7:0] Q_count_start;
+logic Start_Write;
+logic rst_Counter_start;
+
+Counter #(.N(8)) Count_Start(
+    .clk(clk_div),
+    .rst(~(&{ps2_clk_in, ps2_dat_in})),
+    .en({ps2_clk_in,ps2_dat_in} == 2'b11),
+    .mode(1'b1),                
+    .Q(Q_count_start)
+
+);
+
+Comparator #(.N(8)) Comp_Start(
     
-    logic en_Bit_Counter;
-    logic en_Byte_Counter;
+	.A(Q_count_start), 
+    .B(8'b1111111),
+	.equ(Start_Write)
+);
 
-    logic en_Reg_Status;
-    logic en_Reg_DX;
-    logic en_Reg_DY;
-    logic shft_Status;
-    logic shft_DX;
-    logic shft_DY;
-    logic en_Sumandor;
-    logic mode_sum_X;
-    logic mode_sum_y;
-    logic [7:0] Q_Reg_Status, Q_Reg_DY,Q_Reg_DX;
-    logic [3:0] Q_Counter_Bit;
-    logic [1:0] Q_Counter_Byte;
-    logic eq_Comp_Byte_0,eq_Comp_Byte_1,eq_Comp_Byte_2, eq_Comp_Bite, eq_Comp_Lim_x, eq_Comp_Lim_Y;
-	 logic [15:0] Q_Reg_X_pos, Q_Reg_Y_pos;
-	logic [15:0] D_Red_X_Pos, D_Red_Y_Pos;
-	logic en_Reg_X_pos, en_Reg_Y_pos;
-	
-	 
-	 
-	 //shif registers
+// logica de hold_time para el estado 1
+logic [17:0] Q_count_Hold_time;
+logic Hold_Time;
+logic rst_Count_Hold_Time;
+logic en_Count_Hold_Time;
+
+Counter #(.N(18)) Count_Hold_Time(
+    .clk(clk_div),
+    .rst(rst_Count_Hold_Time),
+    .en(en_Count_Hold_Time),
+    .mode(1'b1),                
+    .Q(Q_count_Hold_time)
+);
 
 
-Shift_Reg #(.N(8)) Reg_shift_status (
-    .clk(PS2_CLK),
+Comparator #(.N(18)) Comp_hold_time(
+	.A(Q_count_Hold_time), 
+    .B(18'd2),
+	.equ(Hold_Time)
+);
+
+
+
+
+//logica para mandar mensaje
+logic en_reg_out;
+logic shift_reg_out;
+logic rs_Count_write;
+logic en_Count_write;
+logic [3:0] Q_count_write;
+logic wo;
+
+
+Reg_Shift_Out #(.N(10)) reg_escritura (
+    .clk(ps2_clk_in),
     .rst(rst),
-	.D(PS2_DAT),
-	.en(en_Reg_Status),
-    .shf(shft_Status),
-	.Q(Q_Reg_Status)
-
+    .D(10'b1001011110),
+    .en(en_reg_out),
+    .shf(shift_reg_out),
+    .Q(ps2_dat_out),
+    .Q_T(Q_T_debug)
 );
 
-Shift_Reg #(.N(8)) Reg_shift_DX(
-  .clk(PS2_CLK),
+
+
+Counter #(.N(4)) Count_write(
+    .clk(ps2_clk_in),
+    .rst(rs_Count_write | rst),
+    .en(en_Count_write),
+    .mode(1'b1),                
+    .Q(Q_count_write)
+);
+
+
+Comparator #(.N(4)) Comp_write(
+	.A(Q_count_write), 
+    .B(4'b1001),
+	.equ(wo)
+);
+
+Shift_Reg #(.N(10)) reg_wirte_debug(
+	.clk(ps2_clk_in), 
+   .rst(rst | rs_Count_write),
+	.D(ps2_dat_in),
+	.en(en_Count_write),
+   .shf(shift_reg_out),
+	.Q(Q_write_debug)
+);
+
+assign debug_data = Q_reg_lectura;
+
+
+
+ 
+
+//logica para recibir datos
+
+logic en_reg_lectura;
+logic shif_reg_lectura; 
+logic [32:0] Q_reg_lectura;
+
+Shift_Reg #(.N(33)) reg_lectura(
+	.clk(ps2_clk_in), 
     .rst(rst),
-	.D(PS2_DAT),
-	.en(en_Reg_DX),
-    .shf(shft_DX),
-	.Q(Q_Reg_DX)
-
+	.D(ps2_dat_in),
+	.en(en_reg_lectura),
+    .shf(shif_reg_lectura),
+	.Q(Q_reg_lectura)
 );
 
-Shift_Reg #(.N(8))Reg_shift_DY(
-  .clk(PS2_CLK), 
-    .rst(rst),
-	.D(PS2_DAT),
-	.en(en_Reg_DY),
-    .shf(shft_DY),
-	.Q(Q_Reg_DY)
-
-);
-
-//counters
+assign debug_data = Q_reg_lectura;
 
 
-Counter #(.N(2)) Byte_Counter (
-.clk(PS2_CLK),
-.rst(rst_Byte_Counter | rst),
-.en(en_Byte_Counter),
-.mode(1'b1),                
-.Q(Q_Counter_Byte)
-
-);
-
-
-
-Counter #(.N(4))Bit_Counter(
-.clk(PS2_CLK),
-.rst(rst_Bit_Counter | rst),
-.en(en_Bit_Counter),
-.mode(1'b1),                
-.Q(Q_Counter_Bit)
-);
-
-
-//comparator
-
-Comparator #(.N(2)) Byte_Comparator_0(    
-	.A(Q_Counter_Byte), 
-    .B(2'b00),
-	.equ(eq_Comp_Byte_0)
-
-);
-
-
-Comparator #(.N(2)) Byte_Comparator_1(    
-	.A(Q_Counter_Byte), 
-    .B(2'b01),
-	.equ(eq_Comp_Byte_1)
-
-);
-
-Comparator #(.N(2)) Byte_Comparator_2(    
-	.A(Q_Counter_Byte), 
-    .B(2'b10),
-	.equ(eq_Comp_Byte_2)
-
-);
-
-
-Comparator #(.N(2)) Byte_Comparator_3(    
-	.A(Q_Counter_Byte), 
-    .B(2'b11),
-	.equ(eq_Comp_Byte_3)
-
-);
-
-
-
-Comparator #(.N(4)) Bit_Comparator(    
-	.A(Q_Counter_Bit), 
-    .B(4'b1000),
-	.equ(eq_Comp_Bite)
-
-);
-
-
-
-
-//Adders
-
-Adder #(.N(16)) Sum_X (
-    .A(Q_Reg_X_pos),
-    .en(en_Sumandor),
-    .Mode(mode_sum_X),
-    .B({8'h00,Q_Reg_DX}),
-    .C(D_Red_X_Pos)
+FSM_Mouse FMS_MO(
+	.clk(clk_div),
+	.rst(rst),
+    .Start_Write(Start_Write),
+    .Hold_Time(Hold_Time),
+    .wo(wo),
+    .en_reg_out(en_reg_out),
+    .clk_oe(clk_oe),
+    .data_oe(data_oe),
+    .en_reg_lectura(en_reg_lectura),
+    .shif_reg_lectura(shif_reg_lectura),
+    .shift_reg_out(shift_reg_out),
+    .rs_Count_write(rs_Count_write),
+    .en_Count_write(en_Count_write),
+    .rst_Count_Hold_Time(rst_Count_Hold_Time),
+    .en_Count_Hold_Time(en_Count_Hold_Time),
+    .debug_state(debug_state),
+	 .rst_Counter_start(rst_Counter_start)
     
 
 );
 
 
-Adder #(.N(16)) Sum_Y (
-    .A(Q_Reg_Y_pos),
-    .en(en_Sumandor),
-    .Mode(mode_sum_y),
-    .B({8'h00,Q_Reg_DY}),
-    .C(D_Red_Y_Pos)
-
-);
-
-//registros de la posicion
-
-Register #(.N(16)) Reg_X_Pos(
-    .clk(PS2_CLK),
-    .rst(rst),
-	.D(D_Red_X_Pos),
-	.en(en_Reg_X_pos),
-	.Q(Q_Reg_X_pos)
-
-
-);
-
-Register #(.N(16))Reg_Y_Pos(
-    .clk(PS2_CLK), 
-    .rst(rst),
-	.D(D_Red_Y_Pos),
-	.en(en_Reg_Y_pos),
-	.Q(Q_Reg_Y_pos)
-
-);
-
-
-
-
-//FSM
-
-FSM_Mouse FSM_M (
-	 .Data(PS2_DAT),
-    .BO(eq_Comp_Byte_0),
-    .B1(eq_Comp_Byte_1),
-    .B2(eq_Comp_Byte_2),
-    .Byte_Out(eq_Comp_Byte_3),
-    .Bit_Out(eq_Comp_Bite),
-    .sig_x(Q_Reg_Status[4]),
-    .sig_y(~Q_Reg_Status[5]),
-    .clk(PS2_CLK),
-    .rst(rst),  
-    .rst_Bit_Counter(rst_Bit_Counter),
-    .rst_Byte_Counter(rst_Byte_Counter),
-    .en_Reg_Status(en_Reg_Status),
-    .en_Reg_DX(en_Reg_DX),
-    .en_Reg_DY(en_Reg_DY),
-    .shft_Status(shft_Status),
-    .shft_DX(shft_DX),
-    .shft_DY(shft_DY),
-    .en_Sumandor(en_Sumandor),
-    .mode_sum_X(mode_sum_X),
-    .mode_sum_y(mode_sum_y),
-    .en_Reg_Y_pos(en_Reg_Y_pos),
-    .en_Reg_X_pos(en_Reg_X_pos),
-	 .debug_state(debug_state),
-	 .en_Bit_Counter(en_Bit_Counter),
-    .en_Byte_Counter(en_Byte_Counter)
-	 
-	 
-);
-
-
-assign Mouse_CoordsX = Q_Reg_X_pos; 
-assign Mouse_CoordsY = Q_Reg_Y_pos; 
-assign debug_bit_counter = Q_Counter_Bit;
-assign debug_byte_counter = Q_Counter_Byte;
-assign debug_status = Q_Reg_Status;
-assign debug_dx = Q_Reg_DX;
-assign debug_dy = Q_Reg_DY;
 
 endmodule
 
