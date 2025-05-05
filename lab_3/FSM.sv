@@ -87,9 +87,9 @@ always_comb begin
         display_select = 2'b00; // valor que desees cuando no es ni 0 ni 7
     end else begin
         case (state)
-            4'b0000: display_select = 2'b01;
-            4'b0111: display_select = 2'b10;
-            default: display_select = 2'b01; // valor por defecto
+            4'b0000: display_select = 2'b10;
+            4'b0111: display_select = 2'b01;
+            default: display_select = 2'b00; // valor por defecto
         endcase
     end
 end

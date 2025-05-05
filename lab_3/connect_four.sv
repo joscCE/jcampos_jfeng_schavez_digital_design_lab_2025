@@ -358,13 +358,26 @@ module connect_four (
 
 Mux_31 #(.N(24)) Mux_display(
 	.A(RGB_game),
-	.B(RGB_menu),
+	.B(RBG_End),
 	.C(RGB_menu),
 	.S(display_select),
 	.D(RGB)
 
 );
 
+//=================Display Game_Over ==========
+
+
+
+display_game_over Display_Over(
+			.clk(clk),
+			.Q_X(Q_X), 
+			.Q_Y(Q_Y),
+			.R(RBG_End[23:16]),
+			.G(RBG_End[15:8]),
+			.B(RBG_End[7:0])
+
+	);
 
 
 
