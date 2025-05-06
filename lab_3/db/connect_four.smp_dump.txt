@@ -15,6 +15,13 @@ state.1010 0 0 1 0 0 0 0 0 0 0 0 0 1
 state.1011 0 1 0 0 0 0 0 0 0 0 0 0 1 
 state.1100 1 0 0 0 0 0 0 0 0 0 0 0 1 
 
+State Machine - |connect_four|uart_receiver:uart_inst|state
+Name state.STOP state.DATA state.START state.IDLE 
+state.IDLE 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 
+
 State Machine - |connect_four|debounce:deboun_start|state
 Name state.011 state.010 state.001 state.000 
 state.000 0 0 0 0 

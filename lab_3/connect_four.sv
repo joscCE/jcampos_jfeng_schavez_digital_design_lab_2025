@@ -4,6 +4,8 @@ module connect_four (
 	 input [2:0] player0in, player1in, //[P,R,L]
 	 input p0in, p1in,
 	 input startin,
+	 
+	 input rx, //Para UART (PIN de GPIO)
 
     output logic Hs, Vs,
 	 
@@ -34,7 +36,7 @@ module connect_four (
 	 
 	 assign rst = ~rstin;
 	 assign player0 = ~player0in;
-	 assign player1 = ~player1in;
+	 //assign player1 = ~player1in;
 	 assign p0 = ~p0in;
 	 assign p1 = ~p1in;
 
@@ -121,8 +123,32 @@ module connect_four (
 		.clk25(clk25)
 	 
 	 );
-		 
+	 
+//============== UART Arduino =================
 
+	logic [7:0] uart_data;
+	logic uart_data_valid;
+
+	uart_receiver #(.CLK_PER_BIT(434)) uart_inst(
+		 .clk(clk25),
+		 .rst(rst),
+		 .rx(rx),
+		 .data_out(uart_data),
+		 .data_valid(uart_data_valid)
+	);
+
+	always_ff @(posedge clk25 or posedge rst) begin
+		if (rst) begin
+			player1 <= 3'b000;  
+		end else if (uart_data_valid) begin
+			case (uart_data)
+				8'd1: player1 <= 3'b100;  
+				8'd2: player1 <= 3'b010; 
+				default: player1 <= 3'b000; // No presionado
+			endcase
+		end
+	end
+		 
 	 
 //===============logica turno================== 
 	 
