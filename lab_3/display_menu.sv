@@ -132,7 +132,7 @@ module display_menu(
         if (in_box_p1 || in_box_p2) begin
 			R = 8'd255;
 			G = 8'd255;
-			B = 8'd255;
+         B = 8'd255;
         end else if (inside_p2) begin
             {B, G, R} = (color_p2 == 24'd0) ? 24'hFFFFFF : color_p2;
         end else if (inside_start && blink_on) begin

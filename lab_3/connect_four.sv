@@ -35,7 +35,6 @@ module connect_four (
 	 assign rst = ~rstin;
 	 assign player0 = ~player0in;
 	 assign player1 = ~player1in;
-	 assign p0 = ~p0in;
 	 assign p1 = ~p1in;
 
 	 
@@ -67,6 +66,15 @@ module connect_four (
     .ent(~startin),       // botón con lógica inversa: presionado = 0
     .out(start)
 	);
+	
+	
+				 	 debounce deboun_po(
+    .clk(clk25),
+    .rst(rst),
+    .ent(p0in),       // botón con lógica inversa: presionado = 0
+    .out(p0)
+	);
+	
 	
 	
 

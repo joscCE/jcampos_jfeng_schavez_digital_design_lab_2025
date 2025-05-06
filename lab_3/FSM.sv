@@ -83,14 +83,14 @@ module FSM (
 	assign play_selection = ~(state == 4'b0100);
 	
 always_comb begin
-    if (state != 4'b0000 && state != 4'b0111) begin
+    if (state != 4'b0000 && state != 4'b0111 && state != 4'b0001 && state != 4'b0010) begin
         display_select = 2'b00; // valor que desees cuando no es ni 0 ni 7
     end else begin
         case (state)
             4'b0000: display_select = 2'b10;
 				4'b0001:display_select = 2'b10;
             4'b0111: display_select = 2'b01;
-            default: display_select = 2'b00; // valor por defecto
+            default: display_select = 2'b10; // valor por defecto
         endcase
     end
 end
