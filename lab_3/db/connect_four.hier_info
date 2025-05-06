@@ -60,6 +60,14 @@ seg1[4] << Decoder7Seg:sec_display.seg1
 seg1[5] << Decoder7Seg:sec_display.seg1
 seg1[6] << Decoder7Seg:sec_display.seg1
 seg1[7] << Decoder7Seg:sec_display.seg1
+uart_data[0] << uart_receiver:uart_inst.data_out
+uart_data[1] << uart_receiver:uart_inst.data_out
+uart_data[2] << uart_receiver:uart_inst.data_out
+uart_data[3] << uart_receiver:uart_inst.data_out
+uart_data[4] << uart_receiver:uart_inst.data_out
+uart_data[5] << uart_receiver:uart_inst.data_out
+uart_data[6] << uart_receiver:uart_inst.data_out
+uart_data[7] << uart_receiver:uart_inst.data_out
 
 
 |connect_four|debounce:deboun_play_R

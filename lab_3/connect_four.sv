@@ -12,7 +12,9 @@ module connect_four (
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B,
 	 output logic [3:0] debug_colum,
-	 output logic [7:0] seg0, seg1
+	 output logic [7:0] seg0, seg1,
+	 
+	 output logic [7:0] uart_data
 	 
 	 
 );
@@ -126,7 +128,6 @@ module connect_four (
 	 
 //============== UART Arduino =================
 
-	logic [7:0] uart_data;
 	logic uart_data_valid;
 
 	uart_receiver #(.CLK_PER_BIT(434)) uart_inst(
