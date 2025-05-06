@@ -387,6 +387,7 @@ display_game_over Display_Over(
 
 	display_menu Display_M(
 			.clk(clk),
+			.turn(select_turn),
 			.Q_X(Q_X), 
 			.Q_Y(Q_Y),
 			.R(RGB_menu[23:16]),

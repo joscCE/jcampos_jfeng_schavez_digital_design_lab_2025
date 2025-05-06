@@ -88,6 +88,7 @@ always_comb begin
     end else begin
         case (state)
             4'b0000: display_select = 2'b10;
+				4'b0001:display_select = 2'b10;
             4'b0111: display_select = 2'b01;
             default: display_select = 2'b00; // valor por defecto
         endcase

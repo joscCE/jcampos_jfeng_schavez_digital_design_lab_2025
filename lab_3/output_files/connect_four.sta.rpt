@@ -1,5 +1,5 @@
 Timing Analyzer report for connect_four
-Mon May 05 13:30:07 2025
+Tue May 06 15:26:42 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -101,14 +101,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.64        ;
+; Average used               ; 2.82        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  54.8%      ;
-;     Processor 3            ;  54.6%      ;
-;     Processor 4            ;  54.5%      ;
+;     Processor 2            ;  60.8%      ;
+;     Processor 3            ;  60.7%      ;
+;     Processor 4            ;  60.6%      ;
 +----------------------------+-------------+
 
 
@@ -127,8 +127,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
 +------------+-----------------+---------------------+------+
-; 62.35 MHz  ; 62.35 MHz       ; clk_div:CLK25|clk25 ;      ;
-; 280.35 MHz ; 280.35 MHz      ; clk                 ;      ;
+; 64.22 MHz  ; 64.22 MHz       ; clk_div:CLK25|clk25 ;      ;
+; 277.01 MHz ; 277.01 MHz      ; clk                 ;      ;
 +------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -139,14 +139,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+----------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary          ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -9.235 ; -1915.940     ;
-; clk                 ; -5.900 ; -275.589      ;
-+---------------------+--------+---------------+
++-----------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary           ;
++---------------------+---------+---------------+
+; Clock               ; Slack   ; End Point TNS ;
++---------------------+---------+---------------+
+; clk_div:CLK25|clk25 ; -10.143 ; -2085.237     ;
+; clk                 ; -7.014  ; -508.030      ;
++---------------------+---------+---------------+
 
 
 +---------------------------------------------+
@@ -154,8 +154,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.042 ; 0.000         ;
-; clk                 ; 0.361 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.320 ; 0.000         ;
+; clk                 ; 0.379 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -164,7 +164,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -2.511 ; -156.314      ;
+; clk_div:CLK25|clk25 ; -2.610 ; -131.318      ;
 +---------------------+--------+---------------+
 
 
@@ -173,7 +173,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.378 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.652 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -182,8 +182,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; clk                 ; -0.626 ; -48.272            ;
-; clk_div:CLK25|clk25 ; -0.430 ; -215.360           ;
+; clk                 ; -0.655 ; -65.469            ;
+; clk_div:CLK25|clk25 ; -0.505 ; -218.310           ;
 +---------------------+--------+--------------------+
 
 
@@ -198,20 +198,20 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
 +------------+-----------------+---------------------+------+
-; 62.07 MHz  ; 62.07 MHz       ; clk_div:CLK25|clk25 ;      ;
-; 283.61 MHz ; 283.61 MHz      ; clk                 ;      ;
+; 64.93 MHz  ; 64.93 MHz       ; clk_div:CLK25|clk25 ;      ;
+; 281.14 MHz ; 281.14 MHz      ; clk                 ;      ;
 +------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+----------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary           ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -9.119 ; -1875.997     ;
-; clk                 ; -5.816 ; -271.937      ;
-+---------------------+--------+---------------+
++-----------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary            ;
++---------------------+---------+---------------+
+; Clock               ; Slack   ; End Point TNS ;
++---------------------+---------+---------------+
+; clk_div:CLK25|clk25 ; -10.027 ; -2041.896     ;
+; clk                 ; -6.820  ; -498.883      ;
++---------------------+---------+---------------+
 
 
 +---------------------------------------------+
@@ -219,8 +219,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.061 ; 0.000         ;
-; clk                 ; 0.161 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.286 ; 0.000         ;
+; clk                 ; 0.378 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -229,7 +229,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -2.345 ; -149.622      ;
+; clk_div:CLK25|clk25 ; -2.462 ; -125.636      ;
 +---------------------+--------+---------------+
 
 
@@ -238,7 +238,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.393 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.587 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -247,8 +247,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; clk                 ; -0.661 ; -44.303           ;
-; clk_div:CLK25|clk25 ; -0.394 ; -204.568          ;
+; clk                 ; -0.698 ; -60.287           ;
+; clk_div:CLK25|clk25 ; -0.426 ; -211.225          ;
 +---------------------+--------+-------------------+
 
 
@@ -263,19 +263,19 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -5.235 ; -1044.495     ;
-; clk                 ; -3.430 ; -141.846      ;
+; clk_div:CLK25|clk25 ; -5.725 ; -1143.431     ;
+; clk                 ; -4.298 ; -288.359      ;
 +---------------------+--------+---------------+
 
 
-+----------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary           ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -0.144 ; -1.723        ;
-; clk                 ; 0.182  ; 0.000         ;
-+---------------------+--------+---------------+
++---------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary          ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; clk_div:CLK25|clk25 ; 0.066 ; 0.000         ;
+; clk                 ; 0.184 ; 0.000         ;
++---------------------+-------+---------------+
 
 
 +----------------------------------------------+
@@ -283,17 +283,17 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -1.455 ; -71.230       ;
+; clk_div:CLK25|clk25 ; -1.251 ; -65.599       ;
 +---------------------+--------+---------------+
 
 
-+----------------------------------------------+
-; Fast 1100mV 85C Model Removal Summary        ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -0.010 ; -0.088        ;
-+---------------------+--------+---------------+
++---------------------------------------------+
+; Fast 1100mV 85C Model Removal Summary       ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; clk_div:CLK25|clk25 ; 0.226 ; 0.000         ;
++---------------------+-------+---------------+
 
 
 +---------------------------------------------------+
@@ -301,8 +301,8 @@ No synchronizer chains to report.
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; clk                 ; -0.739 ; -33.109            ;
-; clk_div:CLK25|clk25 ; -0.171 ; -11.211            ;
+; clk                 ; -0.783 ; -44.949            ;
+; clk_div:CLK25|clk25 ; -0.215 ; -18.665            ;
 +---------------------+--------+--------------------+
 
 
@@ -317,19 +317,19 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -4.636 ; -924.972      ;
-; clk                 ; -3.088 ; -126.027      ;
+; clk_div:CLK25|clk25 ; -5.022 ; -1012.632     ;
+; clk                 ; -3.841 ; -257.786      ;
 +---------------------+--------+---------------+
 
 
-+----------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary            ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -0.105 ; -1.250        ;
-; clk                 ; 0.172  ; 0.000         ;
-+---------------------+--------+---------------+
++---------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary           ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; clk_div:CLK25|clk25 ; 0.117 ; 0.000         ;
+; clk                 ; 0.176 ; 0.000         ;
++---------------------+-------+---------------+
 
 
 +----------------------------------------------+
@@ -337,7 +337,7 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clk_div:CLK25|clk25 ; -1.287 ; -62.547       ;
+; clk_div:CLK25|clk25 ; -1.126 ; -57.939       ;
 +---------------------+--------+---------------+
 
 
@@ -346,7 +346,7 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk_div:CLK25|clk25 ; 0.030 ; 0.000         ;
+; clk_div:CLK25|clk25 ; 0.256 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -355,8 +355,8 @@ No synchronizer chains to report.
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; clk                 ; -0.776 ; -39.337           ;
-; clk_div:CLK25|clk25 ; -0.123 ; -5.778            ;
+; clk                 ; -0.822 ; -53.476           ;
+; clk_div:CLK25|clk25 ; -0.150 ; -12.612           ;
 +---------------------+--------+-------------------+
 
 
@@ -366,18 +366,18 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                  ;
-+----------------------+-----------+--------+----------+---------+---------------------+
-; Clock                ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack     ; -9.235    ; -0.144 ; -2.511   ; -0.010  ; -0.776              ;
-;  clk                 ; -5.900    ; 0.161  ; N/A      ; N/A     ; -0.776              ;
-;  clk_div:CLK25|clk25 ; -9.235    ; -0.144 ; -2.511   ; -0.010  ; -0.430              ;
-; Design-wide TNS      ; -2191.529 ; -1.723 ; -156.314 ; -0.088  ; -263.632            ;
-;  clk                 ; -275.589  ; 0.000  ; N/A      ; N/A     ; -48.272             ;
-;  clk_div:CLK25|clk25 ; -1915.940 ; -1.723 ; -156.314 ; -0.088  ; -215.360            ;
-+----------------------+-----------+--------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                 ;
++----------------------+-----------+-------+----------+---------+---------------------+
+; Clock                ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack     ; -10.143   ; 0.066 ; -2.610   ; 0.226   ; -0.822              ;
+;  clk                 ; -7.014    ; 0.176 ; N/A      ; N/A     ; -0.822              ;
+;  clk_div:CLK25|clk25 ; -10.143   ; 0.066 ; -2.610   ; 0.226   ; -0.505              ;
+; Design-wide TNS      ; -2593.267 ; 0.0   ; -131.318 ; 0.0     ; -283.779            ;
+;  clk                 ; -508.030  ; 0.000 ; N/A      ; N/A     ; -65.469             ;
+;  clk_div:CLK25|clk25 ; -2085.237 ; 0.000 ; -131.318 ; 0.000   ; -218.310            ;
++----------------------+-----------+-------+----------+---------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -502,7 +502,7 @@ No synchronizer chains to report.
 ; seg0[5]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.257 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.257 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; seg0[6]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
 ; seg0[7]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
-; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
+; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
 ; seg1[1]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
 ; seg1[2]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
 ; seg1[3]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
@@ -559,7 +559,7 @@ No synchronizer chains to report.
 ; seg0[5]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.136 V            ; 0.025 V                              ; 0.167 V                              ; 4.92e-10 s                  ; 3.12e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.136 V           ; 0.025 V                             ; 0.167 V                             ; 4.92e-10 s                 ; 3.12e-10 s                 ; Yes                       ; No                        ;
 ; seg0[6]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
 ; seg0[7]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
-; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
+; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
 ; seg1[1]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
 ; seg1[2]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
 ; seg1[3]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
@@ -616,7 +616,7 @@ No synchronizer chains to report.
 ; seg0[5]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; seg0[6]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
 ; seg0[7]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
-; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
+; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; seg1[1]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
 ; seg1[2]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
 ; seg1[3]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
@@ -673,7 +673,7 @@ No synchronizer chains to report.
 ; seg0[5]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; seg0[6]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
 ; seg0[7]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
-; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
+; seg1[0]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
 ; seg1[1]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
 ; seg1[2]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
 ; seg1[3]        ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
@@ -689,9 +689,9 @@ No synchronizer chains to report.
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; clk                 ; clk                 ; 1713     ; 0        ; 0        ; 0        ;
-; clk_div:CLK25|clk25 ; clk                 ; 1        ; 4289     ; 0        ; 0        ;
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 1644     ; 29284    ; 213      ; 1514321  ;
+; clk                 ; clk                 ; 1391     ; 0        ; 0        ; 0        ;
+; clk_div:CLK25|clk25 ; clk                 ; 1        ; 7505     ; 0        ; 0        ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 1644     ; 43671    ; 213      ; 1596299  ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -701,9 +701,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; clk                 ; clk                 ; 1713     ; 0        ; 0        ; 0        ;
-; clk_div:CLK25|clk25 ; clk                 ; 1        ; 4289     ; 0        ; 0        ;
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 1644     ; 29284    ; 213      ; 1514321  ;
+; clk                 ; clk                 ; 1391     ; 0        ; 0        ; 0        ;
+; clk_div:CLK25|clk25 ; clk                 ; 1        ; 7505     ; 0        ; 0        ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 1644     ; 43671    ; 213      ; 1596299  ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -713,7 +713,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 48       ; 433      ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 42       ; 334      ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -723,7 +723,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 48       ; 433      ;
+; clk_div:CLK25|clk25 ; clk_div:CLK25|clk25 ; 0        ; 0        ; 42       ; 334      ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -748,9 +748,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 477   ; 477  ;
+; Unconstrained Input Port Paths  ; 471   ; 471  ;
 ; Unconstrained Output Ports      ; 43    ; 43   ;
-; Unconstrained Output Port Paths ; 3168  ; 3168 ;
+; Unconstrained Output Port Paths ; 3974  ; 3974 ;
 +---------------------------------+-------+------+
 
 
@@ -908,7 +908,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 05 13:29:46 2025
+    Info: Processing started: Tue May 06 15:26:13 2025
 Info: Command: quartus_sta connect_four -c connect_four
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -926,120 +926,120 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.235
+Info (332146): Worst-case setup slack is -10.143
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.235           -1915.940 clk_div:CLK25|clk25 
-    Info (332119):    -5.900            -275.589 clk 
-Info (332146): Worst-case hold slack is 0.042
+    Info (332119):   -10.143           -2085.237 clk_div:CLK25|clk25 
+    Info (332119):    -7.014            -508.030 clk 
+Info (332146): Worst-case hold slack is 0.320
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.042               0.000 clk_div:CLK25|clk25 
-    Info (332119):     0.361               0.000 clk 
-Info (332146): Worst-case recovery slack is -2.511
+    Info (332119):     0.320               0.000 clk_div:CLK25|clk25 
+    Info (332119):     0.379               0.000 clk 
+Info (332146): Worst-case recovery slack is -2.610
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.511            -156.314 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is 0.378
+    Info (332119):    -2.610            -131.318 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.652
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.378               0.000 clk_div:CLK25|clk25 
-Info (332146): Worst-case minimum pulse width slack is -0.626
+    Info (332119):     0.652               0.000 clk_div:CLK25|clk25 
+Info (332146): Worst-case minimum pulse width slack is -0.655
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.626             -48.272 clk 
-    Info (332119):    -0.430            -215.360 clk_div:CLK25|clk25 
+    Info (332119):    -0.655             -65.469 clk 
+    Info (332119):    -0.505            -218.310 clk_div:CLK25|clk25 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.119
+Info (332146): Worst-case setup slack is -10.027
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.119           -1875.997 clk_div:CLK25|clk25 
-    Info (332119):    -5.816            -271.937 clk 
-Info (332146): Worst-case hold slack is 0.061
+    Info (332119):   -10.027           -2041.896 clk_div:CLK25|clk25 
+    Info (332119):    -6.820            -498.883 clk 
+Info (332146): Worst-case hold slack is 0.286
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.061               0.000 clk_div:CLK25|clk25 
-    Info (332119):     0.161               0.000 clk 
-Info (332146): Worst-case recovery slack is -2.345
+    Info (332119):     0.286               0.000 clk_div:CLK25|clk25 
+    Info (332119):     0.378               0.000 clk 
+Info (332146): Worst-case recovery slack is -2.462
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.345            -149.622 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is 0.393
+    Info (332119):    -2.462            -125.636 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.587
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.393               0.000 clk_div:CLK25|clk25 
-Info (332146): Worst-case minimum pulse width slack is -0.661
+    Info (332119):     0.587               0.000 clk_div:CLK25|clk25 
+Info (332146): Worst-case minimum pulse width slack is -0.698
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.661             -44.303 clk 
-    Info (332119):    -0.394            -204.568 clk_div:CLK25|clk25 
+    Info (332119):    -0.698             -60.287 clk 
+    Info (332119):    -0.426            -211.225 clk_div:CLK25|clk25 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.235
+Info (332146): Worst-case setup slack is -5.725
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.235           -1044.495 clk_div:CLK25|clk25 
-    Info (332119):    -3.430            -141.846 clk 
-Info (332146): Worst-case hold slack is -0.144
+    Info (332119):    -5.725           -1143.431 clk_div:CLK25|clk25 
+    Info (332119):    -4.298            -288.359 clk 
+Info (332146): Worst-case hold slack is 0.066
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.144              -1.723 clk_div:CLK25|clk25 
-    Info (332119):     0.182               0.000 clk 
-Info (332146): Worst-case recovery slack is -1.455
+    Info (332119):     0.066               0.000 clk_div:CLK25|clk25 
+    Info (332119):     0.184               0.000 clk 
+Info (332146): Worst-case recovery slack is -1.251
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.455             -71.230 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is -0.010
+    Info (332119):    -1.251             -65.599 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.226
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.010              -0.088 clk_div:CLK25|clk25 
-Info (332146): Worst-case minimum pulse width slack is -0.739
+    Info (332119):     0.226               0.000 clk_div:CLK25|clk25 
+Info (332146): Worst-case minimum pulse width slack is -0.783
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.739             -33.109 clk 
-    Info (332119):    -0.171             -11.211 clk_div:CLK25|clk25 
+    Info (332119):    -0.783             -44.949 clk 
+    Info (332119):    -0.215             -18.665 clk_div:CLK25|clk25 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.636
+Info (332146): Worst-case setup slack is -5.022
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.636            -924.972 clk_div:CLK25|clk25 
-    Info (332119):    -3.088            -126.027 clk 
-Info (332146): Worst-case hold slack is -0.105
+    Info (332119):    -5.022           -1012.632 clk_div:CLK25|clk25 
+    Info (332119):    -3.841            -257.786 clk 
+Info (332146): Worst-case hold slack is 0.117
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.105              -1.250 clk_div:CLK25|clk25 
-    Info (332119):     0.172               0.000 clk 
-Info (332146): Worst-case recovery slack is -1.287
+    Info (332119):     0.117               0.000 clk_div:CLK25|clk25 
+    Info (332119):     0.176               0.000 clk 
+Info (332146): Worst-case recovery slack is -1.126
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.287             -62.547 clk_div:CLK25|clk25 
-Info (332146): Worst-case removal slack is 0.030
+    Info (332119):    -1.126             -57.939 clk_div:CLK25|clk25 
+Info (332146): Worst-case removal slack is 0.256
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.030               0.000 clk_div:CLK25|clk25 
-Info (332146): Worst-case minimum pulse width slack is -0.776
+    Info (332119):     0.256               0.000 clk_div:CLK25|clk25 
+Info (332146): Worst-case minimum pulse width slack is -0.822
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.776             -39.337 clk 
-    Info (332119):    -0.123              -5.778 clk_div:CLK25|clk25 
+    Info (332119):    -0.822             -53.476 clk 
+    Info (332119):    -0.150             -12.612 clk_div:CLK25|clk25 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5251 megabytes
-    Info: Processing ended: Mon May 05 13:30:07 2025
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 5311 megabytes
+    Info: Processing ended: Tue May 06 15:26:42 2025
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:01:12
 
 
