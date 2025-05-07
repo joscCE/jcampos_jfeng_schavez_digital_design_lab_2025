@@ -1,7 +1,7 @@
 module Ps2_Key(
  input clk, ps2_clk, ps2_data,
- output left_arrow, right_arrow, left_led, right_led,
- output [3:0] quadrant
+ output logic left_arrow, right_arrow, left_led, right_led,
+ output logic [3:0] quadrant
 );
 
  logic[7:0] ARROW_LEFT = 8'h6B; //arrow code 

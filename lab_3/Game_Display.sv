@@ -37,7 +37,7 @@ module Game_Display(
 
     // Cálculo del área horizontal de la columna seleccionada
     logic [9:0] column_x_start, column_x_end;
-    assign column_x_start = OFFSET_X + (safe_column * TILE_W);
+    assign column_x_start = OFFSET_X + (column * TILE_W);
     assign column_x_end   = column_x_start + TILE_W;
 
     // Detectar si estamos dentro del tablero
@@ -45,7 +45,7 @@ module Game_Display(
                           (Q_Y >= OFFSET_Y) && (Q_Y < OFFSET_Y + BOARD_H);
 
     // Detectar si estamos en la zona del indicador
-    assign inside_indicator = valid_column &&
+    assign inside_indicator = 1'b1 &&
                               (Q_Y >= OFFSET_Y - 20) && (Q_Y < OFFSET_Y) &&
                               (Q_X >= column_x_start) && (Q_X < column_x_end);
 

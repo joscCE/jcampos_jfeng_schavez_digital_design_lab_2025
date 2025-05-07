@@ -33,17 +33,6 @@ module display_menu(
 
     // Área del cuadro blanco para el jugador NO seleccionado
     logic in_box_p1, in_box_p2;
-
-    assign in_box_p1 = (turn == 1) &&  // Player 1 NO seleccionado
-                       (p1_x >= P1_BOX_X) && (p1_x < P1_BOX_X + BOX_W) &&
-                       (p1_y >= P1_BOX_Y) && (p1_y < P1_BOX_Y + BOX_H);
-
-    assign in_box_p2 = (turn == 0) &&  // Player 2 NO seleccionado
-                       (p2_x >= P2_BOX_X) && (p2_x < P2_BOX_X + BOX_W) &&
-                       (p2_y >= P2_BOX_Y) && (p2_y < P2_BOX_Y + BOX_H);
-	 
-	 
-	 
 	 
 	 
 
@@ -66,6 +55,17 @@ module display_menu(
             blink_on <= ~blink_on;
         end
     end
+	 
+    assign in_box_p1 = (turn == 1) &&  // Player 1 NO seleccionado
+                       (p1_x >= P1_BOX_X) && (p1_x < P1_BOX_X + BOX_W) &&
+                       (p1_y >= P1_BOX_Y) && (p1_y < P1_BOX_Y + BOX_H);
+
+    assign in_box_p2 = (turn == 0) &&  // Player 2 NO seleccionado
+                       (p2_x >= P2_BOX_X) && (p2_x < P2_BOX_X + BOX_W) &&
+                       (p2_y >= P2_BOX_Y) && (p2_y < P2_BOX_Y + BOX_H);
+	 
+	 
+	 
 
     // Área de cada imagen
     assign inside_start = (Q_X >= START_X)  && (Q_X < START_X + START_W) &&

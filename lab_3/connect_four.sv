@@ -56,11 +56,65 @@ module connect_four (
  .right_led(player1[1]),
  .quadrant()
 );
+
 	 
+    logic [27:0] Q_reg_count_time;  // Asumiendo que es un contador de 28 bits (por comparación con 28'd250_000_000)
+    logic [3:0] Q_reg_sec_counter;  //Registro para contador 1 segundo
+	 logic [2:0] j_count_random;
+    logic [2:0] Q_reg_random;
+    logic [4:0] Q_reg_Play;
+    logic Q_Reg_Select_Move;
+    logic [4:0] c_Mux_Play;
+	 logic one_second;
+
+	
+	
+	 	 //entradas
+	 logic [2:0] play; //[P,R,L]
+    logic time_out;
+    logic winning;
+    logic valid_play;
+    logic comp_turn;
+    logic comp_right;
+    logic comp_left;
+    logic comp_random;
 	 
-	 
+	 logic R_player;
+	 logic P_player;
+
+    // Salidas
+    logic rst_timer;
+    logic rst_turn;
+    logic rst_game;
+    logic rst_random;
+    logic en_turn;
+    logic en_count_column;
+    logic en_random_play;
+    logic en_new_game;
+    logic en_reg_selection;
+    logic mode_count_column;
+    logic play_selection;
+    logic [1:0] display_select;
+	 logic [2:0] Q_reg_Column;
+	 logic select_turn;
+	 logic en_turn_timer;
+	 logic [83:0] new_game, Q_reg_game;
+	logic [6:0] Q_Reg_play_made;
 	
 	 
+//============== clk de 25MH =========================
+	 
+	 assign debug_colum = c_Mux_Play;
+	 
+	 clk_div CLK25(
+		.clk(clk),
+		.rst_active(rst),
+		.clk25(clk25)
+	 
+	 );
+	 
+// =================Debounce======================
+
 	 	 debounce deboun_play_R(
     .clk(clk25),
     .rst(rst),
@@ -90,61 +144,6 @@ module connect_four (
     .ent(p0in),       // botón con lógica inversa: presionado = 0
     .out(p0)
 	);
-	
-	
-	
-
-	 
-    logic [27:0] Q_reg_count_time;  // Asumiendo que es un contador de 28 bits (por comparación con 28'd250_000_000)
-    logic [3:0] Q_reg_sec_counter;  //Registro para contador 1 segundo
-	 logic [2:0] j_count_random;
-    logic [2:0] Q_reg_random;
-    logic [4:0] Q_reg_Play;
-    logic Q_Reg_Select_Move;
-    logic [4:0] c_Mux_Play;
-	 logic one_second;
-
-	
-	
-	 	 //entradas
-	 logic [2:0] play; //[P,R,L]
-    logic time_out;
-    logic winning;
-    logic valid_play;
-    logic comp_turn;
-    logic comp_right;
-    logic comp_left;
-    logic comp_random;
-
-    // Salidas
-    logic rst_timer;
-    logic rst_turn;
-    logic rst_game;
-    logic rst_random;
-    logic en_turn;
-    logic en_count_column;
-    logic en_random_play;
-    logic en_new_game;
-    logic en_reg_selection;
-    logic mode_count_column;
-    logic play_selection;
-    logic [1:0] display_select;
-	 logic [2:0] Q_reg_Column;
-	 logic select_turn;
-	 logic en_turn_timer;
-	 logic [83:0] new_game, Q_reg_game;
-	logic [6:0] Q_Reg_play_made;
-	 
-//============== clk de 25MH =========================
-	 
-	 assign debug_colum = c_Mux_Play;
-	 
-	 clk_div CLK25(
-		.clk(clk),
-		.rst_active(rst),
-		.clk25(clk25)
-	 
-	 );
 		 
 
 	 
@@ -324,24 +323,25 @@ module connect_four (
 
 
 
-     logic [2:0]  start_row, start_col;
-     logic [2:0]  end_row,   end_col;
+	  logic [1:0]  win_type;     // 00=horizontal, 01=vertical, 10=diagonal \, 11=diagonal /
+     logic [2:0]  win_base_col; // Columna base de la secuencia ganadora
+     logic [2:0]  win_base_row; // Fila base de la secuencia ganadora
+     logic [1:0]  win_length;   // Longitud de la secuencia (útil para direcciones)
 	
 	 Check_win CW_Inst(
 	 .reg_game_M(Q_reg_game), 
-	.play_made(Q_Reg_play_made), 
+	 .play_made(Q_Reg_play_made), 
     .S(winning),
-	 .start_row(start_row),
-	 .start_col(start_col),
-	 .end_row(end_row),
-	 .end_col(end_col),
+	 .win_type(win_type),
+	 .win_base_col(win_base_col),
+	 .win_base_row(win_base_row),
+	 .win_length(win_length)
 
 	 );
 	 
 	 
 
-	 logic R_player;
-	 logic P_player;
+
 	 
 
 	    FSM fsm_inst (
@@ -376,7 +376,7 @@ module connect_four (
 		  .state_debug(state_debug),
 		  .rst_column(rst_column)
     );
-	 
+	
 	 
 	
 	//=============== MUx de display ====================
@@ -402,17 +402,18 @@ Mux_31 #(.N(24)) Mux_display(
 
 
 display_game_over Display_Over(
+			.clk(clk),
 			.Q_X(Q_X), 
 			.Q_Y(Q_Y),
 			.game(Q_reg_game),
 			.R(RBG_End[23:16]),
 			.G(RBG_End[15:8]),
 			.B(RBG_End[7:0]),
-			.start_row(start_row),
-			.start_col(start_col),
-			.end_row(end_row),
-			.end_col(end_col),
-			.S(winning)
+			.turn(select_turn),
+			.S(winning),
+			.win_type(win_type),
+			.win_base_col(win_base_col),
+			.win_base_row(win_base_row)
 			
 			
 
