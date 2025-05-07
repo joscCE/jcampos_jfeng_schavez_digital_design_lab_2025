@@ -324,13 +324,17 @@ module connect_four (
 
 
 
-	logic [10:0] Win_play;
+     logic [2:0]  start_row, start_col;
+     logic [2:0]  end_row,   end_col;
 	
 	 Check_win CW_Inst(
 	 .reg_game_M(Q_reg_game), 
 	.play_made(Q_Reg_play_made), 
     .S(winning),
-	 .Win_play(Win_play)
+	 .start_row(start_row),
+	 .start_col(start_col),
+	 .end_row(end_row),
+	 .end_col(end_col),
 
 	 );
 	 
@@ -396,6 +400,7 @@ Mux_31 #(.N(24)) Mux_display(
 
 
 
+
 display_game_over Display_Over(
 			.Q_X(Q_X), 
 			.Q_Y(Q_Y),
@@ -403,7 +408,10 @@ display_game_over Display_Over(
 			.R(RBG_End[23:16]),
 			.G(RBG_End[15:8]),
 			.B(RBG_End[7:0]),
-			.Win_play(Win_play),
+			.start_row(start_row),
+			.start_col(start_col),
+			.end_row(end_row),
+			.end_col(end_col),
 			.S(winning)
 			
 			
