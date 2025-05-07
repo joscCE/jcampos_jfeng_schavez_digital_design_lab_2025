@@ -1,11 +1,16 @@
 module connect_four (
     input logic clk,        // Reloj de 50 MHz de la FPGA
     input logic rstin, 
-	 input [2:0] player0in, player1in, //[P,R,L]
+	 input [2:0] player0in, //[P,R,L]
 	 input p0in, p1in,
 	 input startin,
+	 
+	 input PS2_CLK,
+	 
+	 input  DATA_PS2,
 
     output logic Hs, Vs,
+	 
 	 
 	 output logic VGA_Blank, VGA_Sync_N, VGA_CLK, 
     output logic [7:0] R, G, B,
@@ -34,12 +39,23 @@ module connect_four (
 	 
 	 assign rst = ~rstin;
 	 assign player0 = ~player0in;
-	 assign player1 = ~player1in;
 	 assign p1 = ~p1in;
 
 	 
 	 
 	 assign VGA_CLK = clk25;
+	 
+	 
+	 Ps2_Key ps2_inst(
+ .clk(clk), 
+ .ps2_clk(PS2_CLK), 
+ .ps2_data(DATA_PS2),
+ .left_arrow(), 
+ .right_arrow(), 
+ .left_led(player1[2]), 
+ .right_led(player1[1]),
+ .quadrant()
+);
 	 
 	 
 	 
@@ -189,7 +205,7 @@ module connect_four (
 	// Registro de juego
 	Register #(.N(84)) Reg_game_M(
 		.clk(clk25),
-		.rst(rst | rst_game),
+		.rst(rst),
 		.D(new_game),
 		.en(en_new_game),
 		.Q(Q_reg_game)
@@ -308,11 +324,14 @@ module connect_four (
 
 
 
+	logic [10:0] Win_play;
 	
 	 Check_win CW_Inst(
 	 .reg_game_M(Q_reg_game), 
 	.play_made(Q_Reg_play_made), 
-    .S(winning) 
+    .S(winning),
+	 .Win_play(Win_play)
+
 	 );
 	 
 	 
@@ -378,12 +397,16 @@ Mux_31 #(.N(24)) Mux_display(
 
 
 display_game_over Display_Over(
-			.clk(clk),
 			.Q_X(Q_X), 
 			.Q_Y(Q_Y),
+			.game(Q_reg_game),
 			.R(RBG_End[23:16]),
 			.G(RBG_End[15:8]),
-			.B(RBG_End[7:0])
+			.B(RBG_End[7:0]),
+			.Win_play(Win_play),
+			.S(winning)
+			
+			
 
 	);
 

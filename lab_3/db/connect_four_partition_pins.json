@@ -196,15 +196,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "player1in[2]",
-					"strict" : false
-				},
-				{
 					"name" : "player0in[2]",
-					"strict" : false
-				},
-				{
-					"name" : "player1in[0]",
 					"strict" : false
 				},
 				{
@@ -212,11 +204,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "player1in[1]",
+					"name" : "player0in[1]",
 					"strict" : false
 				},
 				{
-					"name" : "player0in[1]",
+					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_PS2",
 					"strict" : false
 				}
 			]
