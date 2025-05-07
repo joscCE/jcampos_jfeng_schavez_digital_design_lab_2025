@@ -25,7 +25,7 @@ module Check_win(
     endfunction
 
     always_comb begin
-        // Inicializamos los contadores a 1 (porque ya contamos la celda actual)
+        // Inicializar los contadores a 1 (porque ya contamos la celda actual)
         count_horiz = 1;
         count_vert = 1;
         count_diag1 = 1;
@@ -73,7 +73,7 @@ module Check_win(
             else break;
         end
 
-        // Comprobamos si alguna dirección alcanzó 4 piezas consecutivas
+        // Comprobar si alguna dirección alcanzó 4 piezas consecutivas
         win_horiz = (count_horiz >= 4);
         win_vert  = (count_vert  >= 4);
         win_diag1 = (count_diag1 >= 4);

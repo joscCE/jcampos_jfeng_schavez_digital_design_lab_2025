@@ -17,11 +17,19 @@ vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_
 vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Check_win.sv}
 vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/clk_div.sv}
 vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/debounce.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Mux_31.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/display_menu.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Start_B_ROM.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Decoder7Seg.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Whomp_Rom.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/display_game_over.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Player1_ROM.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/Player2_ROM.sv}
 vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/output_files/Piece_ROM.sv}
 
-vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/tb_connect_four.sv}
+vlog -sv -work work +incdir+C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3 {C:/Users/jimmy/GitHub/jcampos_jfeng_schavez_digital_design_lab_2025/lab_3/FSM_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_connect_four
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  FSM_tb
 
 add wave *
 view structure

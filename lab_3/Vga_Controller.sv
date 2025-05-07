@@ -36,13 +36,13 @@ module Vga_Controller #(parameter N=8,
     
     
 
-    // Señales de sincronización
-    assign Hs = ~(Q_x >= H_Va + H_FP && Q_x < H_Va + H_FP + H_SycP);  
-	 assign Vs = ~(Q_y >= V_Va + V_FP && Q_y < V_Va + V_FP + V_SycP); 
-	 assign VGA_Sync_N = 1'b1;
-	 assign VGA_Blank = (Q_x <= H_Va) && (Q_y <= V_Va);
-	 assign Q_X = Q_x;
-	 assign Q_Y = Q_y;
+	// Señales de sincronización
+	assign Hs = ~(Q_x >= H_Va + H_FP && Q_x < H_Va + H_FP + H_SycP);  
+	assign Vs = ~(Q_y >= V_Va + V_FP && Q_y < V_Va + V_FP + V_SycP); 
+	assign VGA_Sync_N = 1'b1;
+	assign VGA_Blank = (Q_x <= H_Va) && (Q_y <= V_Va);
+	assign Q_X = Q_x;
+	assign Q_Y = Q_y;
 	 
 	 
 

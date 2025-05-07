@@ -3,7 +3,7 @@ module Whomp_Rom (
     output logic [23:0] color
 );
 
-    logic [23:0] memory [0:49999]; // O ajusta el tamaño si el nuevo archivo tiene más o menos datos
+    logic [23:0] memory [0:49999]; 
 
 
 	 assign memory = '{

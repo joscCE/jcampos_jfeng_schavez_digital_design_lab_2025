@@ -6,13 +6,13 @@ module Decoder7Seg(
 
     logic [3:0] y1, y0;
 
-    // Convertir a BCD (4 bits solo permite valores de 0 a 15)
+    // Convertir a BCD 
     always_comb begin
         y1 = (a >= 10) ? 4'd1 : 4'd0; // Dígito de decenas (solo 0 o 1)
         y0 = a % 10;                   // Dígito de unidades
     end
 
-    // Decodificación de los 7 segmentos (bits reordenados)
+    // Decodificación de los 7 segmentos 
     always_comb begin
 			case (y0)
 				 4'd0: seg0 = 8'b00000011;
@@ -31,7 +31,7 @@ module Decoder7Seg(
 			case (y1)
 				 4'd0: seg1 = 8'b00000011; // 0
 				 4'd1: seg1 = 8'b10011111; // 1
-				 default: seg1 = 8'b11111111; // Apagado (nunca debería activarse)
+				 default: seg1 = 8'b11111111; // Apagado 
 			endcase
     end
 

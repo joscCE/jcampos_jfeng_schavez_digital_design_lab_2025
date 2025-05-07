@@ -3,7 +3,7 @@ module Player2_ROM (
     output logic [23:0] color
 );
 
-    logic [23:0] memory [0:47499]; // O ajusta el tamaño si el nuevo archivo tiene más o menos datos
+    logic [23:0] memory [0:47499]; 
 
 
 	 assign memory = '{

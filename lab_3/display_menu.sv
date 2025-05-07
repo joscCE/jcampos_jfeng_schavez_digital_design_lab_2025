@@ -10,7 +10,7 @@ module display_menu(
     localparam int START_W = 200, START_H = 200;
     localparam int PLAYER_W = 250, PLAYER_H = 190;
 
-    // Posiciones centradas (ajústalas si es necesario)
+    // Posiciones centradas 
     localparam int START_X = (640 - START_W) / 2;     // Centro horizontal
     localparam int START_Y = 250;
 
@@ -30,7 +30,17 @@ module display_menu(
 
     localparam int P2_BOX_X = 105;
     localparam int P2_BOX_Y = 10;
+	 
 
+    // Señales comunes
+    logic inside_start, inside_p1, inside_p2;
+    logic [9:0] local_x, local_y;
+    logic [9:0] p1_x, p1_y, p2_x, p2_y;
+
+    logic [15:0] addr_start, addr_p1, addr_p2;
+    logic [23:0] color_start, color_p1, color_p2;
+	 
+	 
     // Área del cuadro blanco para el jugador NO seleccionado
     logic in_box_p1, in_box_p2;
 
@@ -42,18 +52,6 @@ module display_menu(
                        (p2_x >= P2_BOX_X) && (p2_x < P2_BOX_X + BOX_W) &&
                        (p2_y >= P2_BOX_Y) && (p2_y < P2_BOX_Y + BOX_H);
 	 
-	 
-	 
-	 
-	 
-
-    // Señales comunes
-    logic inside_start, inside_p1, inside_p2;
-    logic [9:0] local_x, local_y;
-    logic [9:0] p1_x, p1_y, p2_x, p2_y;
-
-    logic [15:0] addr_start, addr_p1, addr_p2;
-    logic [23:0] color_start, color_p1, color_p2;
 
     // === Blink ===
     logic [26:0] blink_counter = 0;
